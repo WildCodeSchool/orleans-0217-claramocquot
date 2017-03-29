@@ -1,4 +1,11 @@
 
+
+.deroulement{
+    position: absolute;
+    z-index: 100;
+}
+
+
 @font-face{ 
     font-family: 'PTSans';
     src: url('fonts/PTS55F-webfont.woff') format('woff');
@@ -105,3 +112,70 @@ button {
     }
     /* fin menu burger */
 }
+
+
+
+/* Page entreprise*/
+
+.banner {
+    background-size: 100% auto;
+    background: cover;
+    background-image: url("image/entreprise/entreprise - copie.jpg");
+    background-repeat: no-repeat;
+    height: 250px;
+    margin: 50px;
+    color: white;
+    position: relative;
+}
+
+.banner p {
+    color: white;
+    font-size: 55px;
+    position: absolute;
+    bottom: 25px;
+    right: 50px;
+}
+
+.presentationentreprise {
+    margin-bottom: 200px;
+}
+
+.container ul {
+    list-style: none;
+    line-height: 40px;
+    padding-top: 70px;
+}
+
+.textentreprise {
+    padding-top: 80px;
+}
+
+.imgportrait {
+    padding-top: 20px;
+}
+
+figcaption {
+    text-align: center;
+}
+/*fin de la page entreprise*/
+
+
+/*Footer*/
+
+footer {
+    bottom: 0px;
+    text-align: center;
+    border-top: solid 2px black;
+    height: 80px;
+}
+
+footer img {
+    width: 35px;
+    padding-top: 20px;
+}
+
+.contact {
+    padding-top: 25px;
+}
+
+/*Fin du footer*/
