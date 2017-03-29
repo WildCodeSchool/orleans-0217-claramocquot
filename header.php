@@ -31,6 +31,7 @@
 							<div class="burger"></div>
 						</button><br><br>
 
+                    <div class="deroulement">
 						<div id="div1" class="menuburger">Ev&eacute;nements</div>
 						<br> 
 						<div id="div2" class="menuburger">Articles</div>
@@ -48,7 +49,7 @@
 						<div id="div8" class="menuburger">Manifeste</div>
 						<br>
 						<div id="div9" class="menuburger">Presta Pro</div>
-	
+                    </div>
 				</div>
 				<!-- Fin menu burger -->
 

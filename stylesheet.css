@@ -3,6 +3,10 @@
     font-family: 'PTSans';
     src: url('fonts/PTS55F-webfont.woff') format('woff');
 }
+body {
+    font-family: 'PTSans';
+}
+
 
 /* header complet */
 .header {
@@ -56,6 +60,10 @@ button {
     margin: 6px 0;
 }
 
+.deroulement{
+    position: absolute;
+    z-index: 100;
+}
 .menuburger {
     display: none;
     font-size: 1.4em;
@@ -71,37 +79,52 @@ button {
 /* fin menu burger */
 
 
-/*/// MEDIA QUERY ///*/
+/*/// MEDIA QUERY HEADER ///*/
 @media screen and (max-width: 992px) {
-    
+
     /* logo */
-.marque {
+    .marque {
         display: none;
     }
 
-.marque2 {
-    display: inline;
-    color: white;
-    text-decoration: none;
-    position: relative;
-    font-size: 3em;
-    text-align: center;
-    top: 35px;
-    border: solid white 2px;
-    padding: 5px;
+    .marque2 {
+        display: inline;
+        color: white;
+        text-decoration: none;
+        position: relative;
+        font-size: 3em;
+        text-align: center;
+        top: 35px;
+        border: solid white 2px;
+        padding: 5px;
     }
-    /* fin logo */
 
+    /* fin logo */
     /* menu burger */
     button {
         right: 30px;
     }
 
-.menuburger {
-    right: 120px;
-    height: 45px;
-    width: 150px;
-    padding-top: 5px;
+    .menuburger {
+        right: 120px;
+        height: 45px;
+        width: 150px;
+        padding-top: 5px;
     }
-    /* fin menu burger */
 }
+    /* fin menu burger */
+
+/*/// FIN MEDIA QUERY HEADER ///*/
+
+/* page articles */
+
+
+.join {
+    font-size: 1.6em;
+    border: 1px solid black;
+}
+
+
+
+
+/* fin page articles */
