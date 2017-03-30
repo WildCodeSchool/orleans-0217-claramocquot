@@ -75,7 +75,7 @@ button {
     border: solid black 1px;
     background-color: white;
     text-align: center;
-    padding: 2px, 4px, 2px, 4px;
+    padding: 2px 4px 2px 4px;
 }
 /* fin menu burger */
 
@@ -101,6 +101,7 @@ button {
     }
 
     /* fin logo */
+
     /* menu burger */
     button {
         right: 30px;
