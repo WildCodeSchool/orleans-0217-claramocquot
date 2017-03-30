@@ -13,7 +13,7 @@ body {
     font-family: 'PTSans';
     background-color: black;
     position: relative;
-    height: 150px;
+    height: 90px;
 }
 /* fin header */
 
@@ -32,11 +32,11 @@ a:hover, a:active, a:focus, a:visited {
     color: white;
     text-decoration: none;
     position: relative;
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
-    top: 35px;
+    top: 20px;
     border: solid white 2px;
-    padding-bottom:  3px;
+    padding-bottom:  2px;
 }
 
 .marque2 {
@@ -46,18 +46,19 @@ a:hover, a:active, a:focus, a:visited {
 
 /* menu burger */
 button {
-    height: 67px;
-    width: 67px;    
+    height: 46px;
+    width: 46px;
     position: relative;
-    top: 35px;
+    top: 20px;
     background-color: black;
 }
 
 .burger {
-    width: 50px;
+    width: 30px;
     height: 5px;
     background-color: white;
     margin: 6px 0;
+
 }
 
 .deroulement{
@@ -68,7 +69,7 @@ button {
     display: none;
     font-size: 1.4em;
     position: relative;
-    top: 45px;
+    top: 30px;
     width:130px;
     height:30px;
     border: solid black 1px;
