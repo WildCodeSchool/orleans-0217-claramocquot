@@ -1,7 +1,5 @@
-<!DOCTYPE html>
 
 <!DOCTYPE html>
-<html>
 	<head>
 		<meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,7 +36,7 @@
 						<br>
 						<div id="div3" class="menuburger">Marraines</div>
 						<br>
-						<div id="div4" class="menuburger">Entreprises</div>
+						<div id="div4" class="menuburger">Entreprise</div>
 						<br>
 						<div id="div5" class="menuburger">Collections</div>
 						<br>
@@ -57,24 +55,3 @@
 
 			</div>		
 		</div>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-		<script>
-				$(document).ready(function(){
-				    $("button").click(function(){
-				        $("#div1").fadeToggle();
-				        $("#div2").fadeToggle("slow");
-				        $("#div3").fadeToggle(500);
-				        $("#div4").fadeToggle(900);
-				        $("#div5").fadeToggle(1300);
-				        $("#div6").fadeToggle(1700);
-				        $("#div7").fadeToggle(2100);
-				        $("#div8").fadeToggle(2500);
-				        $("#div9").fadeToggle(2900);
-					    });
-				    });
-		</script> 
-	</body>
-</html>
