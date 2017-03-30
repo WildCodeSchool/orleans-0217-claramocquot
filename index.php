@@ -2,4 +2,4 @@
 
 include 'header.php';
 include 'Entreprise.php';
-include 'Footer.php';
+include 'footer.php';
