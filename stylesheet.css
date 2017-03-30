@@ -1,4 +1,6 @@
-
+.container-fluid {
+    padding: 0;
+}
 
 .deroulement{
     position: absolute;
@@ -15,8 +17,11 @@
 .header {
     font-family: 'PTSans';
     background-color: black;
-    position: relative;
-    height: 150px;
+    position: fixed;
+    height: 100px;
+    margin: 0;
+    width: 100%;
+    z-index: 51;
 }
 /* fin header */
 
@@ -73,10 +78,41 @@ button {
     border: solid black 1px;
     background-color: white;
     text-align: center;
-    padding: 2px, 4px, 2px, 4px;
+    padding: 2px 4px 2px 4px;
 }
 /* fin menu burger */
 
+/* manifeste */
+.wrapper {
+    background-color: rgba(0,0,0,0);
+}
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("image/manifeste/manifeste.jpg");
+    background-size: cover;
+    margin-top: 100px;
+
+}
+
+.content {
+    margin-top: 150px;
+    padding: 50px;
+    background-color: rgba(255,255,255,0.6);
+    border: 3px solid black;
+    margin-bottom: 60px;
+
+}
+
+.titreManifeste {
+    text-transform: uppercase;
+    font-family: 'PTSans';
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
 
 /*/// MEDIA QUERY ///*/
 @media screen and (max-width: 992px) {

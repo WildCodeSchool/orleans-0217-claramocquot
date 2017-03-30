@@ -37,14 +37,14 @@
     $(document).ready(function(){
         $("button").click(function(){
             $("#div1").fadeToggle();
-            $("#div2").fadeToggle("slow");
-            $("#div3").fadeToggle(500);
-            $("#div4").fadeToggle(900);
-            $("#div5").fadeToggle(1300);
-            $("#div6").fadeToggle(1700);
-            $("#div7").fadeToggle(2100);
-            $("#div8").fadeToggle(2500);
-            $("#div9").fadeToggle(2900);
+            $("#div2").fadeToggle();
+            $("#div3").fadeToggle();
+            $("#div4").fadeToggle();
+            $("#div5").fadeToggle();
+            $("#div6").fadeToggle();
+            $("#div7").fadeToggle();
+            $("#div8").fadeToggle();
+            $("#div9").fadeToggle();
         });
     });
 </script>
