@@ -118,13 +118,12 @@ button {
 
 /* page articles */
 
+.petit {
 
-.join {
-    font-size: 1.6em;
-    border: 1px solid black;
+    text-align: right;
 }
 
-
-
-
-/* fin page articles */
+.grand {
+    border-left: solid black 1px;
+}
+/* fin page aricles */
