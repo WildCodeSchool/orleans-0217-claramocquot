@@ -1,28 +1,28 @@
 <footer>
     <div class="container pdp">
         <div class="row ">
-            <div class="col-md-4 ">
+            <div class="col-md-4 col-xs-4 ">
                 <div class="row">
-                    <div class="col-md-4  ">
+                    <div class="col-md-4 col-xs-4  ">
                         <img src="image/logo/facebook.jpg" class="fb">
                     </div>
-                    <div class="col-md-4 ">
+                    <div class="col-md-4 col-xs-4">
                         <img src="image/logo/instagram.png">
                     </div>
-                    <div class="col-md-4 ">
+                    <div class="col-md-4 col-xs-4">
                         <img src="image/logo/pinterest.jpg">
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 contact">
+            <div class="col-md-4 col-md-offset-0 col-xs-3 col-xs-offset-1 contact">
                 <p>Contact</p>
             </div>
-            <div class="col-md-4 ">
+            <div class="col-md-4 col-xs-4">
                 <div class="row">
-                    <div class="col-md-4 ">
+                    <div class="col-md-4 col-xs-4">
                         <a href="https://wildcodeschool.fr/"><img src="image/logo/wcs_logo.png"></a>
                     </div>
-                    <div class="col-md-4 ">
+                    <div class="col-md-4 col-xs-4">
                         <img src="image/logo/info.png">
                     </div>
                 </div>

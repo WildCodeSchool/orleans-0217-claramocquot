@@ -35,7 +35,7 @@
 						<br>
 						<div id="div3" class="menuburger">Marraines</div>
 						<br>
-						<div id="div4" class="menuburger">Entreprises</div>
+						<div id="div4" class="menuburger">Entreprise</div>
 						<br>
 						<div id="div5" class="menuburger">Collections</div>
 						<br>

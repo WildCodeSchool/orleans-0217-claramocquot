@@ -137,7 +137,7 @@ button {
 }
 
 .presentationentreprise {
-    margin-bottom: 200px;
+    margin-bottom: 150px;
 }
 
 .container ul {
@@ -163,7 +163,7 @@ figcaption {
 /*Footer*/
 
 footer {
-    bottom: 0px;
+
     text-align: center;
     border-top: solid 2px black;
     height: 80px;
