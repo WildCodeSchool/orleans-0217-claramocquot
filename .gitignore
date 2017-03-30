@@ -1,3 +1,5 @@
 
-connect.php
+config/connect.php
 .idea
+
+/vendor/
