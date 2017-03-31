@@ -30,9 +30,7 @@ body {
     padding-top: 25px;
 }
 
-.borderBlack {
-    border: 1px solid black;
-}
+
 
 /*---------------------------------------
    SECTION ACCUEIL
@@ -109,7 +107,7 @@ body {
     overflow:hidden;
     max-width: 100%;
     height: auto;
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
 .captionHome {
@@ -183,7 +181,8 @@ a:hover, a:active, a:focus, a:visited {
     text-align: center;
     top: 20px;
     border: solid white 2px;
-    padding: 7px 15px;
+    padding: 7px 30px;
+    text-transform: uppercase;
 }
 
 .marque2 {
@@ -392,3 +391,7 @@ footer img {
 
 /*Fin du footer*/
 
+.borderBlack {
+    border: 2px solid black;
+    margin: 15px;
+}
