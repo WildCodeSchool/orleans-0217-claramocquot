@@ -355,7 +355,8 @@ button {
     background-image: url("../img/entreprise/entreprise - copie.jpg");
     background-repeat: no-repeat;
     height: 250px;
-    margin: 50px;
+    /*margin: 50px;*/
+    margin-top: 90px;
     color: white;
     position: relative;
 }
