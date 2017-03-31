@@ -47,7 +47,6 @@
             <span class="titreCadre2">NAVIGATION</span>
             <br><br>
 
-
             <div class="row">
                 <div class="col-xs-12 col-md-4">
                     <a href="index.php?route=entreprise" class="thumbnail">
@@ -109,6 +108,7 @@
                 </div>
             </div>
         </div>
+    </div>
 </section>
 <!-- =========================
     SECTION NOUVEAUTÉS
