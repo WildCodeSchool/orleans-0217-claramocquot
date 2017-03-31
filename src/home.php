@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,16 +9,16 @@
 
     <!-- Importation des fonts Google -->
     <link href="https://fonts.googleapis.com/css?family=Overpass|PT+Sans|PT+Sans+Caption|PT+Serif|Roboto+Condensed"
-          rel="stylesheet">
+          rel="stylesheet" />
 
     <!-- Bootstrap -->
-    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
 
-    <!-- Font Awsome -->
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- Font Awesome -->
+    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet" />
 
     <!-- Style -->
-    <link href="home.css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
 
 </head>
 <body>
@@ -55,7 +55,7 @@
 
         <div class="container home-container">
             <a href="#navigation"><span class="titreCadre1">CLARA MOCQUOT</span></a>
-            <h1>COIFFES & CHAPEAUX<br>
+            <h1 class="title">COIFFES & CHAPEAUX<br>
                 sur-mesure et à la demande</h1>
         </div>
     </div>
@@ -159,11 +159,11 @@
     </div>
 </section>
 
-<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/smoothscroll.js"></script>
 <script src="js/jquery.parallax-1.1.3.js"></script>
-<script src="js/script.js"></script>
+<script src="js/landingPage.js"></script>
 
 </body>
 </html>

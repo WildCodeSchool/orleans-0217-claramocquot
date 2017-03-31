@@ -1,14 +1,16 @@
 <?php
 
-include 'header.php';
+require '../src/home.php';
 
-//include 'articles.php';
+//require '../src/header.php';
 
-include 'manifeste.php';
+//require '../src/articles.php';
 
-//include 'Entreprise.php';
+//require '../src/manifeste.php';
 
-include 'footer.php';
+//require '../src/Entreprise.php';
+
+//require '../src/footer.php';
 
 ?>
 
