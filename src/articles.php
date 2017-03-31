@@ -11,7 +11,7 @@ require 'header.php';
 
                     <div class="row">
                         <div class="col-md-12 col-xs-12">
-                            <div class="jumbotron">
+                            <div class="well presentationArticles">
                                 <h1>Zone de texte d'accueil.</h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -24,7 +24,7 @@ require 'header.php';
 
                     <div class="row">
                         <div class="col-md-4 col-xs-12">
-                            <a href="art.html" target=_blank"><div class="thumbnail">
+                            <a href="art.html" target=_blank"><div class="thumbnail pad_articles borderBlack">
                                 <img src="img/article1.3.jpg" alt="...">
                                 <div class="caption">
                                     <div class="row">
@@ -49,7 +49,7 @@ require 'header.php';
 
 
                         <div class="col-md-4 col-xs-12">
-                            <a href="art.html" target=_blank><div class="thumbnail">
+                            <a href="art.html" target=_blank><div class="thumbnail pad_articles borderBlack">
                                 <img src="img/article1.3.jpg" alt="...">
                                 <div class="caption">
                                     <div class="row">
@@ -73,7 +73,7 @@ require 'header.php';
                         </div>
 
                         <div class="col-md-4 col-xs-12">
-                            <a href="art.html" target=_blank><div class="thumbnail">
+                            <a href="art.html" target=_blank><div class="thumbnail pad_articles borderBlack">
                                 <img src="img/article1.3.jpg" alt="...">
                                 <div class="caption">
                                     <div class="row">
@@ -100,7 +100,7 @@ require 'header.php';
 
                     <div class="row">
                         <div class="col-md-4 col-xs-12">
-                            <a href="art.html" target=_blank><div class="thumbnail">
+                            <a href="art.html" target=_blank><div class="thumbnail pad_articles borderBlack">
                                 <img src="img/article1.3.jpg" alt="...">
                                 <div class="caption">
                                     <div class="row">
@@ -124,7 +124,7 @@ require 'header.php';
                         </div>
 
                         <div class="col-md-4 col-xs-12">
-                            <a href="art.html" target=_blank><div class="thumbnail">
+                            <a href="art.html" target=_blank><div class="thumbnail pad_articles borderBlack">
                                 <img src="img/article1.3.jpg" alt="...">
                                 <div class="caption">
                                     <div class="row">
@@ -148,7 +148,7 @@ require 'header.php';
                         </div>
 
                         <div class="col-md-4 col-xs-12">
-                            <a href="art.html" target=_blank><div class="thumbnail">
+                            <a href="art.html" target=_blank><div class="thumbnail pad_articles borderBlack">
                                 <img src="img/article1.3.jpg" alt="...">
                                 <div class="caption">
                                     <div class="row">

@@ -7,7 +7,6 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
 		<title>Header</title>
 	</head>
 
@@ -18,7 +17,7 @@
 			<div class="row header"> 
 
 				<span class="col-xs-3">
-					<p class="marque"><a href="#"> Clara MOCQUOT</a></p>
+					<span class="marque"><a href="#">CLARA MOCQUOT</a></span>
 					<p class="marque2"><a href="#"> CM </a></p>
 				</span>
 
