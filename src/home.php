@@ -26,12 +26,11 @@
     SECTION ACCUEIL
 ============================== -->
 
-<section class="landingPageAccueil" id="accueil">
-    <div class="section_overlay">
-        <div class="container home-container">
-            <a href="#navigation"><span class="titreCadre1">CLARA MOCQUOT</span></a>
-            <h1 class="title">COIFFES & CHAPEAUX<br>
-                sur-mesure et à la demande</h1>
+<section class="container-fluid landingPageAccueil" id="accueil">
+    <div class="row section_overlay">
+        <div class="col-xs-offset-3 col-xs-6 home-container titreCadre1">
+            <a href="#navigation" class="titreGeneral"><span>CLARA MOCQUOT</span><hr class="trait"><h1 class="title">COIFFES & CHAPEAUX<br>
+                    sur-mesure et à la demande</h1></a>
         </div>
     </div>
 </section>
@@ -42,10 +41,10 @@
 
 <section class="landingPageNavigation" id="navigation">
     <div class="section_overlay">
-        <div class="container home-container">
+        <div class="container text-center navHome">
 
             <span class="titreCadre2">NAVIGATION</span>
-            <br><br>
+            <br><br><br><br>
 
 
             <div class="row">
@@ -137,11 +136,8 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-
+<script src="js/landingPage.js"></script>
 
 <?php
 require 'footer.php';
 ?>
-
-</body>
-</html>

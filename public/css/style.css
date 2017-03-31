@@ -7,7 +7,9 @@ Table of Content
   4. ACTUALITÉS
 ==================================================
 */
-
+.container-fluid, .row{
+    margin: 0;
+}
 
 .marque:hover, .marque:active, .marque:focus, .marque:visited {
     text-decoration: none;
@@ -16,8 +18,12 @@ Table of Content
 
 body {
     font-family: 'PT Sans', sans-serif;
+    position: relative;
 }
 
+.titregeneral, .titreGeneral:hover, .titreGeneral:active, .titreGeneral:focus, .titreGeneral:visited{
+    color: black;
+}
 .title {
     color: black;
     padding-top: 25px;
@@ -33,19 +39,20 @@ body {
 
 .landingPageAccueil {
     background: url(../img/article4.1.jpg);
+    height: 925px;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .landingPageAccueil .section_overlay {
-    background-color: rgba(255, 255, 255, 0.33);
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 925px;
 }
 
 .titreCadre1 {
     font-family: 'PT Sans', sans-serif;
     font-size: 100px;
     border: 7px solid black;
-    padding: 15px 30px;
     text-decoration: none;
     color: black;
 }
@@ -58,10 +65,16 @@ body {
     text-decoration: none;
     color: black;
 }
+.trait {
+    border: 1px solid black;
+    width: 50%;
+}
 
 .home-container {
-    
+    margin-top: 260px;
     text-align: center;
+    padding: 10px 0 30px 0;
+    background-color: rgba(255,255,255,0.6);
 }
 /*---------------------------------------
    SECTION NAVIGATION (MOSAIQUE)
@@ -69,6 +82,10 @@ body {
 
 .landingPageNavigation .section_overlay {
     background-color: rgba(0, 0, 0, 0.33);
+}
+
+.navHome {
+    padding-top: 50px;
 }
 
 .thumbnail {
