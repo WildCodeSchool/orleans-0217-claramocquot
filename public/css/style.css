@@ -349,6 +349,7 @@ a:hover, a:active, a:focus, a:visited {
 
 .presentationentreprise {
     margin-bottom: 150px;
+    font-size: 20px;
 }
 
 .container ul {
@@ -362,7 +363,7 @@ a:hover, a:active, a:focus, a:visited {
 }
 
 .imgportrait {
-    padding-top: 20px;
+    padding-top: 80px;
 }
 
 figcaption {
