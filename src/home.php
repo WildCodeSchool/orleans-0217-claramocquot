@@ -29,7 +29,7 @@
 <section class="container-fluid landingPageAccueil" id="accueil">
     <div class="row section_overlay">
         <div class="col-xs-offset-3 col-xs-6 home-container titreCadre1">
-            <a href="#navigation" class="titreGeneral"><span>CLARA MOCQUOT</span><hr class="trait"><h1 class="title">COIFFES & CHAPEAUX<br>
+            <a href="#navigation" id="title" class="titreGeneral"><span>CLARA MOCQUOT</span><hr class="trait"><h1 class="title">COIFFES & CHAPEAUX<br>
                     sur-mesure et à la demande</h1></a>
         </div>
     </div>
@@ -52,11 +52,12 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-4">
                             <div class="thumbnailHome">
+                                <a href="index.php?route=entreprise">
                                 <div class="captionHome">
-                                    <a href="index.php?route=entreprise">
                                         <h2>ENTREPRISE</h2>
-                                    </a>
                                 </div>
+                                </a>
+
                                 <img class="thumbnail"
                                      src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
                                      alt="thumbnail image">
@@ -176,10 +177,12 @@
     SECTION NOUVEAUTÉS
 ============================== -->
 
-<section class="landingPageNouveautes" id="nouveautes">
+<section class="container-fluid landingPageNouveautes text-center" id="nouveautes">
     <div class="section_overlay">
-        <div class="container home-container">
-            <span class="titreCadre2">NOUVEAUTÉS</span>
+        <div class="row">
+            <div class="col-md-offset-5 col-md-2">
+                <h2 class="titreCadre2">NOUVEAUTÉS</h2>
+            </div>
         </div>
     </div>
 </section>
@@ -188,10 +191,12 @@
     SECTION ACTUALITÉS
 ============================== -->
 
-<section class="landingPageActualites" id="actualites">
+<section class="container-fluid landingPageActualites text-center" id="actualites">
     <div class="section_overlay">
-        <div class="container home-container">
-            <span class="titreCadre2">ACTUALITÉS</span>
+        <div class="row">
+            <div class="col-md-offset-5 col-md-2">
+                <h2 class="titreCadre2">ACTUALITÉS</h2>
+            </div>
         </div>
     </div>
 </section>
