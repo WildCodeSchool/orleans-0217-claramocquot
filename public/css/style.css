@@ -8,6 +8,7 @@ Table of Content
 ==================================================
 */
 
+
 .marque:hover, .marque:active, .marque:focus, .marque:visited {
     text-decoration: none;
     color: black;
@@ -20,6 +21,10 @@ body {
 .title {
     color: black;
     padding-top: 25px;
+}
+
+.borderBlack {
+    border: 1px solid black;
 }
 
 /*---------------------------------------
@@ -69,7 +74,6 @@ body {
 .thumbnail {
     display: block;
     vertical-align: middle;
-    border: 3px solid black;
     border-radius: 0;
 }
 
@@ -111,10 +115,6 @@ body {
 /* fin header */
 
 /* logo */
-a {
-    text-decoration: none;
-    color: white;
-}
 
 a:hover, a:active, a:focus, a:visited {
     text-decoration: none;
@@ -129,7 +129,7 @@ a:hover, a:active, a:focus, a:visited {
     text-align: center;
     top: 20px;
     border: solid white 2px;
-    padding-bottom:  2px;
+    padding: 7px 15px;
 }
 
 .marque2 {
@@ -225,9 +225,9 @@ a:hover, a:active, a:focus, a:visited {
         color: white;
         text-decoration: none;
         position: relative;
-        font-size: 3em;
+        font-size: 2em;
         text-align: center;
-        top: 35px;
+        top: 20px;
         border: solid white 2px;
         padding: 5px;
     }
@@ -251,6 +251,13 @@ a:hover, a:active, a:focus, a:visited {
 /*/// FIN MEDIA QUERY HEADER ///*/
 
 /* page articles */
+.presentationArticles {
+    margin-top: 110px;
+}
+
+.pad_articles {
+    padding: 0px;
+}
 
 .petit {
 
@@ -260,7 +267,7 @@ a:hover, a:active, a:focus, a:visited {
 .grand {
     border-left: solid black 1px;
 }
-/* fin page aricles */
+/* fin page articles */
 
 
 
