@@ -26,6 +26,9 @@ switch ($route) {
         require '../src/entreprise.php';
         break;
 
+    case 'admin':
+        require '../src/admin.php';
+        break;
 
     default :
         require '../src/home.php';

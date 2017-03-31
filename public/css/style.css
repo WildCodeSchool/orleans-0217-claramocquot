@@ -44,7 +44,7 @@ body {
 }
 
 .landingPageAccueil .section_overlay {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.6);
     height: 925px;
 }
 
@@ -74,7 +74,7 @@ body {
     margin-top: 260px;
     text-align: center;
     padding: 10px 0 30px 0;
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255,255,255,0.8);
 }
 /*---------------------------------------
    SECTION NAVIGATION (MOSAIQUE)
@@ -102,7 +102,7 @@ body {
     display: block;
     vertical-align: middle;
     border-radius: 0;
-    border: 4px solid black;
+    border: 2px solid black;
     position:relative;
     overflow:hidden;
     max-width: 100%;
@@ -188,6 +188,15 @@ a:hover, a:active, a:focus, a:visited {
 .marque2 {
     display: none;
 }
+
+.logoHome {
+    position: fixed;
+    top: 70px;
+    left: 100px;
+    font-size: 25px;
+    color: black;
+}
+
 /* fin logo */
 
 /* menu burger */
@@ -202,7 +211,7 @@ a:hover, a:active, a:focus, a:visited {
 
 .burger {
     width: 30px;
-    height: 5px;
+    height: 3px;
     background-color: white;
     margin: 5px 0;
 
@@ -214,14 +223,14 @@ a:hover, a:active, a:focus, a:visited {
 }
 .menuburger {
     display: none;
-    font-size: 1.4em;
+    font-size: 20px;
     position: relative;
-    top: 50px;
-    right: 30px;
-    width:160px;
-    height:30px;
-    border: solid black 1px;
-    background-color: white;
+    top: 60px;
+    right: 80px;
+    width:200px;
+    height:40px;
+    border:2px solid black;
+    background-color: rgba(255,255,255,0.8);
     text-align: center;
     padding: 2px 4px 2px 4px;
 }
@@ -229,6 +238,7 @@ a:hover, a:active, a:focus, a:visited {
 .navGenerale, .navGenerale:hover, .navGenerale:active, .navGenerale:focus, .navGenerale:visited {
     color: black;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 /* fin menu burger */
@@ -305,7 +315,8 @@ a:hover, a:active, a:focus, a:visited {
 
 /* page articles */
 .presentationArticles {
-    margin-top: 110px;
+    margin-top: 160px;
+    margin-bottom: 50px;
 }
 
 .pad_articles {
