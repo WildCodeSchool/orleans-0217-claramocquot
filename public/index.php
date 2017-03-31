@@ -26,6 +26,10 @@ switch ($route) {
         require '../src/entreprise.php';
         break;
 
+    case 'collections':
+        require '../src/collections.php';
+        break;
+
 
     default :
         require '../src/home.php';

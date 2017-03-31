@@ -24,7 +24,7 @@ body {
 }
 
 .borderBlack {
-    border: 1px solid black;
+    border: 3px solid black;
 }
 
 /*---------------------------------------
@@ -317,6 +317,20 @@ figcaption {
     text-align: center;
 }
 /*fin de la page entreprise*/
+
+
+/* page collection */
+
+.titre_car {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.collection {
+    padding-top: 120px;
+}
+
+/* fin page collection*/
 
 
 /*Footer*/

@@ -41,7 +41,7 @@
 						<br>
 						<div id="div4" class="menuburger"><a href="index.php?route=entreprise" class="navGenerale">Entreprise</a></div>
 						<br>
-						<div id="div5" class="menuburger"><a href="index.php?route=articles" class="navGenerale">Collections</a></div>
+						<div id="div5" class="menuburger"><a href="index.php?route=collections" class="navGenerale">Collections</a></div>
 						<br>
 						<div id="div6" class="menuburger"><a href="index.php?route=articles" class="navGenerale">Témoignages</a></div>
 						<br>
