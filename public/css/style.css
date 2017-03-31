@@ -228,19 +228,20 @@ a:hover, a:active, a:focus, a:visited {
 /* fin logo */
 
 /* menu burger */
-button {
+.boutonBurger {
     height: 46px;
     width: 46px;
     position: relative;
     top: 20px;
     background-color: black;
+    border: 2px solid white;
 }
 
 .burger {
     width: 30px;
     height: 5px;
     background-color: white;
-    margin: 6px 0;
+    margin: 5px 0;
 
 }
 
@@ -252,14 +253,21 @@ button {
     display: none;
     font-size: 1.4em;
     position: relative;
-    top: 30px;
-    width:130px;
+    top: 50px;
+    right: 30px;
+    width:160px;
     height:30px;
     border: solid black 1px;
     background-color: white;
     text-align: center;
     padding: 2px 4px 2px 4px;
 }
+
+.navGenerale, .navGenerale:hover, .navGenerale:active, .navGenerale:focus, .navGenerale:visited {
+    color: black;
+    text-decoration: none;
+}
+
 /* fin menu burger */
 
 /* manifeste */

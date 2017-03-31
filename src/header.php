@@ -24,30 +24,30 @@
 	
 				<!-- Menu burger -->
 				<div class="col-xs-offset-8 col-xs-1">
-						<button>
+						<button class="boutonBurger">
 							<div class="burger"></div>
 							<div class="burger"> </div>
 							<div class="burger"></div>
-						</button><br><br>
+						</button>
 
                     <div class="deroulement">
-						<div id="div1" class="menuburger">Ev&eacute;nements</div>
+						<div id="div1" class="menuburger"><a href="index.php?route=articles" class="navGenerale">Ev&eacute;nements</a></div>
 						<br> 
-						<div id="div2" class="menuburger">Articles</div>
+						<div id="div2" class="menuburger"><a href="index.php?route=articles" class="navGenerale">Articles</a></div>
 						<br>
-						<div id="div3" class="menuburger">Marraines</div>
+						<div id="div3" class="menuburger"><a href="index.php?route=articles" class="navGenerale">Marraines</a></div>
 						<br>
-						<div id="div4" class="menuburger">Entreprise</div>
+						<div id="div4" class="menuburger"><a href="index.php?route=entreprise" class="navGenerale">Entreprise</a></div>
 						<br>
-						<div id="div5" class="menuburger">Collections</div>
+						<div id="div5" class="menuburger"><a href="index.php?route=articles" class="navGenerale">Collections</a></div>
 						<br>
-						<div id="div6" class="menuburger">T&eacute;moignages</div>
+						<div id="div6" class="menuburger"><a href="index.php?route=articles" class="navGenerale">Témoignages</a></div>
 						<br>
-						<div id="div7" class="menuburger">Partenaires</div>
+						<div id="div7" class="menuburger"><a href="index.php?route=articles" class="navGenerale">Partenaires</a></div>
 						<br>
-						<div id="div8" class="menuburger">Manifeste</div>
+						<div id="div8" class="menuburger"><a href="index.php?route=manifeste" class="navGenerale">Manifeste</a></div>
 						<br>
-						<div id="div9" class="menuburger">Presta Pro</div>
+						<div id="div9" class="menuburger"><a href="index.php?route=articles" class="navGenerale">Prestations pro</a></div>
                     </div>
 				</div>
 				<!-- Fin menu burger -->
