@@ -55,8 +55,7 @@ body {
 }
 
 .home-container {
-    overflow-y: scroll;
-    overflow-x: hidden;
+    
     text-align: center;
 }
 /*---------------------------------------

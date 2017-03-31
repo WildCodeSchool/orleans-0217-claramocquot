@@ -109,6 +109,7 @@
                 </div>
             </div>
         </div>
+    </div>
 </section>
 <!-- =========================
     SECTION NOUVEAUTÉS
@@ -136,9 +137,7 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/smoothscroll.js"></script>
-<script src="js/jquery.parallax-1.1.3.js"></script>
-<script src="js/landingPage.js"></script>
+
 
 <?php
 require 'footer.php';
