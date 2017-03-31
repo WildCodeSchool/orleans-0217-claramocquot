@@ -3,3 +3,5 @@ config/connect.php
 .idea
 
 /vendor/
+summernote
+AdminLTE-2.3.11
