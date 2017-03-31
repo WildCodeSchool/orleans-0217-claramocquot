@@ -17,8 +17,8 @@
 			<div class="row header"> 
 
 				<span class="col-xs-3">
-					<p class="marque"><a href="#"> Clara MOCQUOT</a></p>
-					<p class="marque2"><a href="#"> CM </a></p>
+					<p class="marque"><a href="index.php"> Clara MOCQUOT</a></p>
+					<p class="marque2"><a href="index.php?route=home.php"> CM </a></p>
 				</span>
 
 	
