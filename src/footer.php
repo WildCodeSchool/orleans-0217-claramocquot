@@ -4,10 +4,10 @@
             <div class="col-md-4 col-xs-4 ">
                 <div class="row">
                     <div class="col-md-4 col-xs-4  ">
-                        <img src="img/logo/facebook.jpg" class="fb">
+                        <a href="https://www.facebook.com/claramocquotchapeaux/"><img src="img/logo/facebook.jpg" class="fb"></a>
                     </div>
                     <div class="col-md-4 col-xs-4">
-                        <img src="../public/img/logo/instagram.png">
+                        <img src="img/logo/instagram.png">
                     </div>
                     <div class="col-md-4 col-xs-4">
                         <img src="img/logo/pinterest.jpg">

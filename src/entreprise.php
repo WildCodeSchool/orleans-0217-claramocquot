@@ -10,7 +10,7 @@
         </div>
         <div class="col-md-4 col-xs-12">
             <figure>
-                <img src="../public/img/entreprise/modele2.4.jpg" class="img-responsive imgportrait" alt="Responsive image">
+                <img src="img/entreprise/modele2.4.jpg" class="img-responsive imgportrait" alt="Responsive image">
                 <figcaption>Clara Mocquot - Fondatrice</figcaption>
             </figure>
         </div>
