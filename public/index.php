@@ -1,18 +1,33 @@
 <?php
+require '../config/connect.php';
+require __DIR__ . '/../vendor/autoload.php';
 
-//require '../src/home.php';
 
-require '../src/header.php';
+$route = '';
 
-//require '../src/articles.php';
+if (isset($_GET['route'])) {
+    $route = $_GET['route'];
+}
 
-//require '../src/manifeste.php';
+switch ($route) {
 
-require '../src/entreprise.php';
+    case 'articles':
+        require '../src/articles.php';
+        break;
 
-require '../src/footer.php';
 
-?>
+    case 'manifeste':
+        require '../src/manifeste.php';
+        break;
+
+    case 'entreprise':
+        require '../src/entreprise.php';
+        break;
+
+
+    default :
+        require '../src/home.php';
+}
 
 
 

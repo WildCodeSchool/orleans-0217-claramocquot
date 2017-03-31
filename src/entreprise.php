@@ -1,3 +1,7 @@
+<?php
+require 'header.php';
+?>
+
 <div class="banner"><p><i>"Soyons inspirés"</i></p>
 </div>
 <div class="container presentationentreprise">
@@ -24,3 +28,7 @@
         </div>
     </div>
 </div>
+
+<?php
+require 'footer.php';
+?>

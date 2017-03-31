@@ -1,4 +1,6 @@
-
+<?php
+require 'header.php';
+?>
 
 
 
@@ -23,7 +25,7 @@
                     <div class="row">
                         <div class="col-md-4 col-xs-12">
                             <a href="art.html" target=_blank"><div class="thumbnail">
-                                <img src="../public/img/article1.3.jpg" alt="...">
+                                <img src="img/article1.3.jpg" alt="...">
                                 <div class="caption">
                                     <div class="row">
 
@@ -48,7 +50,7 @@
 
                         <div class="col-md-4 col-xs-12">
                             <a href="art.html" target=_blank><div class="thumbnail">
-                                <img src="../public/img/article1.3.jpg" alt="...">
+                                <img src="img/article1.3.jpg" alt="...">
                                 <div class="caption">
                                     <div class="row">
 
@@ -72,7 +74,7 @@
 
                         <div class="col-md-4 col-xs-12">
                             <a href="art.html" target=_blank><div class="thumbnail">
-                                <img src="../public/img/article1.3.jpg" alt="...">
+                                <img src="img/article1.3.jpg" alt="...">
                                 <div class="caption">
                                     <div class="row">
 
@@ -99,7 +101,7 @@
                     <div class="row">
                         <div class="col-md-4 col-xs-12">
                             <a href="art.html" target=_blank><div class="thumbnail">
-                                <img src="../public/img/article1.3.jpg" alt="...">
+                                <img src="img/article1.3.jpg" alt="...">
                                 <div class="caption">
                                     <div class="row">
 
@@ -123,7 +125,7 @@
 
                         <div class="col-md-4 col-xs-12">
                             <a href="art.html" target=_blank><div class="thumbnail">
-                                <img src="../public/img/article1.3.jpg" alt="...">
+                                <img src="img/article1.3.jpg" alt="...">
                                 <div class="caption">
                                     <div class="row">
 
@@ -147,7 +149,7 @@
 
                         <div class="col-md-4 col-xs-12">
                             <a href="art.html" target=_blank><div class="thumbnail">
-                                <img src="../public/img/article1.3.jpg" alt="...">
+                                <img src="img/article1.3.jpg" alt="...">
                                 <div class="caption">
                                     <div class="row">
 
@@ -173,3 +175,6 @@
         </div>
     </div>
 
+<?php
+require 'footer.php';
+?>
