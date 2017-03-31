@@ -8,6 +8,12 @@ Table of Content
 ==================================================
 */
 
+
+.marque:hover, .marque:active, .marque:focus, .marque:visited {
+    text-decoration: none;
+    color: black;
+}
+
 body {
     font-family: 'PT Sans', sans-serif;
 }
@@ -19,95 +25,6 @@ body {
 
 .borderBlack {
     border: 1px solid black;
-}
-
-/*---------------------------------------
-   NAVBAR
------------------------------------------*/
-
-.navbar {
-    margin-top: -100px
-}
-
-.navbar-brand {
-    padding: 15px 0;
-}
-
-.navbar-default {
-    background-color: #f8f8f8;
-    border: none;
-}
-
-.titreCadreNav {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 20px;
-    border: 2px solid white;
-    padding: 5px 8px;
-    text-decoration: none;
-    color: white;
-}
-
-@media (min-width: 768px) {
-    .navbar-default {
-        background-color: transparent;
-    }
-
-    .navbar-default .navbar-nav > li > a {
-        color: #B5B5B5;
-        font-family: 'Raleway', sans-serif;
-    }
-
-    .navbar-default .navbar-nav > li > a:hover {
-        color: #f39c12;
-    }
-
-    .navbar-default .navbar-nav > li > a:focus {
-        color: #B5B5B5;
-    }
-
-    .navbar-default {
-        -webkit-transition: all 1s;
-        -moz-transition: all 1s;
-        -o-transition: all 1s;
-        transition: all 1s;
-        z-index: 110;
-    }
-
-    .navbar-brand img {
-        padding-top: 25px;
-        height: 45px;
-        -webkit-transition: all 1s;
-        -moz-transition: all 1s;
-        -o-transition: all 1s;
-        transition: all 1s;
-    }
-
-    .navbar-default .navbar-nav > li > a {
-        -webkit-transition: all 1s;
-        -moz-transition: all 1s;
-        -o-transition: all 1s;
-        transition: all 1s;
-    }
-
-    .navbar-nav > li > a {
-        padding-top: 45px;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar-brand img {
-    }
-
-    .navbar-default {
-        /*  background-color: #fff !important; */
-    }
-}
-
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-    background: transparent;
-    color: #f39c12;
 }
 
 /*---------------------------------------
@@ -222,19 +139,20 @@ a:hover, a:active, a:focus, a:visited {
 /* fin logo */
 
 /* menu burger */
-button {
+.boutonBurger {
     height: 46px;
     width: 46px;
     position: relative;
     top: 20px;
     background-color: black;
+    border: 2px solid white;
 }
 
 .burger {
     width: 30px;
     height: 5px;
     background-color: white;
-    margin: 6px 0;
+    margin: 5px 0;
 
 }
 
@@ -246,14 +164,21 @@ button {
     display: none;
     font-size: 1.4em;
     position: relative;
-    top: 30px;
-    width:130px;
+    top: 50px;
+    right: 30px;
+    width:160px;
     height:30px;
     border: solid black 1px;
     background-color: white;
     text-align: center;
     padding: 2px 4px 2px 4px;
 }
+
+.navGenerale, .navGenerale:hover, .navGenerale:active, .navGenerale:focus, .navGenerale:visited {
+    color: black;
+    text-decoration: none;
+}
+
 /* fin menu burger */
 
 /* manifeste */
@@ -266,7 +191,7 @@ button {
     background-repeat: no-repeat;
     background-image: url("../img/manifeste/manifeste.jpg");
     background-size: cover;
-    margin-top: 100px;
+    margin-top: 90px;
 
 }
 
@@ -353,10 +278,11 @@ button {
 
 .banner {
     background-size: cover;
-    background-image: url("img/entreprise/entreprise - copie.jpg");
+    background-image: url("../img/entreprise/entreprise - copie.jpg");
     background-repeat: no-repeat;
     height: 250px;
-    margin: 50px;
+    /*margin: 50px;*/
+    margin-top: 90px;
     color: white;
     position: relative;
 }
