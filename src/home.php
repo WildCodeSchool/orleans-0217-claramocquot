@@ -75,19 +75,19 @@
 
             <div class="row">
                 <div class="col-xs-12 col-md-4">
-                    <a href="#" class="thumbnail">
+                    <a href="index.php?route=entreprise" class="thumbnail">
                         <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
                              alt="thumbnail image">
                     </a>
                 </div>
                 <div class="col-xs-12 col-md-4">
-                    <a href="#" class="thumbnail">
+                    <a href="index.php?route=manifeste" class="thumbnail">
                         <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
                              alt="thumbnail image">
                     </a>
                 </div>
                 <div class="col-xs-12 col-md-4">
-                    <a href="#" class="thumbnail">
+                    <a href="index.php?route=articles" class="thumbnail">
                         <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
                              alt="thumbnail image">
                     </a>
