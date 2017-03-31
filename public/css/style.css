@@ -8,7 +8,6 @@ Table of Content
 ==================================================
 */
 
-
 .marque:hover, .marque:active, .marque:focus, .marque:visited {
     text-decoration: none;
     color: black;
@@ -67,15 +66,44 @@ body {
 -----------------------------------------*/
 
 .landingPageNavigation .section_overlay {
-    background-color: rgba(0, 0, 0, 0.33);
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 .thumbnail {
     display: block;
-    vertical-align: middle;
     border-radius: 0;
+    padding: 0px;
+    border: none;
+    max-width: 100%;
+    height: auto;
+    margin: 0px;
 }
 
+.thumbnailHome {
+    display: block;
+    vertical-align: middle;
+    border-radius: 0;
+    border: 4px solid black;
+    position:relative;
+    overflow:hidden;
+    max-width: 100%;
+    height: auto;
+    margin: 15px 0;
+}
+
+.captionHome {
+    position:absolute;
+    top:0;
+    right:0;
+    background:rgba(0, 0, 0, 0.33);
+    width:100%;
+    height:100%;
+    padding:2%;
+    display: none;
+    text-align:center;
+    color:black;
+    z-index:2;
+}
 /*---------------------------------------
    SECTION ACTUALITÉS
 -----------------------------------------*/
