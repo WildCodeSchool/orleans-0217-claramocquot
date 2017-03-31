@@ -28,31 +28,6 @@
 
 <section class="landingPageAccueil" id="accueil">
     <div class="section_overlay">
-
-        <!-- NAVBAR -->
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#navigation">
-                        <span class="titreCadreNav">CLARA MOCQUOT</span>
-                    </a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#navigation">BURGER</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- /NAVBAR -->
-
         <div class="container home-container">
             <a href="#navigation"><span class="titreCadre1">CLARA MOCQUOT</span></a>
             <h1 class="title">COIFFES & CHAPEAUX<br>
@@ -164,6 +139,10 @@
 <script src="js/smoothscroll.js"></script>
 <script src="js/jquery.parallax-1.1.3.js"></script>
 <script src="js/landingPage.js"></script>
+
+<?php
+require 'footer.php';
+?>
 
 </body>
 </html>
