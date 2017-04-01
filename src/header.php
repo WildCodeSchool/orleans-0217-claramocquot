@@ -18,7 +18,7 @@
 
 				<span class="col-xs-3">
 
-					<p class="marque"><a href="index.php#navigation"> Clara MOCQUOT</a></p>
+					<span class="marque"><a href="index.php#navigation"> Clara MOCQUOT</a></span>
 					<p class="marque2"><a href="index.php"> CM </a></p>
 
 				</span>

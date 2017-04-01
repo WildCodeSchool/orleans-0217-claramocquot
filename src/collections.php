@@ -5,49 +5,56 @@ require 'header.php';
 
 <div class="container">
 
-
-
-    <div class="row collection">
-        <div class="col-xs-12 col-md-4">
-            <a href="" class="thumbnail">
-                <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
-                     alt="thumbnail image">
-            </a>
-        </div>
-        <div class="col-xs-12 col-md-4">
-            <a href="" class="thumbnail">
-                <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
-                     alt="thumbnail image">
-            </a>
-        </div>
-        <div class="col-xs-12 col-md-4">
-            <a href="" class="thumbnail">
-                <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
-                     alt="thumbnail image">
-            </a>
-        </div>
-    </div>
-
     <div class="row">
-        <div class="col-xs-12 col-md-4">
-            <a href="" class="thumbnail">
-                <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
-                     alt="thumbnail image">
-            </a>
-        </div>
-        <div class="col-xs-12 col-md-4">
-            <a href="" class="thumbnail">
-                <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
-                     alt="thumbnail image">
-            </a>
-        </div>
-        <div class="col-xs-12 col-md-4">
-            <a href="" class="thumbnail">
-                <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
-                     alt="thumbnail image">
-            </a>
+        <div class="col-md-10 col-md-offset-1">
+
+            <div class="row collection">
+                    <div class="col-xs-5 col-md-4 borderBlack">
+                        <a href="" class="thumbnail">
+                            <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                 alt="thumbnail image">
+                        </a>
+                    </div>
+                    <div class="col-xs-5 col-md-4 borderBlack">
+                        <a href="" class="thumbnail">
+                            <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                 alt="thumbnail image">
+                        </a>
+                    </div>
+                    <div class="col-xs-5 col-md-4 borderBlack">
+                        <a href="" class="thumbnail">
+                            <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                 alt="thumbnail image">
+                        </a>
+                    </div>
+            </div>
+
+            <div class="row">
+                    <div class="col-xs-5 col-md-4 borderBlack">
+                        <a href="" class="thumbnail">
+                            <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                 alt="thumbnail image">
+                        </a>
+                    </div>
+                    <div class="col-xs-5 col-md-4 borderBlack">
+                        <a href="" class="thumbnail">
+                            <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                 alt="thumbnail image">
+                        </a>
+                    </div>
+                    <div class="col-xs-5 col-md-4 borderBlack">
+                        <a href="" class="thumbnail">
+                            <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                 alt="thumbnail image">
+                        </a>
+                    </div>
+            </div>
+
         </div>
     </div>
+
+
+
 
     <div class="row">
         <div class="col-md-4 col-md-offset-4">

@@ -6,6 +6,7 @@ require 'header.php';
 
     <div class="container-fluid">
 
+
         <div class="row">
             <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
 
@@ -22,7 +23,7 @@ require 'header.php';
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row rang_article">
                         <div class="col-md-4 col-xs-12">
                             <a href="art.html" target=_blank"><div class="thumbnail pad_articles borderBlack">
                                 <img src="img/article1.3.jpg" alt="...">
@@ -98,7 +99,7 @@ require 'header.php';
                     </div>
 
 
-                    <div class="row">
+                    <div class="row rang_article">
                         <div class="col-md-4 col-xs-12">
                             <a href="art.html" target=_blank><div class="thumbnail pad_articles borderBlack">
                                 <img src="img/article1.3.jpg" alt="...">

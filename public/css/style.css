@@ -31,7 +31,7 @@ body {
 }
 
 .borderBlack {
-    border: 3px solid black;
+    border: solid black 3px;
 }
 
 /*---------------------------------------
@@ -196,7 +196,7 @@ a:hover, a:active, a:focus, a:visited {
 
 .burger {
     width: 30px;
-    height: 5px;
+    height: 2px;
     background-color: white;
     margin: 5px 0;
 
@@ -217,12 +217,13 @@ a:hover, a:active, a:focus, a:visited {
     border: solid black 1px;
     background-color: white;
     text-align: center;
-    padding: 2px 4px 2px 4px;
+    border: 2px black solid;
+    padding-bottom: 3px;
 }
 
 .navGenerale, .navGenerale:hover, .navGenerale:active, .navGenerale:focus, .navGenerale:visited {
     color: black;
-    text-decoration: none;
+    text-decoration: none
 }
 
 /* fin menu burger */
@@ -313,6 +314,11 @@ a:hover, a:active, a:focus, a:visited {
 
 .grand {
     border-left: solid black 1px;
+    text-align: justify;
+}
+
+.rang_article{
+    margin-bottom: 25px;
 }
 /* fin page articles */
 
@@ -374,6 +380,10 @@ figcaption {
 
 .collection {
     padding-top: 120px;
+}
+
+.collecCadre {
+    margin: 12px;;
 }
 
 /* fin page collection*/
