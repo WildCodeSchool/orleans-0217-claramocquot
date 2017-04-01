@@ -191,7 +191,10 @@ desired effect
 
         <!-- Main content -->
         <section class="content">
-            Contenu de la page
+
+            <div id="summernote"></div>
+
+
             <!-- Your Page Content Here -->
 
         </section>
@@ -204,7 +207,7 @@ desired effect
         <!-- To the right -->
 
         <!-- Default to the left -->
-        <strong><a href="www.wildcodeschool.fr">Wild code school 2017 </a>.</strong> All rights reserved.
+        <strong><a href="http://www.wildcodeschool.fr">Wild code school 2017 </a>.</strong> All rights reserved.
     </footer>
 
     <!-- Control Sidebar -->
@@ -259,6 +262,8 @@ desired effect
 <script src="js/jquery.slimscroll.min.js"></script>
 <script src="js/fastclick.min.js"></script>
 <script src="js/summernote.min.js"></script>
+<script src="js/admin.js"></script>
+<script src="lang/summernote-fr-FR.js"></script>
 
 
 </body>
