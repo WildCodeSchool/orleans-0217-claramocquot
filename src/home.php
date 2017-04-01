@@ -9,13 +9,13 @@
 
     <!-- Importation des fonts Google -->
     <link href="https://fonts.googleapis.com/css?family=Overpass|PT+Sans|PT+Sans+Caption|PT+Serif|Roboto+Condensed"
-          rel="stylesheet" />
+          rel="stylesheet"/>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
 
     <!-- Font Awesome -->
-    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
 
     <!-- Style -->
     <link href="css/style.css" type="text/css" rel="stylesheet">
@@ -26,12 +26,11 @@
     SECTION ACCUEIL
 ============================== -->
 
-<section class="landingPageAccueil" id="accueil">
-    <div class="section_overlay">
-        <div class="container home-container">
-            <a href="#navigation"><span class="titreCadre1">CLARA MOCQUOT</span></a>
-            <h1 class="title">COIFFES & CHAPEAUX<br>
-                sur-mesure et à la demande</h1>
+<section class="container-fluid landingPageAccueil" id="accueil">
+    <div class="row section_overlay">
+        <div class="col-xs-offset-3 col-xs-6 home-container titreCadre1">
+            <a href="#navigation" class="titreGeneral"><span>CLARA MOCQUOT</span><hr class="trait"><h1 class="title">COIFFES & CHAPEAUX<br>
+                    sur-mesure et à la demande</h1></a>
         </div>
     </div>
 </section>
@@ -42,69 +41,132 @@
 
 <section class="landingPageNavigation" id="navigation">
     <div class="section_overlay">
-        <div class="container home-container">
 
-            <span class="titreCadre2">NAVIGATION</span>
-            <br><br>
+
+        <div class="container">
 
             <div class="row">
-                <div class="col-xs-12 col-md-4">
-                    <a href="index.php?route=entreprise" class="thumbnail">
-                        <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
-                             alt="thumbnail image">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <a href="index.php?route=manifeste" class="thumbnail">
-                        <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
-                             alt="thumbnail image">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <a href="index.php?route=articles" class="thumbnail">
-                        <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
-                             alt="thumbnail image">
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-md-4">
-                    <a href="#" class="thumbnail">
-                        <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
-                             alt="thumbnail image">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <a href="#" class="thumbnail">
-                        <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
-                             alt="thumbnail image">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <a href="#" class="thumbnail">
-                        <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
-                             alt="thumbnail image">
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-md-4">
-                    <a href="#" class="thumbnail">
-                        <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
-                             alt="thumbnail image">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <a href="#" class="thumbnail">
-                        <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
-                             alt="thumbnail image">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <a href="#" class="thumbnail">
-                        <img src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
-                             alt="thumbnail image">
-                    </a>
+                <div class="col-md-10 col-md-offset-1">
+
+
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4">
+                            <div class="thumbnailHome">
+                                <div class="captionHome">
+                                    <a href="index.php?route=entreprise">
+                                        <h2>ENTREPRISE</h2>
+                                    </a>
+                                </div>
+                                <img class="thumbnail"
+                                     src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                     alt="thumbnail image">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="thumbnailHome">
+                                <div class="captionHome">
+                                    <a href="index.php?route=manifeste">
+                                        <h2>MANIFESTE</h2>
+                                    </a>
+                                </div>
+                                <img class="thumbnail"
+                                     src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                     alt="thumbnail image">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="thumbnailHome">
+                                <div class="captionHome">
+                                    <a href="index.php?route=articles">
+                                        <h2>ARTICLES</h2>
+                                    </a>
+                                </div>
+                                <img class="thumbnail"
+                                     src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                     alt="thumbnail image">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4">
+                            <div class="thumbnailHome">
+                                <div class="captionHome">
+                                    <a href="index.php?route=entreprise">
+                                        <h2>ENTREPRISE</h2>
+                                    </a>
+                                </div>
+                                <img class="thumbnail"
+                                     src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                     alt="thumbnail image">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="thumbnailHome">
+                                <div class="captionHome">
+                                    <a href="index.php?route=manifeste">
+                                        <h2>MANIFESTE</h2>
+                                    </a>
+                                </div>
+                                <img class="thumbnail"
+                                     src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                     alt="thumbnail image">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="thumbnailHome">
+                                <div class="captionHome">
+                                    <a href="index.php?route=articles">
+                                        <h2>ARTICLES</h2>
+                                    </a>
+                                </div>
+                                <img class="thumbnail"
+                                     src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                     alt="thumbnail image">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4">
+                            <div class="thumbnailHome">
+                                <div class="captionHome">
+                                    <a href="index.php?route=entreprise">
+                                        <h2>ENTREPRISE</h2>
+                                    </a>
+                                </div>
+                                <img class="thumbnail"
+                                     src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                     alt="thumbnail image">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="thumbnailHome">
+                                <div class="captionHome">
+                                    <a href="index.php?route=manifeste">
+                                        <h2>MANIFESTE</h2>
+                                    </a>
+                                </div>
+                                <img class="thumbnail"
+                                     src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                     alt="thumbnail image">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="thumbnailHome">
+                                <div class="captionHome">
+                                    <a href="index.php?route=articles">
+                                        <h2>ARTICLES</h2>
+                                    </a>
+                                </div>
+                                <img class="thumbnail"
+                                     src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                     alt="thumbnail image">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -136,11 +198,10 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/landingPage.js"></script>
+<script src="js/thumbnailHome.js"></script>
 
 
 <?php
 require 'footer.php';
 ?>
-
-</body>
-</html>
