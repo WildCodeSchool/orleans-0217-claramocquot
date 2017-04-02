@@ -42,7 +42,7 @@
 <section class="landingPageNavigation" id="navigation">
     <div class="section_overlay">
 
-        <div class="logoHome"><a href="index.php#navigation"> Clara MOCQUOT</a></div>
+        <div class="logoHome"><a href="#navigation" id="link" class="titreGeneral borderBlack"> Clara MOCQUOT</a></div>
 
         <div class="container">
 

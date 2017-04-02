@@ -22,7 +22,7 @@ body {
     position: relative;
 }
 
-.titregeneral, .titreGeneral:hover, .titreGeneral:active, .titreGeneral:focus, .titreGeneral:visited{
+.titreGeneral, .titreGeneral:hover, .titreGeneral:active, .titreGeneral:focus, .titreGeneral:visited{
     color: black;
 }
 .title {
@@ -168,7 +168,7 @@ body {
 
 /* logo */
 
-a:hover, a:active, a:focus, a:visited {
+a, a:hover, a:active, a:focus, a:visited {
     text-decoration: none;
     color: white;
 }

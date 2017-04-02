@@ -4,7 +4,7 @@
 $(document).ready(function() {
     $('#summernote').summernote({
         height: 500,
-        maxHeight: 500,
+        minHeight: 500,
         lang: 'fr-FR',
         fontNames: ['PT sans'],
         fontNamesIgnoreCheck: ['PT sans'],
@@ -34,5 +34,6 @@ $(document).ready(function() {
             ]
         }
     });
+
 });
 

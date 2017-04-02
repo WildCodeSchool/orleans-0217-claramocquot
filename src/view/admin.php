@@ -172,6 +172,22 @@ desired effect
                         <li><a href="#">Portrait</a></li>
                     </ul>
                 </li>
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-indent"></i> <span>Modifier un article</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">Evenement</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Marraines</a></li>
+                        <li><a href="#">Partenaires</a></li>
+                        <li><a href="#">Prestations Pro.</a></li>
+                        <li><a href="#">Portrait</a></li>
+                    </ul>
+                </li>
+
                 <li class="header">GESTION DES MESSAGES</li>
                 <li><a href="#"><i class="fa fa-envelope-o"></i> <span>Consulter les messages</span></a></li>
             </ul>
@@ -191,9 +207,10 @@ desired effect
 
         <!-- Main content -->
         <section class="content">
-
-            <div id="summernote"></div>
-
+            <form action='../src/controller/affichage.php' method="POST">
+                <textarea class="input-block-level" id="summernote" name="content"></textarea>
+                <input type="submit" id="create" class="btn btn-default" name="submit" value="Créer">
+            </form>
 
             <!-- Your Page Content Here -->
 
