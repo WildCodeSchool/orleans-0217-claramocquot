@@ -12,15 +12,6 @@ use clara\DB;
 
 class SummernoteController extends Controller
 {
-     /**
-     * @return string
-     */
-    public function listAll()
-    {
-        $db = new DB();
-        $summernote = $db -> findAll('summernote');
-        return $this->render('articles.php', ['summernote'=>$summernote]);
-    }
 
     /**
      * @param $id
@@ -29,33 +20,68 @@ class SummernoteController extends Controller
     public function show($id)
     {
         $db = new DB();
-        $summernote = $db -> findOne('summernote', $id);
-        return $this->render('article.php', ['summernote'=>$summernote]);
+        $summernote = $db->findOne('summernote', $id);
+        return $this->render('article.php', ['summernote' => $summernote]);
 
     }
 
     /**
-     * j'ajoute un élève
+     * @param $id
+     * @return string
      */
-    public function add() {
+    public function showType($type)
+    {
+        $db = new DB();
+        $summernote = $db->findAllType('summernote', $type);
+        return $this->render('articles.php', ['summernote' => $summernote]);
 
     }
 
     /**
-     *
+     * @param $title
+     * @param $type
+     * @param $content
+     * @param $visibility
+     * @param $date
+     * @param $img
+     * @param $sumup
+     * @return string
      */
-    public function update() {
-
+    public function add($title, $type, $content, $visibility, $date, $img, $sumup)
+    {
+        $db= new DB();
+        $summernote = $db->addOneType('summernote', $title, $type, $content, $visibility, $date, $img, $sumup);
+        return $this->render('addSummernote.php', ['summernote' => $summernote]);
     }
 
     /**
-     *
+     * @param $id
+     * @param $title
+     * @param $type
+     * @param $content
+     * @param $visibility
+     * @param $date
+     * @param $img
+     * @param $sumup
+     * @return string
      */
-    public function delete() {
+    public function update($id, $title, $type, $content, $visibility, $date, $img, $sumup)
+    {
+        $db= new DB();
+        $summernote = $db->updateOneType('summernote', $id, $title, $type, $content, $visibility, $date, $img, $sumup);
+        return $this->render('updateSummernote.php', ['summernote' => $summernote]);
+    }
 
+    /**
+     * @param $id
+     * @return string
+     */
+    public function delete($id)
+    {
+        $db= new DB();
+        $summernote = $db->deleteOneType('summernote', $id);
+        return $this->render('deleteSummernote.php', ['summernote' => $summernote]);
     }
 
 
-
-}
 }

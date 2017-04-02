@@ -39,9 +39,7 @@ class DB
         $req = "SELECT * FROM $table WHERE id=:id";
         $prep = $this->db->prepare($req);
         $prep->bindValue(':id', $id, \PDO::PARAM_INT);
-
         $prep->execute();
-
         $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\' . ucfirst($table));
         return $res[0];
     }
@@ -66,12 +64,11 @@ class DB
      * @param $id
      * @return mixed
      */
-    public function findOneType($table, $type, $id)
+    public function findOneType($table, $id)
     {
-        $req = "SELECT * FROM $table WHERE id=:id && type=:type";
+        $req = "SELECT * FROM $table WHERE id=:id";
         $prep = $this->db->prepare($req);
         $prep->bindValue(':id', $id, \PDO::PARAM_INT);
-        $prep->bindValue(':type', $type, \PDO::PARAM_STR);
         $prep->execute();
         $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\' . ucfirst($table));
 
@@ -83,15 +80,21 @@ class DB
      * @param $id
      * @return mixed
      */
-    public function addOneType($table, $type)
+    public function addOneType($table, $title, $type, $content, $visibility, $date, $img, $sumup)
     {
-        $req = "INSERT INTO * FROM $table WHERE id=:id && type=:type";
+        $req = "INSERT INTO $table(title, type, content, visibility, date, img, sumup) VALUES(:title, :type, :content, :date, :img, :sumup)";
         $prep = $this->db->prepare($req);
+        $prep->bindValue(':title', $title, \PDO::PARAM_STR);
         $prep->bindValue(':type', $type, \PDO::PARAM_STR);
+        $prep->bindValue(':content', $content, \PDO::PARAM_STR);
+        $prep->bindValue(':visibility', $visibility, \PDO::PARAM_STR);
+        $prep->bindValue(':date', $date, \PDO::PARAM_STR);
+        $prep->bindValue(':img', $img, \PDO::PARAM_STR);
+        $prep->bindValue(':sumup', $sumup, \PDO::PARAM_STR);
         $prep->execute();
-        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\' . ucfirst($table));
+        $res = 'Element ajouté';
 
-        return $res[0];
+        return $res;
     }
 
     /**
@@ -99,16 +102,22 @@ class DB
      * @param $id
      * @return mixed
      */
-    public function updateOneType($table, $type, $id)
+    public function updateOneType($table, $id, $title, $type, $content, $visibility, $date, $img, $sumup)
     {
-        $req = "SELECT * FROM $table WHERE id=:id && type=:type";
+        $req = "UPDATE $table SET (title=:title, type=:type, content=:content, visibility=;visibility, date=:date, img=:img, sumup=:sumup) WHERE id=:id";
         $prep = $this->db->prepare($req);
         $prep->bindValue(':id', $id, \PDO::PARAM_INT);
+        $prep->bindValue(':title', $title, \PDO::PARAM_STR);
         $prep->bindValue(':type', $type, \PDO::PARAM_STR);
+        $prep->bindValue(':content', $content, \PDO::PARAM_STR);
+        $prep->bindValue(':visibility', $visibility, \PDO::PARAM_STR);
+        $prep->bindValue(':date', $date, \PDO::PARAM_STR);
+        $prep->bindValue(':img', $img, \PDO::PARAM_STR);
+        $prep->bindValue(':sumup', $sumup, \PDO::PARAM_STR);
         $prep->execute();
-        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\' . ucfirst($table));
+        $res = 'Element modifié';
 
-        return $res[0];
+        return $res;
     }
 
     /**
@@ -116,16 +125,15 @@ class DB
      * @param $id
      * @return mixed
      */
-    public function deleteOneType($table, $type, $id)
+    public function deleteOneType($table, $id)
     {
-        $req = "SELECT * FROM $table WHERE id=:id && type=:type";
+        $req = "DELETE FROM $table WHERE id=:id";
         $prep = $this->db->prepare($req);
         $prep->bindValue(':id', $id, \PDO::PARAM_INT);
-        $prep->bindValue(':type', $type, \PDO::PARAM_STR);
         $prep->execute();
-        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\' . ucfirst($table));
+        $res = 'Element supprimé';
 
-        return $res[0];
+        return $res;
     }
 
 }

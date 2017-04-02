@@ -15,6 +15,7 @@ class Summernote
     private $title;
     private $type;
     private $content;
+    private $visibility;
     private $date;
     private $img;
     private $sumup;
@@ -81,6 +82,22 @@ class Summernote
     public function setContent($content)
     {
         $this->content = $content;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getVisibility()
+    {
+        return $this->visibility;
+    }
+
+    /**
+     * @param mixed $visibility
+     */
+    public function setVisibility($visibility)
+    {
+        $this->visibility = $visibility;
     }
 
     /**
