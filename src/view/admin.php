@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Clara Mocquot Admin</title>
-        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <link href="https://fonts.googleapis.com/css?family=Overpass|PT+Sans|PT+Sans+Caption|PT+Serif|Roboto+Condensed"
-              rel="stylesheet"/>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-        <link rel="stylesheet" href="css/AdminLTE.min.css">
-        <link rel="stylesheet" href="css/skins/skin-black.min.css">
-        <link rel="stylesheet" href="css/summernote.css">
-        <link rel="stylesheet" href="css/admin.css">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clara Mocquot Admin</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link href="https://fonts.googleapis.com/css?family=Overpass|PT+Sans|PT+Sans+Caption|PT+Serif|Roboto+Condensed"
+          rel="stylesheet"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="css/AdminLTE.min.css">
+    <link rel="stylesheet" href="css/skins/skin-black.min.css">
+    <link rel="stylesheet" href="css/summernote.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
 <!--
 BODY TAG OPTIONS:
 =================
@@ -154,7 +154,8 @@ desired effect
             <ul class="sidebar-menu">
                 <li class="header">GESTION DU CONTENU</li>
                 <!-- Optionally, you can add icons to the links -->
-                <li class="active"><a href="#"><i class="fa fa-file-image-o"></i> <span>Changer l'image d'accueil</span></a></li>
+                <li class="active"><a href="#"><i class="fa fa-file-image-o"></i> <span>Changer l'image d'accueil</span></a>
+                </li>
                 <li><a href="#"><i class="fa fa-plus-square-o"></i> <span>Ajouter un produit</span></a></li>
                 <li><a href="#"><i class="fa fa-refresh"></i> <span>Modifier un produit</span></a></li>
                 <li class="treeview">
@@ -207,10 +208,6 @@ desired effect
 
         <!-- Main content -->
         <section class="content">
-            <form action='../src/controller/affichage.php' method="POST">
-                <textarea class="input-block-level" id="summernote" name="content"></textarea>
-                <input type="submit" id="create" class="btn btn-default" name="submit" value="Créer">
-            </form>
 
             <!-- Your Page Content Here -->
 
@@ -238,7 +235,7 @@ desired effect
         <div class="tab-content">
             <!-- Home tab content -->
 
-                <!-- /.control-sidebar-menu -->
+            <!-- /.control-sidebar-menu -->
 
             <!-- /.tab-pane -->
             <!-- Stats tab content -->
@@ -258,7 +255,7 @@ desired effect
                         </label>
                         <input type="text" class="pull-right" value="Message">
                     </div>
-                    <br /><br />
+                    <br/><br/>
                     <input class="btn btn-default text-center" type="submit">
                     <!-- /.form-group -->
                 </form>

@@ -1,7 +1,7 @@
 /**
  * Created by julien on 01/04/17.
  */
-$(document).ready(function() {
+$(document).ready(function () {
     $('#summernote').summernote({
         height: 500,
         minHeight: 500,

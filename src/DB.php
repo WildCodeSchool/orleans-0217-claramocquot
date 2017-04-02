@@ -22,10 +22,11 @@ class DB
      * @param $table
      * @return array
      */
-    public function findAll($table) {
+    public function findAll($table)
+    {
         $req = "SELECT * FROM $table";
         $res = $this->db->query($req);
-        return $res->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\'.ucfirst($table));
+        return $res->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\' . ucfirst($table));
     }
 
     /**
@@ -33,14 +34,15 @@ class DB
      * @param $id
      * @return mixed
      */
-    public function findOne($table, $id) {
+    public function findOne($table, $id)
+    {
         $req = "SELECT * FROM $table WHERE id=:id";
         $prep = $this->db->prepare($req);
         $prep->bindValue(':id', $id, \PDO::PARAM_INT);
 
         $prep->execute();
 
-        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\'.ucfirst($table));
+        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\' . ucfirst($table));
         return $res[0];
     }
 
@@ -48,10 +50,15 @@ class DB
      * @param $table
      * @return array
      */
-    public function findAllEvenement($table) {
-        $req = "SELECT * FROM $table";
-        $res = $this->db->query($req);
-        return $res->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\'.ucfirst($table));
+    public function findAllType($table, $type)
+    {
+        $req = "SELECT * FROM $table WHERE type=:type";
+        $prep = $this->db->prepare($req);
+        $prep->bindValue(':type', $type, \PDO::PARAM_STR);
+        $prep->execute();
+        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\' . ucfirst($table));
+
+        return $res;
     }
 
     /**
@@ -59,25 +66,16 @@ class DB
      * @param $id
      * @return mixed
      */
-    public function findOneEvenement($table, $id) {
-        $req = "SELECT * FROM $table WHERE id=:id";
+    public function findOneType($table, $type, $id)
+    {
+        $req = "SELECT * FROM $table WHERE id=:id && type=:type";
         $prep = $this->db->prepare($req);
         $prep->bindValue(':id', $id, \PDO::PARAM_INT);
-
+        $prep->bindValue(':type', $type, \PDO::PARAM_STR);
         $prep->execute();
+        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\' . ucfirst($table));
 
-        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\'.ucfirst($table));
         return $res[0];
-    }
-
-    /**
-     * @param $table
-     * @return array
-     */
-    public function findAllBlog($table) {
-        $req = "SELECT * FROM $table";
-        $res = $this->db->query($req);
-        return $res->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\'.ucfirst($table));
     }
 
     /**
@@ -85,25 +83,15 @@ class DB
      * @param $id
      * @return mixed
      */
-    public function findOneBlog($table, $id) {
-        $req = "SELECT * FROM $table WHERE id=:id";
+    public function addOneType($table, $type)
+    {
+        $req = "INSERT INTO * FROM $table WHERE id=:id && type=:type";
         $prep = $this->db->prepare($req);
-        $prep->bindValue(':id', $id, \PDO::PARAM_INT);
-
+        $prep->bindValue(':type', $type, \PDO::PARAM_STR);
         $prep->execute();
+        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\' . ucfirst($table));
 
-        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\'.ucfirst($table));
         return $res[0];
-    }
-
-    /**
-     * @param $table
-     * @return array
-     */
-    public function findAllMarraine($table) {
-        $req = "SELECT * FROM $table";
-        $res = $this->db->query($req);
-        return $res->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\'.ucfirst($table));
     }
 
     /**
@@ -111,25 +99,16 @@ class DB
      * @param $id
      * @return mixed
      */
-    public function findOneMarraine($table, $id) {
-        $req = "SELECT * FROM $table WHERE id=:id";
+    public function updateOneType($table, $type, $id)
+    {
+        $req = "SELECT * FROM $table WHERE id=:id && type=:type";
         $prep = $this->db->prepare($req);
         $prep->bindValue(':id', $id, \PDO::PARAM_INT);
-
+        $prep->bindValue(':type', $type, \PDO::PARAM_STR);
         $prep->execute();
+        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\' . ucfirst($table));
 
-        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\'.ucfirst($table));
         return $res[0];
-    }
-
-    /**
-     * @param $table
-     * @return array
-     */
-    public function findAllPrestation($table) {
-        $req = "SELECT * FROM $table";
-        $res = $this->db->query($req);
-        return $res->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\'.ucfirst($table));
     }
 
     /**
@@ -137,66 +116,16 @@ class DB
      * @param $id
      * @return mixed
      */
-    public function findOnePrestation($table, $id) {
-        $req = "SELECT * FROM $table WHERE id=:id";
+    public function deleteOneType($table, $type, $id)
+    {
+        $req = "SELECT * FROM $table WHERE id=:id && type=:type";
         $prep = $this->db->prepare($req);
         $prep->bindValue(':id', $id, \PDO::PARAM_INT);
-
+        $prep->bindValue(':type', $type, \PDO::PARAM_STR);
         $prep->execute();
+        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\' . ucfirst($table));
 
-        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\'.ucfirst($table));
         return $res[0];
     }
 
-    /**
-     * @param $table
-     * @return array
-     */
-    public function findAllPortrait($table) {
-        $req = "SELECT * FROM $table";
-        $res = $this->db->query($req);
-        return $res->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\'.ucfirst($table));
-    }
-
-    /**
-     * @param $table
-     * @param $id
-     * @return mixed
-     */
-    public function findOnePortrait($table, $id) {
-        $req = "SELECT * FROM $table WHERE id=:id";
-        $prep = $this->db->prepare($req);
-        $prep->bindValue(':id', $id, \PDO::PARAM_INT);
-
-        $prep->execute();
-
-        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\'.ucfirst($table));
-        return $res[0];
-    }
-
-    /**
-     * @param $table
-     * @return array
-     */
-    public function findAllPartenaire($table) {
-        $req = "SELECT * FROM $table";
-        $res = $this->db->query($req);
-        return $res->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\'.ucfirst($table));
-    }
-
-    /**
-     * @param $table
-     * @param $id
-     * @return mixed
-     */
-    public function findOnePartenaire($table, $id) {
-        $req = "SELECT * FROM $table WHERE id=:id";
-        $prep = $this->db->prepare($req);
-        $prep->bindValue(':id', $id, \PDO::PARAM_INT);
-
-        $prep->execute();
-
-        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\'.ucfirst($table));
-        return $res[0];
-    }
 }

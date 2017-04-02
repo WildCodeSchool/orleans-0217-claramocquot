@@ -6,7 +6,7 @@
  * Time: 15:34
  */
 
-namespace clara;
+namespace clara\model;
 
 
 class Summernote
