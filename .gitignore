@@ -5,3 +5,4 @@ config/connect.php
 /vendor/
 summernote
 AdminLTE-2.3.11
+pfbc3.1-php5.3
