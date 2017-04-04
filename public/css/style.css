@@ -24,6 +24,7 @@ body {
 
 .titreGeneral, .titreGeneral:hover, .titreGeneral:active, .titreGeneral:focus, .titreGeneral:visited{
     color: black;
+    padding: 10px;
 }
 .title {
     color: black;
@@ -54,6 +55,7 @@ body {
     border: 7px solid black;
     text-decoration: none;
     color: black;
+    margin-top: 50px;
 }
 
 .titreCadre2 {
@@ -64,6 +66,7 @@ body {
     text-decoration: none;
     color: black;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 .trait {
     border: 1px solid black;
@@ -71,9 +74,9 @@ body {
 }
 
 .home-container {
-    margin-top: 260px;
+    margin-top: 200px;
     text-align: center;
-    padding: 10px 0 30px 0;
+    padding: 80px 0 80px 0;
     background-color: rgba(255,255,255,0.8);
 }
 /*---------------------------------------
@@ -107,7 +110,16 @@ body {
     overflow:hidden;
     max-width: 100%;
     height: auto;
-    margin: 10px 0;
+    margin: 0;
+}
+
+.borderPlus {
+    border: 2px solid black;
+    margin-top: 30px;
+}
+
+.stopPadding {
+    padding: 0;
 }
 
 .captionHome {
@@ -191,10 +203,11 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .logoHome {
     position: fixed;
-    top: 70px;
-    left: 100px;
-    font-size: 25px;
+    top: 30px;
+    left: 20px;
+    font-size: 20px;
     color: black;
+    text-transform: uppercase;
 }
 
 /* fin logo */
@@ -399,6 +412,10 @@ footer img {
 
 .contact {
     padding-top: 25px;
+}
+
+.mentions {
+
 }
 
 /*Fin du footer*/
