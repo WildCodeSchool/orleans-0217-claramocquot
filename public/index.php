@@ -1,6 +1,6 @@
 <?php
 
-/**require '../config/connect.php';**/
+require '../config/connect.php';
 
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -14,25 +14,24 @@ if (isset($_GET['route'])) {
 switch ($route) {
 
     case 'articles':
-        require '../src/articles.php';
+        require '../src/view/articles.php';
         break;
 
 
     case 'manifeste':
-        require '../src/manifeste.php';
+        require '../src/view/manifeste.php';
         break;
 
     case 'entreprise':
-        require '../src/entreprise.php';
+        require '../src/view/entreprise.php';
         break;
 
-    case 'collections':
-        require '../src/collections.php';
+    case 'admin':
+        require '../src/view/admin.php';
         break;
-
 
     default :
-        require '../src/home.php';
+        require '../src/view/home.php';
 }
 
 
