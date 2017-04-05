@@ -8,6 +8,12 @@ Table of Content
 ==================================================
 */
 
+
+@font-face{
+    font-family: 'PTSans';
+    src: url('../fonts/PTS55F-webfont.woff') format('woff');
+}
+
 .container-fluid, .row{
     margin: 0;
 }
@@ -158,11 +164,6 @@ body {
     z-index: 100;
 }
 
-
-@font-face{ 
-    font-family: 'PTSans';
-    src: url('../fonts/PTS55F-webfont.woff') format('woff');
-}
 
 /*------------------------------------
     HEADER
@@ -352,27 +353,29 @@ a, a:hover, a:active, a:focus, a:visited {
     font-size: 1.15em;
 }
 
-.txt_com{
-    position: ;
-}
-
-.cache {
-    position: ;
-    z-index: ;
-    background-color:  ;
-    height: ;
-}
-
 .gris {
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     -o-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
-
     filter: grayscale(100%);
-
 }
 /* fin page articles */
+
+/*    page collections  */
+
+.page_collec {
+    margin-top: 160px;
+    margin-bottom: 50px;
+}
+
+.titre_photo {
+    text-align: center;
+    font-family: 'PTSans', sans-serif;
+
+}
+
+/*  fin collections */
 
 /* Page entreprise*/
 
@@ -446,7 +449,6 @@ footer img {
 
 Cont{
     font-size: 20px;
-
 }
 
 .mentions {
