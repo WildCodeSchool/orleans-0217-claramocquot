@@ -143,8 +143,8 @@ body {
 
 .landingPageNouveautes .section_overlay {
     margin-top: 30px;
+    padding-bottom: 50px;
     background-color: rgba(0, 0, 0, 0.33);
-    height: 500px;
 }
 /*---------------------------------------
    SECTION ACTUALITÉS
@@ -375,6 +375,10 @@ a, a:hover, a:active, a:focus, a:visited {
 
 }
 
+.marginCollections {
+    margin-bottom: 25px;
+}
+
 /*  fin collections */
 
 /* Page entreprise*/
@@ -464,4 +468,8 @@ a {
 .borderBlack {
     border: 2px solid black;
     margin: 15px;
+}
+
+.carousel-indicators {
+    bottom: -30px;
 }

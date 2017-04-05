@@ -188,6 +188,120 @@
                 <h2 class="titreCadre2">NOUVEAUTÉS</h2>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="thumbnailHome marginCollections">
+                                        <img class="thumbnail"
+                                             src="img/modele2.4.jpg"
+                                             alt="thumbnail image">
+                                        <h1 class="titre_photo">Chapeau d'hiver</h1>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="thumbnailHome marginCollections">
+                                        <img class="thumbnail"
+                                             src="img/modele2.4.jpg"
+                                             alt="thumbnail image">
+                                        <h1 class="titre_photo">Chapeau d'été</h1>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="thumbnailHome marginCollections">
+                                        <img class="thumbnail"
+                                             src="img/modele2.4.jpg"
+                                             alt="thumbnail image">
+                                        <h1 class="titre_photo">Chapeau d'lapin</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="thumbnailHome marginCollections">
+                                        <img class="thumbnail"
+                                             src="img/modele2.4.jpg"
+                                             alt="thumbnail image">
+                                        <h1 class="titre_photo">Chapeau d'échappement</h1>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="thumbnailHome marginCollections">
+                                        <img class="thumbnail"
+                                             src="img/modele2.4.jpg"
+                                             alt="thumbnail image">
+                                        <h1 class="titre_photo">Chapeau de miel</h1>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="thumbnailHome marginCollections">
+                                        <img class="thumbnail"
+                                             src="img/modele2.4.jpg"
+                                             alt="thumbnail image">
+                                        <h1 class="titre_photo">Chapeau chapi</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="thumbnailHome marginCollections">
+                                        <img class="thumbnail"
+                                             src="img/modele2.4.jpg"
+                                             alt="thumbnail image">
+                                        <h1 class="titre_photo">Chapeau de printemps</h1>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="thumbnailHome marginCollections">
+                                        <img class="thumbnail"
+                                             src="img/modele2.4.jpg"
+                                             alt="thumbnail image">
+                                        <h1 class="titre_photo">Chapeau d'automne</h1>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="thumbnailHome marginCollections">
+                                        <img class="thumbnail"
+                                             src="img/modele2.4.jpg"
+                                             alt="thumbnail image">
+                                        <h1 class="titre_photo">Chapeau de pluie</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
