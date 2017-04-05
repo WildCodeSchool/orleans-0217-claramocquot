@@ -11,6 +11,8 @@
 	</head>
 
 	<body>
+    <div id="fb-root"></div>
+
 		<div class="container-fluid">
 
 			<!-- Header -->
