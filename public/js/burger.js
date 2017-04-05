@@ -10,4 +10,5 @@ $(document).ready(function(){
         $("#div8").fadeToggle();
         $("#div9").fadeToggle();
     });
+
 });

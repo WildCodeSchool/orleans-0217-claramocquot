@@ -30,7 +30,7 @@ require 'header.php';
                 </div>
 
                 <div class="col-xs-12 col-md-4 gris">
-                    <a href="produit.php">
+                    <a href="produit.php" title="Produit actuellement indisponible" data-toggle="tooltip" data-delay="delay: { "show": 10, "hide": 10 }">
                         <div class="thumbnailHome marginCollections">
                             <img class="thumbnail"
                                  src="img/modele2.4.jpg"
@@ -56,7 +56,7 @@ require 'header.php';
 
     <div class="row">
         <div class="col-xs-12 col-md-4 gris">
-            <a href="produit.php">
+            <a href="produit.php" title="Produit actuellement indisponible">
                 <div class="thumbnailHome marginCollections">
                     <img class="thumbnail"
                          src="img/modele2.4.jpg"
@@ -88,8 +88,8 @@ require 'header.php';
     </div>
 
     <div class="row">
-        <div class="col-xs-12 col-md-4">
-            <a href="produit.php">
+        <div class="col-xs-12 col-md-4 gris">
+            <a href="produit.php" title="Produit actuellement indisponible">
                 <div class="thumbnailHome marginCollections">
                     <img class="thumbnail"
                          src="img/modele2.4.jpg"

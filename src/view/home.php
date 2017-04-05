@@ -63,7 +63,7 @@
                                 </a>
 
                                 <img class="thumbnail"
-                                     src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                     src="img/entreprise.jpg"
                                      alt="thumbnail image">
                             </div>
                         </div>
@@ -75,7 +75,7 @@
                                     </div>
                                 </a>
                                 <img class="thumbnail"
-                                     src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                     src="img/manifeste.jpg"
                                      alt="thumbnail image">
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                                     </div>
                                 </a>
                                 <img class="thumbnail"
-                                     src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                     src="img/articles.png"
                                      alt="thumbnail image">
                             </div>
                         </div>
@@ -103,7 +103,7 @@
                                     </div>
                                 </a>
                                 <img class="thumbnail"
-                                     src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                     src="img/marraines.jpg"
                                      alt="thumbnail image">
                             </div>
                         </div>
@@ -115,7 +115,7 @@
                                     </div>
                                 </a>
                                 <img class="thumbnail"
-                                     src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                     src="img/collections.jpg"
                                      alt="thumbnail image">
                             </div>
                         </div>
@@ -127,7 +127,7 @@
                                     </div>
                                 </a>
                                 <img class="thumbnail"
-                                     src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                     src="img/partenaires.jpg"
                                      alt="thumbnail image">
                             </div>
                         </div>
@@ -143,7 +143,7 @@
                                     </div>
                                 </a>
                                 <img class="thumbnail"
-                                     src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                     src="img/prestationsPro.png"
                                      alt="thumbnail image">
                             </div>
                         </div>
@@ -155,7 +155,7 @@
                                     </div>
                                 </a>
                                 <img class="thumbnail"
-                                     src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                     src="img/evenements.jpg"
                                      alt="thumbnail image">
                             </div>
                         </div>
@@ -167,7 +167,7 @@
                                     </div>
                                 </a>
                                 <img class="thumbnail"
-                                     src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"
+                                     src="img/temoignages.jpg"
                                      alt="thumbnail image">
                             </div>
                         </div>

@@ -105,6 +105,7 @@ body {
     max-width: 100%;
     height: auto;
     margin: 0px;
+    background-size: auto;
 }
 
 .thumbnailHome {
@@ -124,7 +125,6 @@ body {
     margin-top: 70px;
     margin-bottom: 50px;
 }
-
 .stopPadding {
     padding: 0;
 }
