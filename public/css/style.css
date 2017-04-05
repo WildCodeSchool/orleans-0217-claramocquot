@@ -268,10 +268,10 @@ a, a:hover, a:active, a:focus, a:visited {
 }
 
 .contentManifest {
-    margin-top: 100px;
+    margin-top: 80px;
     padding: 50px;
     background-color: rgba(255,255,255,0.6);
-    border: 3px solid black;
+    border: 2px solid black;
     margin-bottom: 60px;
 
 }
@@ -359,14 +359,17 @@ a, a:hover, a:active, a:focus, a:visited {
 /*    page collections  */
 
 .page_collec {
-    margin-top: 160px;
+    margin-top: 100px;
     margin-bottom: 50px;
 }
 
 .titre_photo {
     text-align: center;
     font-family: 'PTSans', sans-serif;
+}
 
+.titreCollections {
+    margin-bottom: 30px;
 }
 
 .marginCollections {
@@ -381,7 +384,15 @@ a, a:hover, a:active, a:focus, a:visited {
     filter: grayscale(100%);
     }
 
+.ajustMargin {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
 
+.wrapperCollections {
+    padding-top: 30px;
+    background-color: rgba(0, 0, 0, 0.33);
+}
 /*  fin collections */
 
 /* Page entreprise*/
@@ -406,22 +417,25 @@ a, a:hover, a:active, a:focus, a:visited {
 }
 
 .presentationentreprise {
-    margin-bottom: 75px;
+    margin-top: 60px;
+    margin-bottom: 60px;
     font-size: 20px;
+    border: 2px solid black;
 }
 
 .container ul {
     list-style: none;
     line-height: 40px;
-    padding-top: 70px;
+    padding-top: 40px;
 }
 
 .textentreprise {
-    padding-top: 80px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .imgportrait {
-    padding-top: 80px;
+    padding-top: 45px;
 }
 
 figcaption {
@@ -456,10 +470,6 @@ footer img {
 
 Cont{
     font-size: 20px;
-}
-
-.mentions {
-
 }
 
 /*Fin du footer*/
