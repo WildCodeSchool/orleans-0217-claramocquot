@@ -97,7 +97,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-4 stopPadding">
                             <div class="thumbnailHome">
-                                <a href="index.php?route=entreprise">
+                                <a href="index.php?route=articles">
                                     <div class="captionHome">
                                         <h2>MARRAINES</h2>
                                     </div>
@@ -109,7 +109,7 @@
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
                             <div class="thumbnailHome">
-                                <a href="index.php?route=entreprise">
+                                <a href="index.php?route=collections">
                                     <div class="captionHome">
                                         <h2>COLLECTIONS</h2>
                                     </div>
@@ -121,7 +121,7 @@
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
                             <div class="thumbnailHome">
-                                <a href="index.php?route=entreprise">
+                                <a href="index.php?route=articles">
                                     <div class="captionHome">
                                         <h2>PARTENAIRES</h2>
                                     </div>
@@ -137,7 +137,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-4 stopPadding">
                             <div class="thumbnailHome">
-                                <a href="index.php?route=entreprise">
+                                <a href="index.php?route=articles">
                                     <div class="captionHome">
                                         <h2>PRESTATION PRO</h2>
                                     </div>
@@ -149,7 +149,7 @@
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
                             <div class="thumbnailHome">
-                                <a href="index.php?route=entreprise">
+                                <a href="index.php?route=articles">
                                     <div class="captionHome">
                                         <h2>EVENEMENTS</h2>
                                     </div>
@@ -161,7 +161,7 @@
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
                             <div class="thumbnailHome">
-                                <a href="index.php?route=entreprise">
+                                <a href="index.php?route=articles">
                                     <div class="captionHome">
                                         <h2>VOS PORTRAITS</h2>
                                     </div>

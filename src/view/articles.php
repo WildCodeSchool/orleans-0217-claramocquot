@@ -157,12 +157,8 @@ require 'header.php';
                                     <div class="row">
 
                                         <div class="col-md-12 col-xs-12">
-                                            <div class="row">
-                                                <h2 class="titre">Titre</h2>
-                                                <p class="date">Date</p >
-                                            </div>
                                             <div class="row txt_com">
-                                                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                             </div>
                                             <div class="cache">
 
