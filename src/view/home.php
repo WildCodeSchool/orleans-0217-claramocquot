@@ -48,7 +48,8 @@
 
 
         <div class="container">
-            <div class="logoHome"><a href="#navigation" id="link" class="titreGeneral borderBlack"> Clara MOCQUOT</a></div>
+            <div class="logoHome"><a href="#navigation" id="link" class="titreGeneral borderBlack"> Clara MOCQUOT</a>
+            </div>
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 borderPlus stopPadding">
 
@@ -57,9 +58,9 @@
                         <div class="col-xs-12 col-md-4 stopPadding">
                             <div class="thumbnailHome">
                                 <a href="index.php?route=entreprise">
-                                <div class="captionHome">
+                                    <div class="captionHome">
                                         <h2>ENTREPRISE</h2>
-                                </div>
+                                    </div>
                                 </a>
 
                                 <img class="thumbnail"
@@ -257,7 +258,7 @@
                                     </div>
                                 </div>
                             </div>
-                            </div>
+                        </div>
 
                         <div class="item">
                             <div class="row">
@@ -287,21 +288,21 @@
                                 </div>
                             </div>
                         </div>
-                        </div>
                     </div>
-
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
+    </div>
     </div>
 </section>
 
@@ -319,90 +320,94 @@
         <div class="row">
             <div class="col-xs-8 col-xs-offset-2">
                 <div class="row">
-            <div class="col-md-4 col-xs-12">
-                <h2 class="text-center">Dernier Evenement</h2>
-                <a href="art.html" target=_blank"><div class="thumbnail pad_articles borderBlack">
-                        <img src="img/article1.3.jpg" alt="...">
-                        <div class="caption">
-                            <div class="row">
-
-
-                                <div class="col-md-12 col-xs-12">
+                    <div class="col-md-4 col-xs-12">
+                        <h2 class="text-center">Dernier Evenement</h2>
+                        <a href="art.html" target=_blank">
+                            <div class="thumbnail pad_articles borderBlack">
+                                <img src="img/article1.3.jpg" alt="...">
+                                <div class="caption">
                                     <div class="row">
-                                        <h2 class="titre">Titre</h2>
-                                        <p class="date">Date</p >
-                                    </div>
-                                    <div class="row txt_com">
-                                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-                                    </div>
-                                    <div class="cache">
+
+
+                                        <div class="col-md-12 col-xs-12">
+                                            <div class="row">
+                                                <h2 class="titre">Titre</h2>
+                                                <p class="date">Date</p>
+                                            </div>
+                                            <div class="row txt_com">
+                                                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+                                            </div>
+                                            <div class="cache">
+
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
-
                             </div>
-                        </div>
-                    </div></a>
-            </div>
+                        </a>
+                    </div>
 
-            <div class="col-md-4 col-xs-12">
-                <h2 class="text-center">Dernier Article</h2>
-                <a href="art.html" target=_blank"><div class="thumbnail pad_articles borderBlack">
-                        <img src="img/article1.3.jpg" alt="...">
-                        <div class="caption">
-                            <div class="row">
-
-
-                                <div class="col-md-12 col-xs-12">
+                    <div class="col-md-4 col-xs-12">
+                        <h2 class="text-center">Dernier Article</h2>
+                        <a href="art.html" target=_blank">
+                            <div class="thumbnail pad_articles borderBlack">
+                                <img src="img/article1.3.jpg" alt="...">
+                                <div class="caption">
                                     <div class="row">
-                                        <h2 class="titre">Titre</h2>
-                                        <p class="date">Date</p >
-                                    </div>
-                                    <div class="row txt_com">
-                                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-                                    </div>
-                                    <div class="cache">
+
+
+                                        <div class="col-md-12 col-xs-12">
+                                            <div class="row">
+                                                <h2 class="titre">Titre</h2>
+                                                <p class="date">Date</p>
+                                            </div>
+                                            <div class="row txt_com">
+                                                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+                                            </div>
+                                            <div class="cache">
+
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
-
                             </div>
-                        </div>
-                    </div></a>
-            </div>
+                        </a>
+                    </div>
 
-            <div class="col-md-4 col-xs-12">
-                <h2 class="text-center">Dernier Portrait</h2>
-                <a href="art.html" target=_blank"><div class="thumbnail pad_articles borderBlack">
-                        <img src="img/article1.3.jpg" alt="...">
-                        <div class="caption">
-                            <div class="row">
-
-
-                                <div class="col-md-12 col-xs-12">
+                    <div class="col-md-4 col-xs-12">
+                        <h2 class="text-center">Dernier Portrait</h2>
+                        <a href="art.html" target=_blank">
+                            <div class="thumbnail pad_articles borderBlack">
+                                <img src="img/article1.3.jpg" alt="...">
+                                <div class="caption">
                                     <div class="row">
-                                        <h2 class="titre">Titre</h2>
-                                        <p class="date">Date</p >
-                                    </div>
-                                    <div class="row txt_com">
-                                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-                                    </div>
-                                    <div class="cache">
+
+
+                                        <div class="col-md-12 col-xs-12">
+                                            <div class="row">
+                                                <h2 class="titre">Titre</h2>
+                                                <p class="date">Date</p>
+                                            </div>
+                                            <div class="row txt_com">
+                                                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+                                            </div>
+                                            <div class="cache">
+
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
-
                             </div>
-                        </div>
-                    </div></a>
-    </div>
+                        </a>
+                    </div>
 </section>
-<br />
-
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/landingPage.js"></script>
-<script src="js/thumbnailHome.js"></script>
+<br/>
 
 
 <?php

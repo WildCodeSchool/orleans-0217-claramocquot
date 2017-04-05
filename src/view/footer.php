@@ -84,6 +84,8 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/burger.js"></script>
+<script src="js/landingPage.js"></script>
+<script src="js/thumbnailHome.js"></script>
 
 
 </body>
