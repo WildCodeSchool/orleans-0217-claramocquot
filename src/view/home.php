@@ -50,7 +50,7 @@
         <div class="container">
             <div class="logoHome"><a href="#navigation" id="link" class="titreGeneral borderBlack"> Clara MOCQUOT</a></div>
             <div class="row">
-                <div class="col-md-10 col-md-offset-1 borderPlus stopPadding">
+                <div class="col-md-8 col-md-offset-2 borderPlus stopPadding">
 
 
                     <div class="row">
