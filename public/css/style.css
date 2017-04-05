@@ -8,7 +8,6 @@ Table of Content
 ==================================================
 */
 
-
 @font-face{
     font-family: 'PTSans';
     src: url('../fonts/PTS55F-webfont.woff') format('woff');
@@ -28,16 +27,15 @@ body {
     position: relative;
 }
 
-.titreGeneral, .titreGeneral:hover, .titreGeneral:active, .titreGeneral:focus, .titreGeneral:visited{
+.titreGeneral, .titreGeneral:hover, .titreGeneral:active, .titreGeneral:focus, .titreGeneral:visited {
     color: black;
     padding: 10px;
 }
+
 .title {
     color: black;
     padding-top: 25px;
 }
-
-
 
 /*---------------------------------------
    SECTION ACCUEIL
@@ -74,6 +72,7 @@ body {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
 .trait {
     border: 1px solid black;
     width: 50%;
@@ -83,8 +82,9 @@ body {
     margin-top: 200px;
     text-align: center;
     padding: 80px 0 80px 0;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255, 255, 255, 0.8);
 }
+
 /*---------------------------------------
    SECTION NAVIGATION (MOSAIQUE)
 -----------------------------------------*/
@@ -112,6 +112,7 @@ body {
     display: block;
     vertical-align: middle;
     border-radius: 0;
+
     border: 1px solid black;
     position:relative;
     overflow:hidden;
@@ -130,6 +131,7 @@ body {
 }
 
 .captionHome {
+
     color: white;
     position:absolute;
     top:0;
@@ -139,8 +141,8 @@ body {
     height:100%;
     padding-top:35%;
     display: none;
-    text-align:center;
-    z-index:2;
+    text-align: center;
+    z-index: 2;
 }
 
 .landingPageNouveautes .section_overlay {
@@ -148,6 +150,7 @@ body {
     padding-bottom: 50px;
     background-color: rgba(0, 0, 0, 0.33);
 }
+
 /*---------------------------------------
    SECTION ACTUALITÉS
 -----------------------------------------*/
@@ -161,18 +164,49 @@ body {
     padding: 0;
 }
 
-.deroulement{
+.deroulement {
     position: absolute;
     z-index: 100;
 }
 
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000\9;
+    background-color: rgba(0,0,0,0);
+    border: 2px solid black;
+    border-radius: 10px;
+}
 
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: black;
+}
+
+.thumbnailSlider{
+    display: block;
+    vertical-align: middle;
+    border-radius: 0;
+    border: 2px solid black;
+    position:relative;
+    overflow:hidden;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    background-color: white;
+}
 /*------------------------------------
     HEADER
  -------------------------------------*/
 /* header complet */
 .header {
-    font-family: 'PTSans';
+    font-family: 'PT Sans', sans-serif;
     background-color: white;
     height: 90px;
     position: fixed;
@@ -181,6 +215,7 @@ body {
     z-index: 51;
     border-bottom: black 2px solid;
 }
+
 /* fin header */
 
 /* logo */
@@ -230,23 +265,23 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .burger:hover, .burger:active, .burger:focus, .burger:visited {
     border: solid black 2.5px;
-
 }
 
-.deroulement{
+.deroulement {
     position: absolute;
     z-index: 100;
 }
+
 .menuburger {
     display: none;
     font-size: 20px;
     position: relative;
     top: 60px;
     right: 80px;
-    width:200px;
-    height:40px;
-    border:2px solid black;
-    background-color: rgba(255,255,255,0.8);
+    width: 200px;
+    height: 40px;
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding: 2px 4px 2px 4px;
 }
@@ -308,7 +343,6 @@ a, a:hover, a:active, a:focus, a:visited {
     }
 
     /* fin logo */
-
     /* menu burger */
     button {
         right: 30px;
@@ -322,7 +356,8 @@ a, a:hover, a:active, a:focus, a:visited {
         font-size: 17px;
     }
 }
-    /* fin menu burger */
+
+/* fin menu burger */
 
 /*/// FIN MEDIA QUERY HEADER ///*/
 
@@ -368,6 +403,9 @@ a, a:hover, a:active, a:focus, a:visited {
 .titre_photo {
     text-align: center;
     font-family: 'PTSans', sans-serif;
+    font-size: 16pt;
+    color: black;
+    padding-bottom: 10px;
 }
 
 .titreCollections {
@@ -391,6 +429,7 @@ a, a:hover, a:active, a:focus, a:visited {
     padding-bottom: 50px;
 }
 
+/* fin page articles */
 .wrapperCollections {
     padding-top: 30px;
     background-color: rgba(0, 0, 0, 0.33);
@@ -443,8 +482,8 @@ a, a:hover, a:active, a:focus, a:visited {
 figcaption {
     text-align: center;
 }
-/*fin de la page entreprise*/
 
+/*fin de la page entreprise*/
 
 /*Footer*/
 
@@ -464,14 +503,16 @@ footer img {
     padding-top: 20px;
 }
 
-.contact button{
+.contact button {
     background-color: white;
     color: black;
-    border: 1px solid black;
+    border-radius: 0;
+    border: 2px solid black;
 }
 
+
 Cont{
-    font-size: 20px;
+    font-size: 15px;
 }
 
 /*Fin du footer*/
@@ -480,10 +521,55 @@ a {
     text-decoration: none;
     color: black;
 }
+
 .borderBlack {
     border: 2px solid black;
     margin: 15px;
 }
+
+/*page produit*/
+
+.produitDescription {
+    padding-top: 70px;
+
+}
+
+.sliderProduit {
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+.sliderHeight {
+    height: 450px;
+}
+
+.headModalProduit {
+    padding: 20px;
+    text-align: center;
+}
+
+.headModalProduit p {
+    margin-top: 20px;
+}
+
+.DescProduit{
+    font-size: 20px;
+
+
+}
+
+.titleProduit{
+    margin-top: 130px;
+    font-size: 40px;
+
+}
+
+/*button reseaux sociaux*/
+
+.buttonFB{
+    margin-top: 20px;
+}
+
 
 .carousel-indicators {
     bottom: -30px;

@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="col-md-4 col-md-offset-0 col-xs-3 col-xs-offset-1 contact">
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#contact" data-whatever="@mdo"><Cont>Contact</Cont></button>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#contact" data-whatever="@mdo"><Cont>CONTACT</Cont></button>
                 <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -87,6 +87,13 @@
 <script src="js/landingPage.js"></script>
 <script src="js/thumbnailHome.js"></script>
 
-
+<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>

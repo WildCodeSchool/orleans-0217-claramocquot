@@ -204,7 +204,7 @@
                         <div class="item active">
                             <div class="row">
                                 <div class="col-xs-12 col-md-4">
-                                    <div class="thumbnailHome marginCollections">
+                                    <div class="thumbnailSlider marginCollections">
                                         <img class="thumbnail"
                                              src="img/modele2.4.jpg"
                                              alt="thumbnail image">
@@ -213,7 +213,7 @@
                                 </div>
 
                                 <div class="col-xs-12 col-md-4">
-                                    <div class="thumbnailHome marginCollections">
+                                    <div class="thumbnailSlider marginCollections">
                                         <img class="thumbnail"
                                              src="img/modele2.4.jpg"
                                              alt="thumbnail image">
@@ -222,7 +222,7 @@
                                 </div>
 
                                 <div class="col-xs-12 col-md-4">
-                                    <div class="thumbnailHome marginCollections">
+                                    <div class="thumbnailSlider marginCollections">
                                         <img class="thumbnail"
                                              src="img/modele2.4.jpg"
                                              alt="thumbnail image">
@@ -234,7 +234,7 @@
                         <div class="item">
                             <div class="row">
                                 <div class="col-xs-12 col-md-4">
-                                    <div class="thumbnailHome marginCollections">
+                                    <div class="thumbnailSlider marginCollections">
                                         <img class="thumbnail"
                                              src="img/modele2.4.jpg"
                                              alt="thumbnail image">
@@ -242,7 +242,7 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-md-4">
-                                    <div class="thumbnailHome marginCollections">
+                                    <div class="thumbnailSlider marginCollections">
                                         <img class="thumbnail"
                                              src="img/modele2.4.jpg"
                                              alt="thumbnail image">
@@ -250,7 +250,7 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-md-4">
-                                    <div class="thumbnailHome marginCollections">
+                                    <div class="thumbnailSlider marginCollections">
                                         <img class="thumbnail"
                                              src="img/modele2.4.jpg"
                                              alt="thumbnail image">
@@ -263,7 +263,7 @@
                         <div class="item">
                             <div class="row">
                                 <div class="col-xs-12 col-md-4">
-                                    <div class="thumbnailHome marginCollections">
+                                    <div class="thumbnailSlider marginCollections">
                                         <img class="thumbnail"
                                              src="img/modele2.4.jpg"
                                              alt="thumbnail image">
@@ -271,7 +271,7 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-md-4">
-                                    <div class="thumbnailHome marginCollections">
+                                    <div class="thumbnailSlider marginCollections">
                                         <img class="thumbnail"
                                              src="img/modele2.4.jpg"
                                              alt="thumbnail image">
@@ -279,7 +279,7 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-md-4">
-                                    <div class="thumbnailHome marginCollections">
+                                    <div class="thumbnailSlider marginCollections">
                                         <img class="thumbnail"
                                              src="img/modele2.4.jpg"
                                              alt="thumbnail image">
@@ -292,17 +292,16 @@
                 </div>
 
                 <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+<!--                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">-->
+<!--                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+<!--                    <span class="sr-only">Previous</span>-->
+<!--                </a>-->
+<!--                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">-->
+<!--                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+<!--                    <span class="sr-only">Next</span>-->
+<!--                </a>-->
             </div>
         </div>
-    </div>
     </div>
 </section>
 
@@ -406,6 +405,8 @@
                             </div>
                         </a>
                     </div>
+
+                </div>
 </section>
 <br/>
 
