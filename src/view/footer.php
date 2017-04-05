@@ -15,25 +15,27 @@
                 </div>
             </div>
             <div class="col-md-4 col-md-offset-0 col-xs-3 col-xs-offset-1 contact">
-
-
-
-
-
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
-
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#contact" data-whatever="@mdo"><Cont>Contact</Cont></button>
+                <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+                                <h4 class="modal-title" id="exampleModalLabel">Formulaire de contact</h4>
                             </div>
                             <div class="modal-body">
                                 <form>
                                     <div class="form-group">
-                                        <label for="recipient-name" class="control-label">Recipient:</label>
+                                        <label for="recipient-name" class="control-label">Nom:</label>
                                         <input type="text" class="form-control" id="recipient-name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="control-label">Prenom:</label>
+                                        <input type="text" class="form-control" id="recipient-name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="control-label">Adresse email:</label>
+                                        <input type="email" class="form-control" id="recipient-name" placeholder="dupont@exemple.fr">
                                     </div>
                                     <div class="form-group">
                                         <label for="message-text" class="control-label">Message:</label>
@@ -42,14 +44,12 @@
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Send message</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                                <button type="button" class="btn btn-default">Envoyer</button>
                             </div>
                         </div>
                     </div>
                 </div>
-
-<!--                <p>Contact</p>-->
             </div>
             <div class="col-md-4 col-xs-4">
                 <div class="row">
