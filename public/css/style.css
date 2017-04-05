@@ -353,13 +353,7 @@ a, a:hover, a:active, a:focus, a:visited {
     font-size: 1.15em;
 }
 
-.gris {
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    filter: grayscale(100%);
-}
+
 /* fin page articles */
 
 /*    page collections  */
@@ -378,6 +372,15 @@ a, a:hover, a:active, a:focus, a:visited {
 .marginCollections {
     margin-bottom: 25px;
 }
+
+.gris {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+    }
+
 
 /*  fin collections */
 
