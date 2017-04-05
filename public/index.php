@@ -30,8 +30,8 @@ switch ($route) {
         require '../src/view/admin.php';
         break;
 
-    case 'produit':
-        require '../src/view/produit.php';
+    case 'collections':
+        require '../src/view/collections.php';
         break;
 
     default :

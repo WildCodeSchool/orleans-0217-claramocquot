@@ -8,7 +8,12 @@ Table of Content
 ==================================================
 */
 
-.container-fluid, .row {
+@font-face{
+    font-family: 'PTSans';
+    src: url('../fonts/PTS55F-webfont.woff') format('woff');
+}
+
+.container-fluid, .row{
     margin: 0;
 }
 
@@ -45,7 +50,7 @@ body {
 
 .landingPageAccueil .section_overlay {
     background-color: rgba(255, 255, 255, 0.6);
-    height: 925px;
+    height: 940px;
 }
 
 .titreCadre1 {
@@ -106,17 +111,19 @@ body {
     display: block;
     vertical-align: middle;
     border-radius: 0;
-    border: 2px solid black;
-    position: relative;
-    overflow: hidden;
+
+    border: 1px solid black;
+    position:relative;
+    overflow:hidden;
     max-width: 100%;
     height: auto;
     margin: 0;
 }
 
 .borderPlus {
-    border: 2px solid black;
-    margin-top: 30px;
+    border: 1px solid black;
+    margin-top: 70px;
+    margin-bottom: 50px;
 }
 
 .stopPadding {
@@ -124,22 +131,24 @@ body {
 }
 
 .captionHome {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.33);
-    width: 100%;
-    height: 100%;
-    padding-top: 35%;
+
+    color: white;
+    position:absolute;
+    top:0;
+    right:0;
+    background:rgba(0, 0, 0, 0.33);
+    width:100%;
+    height:100%;
+    padding-top:35%;
     display: none;
     text-align: center;
     z-index: 2;
 }
 
 .landingPageNouveautes .section_overlay {
-    margin-top: 30px;
+    margin-top: 50px;
+    padding-bottom: 50px;
     background-color: rgba(0, 0, 0, 0.33);
-    height: 500px;
 }
 
 /*---------------------------------------
@@ -160,17 +169,44 @@ body {
     z-index: 100;
 }
 
-@font-face {
-    font-family: 'PTSans';
-    src: url('../fonts/PTS55F-webfont.woff') format('woff');
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000\9;
+    background-color: rgba(0,0,0,0);
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: black;
+}
+
+.thumbnailSlider{
+    display: block;
+    vertical-align: middle;
+    border-radius: 0;
+    border: 2px solid black;
+    position:relative;
+    overflow:hidden;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    background-color: white;
+}
 /*------------------------------------
     HEADER
  -------------------------------------*/
 /* header complet */
 .header {
-    font-family: 'PTSans';
+    font-family: 'PT Sans', sans-serif;
     background-color: white;
     height: 90px;
     position: fixed;
@@ -229,7 +265,6 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .burger:hover, .burger:active, .burger:focus, .burger:visited {
     border: solid black 2.5px;
-
 }
 
 .deroulement {
@@ -270,10 +305,10 @@ a, a:hover, a:active, a:focus, a:visited {
 }
 
 .contentManifest {
-    margin-top: 100px;
+    margin-top: 80px;
     padding: 50px;
-    background-color: rgba(255, 255, 255, 0.6);
-    border: 3px solid black;
+    background-color: rgba(255,255,255,0.6);
+    border: 2px solid black;
     margin-bottom: 60px;
 
 }
@@ -334,6 +369,7 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .pad_articles {
     padding: 0px;
+    height: 545px;
 }
 
 .petit {
@@ -354,15 +390,30 @@ a, a:hover, a:active, a:focus, a:visited {
     font-size: 1.15em;
 }
 
-.txt_com {
-    position:;
+
+/* fin page articles */
+
+/*    page collections  */
+
+.page_collec {
+    margin-top: 100px;
+    margin-bottom: 50px;
 }
 
-.cache {
-    position:;
-    z-index:;
-    background-color:;
-    height:;
+.titre_photo {
+    text-align: center;
+    font-family: 'PTSans', sans-serif;
+    font-size: 16pt;
+    color: black;
+    padding-bottom: 10px;
+}
+
+.titreCollections {
+    margin-bottom: 30px;
+}
+
+.marginCollections {
+    margin-bottom: 25px;
 }
 
 .gris {
@@ -371,10 +422,19 @@ a, a:hover, a:active, a:focus, a:visited {
     -o-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
     filter: grayscale(100%);
+    }
 
+.ajustMargin {
+    padding-top: 30px;
+    padding-bottom: 50px;
 }
 
 /* fin page articles */
+.wrapperCollections {
+    padding-top: 30px;
+    background-color: rgba(0, 0, 0, 0.33);
+}
+/*  fin collections */
 
 /* Page entreprise*/
 
@@ -398,22 +458,25 @@ a, a:hover, a:active, a:focus, a:visited {
 }
 
 .presentationentreprise {
-    margin-bottom: 75px;
+    margin-top: 60px;
+    margin-bottom: 60px;
     font-size: 20px;
+    border: 2px solid black;
 }
 
 .container ul {
     list-style: none;
     line-height: 40px;
-    padding-top: 70px;
+    padding-top: 40px;
 }
 
 .textentreprise {
-    padding-top: 80px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .imgportrait {
-    padding-top: 80px;
+    padding-top: 45px;
 }
 
 figcaption {
@@ -443,16 +506,13 @@ footer img {
 .contact button {
     background-color: white;
     color: black;
-    border: 1px solid black;
+    border-radius: 0;
+    border: 2px solid black;
 }
 
-Cont {
-    font-size: 20px;
 
-}
-
-.mentions {
-
+Cont{
+    font-size: 15px;
 }
 
 /*Fin du footer*/
@@ -511,10 +571,6 @@ a {
 }
 
 
-
-
-
-
-
-
-
+.carousel-indicators {
+    bottom: -30px;
+}
