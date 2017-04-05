@@ -33,7 +33,7 @@ require 'header.php';
                             </div>
                         </div>
 
-                        <div class="col-xs-12 col-md-4">
+                        <div class="col-xs-12 col-md-4 gris">
                             <div class="thumbnailHome">
                                 <img class="thumbnail"
                                      src="https://www.chapellerie-traclet.com/37425-large/chapeau-fez-bordeaux.jpg"

@@ -343,26 +343,6 @@ a, a:hover, a:active, a:focus, a:visited {
     font-size: 1.15em;
 }
 
-.txt_com{
-    position: ;
-}
-
-.cache {
-    position: ;
-    z-index: ;
-    background-color:  ;
-    height: ;
-}
-
-.gris {
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-
-    filter: grayscale(100%);
-
-}
 /* fin page articles */
 
 /*    page collections  */
@@ -378,6 +358,15 @@ a, a:hover, a:active, a:focus, a:visited {
 
 }
 
+.gris {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+
+    filter: grayscale(100%);
+
+}
 
 
 
