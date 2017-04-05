@@ -56,121 +56,121 @@
 
                     <div class="row">
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <div class="thumbnailHome">
-                                <a href="index.php?route=entreprise">
+                            <a href="index.php?route=entreprise">
+                                <div class="thumbnailHome">
                                     <div class="captionHome">
                                         <h2>ENTREPRISE</h2>
                                     </div>
-                                </a>
 
-                                <img class="thumbnail"
-                                     src="img/entreprise.jpg"
-                                     alt="thumbnail image">
-                            </div>
+                                    <img class="thumbnail"
+                                         src="img/entreprise.jpg"
+                                         alt="thumbnail image">
+                                </div>
+                            </a>
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <div class="thumbnailHome">
-                                <a href="index.php?route=manifeste">
+                            <a href="index.php?route=manifeste">
+                                <div class="thumbnailHome">
                                     <div class="captionHome">
                                         <h2>MANIFESTE</h2>
                                     </div>
-                                </a>
-                                <img class="thumbnail"
-                                     src="img/manifeste.jpg"
-                                     alt="thumbnail image">
-                            </div>
+                                    <img class="thumbnail"
+                                         src="img/manifeste.jpg"
+                                         alt="thumbnail image">
+                                </div>
+                            </a>
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <div class="thumbnailHome">
-                                <a href="index.php?route=articles">
+                            <a href="index.php?route=articles">
+                                <div class="thumbnailHome">
                                     <div class="captionHome">
                                         <h2>ARTICLES</h2>
                                     </div>
-                                </a>
-                                <img class="thumbnail"
-                                     src="img/articles.png"
-                                     alt="thumbnail image">
-                            </div>
+                                    <img class="thumbnail"
+                                         src="img/articles.png"
+                                         alt="thumbnail image">
+                                </div>
                         </div>
+                        </a>
                     </div>
 
 
                     <div class="row">
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <div class="thumbnailHome">
-                                <a href="index.php?route=articles">
+                            <a href="index.php?route=articles">
+                                <div class="thumbnailHome">
                                     <div class="captionHome">
                                         <h2>MARRAINES</h2>
                                     </div>
-                                </a>
-                                <img class="thumbnail"
-                                     src="img/marraines.jpg"
-                                     alt="thumbnail image">
-                            </div>
+                                    <img class="thumbnail"
+                                         src="img/marraines.jpg"
+                                         alt="thumbnail image">
+                                </div>
+                            </a>
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <div class="thumbnailHome">
-                                <a href="index.php?route=collections">
+                            <a href="index.php?route=collections">
+                                <div class="thumbnailHome">
                                     <div class="captionHome">
                                         <h2>COLLECTIONS</h2>
                                     </div>
-                                </a>
-                                <img class="thumbnail"
-                                     src="img/collections.jpg"
-                                     alt="thumbnail image">
-                            </div>
+                                    <img class="thumbnail"
+                                         src="img/collections.jpg"
+                                         alt="thumbnail image">
+                                </div>
+                            </a>
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <div class="thumbnailHome">
-                                <a href="index.php?route=articles">
+                            <a href="index.php?route=articles">
+                                <div class="thumbnailHome">
                                     <div class="captionHome">
                                         <h2>PARTENAIRES</h2>
                                     </div>
-                                </a>
-                                <img class="thumbnail"
-                                     src="img/partenaires.jpg"
-                                     alt="thumbnail image">
-                            </div>
+                                    <img class="thumbnail"
+                                         src="img/partenaires.jpg"
+                                         alt="thumbnail image">
+                                </div>
                         </div>
+                        </a>
                     </div>
 
 
                     <div class="row">
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <div class="thumbnailHome">
-                                <a href="index.php?route=articles">
+                            <a href="index.php?route=articles">
+                                <div class="thumbnailHome">
                                     <div class="captionHome">
                                         <h2>PRESTATION PRO</h2>
                                     </div>
-                                </a>
-                                <img class="thumbnail"
-                                     src="img/prestationsPro.png"
-                                     alt="thumbnail image">
-                            </div>
+                                    <img class="thumbnail"
+                                         src="img/prestationsPro.png"
+                                         alt="thumbnail image">
+                                </div>
+                            </a>
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <div class="thumbnailHome">
-                                <a href="index.php?route=articles">
+                            <a href="index.php?route=articles">
+                                <div class="thumbnailHome">
                                     <div class="captionHome">
                                         <h2>EVENEMENTS</h2>
                                     </div>
-                                </a>
-                                <img class="thumbnail"
-                                     src="img/evenements.jpg"
-                                     alt="thumbnail image">
-                            </div>
+                                    <img class="thumbnail"
+                                         src="img/evenements.jpg"
+                                         alt="thumbnail image">
+                                </div>
+                            </a>
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <div class="thumbnailHome">
-                                <a href="index.php?route=articles">
+                            <a href="index.php?route=articles">
+                                <div class="thumbnailHome">
                                     <div class="captionHome">
                                         <h2>VOS PORTRAITS</h2>
                                     </div>
-                                </a>
-                                <img class="thumbnail"
-                                     src="img/temoignages.jpg"
-                                     alt="thumbnail image">
-                            </div>
+                                    <img class="thumbnail"
+                                         src="img/temoignages.jpg"
+                                         alt="thumbnail image">
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -292,14 +292,14 @@
                 </div>
 
                 <!-- Controls -->
-<!--                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">-->
-<!--                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
-<!--                    <span class="sr-only">Previous</span>-->
-<!--                </a>-->
-<!--                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">-->
-<!--                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-<!--                    <span class="sr-only">Next</span>-->
-<!--                </a>-->
+                <!--                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">-->
+                <!--                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+                <!--                    <span class="sr-only">Previous</span>-->
+                <!--                </a>-->
+                <!--                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">-->
+                <!--                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+                <!--                    <span class="sr-only">Next</span>-->
+                <!--                </a>-->
             </div>
         </div>
     </div>

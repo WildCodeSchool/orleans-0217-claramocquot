@@ -108,6 +108,10 @@ body {
     background-size: auto;
 }
 
+.hide {
+    position: absolute;
+}
+
 .thumbnailHome {
     display: block;
     vertical-align: middle;
