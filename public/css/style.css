@@ -24,6 +24,7 @@ body {
 
 .titreGeneral, .titreGeneral:hover, .titreGeneral:active, .titreGeneral:focus, .titreGeneral:visited{
     color: black;
+    padding: 10px;
 }
 .title {
     color: black;
@@ -54,6 +55,7 @@ body {
     border: 7px solid black;
     text-decoration: none;
     color: black;
+    margin-top: 50px;
 }
 
 .titreCadre2 {
@@ -64,6 +66,7 @@ body {
     text-decoration: none;
     color: black;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 .trait {
     border: 1px solid black;
@@ -71,9 +74,9 @@ body {
 }
 
 .home-container {
-    margin-top: 260px;
+    margin-top: 200px;
     text-align: center;
-    padding: 10px 0 30px 0;
+    padding: 80px 0 80px 0;
     background-color: rgba(255,255,255,0.8);
 }
 /*---------------------------------------
@@ -107,7 +110,16 @@ body {
     overflow:hidden;
     max-width: 100%;
     height: auto;
-    margin: 10px 0;
+    margin: 0;
+}
+
+.borderPlus {
+    border: 2px solid black;
+    margin-top: 30px;
+}
+
+.stopPadding {
+    padding: 0;
 }
 
 .captionHome {
@@ -152,17 +164,19 @@ body {
     src: url('../fonts/PTS55F-webfont.woff') format('woff');
 }
 
-
+/*------------------------------------
+    HEADER
+ -------------------------------------*/
 /* header complet */
 .header {
     font-family: 'PTSans';
-    background-color: black;
+    background-color: white;
     height: 90px;
     position: fixed;
     margin: 0;
     width: 100%;
     z-index: 51;
-
+    border-bottom: black 2px solid;
 }
 /* fin header */
 
@@ -170,17 +184,17 @@ body {
 
 a, a:hover, a:active, a:focus, a:visited {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .marque {
-    color: white;
+    color: black;
     text-decoration: none;
     position: relative;
     font-size: 2em;
     text-align: center;
     top: 20px;
-    border: solid white 2px;
+    border: solid black 2px;
     padding: 7px 30px;
     text-transform: uppercase;
 }
@@ -191,29 +205,28 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .logoHome {
     position: fixed;
-    top: 70px;
-    left: 100px;
-    font-size: 25px;
+    top: 30px;
+    left: 20px;
+    font-size: 20px;
     color: black;
+    text-transform: uppercase;
 }
 
 /* fin logo */
 
 /* menu burger */
-.boutonBurger {
-    height: 46px;
-    width: 46px;
+.burger {
     position: relative;
-    top: 20px;
-    background-color: black;
-    border: 2px solid white;
+    background-image: url("../img/boutonBurger.jpg");
+    height: 53px;
+    width: 53px;
+    top: 12px;
+    border: solid black 2.5px;
+    border-radius: 0;
 }
 
-.burger {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    margin: 5px 0;
+.burger:hover, .burger:active, .burger:focus, .burger:visited {
+    border: solid black 2.5px;
 
 }
 
@@ -287,7 +300,7 @@ a, a:hover, a:active, a:focus, a:visited {
         font-size: 2em;
         text-align: center;
         top: 20px;
-        border: solid white 2px;
+        border: solid black 2px;
         padding: 5px;
     }
 
@@ -303,6 +316,7 @@ a, a:hover, a:active, a:focus, a:visited {
         height: 45px;
         width: 150px;
         padding-top: 5px;
+        font-size: 17px;
     }
 }
     /* fin menu burger */
@@ -327,11 +341,37 @@ a, a:hover, a:active, a:focus, a:visited {
 .grand {
     border-left: solid black 1px;
 }
+
+.titre {
+    font-size: 1.6em;
+}
+
+.date {
+    font-style: italic;
+    font-size: 1.15em;
+}
+
+.txt_com{
+    position: ;
+}
+
+.cache {
+    position: ;
+    z-index: ;
+    background-color:  ;
+    height: ;
+}
+
+.gris {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+
+    filter: grayscale(100%);
+
+}
 /* fin page articles */
-
-
-
-
 
 /* Page entreprise*/
 
@@ -405,6 +445,10 @@ footer img {
 
 Cont{
     font-size: 20px;
+
+}
+
+.mentions {
 
 }
 
