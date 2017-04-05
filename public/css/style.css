@@ -52,7 +52,7 @@ body {
 
 .landingPageAccueil .section_overlay {
     background-color: rgba(255, 255, 255, 0.6);
-    height: 925px;
+    height: 940px;
 }
 
 .titreCadre1 {
@@ -144,7 +144,7 @@ body {
 }
 
 .landingPageNouveautes .section_overlay {
-    margin-top: 30px;
+    margin-top: 50px;
     padding-bottom: 50px;
     background-color: rgba(0, 0, 0, 0.33);
 }
