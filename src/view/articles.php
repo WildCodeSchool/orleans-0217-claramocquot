@@ -9,6 +9,7 @@ require 'header.php';
         <div class="row">
             <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2">
 
+
                     <div class="row">
                         <div class="col-md-12 col-xs-12">
                             <div class=" presentationArticles">

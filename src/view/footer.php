@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="col-md-4 col-md-offset-0 col-xs-3 col-xs-offset-1 contact">
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#contact" data-whatever="@mdo"><Cont>Contact</Cont></button>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#contact" data-whatever="@mdo"><Cont>CONTACT</Cont></button>
                 <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">

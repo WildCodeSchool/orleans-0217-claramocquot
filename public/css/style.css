@@ -166,13 +166,44 @@ body {
     z-index: 100;
 }
 
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000\9;
+    background-color: rgba(0,0,0,0);
+    border: 2px solid black;
+    border-radius: 10px;
+}
 
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: black;
+}
+
+.thumbnailSlider{
+    display: block;
+    vertical-align: middle;
+    border-radius: 0;
+    border: 2px solid black;
+    position:relative;
+    overflow:hidden;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    background-color: white;
+}
 /*------------------------------------
     HEADER
  -------------------------------------*/
 /* header complet */
 .header {
-    font-family: 'PTSans';
+    font-family: 'PT Sans', sans-serif;
     background-color: white;
     height: 90px;
     position: fixed;
@@ -230,7 +261,6 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .burger:hover, .burger:active, .burger:focus, .burger:visited {
     border: solid black 2.5px;
-
 }
 
 .deroulement{
@@ -368,6 +398,9 @@ a, a:hover, a:active, a:focus, a:visited {
 .titre_photo {
     text-align: center;
     font-family: 'PTSans', sans-serif;
+    font-size: 16pt;
+    color: black;
+    padding-bottom: 10px;
 }
 
 .titreCollections {
@@ -467,11 +500,12 @@ footer img {
 .contact button{
     background-color: white;
     color: black;
-    border: 1px solid black;
+    border-radius: 0;
+    border: 2px solid black;
 }
 
 Cont{
-    font-size: 20px;
+    font-size: 15px;
 }
 
 /*Fin du footer*/
