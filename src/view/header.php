@@ -25,12 +25,8 @@
 
 	
 				<!-- Menu burger -->
-				<div class="col-xs-offset-8 col-xs-1">
-						<button class="boutonBurger">
-							<div class="burger"></div>
-							<div class="burger"> </div>
-							<div class="burger"></div>
-						</button>
+				<div class="col-xs-offset-8 col-xs-1 btn-nav">
+                    <button type="button" class="btn btn-default burger"></button>
 
                     <div class="deroulement">
 						<div id="div1" class="menuburger"><a href="index.php?route=articles" class="navGenerale">Ev&eacute;nements</a></div>

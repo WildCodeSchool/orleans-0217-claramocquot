@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("button").click(function(){
+    $(".btn-nav").click(function(){
         $("#div1").fadeToggle();
         $("#div2").fadeToggle();
         $("#div3").fadeToggle();

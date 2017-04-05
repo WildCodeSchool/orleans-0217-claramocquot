@@ -164,17 +164,19 @@ body {
     src: url('../fonts/PTS55F-webfont.woff') format('woff');
 }
 
-
+/*------------------------------------
+    HEADER
+ -------------------------------------*/
 /* header complet */
 .header {
     font-family: 'PTSans';
-    background-color: black;
+    background-color: white;
     height: 90px;
     position: fixed;
     margin: 0;
     width: 100%;
     z-index: 51;
-
+    border-bottom: black 2px solid;
 }
 /* fin header */
 
@@ -182,17 +184,17 @@ body {
 
 a, a:hover, a:active, a:focus, a:visited {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .marque {
-    color: white;
+    color: black;
     text-decoration: none;
     position: relative;
     font-size: 2em;
     text-align: center;
     top: 20px;
-    border: solid white 2px;
+    border: solid black 2px;
     padding: 7px 30px;
     text-transform: uppercase;
 }
@@ -213,20 +215,18 @@ a, a:hover, a:active, a:focus, a:visited {
 /* fin logo */
 
 /* menu burger */
-.boutonBurger {
-    height: 46px;
-    width: 46px;
+.burger {
     position: relative;
-    top: 20px;
-    background-color: black;
-    border: 2px solid white;
+    background-image: url("../img/boutonBurger.jpg");
+    height: 53px;
+    width: 53px;
+    top: 12px;
+    border: solid black 2.5px;
+    border-radius: 0;
 }
 
-.burger {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    margin: 5px 0;
+.burger:hover, .burger:active, .burger:focus, .burger:visited {
+    border: solid black 2.5px;
 
 }
 
@@ -304,7 +304,7 @@ a, a:hover, a:active, a:focus, a:visited {
         font-size: 2em;
         text-align: center;
         top: 20px;
-        border: solid white 2px;
+        border: solid black 2px;
         padding: 5px;
     }
 
@@ -320,6 +320,7 @@ a, a:hover, a:active, a:focus, a:visited {
         height: 45px;
         width: 150px;
         padding-top: 5px;
+        font-size: 17px;
     }
 }
     /* fin menu burger */
@@ -343,6 +344,36 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .grand {
     border-left: solid black 1px;
+}
+
+.titre {
+    font-size: 1.6em;
+}
+
+.date {
+    font-style: italic;
+    font-size: 1.15em;
+}
+
+.txt_com{
+    position: ;
+}
+
+.cache {
+    position: ;
+    z-index: ;
+    background-color:  ;
+    height: ;
+}
+
+.gris {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+
+    filter: grayscale(100%);
+
 }
 /* fin page articles */
 
