@@ -30,6 +30,10 @@ switch ($route) {
         require '../src/view/admin.php';
         break;
 
+    case 'collections':
+        require '../src/view/collections.php';
+        break;
+
     default :
         require '../src/view/home.php';
 }
