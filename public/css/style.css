@@ -363,11 +363,8 @@ a, a:hover, a:active, a:focus, a:visited {
     -moz-filter: grayscale(100%);
     -o-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
-
     filter: grayscale(100%);
-
-}
-
+    }
 
 
 /*  fin collections */
