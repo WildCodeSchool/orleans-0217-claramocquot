@@ -22,8 +22,12 @@ switch ($route) {
         break;
 
     case 'entreprise':
-        require '../src/view/user/entreprise.php';
+        require '../src/view/entreprise.php';
         break;
+
+    case 'admin':
+        require '../src/view/admin/admin.php';
+
 
     case 'collections':
         require '../src/view/user/collections.php';
