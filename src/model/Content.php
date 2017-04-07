@@ -9,15 +9,14 @@
 namespace clara\model;
 
 
-class Summernote
+class Content
 {
     private $id;
-    private $title;
     private $type;
-    private $content;
-    private $visibility;
+    private $title;
     private $date;
-    private $img;
+    private $image;
+    private $content;
     private $sumup;
 
     /**
@@ -39,22 +38,6 @@ class Summernote
     /**
      * @return mixed
      */
-    public function getTitle()
-    {
-        return $this->title;
-    }
-
-    /**
-     * @param mixed $title
-     */
-    public function setTitle($title)
-    {
-        $this->title = $title;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getType()
     {
         return $this->type;
@@ -71,33 +54,17 @@ class Summernote
     /**
      * @return mixed
      */
-    public function getContent()
+    public function getTitle()
     {
-        return $this->content;
+        return $this->title;
     }
 
     /**
-     * @param mixed $content
+     * @param mixed $title
      */
-    public function setContent($content)
+    public function setTitle($title)
     {
-        $this->content = $content;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getVisibility()
-    {
-        return $this->visibility;
-    }
-
-    /**
-     * @param mixed $visibility
-     */
-    public function setVisibility($visibility)
-    {
-        $this->visibility = $visibility;
+        $this->title = $title;
     }
 
     /**
@@ -119,17 +86,33 @@ class Summernote
     /**
      * @return mixed
      */
-    public function getImg()
+    public function getImage()
     {
-        return $this->img;
+        return $this->image;
     }
 
     /**
-     * @param mixed $img
+     * @param mixed $image
      */
-    public function setImg($img)
+    public function setImage($image)
     {
-        $this->img = $img;
+        $this->image = $image;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+
+    /**
+     * @param mixed $content
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
     }
 
     /**
@@ -147,6 +130,7 @@ class Summernote
     {
         $this->sumup = $sumup;
     }
+
 
 
 }

@@ -10,7 +10,7 @@ namespace clara\controller;
 
 use clara\DB;
 
-class SummernoteController extends Controller
+class ContentController extends Controller
 {
 
     /**
@@ -69,7 +69,7 @@ class SummernoteController extends Controller
     {
         $db= new DB();
         $summernote = $db->updateOneType('summernote', $id, $title, $type, $content, $visibility, $date, $img, $sumup);
-        return $this->render('updateSummernote.php', ['summernote' => $summernote]);
+        return $this->render('updateContent.php', ['summernote' => $summernote]);
     }
 
     /**
@@ -80,7 +80,7 @@ class SummernoteController extends Controller
     {
         $db= new DB();
         $summernote = $db->deleteOneType('summernote', $id);
-        return $this->render('deleteSummernote.php', ['summernote' => $summernote]);
+        return $this->render('deleteContent.php', ['summernote' => $summernote]);
     }
 
 
