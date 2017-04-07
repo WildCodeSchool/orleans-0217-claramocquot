@@ -6,7 +6,7 @@
  * Time: 15:34
  */
 
-namespace clara\model;
+namespace Clara\Model;
 
 
 class Content

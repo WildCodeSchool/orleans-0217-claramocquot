@@ -63,7 +63,7 @@ class ContentController extends Controller
                 return $db->addOneContent('content', $type, $title, $date, $image, $content, $sumup);
             }
         }
-        return $this->render('admin/addContent.php', ['form'=>$form]);
+        return $this->render('Admin/addContent.php', ['form'=>$form]);
     }
 
     /**

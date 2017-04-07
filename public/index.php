@@ -15,36 +15,36 @@ if (isset($_GET['route'])) {
 switch ($route) {
 
     case 'articles':
-        require '../src/view/user/articles.php';
+        require '../src/View/User/articles.php';
         break;
 
     case 'manifeste':
-        require '../src/view/user/manifeste.php';
+        require '../src/View/User/manifeste.php';
         break;
 
     case 'entreprise':
-        require '../src/view/user/entreprise.php';
+        require '../src/View/User/entreprise.php';
         break;
 
     case 'collections':
-        require '../src/view/user/collections.php';
+        require '../src/View/User/collections.php';
         break;
 
     case 'produit':
-        require '../src/view/user/produit.php';
+        require '../src/View/User/produit.php';
         break;
 
-    case 'admin':
-        require '../src/view/admin/admin.php';
+    case 'Admin':
+        require '../src/View/Admin/admin.php';
         break;
 
-    case 'admin/addarticle':
+    case 'Admin/addarticle':
         $content= new ContentController();
         echo $content->add();
         break;
 
     default :
-        require '../src/view/user/home.php';
+        require '../src/View/User/home.php';
 }
 
 
