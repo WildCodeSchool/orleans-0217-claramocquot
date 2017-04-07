@@ -150,7 +150,7 @@ class DB
         $prep = $this->db->prepare($req);
         $prep->bindValue(':id', $id, \PDO::PARAM_STR);
         $prep->bindValue(':url', $url, \PDO::PARAM_STR);
-        $prep->bindValue(':visibility', $visibility \PDO::PARAM_INT);
+        $prep->bindValue(':visibility', $visibility, \PDO::PARAM_INT);
         $prep->execute();
         $res = 'Élément ajouté.';
         return $res;

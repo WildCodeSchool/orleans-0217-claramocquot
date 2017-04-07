@@ -1,10 +1,8 @@
 <?php
 
-//require '../config/connect.php';
+require '../config/connect.php';
 
 require __DIR__ . '/../vendor/autoload.php';
-
-use Clara\Controller\ContentController;
 
 $route = '';
 
@@ -26,25 +24,12 @@ switch ($route) {
         require '../src/View/User/entreprise.php';
         break;
 
-    case 'admin':
-        require '../src/view/admin/admin.php';
-
-
     case 'collections':
         require '../src/View/User/collections.php';
         break;
 
     case 'produit':
         require '../src/View/User/produit.php';
-        break;
-
-    case 'admin':
-        require '../src/View/Admin/admin.php';
-        break;
-
-    case 'admin/addarticle':
-        $content= new ContentController();
-        echo $content->add();
         break;
 
     default :
