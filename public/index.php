@@ -27,7 +27,7 @@ switch ($route) {
         break;
 
     case 'admin':
-        require '../src/view/admin.php';
+        require '../src/view/admin/admin.php';
         break;
 
     case 'collections':

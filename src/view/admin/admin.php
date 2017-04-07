@@ -8,13 +8,13 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link href="https://fonts.googleapis.com/css?family=Overpass|PT+Sans|PT+Sans+Caption|PT+Serif|Roboto+Condensed"
           rel="stylesheet"/>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="css/AdminLTE.min.css">
-    <link rel="stylesheet" href="css/skins/skin-black.min.css">
-    <link rel="stylesheet" href="css/summernote.css">
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="../css/AdminLTE.min.css">
+    <link rel="stylesheet" href="../css/skins/skin-black.min.css">
+    <link rel="stylesheet" href="../css/summernote.css">
+    <link rel="stylesheet" href="../css/admin.css">
 </head>
 <!--
 BODY TAG OPTIONS:
@@ -270,14 +270,14 @@ desired effect
 <!-- ./wrapper -->
 
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/app.min.js"></script>
-<script src="js/jquery.slimscroll.min.js"></script>
-<script src="js/fastclick.min.js"></script>
-<script src="js/summernote.min.js"></script>
-<script src="js/admin.js"></script>
-<script src="lang/summernote-fr-FR.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/app.min.js"></script>
+<script src="../js/jquery.slimscroll.min.js"></script>
+<script src="../js/fastclick.min.js"></script>
+<script src="../js/summernote.min.js"></script>
+<script src="../js/admin.js"></script>
+<script src="../lang/summernote-fr-FR.js"></script>
 
 
 </body>
