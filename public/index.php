@@ -34,11 +34,11 @@ switch ($route) {
         require '../src/View/User/produit.php';
         break;
 
-    case 'Admin':
+    case 'admin':
         require '../src/View/Admin/admin.php';
         break;
 
-    case 'Admin/addarticle':
+    case 'admin/addarticle':
         $content= new ContentController();
         echo $content->add();
         break;

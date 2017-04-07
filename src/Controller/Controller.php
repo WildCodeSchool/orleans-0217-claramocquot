@@ -14,7 +14,7 @@ class Controller
     {
         extract($param);
         ob_start();
-        require '../view/'.$path;
+        require '../../view/'.$path;
         $buffer = ob_get_clean();
         return $buffer;
     }

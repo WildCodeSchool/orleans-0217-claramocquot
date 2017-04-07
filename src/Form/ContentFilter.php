@@ -6,7 +6,7 @@
  * Time: 12:48
  */
 
-namespace clara\Form;
+namespace Clara\Form;
 
 use Zend\InputFilter\InputFilter;
 use Zend\Validator\NotEmpty;

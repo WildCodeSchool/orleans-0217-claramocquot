@@ -1,6 +1,6 @@
 <?php
 
-namespace clara\Form;
+namespace Clara\Form;
 
 
 use Zend\Form\Element\Csrf;
