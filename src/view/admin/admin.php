@@ -139,58 +139,45 @@ desired effect
 
 
             <!-- search form (Optional) -->
-            <form action="#" method="get" class="sidebar-form">
-                <div class="input-group">
-                    <input type="text" name="q" class="form-control" placeholder="Rechercher">
-                    <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-                </div>
-            </form>
+<!--            <form action="#" method="get" class="sidebar-form">-->
+<!--                <div class="input-group">-->
+<!--                    <input type="text" name="q" class="form-control" placeholder="Rechercher">-->
+<!--                    <span class="input-group-btn">-->
+<!--                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>-->
+<!--                </button>-->
+<!--              </span>-->
+<!--                </div>-->
+<!--            </form>-->
             <!-- /.search form -->
 
             <!-- Sidebar Menu -->
             <ul class="sidebar-menu">
-                <li class="header">GESTION DU CONTENU</li>
+<!--                <li class="header">GESTION DE LA COLLECTION</li>-->
                 <!-- Optionally, you can add icons to the links -->
-                <li class="active"><a href="#"><i class="fa fa-file-image-o"></i> <span>Changer l'image d'accueil</span></a>
-                </li>
-                <li><a href="#"><i class="fa fa-plus-square-o"></i> <span>Ajouter un produit</span></a></li>
-                <li><a href="#"><i class="fa fa-refresh"></i> <span>Modifier un produit</span></a></li>
-                <li class="treeview">
-                    <a href="#"><i class="fa fa-indent"></i> <span>Créer un article</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="#">Evenement</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Marraines</a></li>
-                        <li><a href="#">Partenaires</a></li>
-                        <li><a href="#">Prestations Pro.</a></li>
-                        <li><a href="#">Portrait</a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#"><i class="fa fa-indent"></i> <span>Modifier un article</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="#">Evenement</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Marraines</a></li>
-                        <li><a href="#">Partenaires</a></li>
-                        <li><a href="#">Prestations Pro.</a></li>
-                        <li><a href="#">Portrait</a></li>
-                    </ul>
+                <li class="active"><a href="#"><i class="fa fa-file-image-o"></i> <span>Chapeaux</span></a>
                 </li>
 
-                <li class="header">GESTION DES MESSAGES</li>
-                <li><a href="#"><i class="fa fa-envelope-o"></i> <span>Consulter les messages</span></a></li>
+
+<!--                <li class="header">GESTION DES ARTICLES</li>-->
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-indent"></i> <span>Articles</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">Evenement</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Marraines</a></li>
+                        <li><a href="#">Partenaires</a></li>
+                        <li><a href="#">Prestations Pro.</a></li>
+                        <li><a href="#">Portrait</a></li>
+                    </ul>
+                </li>
+<!--                <li class="header">GESTION DE L'ACCUEIL</li>-->
+                <!-- Optionally, you can add icons to the links -->
+                <li><a href="#"><i class="fa fa-file-image-o"></i> <span>Image d'accueil</span></a>
+                </li>
             </ul>
             <!-- /.sidebar-menu -->
         </section>
