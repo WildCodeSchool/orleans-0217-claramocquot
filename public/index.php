@@ -25,16 +25,20 @@ switch ($route) {
         require '../src/view/user/entreprise.php';
         break;
 
-    case 'admin':
-        require '../src/view/admin/admin.php';
-        break;
-
     case 'collections':
         require '../src/view/user/collections.php';
         break;
 
     case 'produit':
         require '../src/view/user/produit.php';
+        break;
+
+    case 'admin':
+        require '../src/view/admin/admin.php';
+        break;
+
+    case 'admin/addarticle':
+        require '../src/view/admin/addContent.php';
         break;
 
     default :
