@@ -14,32 +14,31 @@ if (isset($_GET['route'])) {
 switch ($route) {
 
     case 'articles':
-        require '../src/view/articles.php';
+        require '../src/view/user/articles.php';
         break;
 
-
     case 'manifeste':
-        require '../src/view/manifeste.php';
+        require '../src/view/user/manifeste.php';
         break;
 
     case 'entreprise':
-        require '../src/view/entreprise.php';
+        require '../src/view/user/entreprise.php';
         break;
 
     case 'admin':
-        require '../src/view/admin.php';
+        require '../src/view/admin/admin.php';
         break;
 
     case 'collections':
-        require '../src/view/collections.php';
+        require '../src/view/user/collections.php';
         break;
 
     case 'produit':
-        require '../src/view/produit.php';
+        require '../src/view/user/produit.php';
         break;
 
     default :
-        require '../src/view/home.php';
+        require '../src/view/user/home.php';
 }
 
 
