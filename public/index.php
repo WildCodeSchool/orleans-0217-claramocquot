@@ -4,6 +4,7 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
+use Clara\Controller\ContentController;
 
 $route = '';
 
@@ -38,7 +39,8 @@ switch ($route) {
         break;
 
     case 'admin/addarticle':
-        require '../src/view/admin/addContent.php';
+        $content= new ContentController();
+        echo $content->add();
         break;
 
     default :

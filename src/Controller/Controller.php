@@ -1,6 +1,6 @@
 <?php
 
-namespace clara\controller;
+namespace Clara\Controller;
 
 
 class Controller

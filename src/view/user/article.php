@@ -1,7 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: julien
- * Date: 02/04/17
- * Time: 17:35
- */
+include 'header.php';
+?>
+bla bla
+<?php
+include 'footer.php';
