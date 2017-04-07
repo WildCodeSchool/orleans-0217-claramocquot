@@ -1,0 +1,5 @@
+AuthUserFile "/home/wilder2/Projets/Clara-Mocquot/public/admin/.htpasswd"
+AuthName "Accès protégé"
+AuthType Basic
+Require valid-user
+
