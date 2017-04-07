@@ -27,7 +27,7 @@ class ContentController extends Controller
     {
         $db = new DB();
         $res = $db->findOne('content', $id);
-        return $this->render('article.php', ['content' => $res]);
+        return $this->render('article.html.twig', ['content' => $res]);
     }
 
     /**

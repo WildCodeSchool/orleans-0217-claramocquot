@@ -1,40 +1,77 @@
 <?php
 
-require '../config/connect.php';
+require __DIR__ . '../config/connect.php';
 
 require __DIR__ . '/../vendor/autoload.php';
+
+use Clara\Controller\DefaultController;
 
 $route = '';
 
 if (isset($_GET['route'])) {
     $route = $_GET['route'];
 }
+$page = new DefaultController(true);
 
 switch ($route) {
-
-    case 'articles':
-        require '../src/View/User/articles.php';
+    case 'home':
+        $view = $page->home();
         break;
-
-    case 'manifeste':
-        require '../src/View/User/manifeste.php';
+    case 'produits':
+        $view = $page->products();
         break;
-
-    case 'entreprise':
-        require '../src/View/User/entreprise.php';
-        break;
-
-    case 'collections':
-        require '../src/View/User/collections.php';
-        break;
-
     case 'produit':
-        require '../src/View/User/produit.php';
+        $view = $page->product();
         break;
-
+    case 'blogs':
+        $view = $page->articles();
+        break;
+    case 'blog':
+        $view = $page->article();
+        break;
+    case 'marraines':
+        $view = $page->articles();
+        break;
+    case 'marraine':
+        $view = $page->article();
+        break;
+    case 'portraits':
+        $view = $page->articles();
+        break;
+    case 'portrait':
+        $view = $page->article();
+        break;
+    case 'partenaires':
+        $view = $page->articles();
+        break;
+    case 'partenaire':
+        $view = $page->article();
+        break;
+    case 'evenements':
+        $view = $page->articles();
+        break;
+    case 'evenement':
+        $view = $page->article();
+        break;
+    case 'prestations':
+        $view = $page->articles();
+        break;
+    case 'prestation':
+        $view = $page->article();
+        break;
+    case 'entreprise':
+        $view = $page->firm();
+        break;
+    case 'manifeste':
+        $view = $page->manifest();
+        break;
     default :
-        require '../src/View/User/home.php';
+        $view = $page->home();
 }
+
+echo $view;
+
+
 
 
 
