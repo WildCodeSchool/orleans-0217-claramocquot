@@ -4,7 +4,7 @@
 namespace clara\model;
 
 
-class HomePicture
+class PictureHome
 {
     private $id;
     private $url;

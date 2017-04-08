@@ -13,11 +13,11 @@ class UserController extends Controller
 {
     public function articles()
     {
-        return $this->getTwig()->render('articles.html.twig');
+        return $this->getTwig()->render('contents.html.twig');
     }
     public function article()
     {
-        return $this->getTwig()->render('article.html.twig');
+        return $this->getTwig()->render('content.html.twig');
     }
     public function manifest()
     {

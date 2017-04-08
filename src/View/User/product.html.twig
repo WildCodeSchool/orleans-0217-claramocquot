@@ -1,14 +1,11 @@
-<?php
-require 'header.php';
-?>
+{% extends "base.html.twig" %}
+{% block title %}Chapeau rouge{% endblock %}
 
-
-
-
+{% block content %}
 <div class="containerProduit">
     <div class="row">
         <div class="col-xs-offset-2 titleProduit">
-            <p>Chapeau Rouge</p>
+            <p>Chapeau rouge</p>
 
         </div>
     </div>
@@ -120,9 +117,4 @@ require 'header.php';
     </div>
 </div>
 
-
-
-
-<?php
-require 'footer.php';
-?>
+{% endblock %}

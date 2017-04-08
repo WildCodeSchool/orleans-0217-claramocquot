@@ -1,7 +1,7 @@
-<?php
-require 'header.php';
-?>
+{% extends "base.html.twig" %}
+{% block title %}Présentation{% endblock %}
 
+{% block content %}
 <div class="banner"><p><i>"Soyons inspirés"</i></p>
 </div>
 <div class="container presentationentreprise">
@@ -28,7 +28,4 @@ require 'header.php';
         </div>
     </div>
 </div>
-
-<?php
-require 'footer.php';
-?>
+{% endblock %}
