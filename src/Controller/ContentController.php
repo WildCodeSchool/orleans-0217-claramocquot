@@ -63,7 +63,7 @@ class ContentController extends Controller
                 return $db->addOneContent('content', $type, $title, $date, $image, $content, $sumup);
             }
         }
-        return $this->render('Admin/addContent.php', ['form'=>$form]);
+        return $this->render('Admin/addContent.html.twig', ['form'=>$form]);
     }
 
     /**
@@ -81,7 +81,7 @@ class ContentController extends Controller
     {
         $db= new DB();
         $res = $db->updateOneType('content', $id, $type, $title, $date, $image, $content, $sumup);
-        return $this->render('updateContent.php', ['content' => $res]);
+        return $this->render('updateContent.html.twig', ['content' => $res]);
     }
 
     /**
@@ -92,7 +92,7 @@ class ContentController extends Controller
     {
         $db= new DB();
         $res = $db->deleteOneType('content', $id);
-        return $this->render('deleteContent.php', ['content' => $res]);
+        return $this->render('deleteContent.html.twig', ['content' => $res]);
     }
 
 

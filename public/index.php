@@ -1,17 +1,17 @@
 <?php
 
-require __DIR__ . '../config/connect.php';
+require __DIR__ . '/../config/connect.php';
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use Clara\Controller\DefaultController;
+use Clara\Controller\UserController;
 
 $route = '';
 
 if (isset($_GET['route'])) {
     $route = $_GET['route'];
 }
-$page = new DefaultController(true);
+$page = new UserController(true);
 
 switch ($route) {
     case 'home':
