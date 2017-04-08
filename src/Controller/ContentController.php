@@ -11,6 +11,7 @@ namespace Clara\Controller;
 use Clara\DB;
 use Clara\Form\ContentForm;
 use Clara\Form\ContentFilter;
+use Clara\Model\ContentManager;
 
 /**
  * Class ContentController
@@ -25,7 +26,7 @@ class ContentController extends Controller
      */
     public function show($id)
     {
-        $db = new DB();
+        $db = new ContentManager();
         $res = $db->findOne('content', $id);
         return $this->render('content.html.twig', ['content' => $res]);
     }
@@ -36,7 +37,7 @@ class ContentController extends Controller
      */
     public function showType($type)
     {
-        $db = new DB();
+        $db = new ContentManager();
         $res = $db->findAllContentType('content', $type);
         return $this->render('articles.php', ['content' => $res]);
 
@@ -51,7 +52,7 @@ class ContentController extends Controller
      * @param $sumup
      * @return string
      */
-    public function add()
+    public function add($type, $title, $date, $image, $content, $sumup)
     {
         $form = new ContentForm();
         if (isset($_POST['Ajouter'])) {
@@ -59,7 +60,7 @@ class ContentController extends Controller
             $form->setInputFilter($filter);
             $form->setData($_POST);
             if ($form->isValid()) {
-                $db= new DB();
+                $db= new ContentManager();
                 return $db->addOneContent('content', $type, $title, $date, $image, $content, $sumup);
             }
         }
@@ -79,7 +80,7 @@ class ContentController extends Controller
      */
     public function update($id, $type, $title, $date, $image, $content, $sumup)
     {
-        $db= new DB();
+        $db= new ContentManager();
         $res = $db->updateOneType('content', $id, $type, $title, $date, $image, $content, $sumup);
         return $this->render('updateContent.html.twig', ['content' => $res]);
     }
@@ -90,7 +91,7 @@ class ContentController extends Controller
      */
     public function delete($id)
     {
-        $db= new DB();
+        $db= new ContentManager();
         $res = $db->deleteOneType('content', $id);
         return $this->render('deleteContent.html.twig', ['content' => $res]);
     }
