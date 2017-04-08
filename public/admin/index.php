@@ -34,7 +34,7 @@ switch ($route) {
     case 'modif-article':
         $view = $page->updateContent();
         break;
-    case 'image':
+    case 'images':
         $view = $page->showPicturesHome();
         break;
     case 'nouvelle-image':
