@@ -28,7 +28,7 @@ class ContentFilter extends InputFilter
                     'name' => StringLength::class,
                     'options' =>
                         [
-                            'max' => 50,
+                            'max' => 5,
                         ]
                 ]],
         ]);

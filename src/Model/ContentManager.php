@@ -55,16 +55,17 @@ class ContentManager extends DB
      * @param $sumup
      * @return string
      */
-    public function addOneContent($table, $type, $title, $date, $image, $content, $sumup)
+    public function addOneContent($content)
     {
-        $req = "INSERT INTO $table(type, title, date, image, content, sumup) VALUES(:type, :title, :date, :image, :content, :sumup)";
+        $req = "INSERT INTO :table(type, title, date, image, content, sumup) VALUES(:type, :title, :date, :image, :content, :sumup)";
         $prep = $this->db->prepare($req);
-        $prep->bindValue(':type', $type, \PDO::PARAM_STR);
-        $prep->bindValue(':title', $title, \PDO::PARAM_STR);
-        $prep->bindValue(':date', $date, \PDO::PARAM_STR);
-        $prep->bindValue(':img', $image, \PDO::PARAM_STR);
-        $prep->bindValue(':content', $content, \PDO::PARAM_STR);
-        $prep->bindValue(':sumup', $sumup, \PDO::PARAM_STR);
+        $prep->bindValue(':table', 'content', \PDO::PARAM_STR);
+        $prep->bindValue(':type', $content->getType(), \PDO::PARAM_STR);
+        $prep->bindValue(':title', $content->getTitle(), \PDO::PARAM_STR);
+        $prep->bindValue(':date', $content->getDate(), \PDO::PARAM_STR);
+        $prep->bindValue(':img', $content->getImage(), \PDO::PARAM_STR);
+        $prep->bindValue(':content', $content->getContent(), \PDO::PARAM_STR);
+        $prep->bindValue(':sumup', $content->getSumup(), \PDO::PARAM_STR);
         $prep->execute();
         $res = 'Element ajouté';
         return $res;

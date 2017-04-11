@@ -29,7 +29,9 @@ class AdminController extends Controller
     }
     public function addContent()
     {
-        return $this->getTwig()->render('addContent.html.twig');
+        $content = new ContentController(false);
+        $content->add();
+//        return $this->getTwig()->render('addContent.html.twig');
     }
     public function updateContent()
     {

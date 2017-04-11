@@ -3,22 +3,18 @@
 {% block content %}
     {{ form.prepare() }}
 
+    <h1>Ajouter un article</h1>
+
 
     <form name="formAddContent" method="post">
-        {#<?php echo $form->get('title')->getValue(); ?>#}
         <input type="text" name="title" value="{{ form.get('title').getValue() }}"/>
         {% for name, message in form.getMessages() %}
             {% if  'title' == name %}
-                {{ message }}
+                <p>{{ message }} !!</p>
             {% endif %}
-            {#foreach($form->getMessages() as $name => $message) {#}
-            {#if ('title' == $name) {#}
-            {#var_dump($message);#}
-            {#}#}
-            {#}#}
         {% endfor %}
 
-        <input type="hidden" name="csrf" value="<?php echo $form->get('csrf')->getValue(); ?>"/>
+        <input type="hidden" name="csrf" value="{{ form.get('csrf').getValue() }}"/>
         <input type="submit" name="Ajouter" value="Ajouter"/>
     </form>
 
