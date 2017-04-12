@@ -8,6 +8,7 @@
 
 namespace Clara\Controller;
 
+use Clara\Form\Validator\ImageValidators;
 use Del\Form\Form;
 use Del\Form\Field\Text;
 use Del\Form\Field\Hidden;
@@ -15,8 +16,13 @@ use Del\Form\Field\TextArea;
 use Del\Form\Field\FileUpload;
 use Del\Form\Field\Submit;
 use Clara\Model\ContentManager;
-use Zend\Form\Element\Date;
-use Del\Form\Field\FieldInterface;
+use Del\Form\Filter\Adapter\FilterAdapterZf;
+use Del\Form\Validator\Adapter\ValidatorAdapterZf;
+use Zend\Validator\Between;
+use Zend\Validator\Callback;
+use Zend\Validator\Date;
+use Zend\Validator\File\ImageSize;
+use Zend\Validator\File\IsImage;
 
 /**
  * Class ContentController
@@ -44,8 +50,7 @@ class ContentController extends Controller
     {
         $em = new ContentManager();
         $datas = $em->findAll($type);
-        return $this->getTwig()->render('showContents.html.twig', ['datas'=>$datas, 'type' => $type]);
-
+        return $this->getTwig()->render('showContents.html.twig', ['datas' => $datas, 'type' => $type]);
     }
 
     /**
@@ -54,20 +59,24 @@ class ContentController extends Controller
      */
     public function addContent($type)
     {
-        $res='';
+
+        $res = '';
         $form = new Form('addContent');
         $form->setEncType('multipart/form-data');
         $title = new Text('title');
         $date = new Text('date');
+        $date->setValue(date('Y-m-d'));
+        $dateVal = new ValidatorAdapterZf(new Date());
+        $date->addValidator($dateVal);
         $image = new FileUpload('image');
         $sumup = new Text('sumup');
-        $content = new TextArea('content');
+        $content = new \Clara\Form\Field\TextArea('content');
         $hidden = new Hidden('type');
         $submit = new Submit('submit');
         $title->setLabel('Titre :');
-        $date->setLabel('Date de création :');
-        $image->setLabel('Image de mignature :');
-        $sumup->setLabel('Résumé de la mignature :');
+        $date->setLabel('Date de création (YYYY-MM-DD) :');
+        $image->setLabel('Image de miniature (500px X 500px) :');
+        $sumup->setLabel('Résumé de la miniature :');
         $content->setLabel('Mise en page de l\'article');
         $title->setRequired(true);
         $image->setRequired(true);
@@ -91,6 +100,15 @@ class ContentController extends Controller
             ->addField($hidden)
             ->addField($submit);
 
+
+        if (!empty($_FILES)) {
+            $imageVal = new Callback([new ImageValidators(), 'isValid']);
+            if (!$imageVal->isValid($_FILES['image']['tmp_name'])) {
+                $message = $imageVal->getMessages();
+                return $this->getTwig()->render('addContent.html.twig', ['form' => $form, 'type' => $type, 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format !']);
+            }
+        }
+
         if (isset($_POST['submit'])) {
             $data = $_POST;
             $form->populate($data);
@@ -102,8 +120,7 @@ class ContentController extends Controller
                 }
             }
         }
-
-        return $this->getTwig()->render('addContent.html.twig', ['form' => $form, 'type' => $type, 'result'=>$res]);
+        return $this->getTwig()->render('addContent.html.twig', ['form' => $form, 'type' => $type, 'result' => $res]);
     }
 
     /**

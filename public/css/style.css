@@ -578,3 +578,12 @@ a {
 .carousel-indicators {
     bottom: -30px;
 }
+
+#summernote {
+    width: 1140px;
+}
+
+.padSummernote {
+    padding: 20px;
+    width: 1180px;
+}
