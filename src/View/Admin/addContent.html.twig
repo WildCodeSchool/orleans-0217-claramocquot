@@ -1,26 +1,9 @@
 {% extends "homeAdmin.html.twig" %}
 
 {% block content %}
-    {{ form.prepare() }}
-
-    <h1>Ajouter un article</h1>
-
-
-    <form name="formAddContent" method="post">
-        <input type="text" name="title" value="{{ form.get('title').getValue() }}"/>
-        {% for name, message in form.getMessages() %}
-            {% if  'title' == name %}
-                <p>{{ message }} !!</p>
-            {% endif %}
-        {% endfor %}
-
-        <input type="hidden" name="csrf" value="{{ form.get('csrf').getValue() }}"/>
-        <input type="submit" name="Ajouter" value="Ajouter"/>
-    </form>
-
-
-    <!--<form action='../src/controller/affichage.php' method="POST">-->
-    <!--    <textarea class="input-block-level" id="summernote" name="content"></textarea>-->
-    <!--    <input type="submit" id="create" class="btn btn-default" name="submit" value="Créer">-->
-    <!--</form>-->
+<div class="container text-center">
+    <h1>Ajouter un article : {{ type }}</h1><hr/>
+    {{ result }}
+{{ form.render|raw }}
+</div>
 {% endblock %}

@@ -18,13 +18,13 @@ class ContentManager extends DB
      * @param $table
      * @return array
      */
-    public function findAllContentType($table, $type)
+    public function findAll($type)
     {
-        $req = "SELECT * FROM $table WHERE type=:type";
+        $req = "SELECT * FROM content WHERE type=:type";
         $prep = $this->db->prepare($req);
         $prep->bindValue(':type', $type, \PDO::PARAM_STR);
         $prep->execute();
-        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\' . ucfirst($table));
+        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst(content));
 
         return $res;
     }
@@ -34,40 +34,33 @@ class ContentManager extends DB
      * @param $id
      * @return mixed
      */
-    public function findOneContentType($table, $id)
+    public function findOne($type, $id)
     {
-        $req = "SELECT * FROM $table WHERE id=:id";
+        $req = "SELECT * FROM content WHERE id=:id";
         $prep = $this->db->prepare($req);
         $prep->bindValue(':id', $id, \PDO::PARAM_INT);
         $prep->execute();
-        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\model\\' . ucfirst($table));
+        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst(content));
 
         return $res[0];
     }
 
     /**
-     * @param $table
-     * @param $type
-     * @param $title
-     * @param $date
-     * @param $image
-     * @param $content
-     * @param $sumup
+     * @param $data
      * @return string
      */
-    public function addOneContent($content)
+    public function addContent($data)
     {
-        $req = "INSERT INTO :table(type, title, date, image, content, sumup) VALUES(:type, :title, :date, :image, :content, :sumup)";
+        $req = "INSERT INTO content(type, title, date, image, content, sumup) VALUES(:type, :title, :date, :image, :content, :sumup)";
         $prep = $this->db->prepare($req);
-        $prep->bindValue(':table', 'content', \PDO::PARAM_STR);
-        $prep->bindValue(':type', $content->getType(), \PDO::PARAM_STR);
-        $prep->bindValue(':title', $content->getTitle(), \PDO::PARAM_STR);
-        $prep->bindValue(':date', $content->getDate(), \PDO::PARAM_STR);
-        $prep->bindValue(':img', $content->getImage(), \PDO::PARAM_STR);
-        $prep->bindValue(':content', $content->getContent(), \PDO::PARAM_STR);
-        $prep->bindValue(':sumup', $content->getSumup(), \PDO::PARAM_STR);
+        $prep->bindValue(':type', $data['type'], \PDO::PARAM_STR);
+        $prep->bindValue(':title', $data['title'], \PDO::PARAM_STR);
+        $prep->bindValue(':date', $data['date'], \PDO::PARAM_STR);
+        $prep->bindValue(':image', $data['image'], \PDO::PARAM_STR);
+        $prep->bindValue(':content', $data['content'], \PDO::PARAM_STR);
+        $prep->bindValue(':sumup', $data['sumup'], \PDO::PARAM_STR);
         $prep->execute();
-        $res = 'Element ajouté';
+        $res = true;
         return $res;
     }
 
@@ -76,7 +69,7 @@ class ContentManager extends DB
      * @param $id
      * @return mixed
      */
-    public function updateOneContent($table, $id, $type, $title, $date, $image, $content, $sumup)
+    public function updateContent($table, $id, $type, $title, $date, $image, $content, $sumup)
     {
         $req = "UPDATE $table SET (type=:type, title=:title,  date=:date,  image=:image, content=:content, sumup=:sumup) WHERE id=:id";
         $prep = $this->db->prepare($req);
@@ -97,7 +90,7 @@ class ContentManager extends DB
      * @param $id
      * @return mixed
      */
-    public function deleteOneContent($table, $id)
+    public function deleteContent($table, $id)
     {
         $req = "DELETE FROM $table WHERE id=:id";
         $prep = $this->db->prepare($req);

@@ -23,19 +23,30 @@ class AdminController extends Controller
     {
         return $this->getTwig()->render('updateHat.html.twig');
     }
-    public function showContents()
-    {
-        return $this->getTwig()->render('showContents.html.twig');
-    }
-    public function addContent()
+    public function showContents($type)
     {
         $content = new ContentController(false);
-        $content->add();
-//        return $this->getTwig()->render('addContent.html.twig');
+        return $content->showContents($type);
     }
-    public function updateContent()
+    public function showContent($type, $id)
     {
-        return $this->getTwig()->render('updateContent.html.twig');
+        $content = new ContentController(false);
+        return $content->showContent($type, $id);
+    }
+    public function addContent($type)
+    {
+        $content = new ContentController(false);
+        return $content->addContent($type);
+    }
+    public function updateContent($type, $id)
+    {
+        $content = new ContentController(false);
+        return $content->updateContent($type, $id);
+    }
+    public function deleteContent($type, $id)
+    {
+        $content = new ContentController(false);
+        return $content->deleteContent($type, $id);
     }
     public function showPicturesHome()
     {

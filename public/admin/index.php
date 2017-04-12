@@ -6,10 +6,20 @@ require __DIR__ . '/../../vendor/autoload.php';
 use Clara\Controller\AdminController;
 
 $route = '';
+$type= '';
+$id='';
 
 if (isset($_GET['route'])) {
     $route = $_GET['route'];
 }
+if (isset($_GET['type'])) {
+    $type = $_GET['type'];
+}
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+}
+
+
 $page = new AdminController(false);
 
 switch ($route) {
@@ -26,13 +36,19 @@ switch ($route) {
         $view = $page->updateHat();
         break;
     case 'articles':
-        $view = $page->showContents();
+        $view = $page->showContents($type);
+        break;
+    case 'article':
+        $view = $page->showContent($type, $id);
         break;
     case 'nouvel-article':
-        $view = $page->addContent();
+        $view = $page->addContent($type);
         break;
     case 'modif-article':
-        $view = $page->updateContent();
+        $view = $page->updateContent($type, $id);
+        break;
+    case 'supp-article':
+        $view = $page->deleteContent($type, $id);
         break;
     case 'images':
         $view = $page->showPicturesHome();
