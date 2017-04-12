@@ -8,11 +8,15 @@
 
 namespace Clara\Controller;
 
-use Clara\DB;
-use Clara\Form\ContentForm;
-use Clara\Form\ContentFilter;
-use Clara\Model\Content;
+use Del\Form\Form;
+use Del\Form\Field\Text;
+use Del\Form\Field\Hidden;
+use Del\Form\Field\TextArea;
+use Del\Form\Field\FileUpload;
+use Del\Form\Field\Submit;
 use Clara\Model\ContentManager;
+use Zend\Form\Element\Date;
+use Del\Form\Field\FieldInterface;
 
 /**
  * Class ContentController
@@ -25,50 +29,81 @@ class ContentController extends Controller
      * @param $id
      * @return string
      */
-    public function show($id)
+    public function showContent($type, $id)
     {
         $db = new ContentManager();
-        $res = $db->findOne('content', $id);
-        return $this->render('content.html.twig', ['content' => $res]);
+        $res = $db->findOne($type, $id);
+        return $this->getTwig()->render('showContent.html.twig', ['type' => $type]);
     }
 
     /**
      * @param $id
      * @return string
      */
-    public function showType($type)
+    public function showContents($type)
     {
         $db = new ContentManager();
-        $res = $db->findAllContentType('content', $type);
-        return $this->render('articles.php', ['content' => $res]);
+        $res = $db->findAll( $type);
+        return $this->getTwig()->render('showContents.html.twig', ['type' => $type]);
 
     }
 
     /**
      * @param $type
-     * @param $title
-     * @param $date
-     * @param $image
-     * @param $content
-     * @param $sumup
      * @return string
      */
-    public function add()
+    public function addContent($type)
     {
-        $form = new ContentForm();
-        if (isset($_POST['Ajouter'])) {
-            $content = new Content();
-            //hydrater $content avec $_POST
-            $filter = new ContentFilter();
-            $form->setInputFilter($filter);
-            $form->setData($_POST);
+        $res='';
+        $form = new Form('addContent');
+        $form->setEncType('multipart/form-data');
+        $title = new Text('title');
+        $date = new Text('date');
+        $image = new FileUpload('image');
+        $sumup = new Text('sumup');
+        $content = new TextArea('content');
+        $hidden = new Hidden('type');
+        $submit = new Submit('submit');
+        $title->setLabel('Titre :');
+        $date->setLabel('Date de création :');
+        $image->setLabel('Image de mignature :');
+        $sumup->setLabel('Résumé de la mignature :');
+        $content->setLabel('Mise en page de l\'article');
+        $title->setRequired(true);
+        $image->setRequired(true);
+        $date->setRequired(true);
+        $sumup->setRequired(true);
+        $content->setRequired(true);
+        $hidden->setValue($type);
+        $title->setPlaceholder('Titre de l\'article');
+        $sumup->setPlaceholder('Résumé de l\'article');
+        $date->setPlaceholder('YYYY-MM-DD');
+        $content->setClass('input-block-level');
+        $image->setId('img');
+        $content->setId('summernote');
+        $image->setUploadDirectory('../img/upload/');
+        $submit->setValue('Ajouter');
+        $form->addField($title)
+            ->addField($date)
+            ->addField($image)
+            ->addField($sumup)
+            ->addField($content)
+            ->addField($hidden)
+            ->addField($submit);
+
+        if (isset($_POST['submit'])) {
+            $data = $_POST;
+            $form->populate($data);
             if ($form->isValid()) {
-                $db = new ContentManager();
-                return $db->addOneContent($content);
+                $filteredData = $form->getValues();
+                $em = new ContentManager();
+                if ($em->addContent($filteredData)) {
+                    $res = 'Article ajouté';
+                }
             }
         }
-        return $this->getTwig()->render('addContent.html.twig', ['form' => $form]);
-//        return $this->render('Admin/addContent.html.twig', ['form'=>$form]);
+
+        return $this->getTwig()->render('addContent.html.twig', ['form' => $form, 'type' => $type, 'result'=>$res]);
     }
 
     /**
@@ -82,22 +117,65 @@ class ContentController extends Controller
      * @param $sumup
      * @return string
      */
-    public function update($id, $type, $title, $date, $image, $content, $sumup)
+    public function update($data)
     {
-        $db = new ContentManager();
-        $res = $db->updateOneType('content', $id, $type, $title, $date, $image, $content, $sumup);
-        return $this->render('updateContent.html.twig', ['content' => $res]);
+        $form = new Form('addContent');
+        $title = new Text('title');
+        $date = new Text('date');
+        $image = new FileUpload('image');
+        $sumup = new Text('sumup');
+        $content = new TextArea('content');
+        $hidden = new Hidden('type');
+        $submit = new Submit('submit');
+        $title->setLabel('Titre :');
+        $date->setLabel('Date de création :');
+        $image->setLabel('Image de mignature :');
+        $sumup->setLabel('Résumé de la mignature :');
+        $content->setLabel('Mise en page de l\'article');
+        $title->setRequired(true);
+        $image->setRequired(true);
+        $date->setRequired(true);
+        $sumup->setRequired(true);
+        $content->setRequired(true);
+        $hidden->setValue($type);
+        $title->setPlaceholder('Titre de l\'article');
+        $sumup->setPlaceholder('Résumé de l\'article');
+        $date->setPlaceholder('YYYY-MM-DD');
+        $content->setClass('input-block-level');
+        $content->setId('summernote');
+        $image->setUploadDirectory('/../img/upload/');
+        $submit->setValue('Ajouter');
+        $form->addField($title)
+            ->addField($date)
+            ->addField($image)
+            ->addField($sumup)
+            ->addField($content)
+            ->addField($hidden)
+            ->addField($submit);
+
+        if (isset($_POST['submit'])) {
+            $data = $_POST;
+            $form->populate($data);
+            if ($form->isValid()) {
+                $filteredData = $form->getValues();
+                $em = new ContentManager();
+                if ($em->updateContent($filteredData)) {
+                    echo 'Article Ajouté !';
+                }
+            }
+        }
+        return $this->getTwig()->render('updateContent.html.twig', ['form' => $form, 'type' => $type]);
     }
 
     /**
      * @param $id
      * @return string
      */
-    public function delete($id)
+    public function delete($type, $id)
     {
         $db = new ContentManager();
-        $res = $db->deleteOneType('content', $id);
-        return $this->render('deleteContent.html.twig', ['content' => $res]);
+        $db->deleteContent($type, $id);
+        return $this->getTwig()->render('showContents.html.twig', ['type' => $type]);
     }
 
 
