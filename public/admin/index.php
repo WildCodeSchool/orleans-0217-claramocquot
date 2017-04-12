@@ -39,7 +39,7 @@ switch ($route) {
         $view = $page->showContents($type);
         break;
     case 'article':
-        $view = $page->showContent($type, $id);
+        $view = $page->showContent($id);
         break;
     case 'nouvel-article':
         $view = $page->addContent($type);
