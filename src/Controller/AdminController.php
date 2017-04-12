@@ -30,10 +30,10 @@ class AdminController extends Controller
         $content = new ContentController(false);
         return $content->showContents($type);
     }
-    public function showContent($type, $id)
+    public function showContent($id)
     {
         $content = new ContentController(false);
-        return $content->showContent($type, $id);
+        return $content->showContent($id);
     }
     public function addContent($type)
     {

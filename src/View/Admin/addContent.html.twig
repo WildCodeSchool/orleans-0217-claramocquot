@@ -2,8 +2,10 @@
 
 {% block content %}
 <div class="container text-center">
-    <h1>Ajouter un article : {{ type }}</h1><hr/>
-    {{ result }}
+    <h1 class="borderBlack">Ajouter un article : {{ type }}</h1><br/>
+    {% if result is not empty %}
+    <blockquote class="btn-success">{{ result }}</blockquote><br/>
+        {% endif %}
 {{ form.render|raw }}
 </div>
 {% endblock %}

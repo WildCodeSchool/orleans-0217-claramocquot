@@ -24,8 +24,7 @@ class ContentManager extends DB
         $prep = $this->db->prepare($req);
         $prep->bindValue(':type', $type, \PDO::PARAM_STR);
         $prep->execute();
-        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst(content));
-
+        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst('content'));
         return $res;
     }
 
@@ -34,7 +33,7 @@ class ContentManager extends DB
      * @param $id
      * @return mixed
      */
-    public function findOne($type, $id)
+    public function findOne($id)
     {
         $req = "SELECT * FROM content WHERE id=:id";
         $prep = $this->db->prepare($req);

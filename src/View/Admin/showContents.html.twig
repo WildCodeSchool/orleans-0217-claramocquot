@@ -1,5 +1,50 @@
 {% extends "homeAdmin.html.twig" %}
 
 {% block content %}
+    <div class="container text-center">
+        <h1 class="borderBlack">Liste des articles : {{ type }}</h1><br/>
+        <div class="row">
+            <div class="col-sm-4 col-xs-12">
+                <a href="index.php?route=nouvel-article">
+                    <div class="thumbnail pad_articles borderBlack">
+                        <img src="../img/addArticle.png" alt="ajouter-article">
+                        <div class="caption">
+                            <div class="row">
+                                <div class="col-md-12 col-xs-12">
+                                    <div class="row">
+                                        <h2 class="titre">Ajouter un nouvel Article</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
+            {% for data in datas %}
+
+                <div class="col-sm-4 col-xs-12">
+                    <a href="index.php?route=article$id={{ data.id }}">
+                        <div class="thumbnail pad_articles borderBlack">
+                            <img src="../img/upload/{{ data.image }}" alt="{{ data.image }}">
+                            <div class="caption">
+                                <div class="row">
+                                    <div class="col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <h2 class="titre">{{ data.title }}</h2>
+                                            <p class="date">{{ data.date }}</p>
+                                        </div>
+                                        <div class="row txt_com">
+                                            <p>{{ data.sumup }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}

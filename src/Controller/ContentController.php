@@ -29,11 +29,11 @@ class ContentController extends Controller
      * @param $id
      * @return string
      */
-    public function showContent($type, $id)
+    public function showContent($id)
     {
         $db = new ContentManager();
-        $res = $db->findOne($type, $id);
-        return $this->getTwig()->render('showContent.html.twig', ['type' => $type]);
+        $res = $db->findOne($id);
+        return $this->getTwig()->render('showContent.html.twig', ['data' => $res]);
     }
 
     /**
@@ -42,9 +42,9 @@ class ContentController extends Controller
      */
     public function showContents($type)
     {
-        $db = new ContentManager();
-        $res = $db->findAll( $type);
-        return $this->getTwig()->render('showContents.html.twig', ['type' => $type]);
+        $em = new ContentManager();
+        $datas = $em->findAll($type);
+        return $this->getTwig()->render('showContents.html.twig', ['datas'=>$datas, 'type' => $type]);
 
     }
 
