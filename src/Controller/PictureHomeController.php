@@ -1,34 +1,86 @@
 <?php
 
+namespace Clara\Controller;
 
-namespace clara\controller;
+use Del\Form\Form;
+use Del\Form\Field\Text;
+use Del\Form\Field\Hidden;
+use Del\Form\Field\TextArea;
+use Del\Form\Field\FileUpload;
+use Del\Form\Field\Submit;
+use Clara\Model\HomePictureManager;
+use Zend\Form\Element\Date;
+use Del\Form\Field\FieldInterface;
 
 
-use Clara\Model\PictureHomeManager;
-
-class PictureHomeController
+/**
+ * Class HomePictureController
+ * @package Clara\Controller
+ */
+class HomePictureController extends Controller
 {
-
-    public function add($id, $url, $visibility)
+    // Montrer toutes les images d'accueil dans l'interface adminitrateur:
+    /**
+     * @param $type
+     * @return string
+     */
+    public function showHomePictures($type)
     {
-        $db= new PictureHomeManager();
-        $pictureHome = $db->addPictureHome('pictureHome', $id, $url, $visibility);
-        return $this->render('addPictureHome.html.twig', ['pictureHome' => $pictureHome]);
+        $em = new HomePictureManager();
+        $datas = $em->findAll($type);
+        return $this->getTwig()->render('showHomePictures.html.twig', ['datas' => $datas, 'type' => $type]);
     }
 
-
-    public function update($id, $url, $visibility)
+    // Uploader une image d'accueil :
+    /**
+     * @param $type
+     * @return string
+     */
+    public function addHomePicture($type)
     {
-        $db= new PictureHomeManager();
-        $pictureHome= $db->updatePictureHome('pictureHome', $id, $url, $visibility);
-        return $this->render('updatePictureHome.html.twig', ['pictureHome' => $pictureHome]);
+        $res = '';
+        $form = new Form('addHomePicture');
+        $form->setEncType('multipart/form-data');
+        $image = new FileUpload('image');
+        $submit = new Submit('submit');
+        $image->setLabel('Image d\'accueil');
+        $image->setRequired(true);
+        $image->setId('img');
+        $image->setUploadDirectory('../img/upload/');
+        $submit->setValue('Ajouter une image d\'accueil');
+        $form->addField($image)
+            ->addField($submit);
+
+        if (isset($_POST['submit'])) {
+            $data = $_POST;
+            $form->populate($data);
+            if ($form->isValid()) {
+                $filteredData = $form->getValues();
+                $em = new HomePictureManager();
+                if ($em->addHomePicture($filteredData)) {
+                    $res = 'Image d\'accueil ajoutée';
+                }
+            }
+        }
+        return $this->getTwig()->render('addHomePicture.html.twig', ['form' => $form, 'type' => $type, 'result' => $res]);
     }
 
-
-    public function delete($id)
+    // Supprimer une image d'accueil :
+    /**
+     * @param $type
+     * @param $id
+     * @return string
+     */
+    public function delete($type, $id)
     {
-        $db= new PictureHomeManager();
-        $pictureHome = $db->deletePictureHome('pictureHome', $id);
-        return $this->render('deletePictureHome.html.twig', ['pictureHome' => $pictureHome]);
+        $db = new HomePictureManager();
+        $db->deleteHomePicture($type, $id);
+        return $this->getTwig()->render('showHomePictures.html.twig', ['type' => $type]);
+    }
+
+    // Afficher l'image d'accueil sur le site :
+    public function EnableHomePicture();
+    {
+        // En attente !
     }
 }
