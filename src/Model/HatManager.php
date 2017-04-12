@@ -10,14 +10,13 @@ namespace Clara\Model;
 
 
 use Clara\DB;
+use Doctrine\DBAL\Driver\PDOException;
 
 class HatManager extends DB
 {
     public function addHat($form)
     {
-
-
-        if ($form['localisation'] = 0) {
+        if ($form['localisation'] == 0) {
 
 
             $new_prod = 1;
@@ -25,7 +24,7 @@ class HatManager extends DB
             $unavailable = 0;
             $old = 0;
             $hide = 0;
-        } elseif ($form['localisation'] = 1) {
+        } elseif ($form['localisation'] == 1) {
 
 
             $new_prod = 0;
@@ -33,7 +32,7 @@ class HatManager extends DB
             $unavailable = 0;
             $old = 0;
             $hide = 0;
-        } elseif ($form['localisation'] = 2) {
+        } elseif ($form['localisation'] == 2) {
 
 
             $new_prod = 0;
@@ -41,7 +40,7 @@ class HatManager extends DB
             $unavailable = 1;
             $old = 0;
             $hide = 0;
-        } elseif ($form['localisation'] = 3) {
+        } elseif ($form['localisation'] == 3) {
 
 
             $new_prod = 0;
@@ -49,7 +48,7 @@ class HatManager extends DB
             $unavailable = 0;
             $old = 1;
             $hide = 0;
-        } elseif ($form['localisation'] = 4) {
+        } elseif ($form['localisation'] == 4) {
 
 
             $new_prod = 0;
@@ -58,46 +57,42 @@ class HatManager extends DB
             $old = 0;
             $hide = 1;
         }
-        /**
-         * @param $table
-         * @param $content
-         * @param $name
-         * @param $price
-         * @param $new_prod
-         * @param $product
-         * @param $unavailable
-         * @param $old
-         * @param $hide
-         * @return string
-         */
-
-        $req ="INSERT INTO  table(content, price, name, new_prod, product, unavailable, old, hide,) VALUES (content = :content, price = :price, name = :name, new_prod= :new_prod ,product = :product, unavailable = :unavailable, old = :old, hide = :hide)";
+        $req = "INSERT INTO  hat (content, price, name, new_prod, product, unavailable, old, hide) 
+                VALUES (:content, :price, :name, :new_prod, :product, :unavailable, :old, :hide)";
 
         $prep = $this->db->prepare($req);
-        $prep->bindValue(':table', 'hat', \PDO::PARAM_STR);
-        $prep->bindValue(':content', $content->getContent(), \PDO::PARAM_STR);
-        $prep->bindValue(':price', $price-> getPrice(), \PDO::PARAM_INT);
-        $prep->bindValue(':name',$name-> getName(), \PDO::PARAM_STR);
-        $prep->bindValue(':new_prod', $new_prod->getNew_Prod(), \PDO::PARAM_STR);
-        $prep->bindValue(':product', $product->getProduct(),\PDO::PARAM_STR);
-        $prep->bindValue(':unavailable',$unavailable->getUnavailable(), \PDO::PARAM_STR);
-        $prep->bindValue(':old',$old->getOld(), \PDO::PARAM_STR);
-        $prep->bindValue(':hide',$hide->getHide, \PDO::PARAM_STR);
+        $prep->bindValue(':content', $form['content'], \PDO::PARAM_STR);
+        $prep->bindValue(':price', $form['price'], \PDO::PARAM_INT);
+        $prep->bindValue(':name', $form['name'], \PDO::PARAM_STR);
+        $prep->bindValue(':new_prod', $new_prod, \PDO::PARAM_INT);
+        $prep->bindValue(':product', $product, \PDO::PARAM_INT);
+        $prep->bindValue(':unavailable', $unavailable, \PDO::PARAM_INT);
+        $prep->bindValue(':old', $old, \PDO::PARAM_INT);
+        $prep->bindValue(':hide', $hide, \PDO::PARAM_INT);
         $prep->execute();
 
-//        $req= "INSERT INTO picture (image, id_hat) VALUES ()"
+
+        $lastid = $this->db->lastInsertId();
+
+        $req2 = "INSERT INTO picture (image, id_hat) VALUES (:img, :idhat)";
+        $prep2 = $this->db->prepare($req2);
+        $prep2->bindValue(':img', $form['image']);
+        $prep2->bindValue(':idhat', $lastid);
+        $prep2->execute();
 
 
 
+        $res = true;
+        return $res;
+    }
 
+    public function showHat(){
 
+        $req = "SELECT * FROM hat";
 
-        $res='bien joué bebe';
-        echo $res;
 
 
     }
-
 }
 
 

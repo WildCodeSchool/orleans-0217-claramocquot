@@ -15,6 +15,7 @@ use Del\Form\Field\Submit;
 use Del\Form\Field\FileUpload;
 use Del\Form\Field\Select;
 use Del\Form\Field\TextArea;
+use Del\Form\Field\FieldInterface;
 
 use Del\Form\Filter\Adapter\FilterAdapterZf;
 use Del\Form\Validator\Adapter\ValidatorAdapterZf;
@@ -28,8 +29,9 @@ class HatController extends Controller
 
     public function addHat()
     {
+        $res='';
         $form = new Form('addHat');
-
+        $form->setEncType('multipart/form-data');
         $name = new Text('name');
         $content = new TextArea('content');
         $price = new Text('price');
@@ -51,6 +53,11 @@ class HatController extends Controller
         $image->setLabel('Choississez les images de votre produit');
         $image->setUploadDirectory('../img/upload');
 
+        $name->setRequired(true);
+        $content->setRequired(true);
+        $price->setRequired(true);
+        $select->setRequired(true);
+        $image->setRequired(true);
         $form->addField($name)
             ->addField($content)
             ->addField($price)
@@ -58,29 +65,21 @@ class HatController extends Controller
             ->addField($image)
             ->addField($submit);
 
-//        $stripTags = new FilterAdapterZf(new StripTags());
-//        $trim = new FilterAdapterZf(new StringTrim());
-//        $lowerCase = new FilterAdapterZf(new StringToLower());
-//
-//        $form->addFilter($stripTags)
-//            ->addFilter($trim)
-//            ->addFilter($lowerCase);
-
 
 
         if (isset($_POST['submit'])) {
-            $form = new Hat();
-
-            $form->setInputFilter($filter);
-            $form->setData($_POST);
+            $data = $_POST;
+            $form->populate($data);
             if ($form->isValid()) {
-                $db = new HatManager();
-                return $db->addHat($form);
+                $filteredData = $form->getValues();
+                $em = new HatManager();
+                if ($em->addHat($filteredData)) {
+                    $res= 'bien joue bebe';
+                }
             }
-
         }
 
-        return $this->getTwig()->render('addHat.html.twig', ['form' => $form]);
+        return $this->getTwig()->render('addHat.html.twig', ['form' => $form, 'result'=>$res]);
 
 
     }

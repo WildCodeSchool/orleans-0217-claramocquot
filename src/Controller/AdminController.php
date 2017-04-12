@@ -13,13 +13,13 @@ class AdminController extends Controller
 {
     public function showHats()
     {
-        return $this->getTwig()->render('showHats.html.twig');
+        $hat= new HatController();
+        return $hat->showHat();
     }
     public function addHat()
     {
         $hat= new HatController(false);
         return $hat->addHat();
-//        return $this->getTwig()->render('addHat.html.twig');
     }
     public function updateHat()
     {
