@@ -17,7 +17,9 @@ class AdminController extends Controller
     }
     public function addHat()
     {
-        return $this->getTwig()->render('addHat.html.twig');
+        $hat= new HatController(false);
+        return $hat->addHat();
+//        return $this->getTwig()->render('addHat.html.twig');
     }
     public function updateHat()
     {
@@ -54,3 +56,4 @@ class AdminController extends Controller
         return $this->getTwig()->render('homeAdmin.html.twig');
     }
 }
+
