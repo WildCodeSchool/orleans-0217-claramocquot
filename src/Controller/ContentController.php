@@ -100,6 +100,7 @@ class ContentController extends Controller
                 if ($em->addContent($filteredData)) {
                     $res = 'Article ajouté';
                 }
+                
             }
         }
 

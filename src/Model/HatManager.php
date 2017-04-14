@@ -16,45 +16,16 @@ class HatManager extends DB
 {
     public function addHat($form)
     {
+        $new_prod = $product = $unavailable = $old = $hide = 0;
         if ($form['localisation'] == 0) {
-
-
             $new_prod = 1;
-            $product = 0;
-            $unavailable = 0;
-            $old = 0;
-            $hide = 0;
         } elseif ($form['localisation'] == 1) {
-
-
-            $new_prod = 0;
             $product = 1;
-            $unavailable = 0;
-            $old = 0;
-            $hide = 0;
         } elseif ($form['localisation'] == 2) {
-
-
-            $new_prod = 0;
-            $product = 0;
             $unavailable = 1;
-            $old = 0;
-            $hide = 0;
         } elseif ($form['localisation'] == 3) {
-
-
-            $new_prod = 0;
-            $product = 0;
-            $unavailable = 0;
             $old = 1;
-            $hide = 0;
         } elseif ($form['localisation'] == 4) {
-
-
-            $new_prod = 0;
-            $product = 0;
-            $unavailable = 0;
-            $old = 0;
             $hide = 1;
         }
         $req = "INSERT INTO  hat (content, price, name, new_prod, product, unavailable, old, hide) 
@@ -72,25 +43,72 @@ class HatManager extends DB
         $prep->execute();
 
 
+
+        $radio1 = $radio2 = $radio4 = $radio4 = 0;
+        if ($form['radio'] == 0) {
+            $radio1 = 1;
+        } elseif ($form['radio'] == 1) {
+            $radio2 = 1;
+        } elseif ($form['radio'] == 2) {
+            $radio4 = 1;
+        } elseif ($form['radio'] == 3) {
+            $radio4 = 1;
+        }
         $lastid = $this->db->lastInsertId();
 
-        $req2 = "INSERT INTO picture (image, id_hat) VALUES (:img, :idhat)";
+        $req2 = "INSERT INTO picture (image, id_hat, radio) VALUES (:img, :idhat, :radio)";
         $prep2 = $this->db->prepare($req2);
-        $prep2->bindValue(':img', $form['image']);
+        $prep2->bindValue(':img', $form['image1']);
         $prep2->bindValue(':idhat', $lastid);
+        $prep2->bindValue(':radio', $radio1);
         $prep2->execute();
 
+        if (!empty($form['image2'])) {
+            $req3 = "INSERT INTO picture (image, id_hat, radio) VALUES (:img, :idhat, :radio)";
+            $prep3 = $this->db->prepare($req3);
+            $prep3->bindValue(':img', $form['image2']);
+            $prep3->bindValue(':idhat', $lastid);
+            $prep3->bindValue(':radio', $radio2);
+
+            $prep3->execute();
+        }
+        if (!empty($form['image3'])) {
+            $req4 = "INSERT INTO picture (image, id_hat, radio) VALUES (:img, :idhat, :radio)";
+            $prep4 = $this->db->prepare($req4);
+            $prep4->bindValue(':img', $form['image3']);
+            $prep4->bindValue(':idhat', $lastid);
+            $prep4->bindValue(':radio', $radio3);
+
+            $prep4->execute();
+        }
+        if (!empty($form['image4'])) {
+            $req5 = "INSERT INTO picture (image, id_hat, radio) VALUES (:img, :idhat, :radio)";
+            $prep5 = $this->db->prepare($req5);
+            $prep5->bindValue(':img', $form['image4']);
+            $prep5->bindValue(':idhat', $lastid);
+            $prep5->bindValue(':radio', $radio4);
+
+            $prep5->execute();
+        }
 
 
         $res = true;
         return $res;
     }
 
-    public function showHat(){
+    public function showHats()
+    {
 
-        $req = "SELECT * FROM hat";
+        $req = "SELECT * FROM hat JOIN picture ON hat.id=picture.id_hat WHERE radio=1";
+        $prep = $this->db->prepare($req);
+        $prep->execute();
+        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst('content'));
+        return $res;
 
 
+    }
+
+    public function updateHat(){
 
     }
 }

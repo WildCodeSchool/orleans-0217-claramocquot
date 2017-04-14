@@ -13,8 +13,8 @@ class AdminController extends Controller
 {
     public function showHats()
     {
-        $hat= new HatController();
-        return $hat->showHat();
+        $hat= new HatController(false);
+        return $hat->showHats();
     }
     public function addHat()
     {
@@ -23,7 +23,8 @@ class AdminController extends Controller
     }
     public function updateHat()
     {
-        return $this->getTwig()->render('updateHat.html.twig');
+        $hat = new HatController(false);
+        return $hat->updateHate();
     }
     public function showContents($type)
     {
