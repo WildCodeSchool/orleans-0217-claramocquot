@@ -8,10 +8,10 @@ Table of Content
 ==================================================
 */
 
-@font-face{
-    font-family: 'PTSans';
-    src: url('../fonts/PTS55F-webfont.woff') format('woff');
-}
+/*@font-face{*/
+    /*font-family: 'PTSans';*/
+    /*src: url('../fonts/PTS55F-webfont.woff') format('woff');*/
+/*}*/
 
 .container-fluid, .row{
     margin: 0;
@@ -586,4 +586,23 @@ a {
 .padSummernote {
     padding: 20px;
     width: 1180px;
+    font-family: 'PT Sans';
+}
+
+.showContent {
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.add {
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.addTitle {
+    margin-top: 50px;
+}
+
+.marginContent {
+    margin-bottom: 50px;
 }

@@ -24,7 +24,7 @@ class ContentManager extends DB
      */
     public function findAll($type)
     {
-        $req = "SELECT * FROM content WHERE type=:type";
+        $req = "SELECT * FROM content WHERE type=:type ORDER BY id DESC";
         $prep = $this->db->prepare($req);
         $prep->bindValue(':type', $type, \PDO::PARAM_STR);
         $prep->execute();

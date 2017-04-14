@@ -1,7 +1,12 @@
 {% extends "base.html.twig" %}
-{% block title %}Article{% endblock %}
+{% block title %}{{ data.title }}{% endblock %}
 
 {% block content %}
-
-
+    <div class="container text-center showContent">
+        <h1 class="text-center">{{ data.title }}</h1><br/>
+        <p>Article créé le {{ data.date|date("d/m/Y") }}</p>
+        <div class="borderBlack padSummernote">
+            {{ data.content|raw }}
+        </div>
+    </div><br/>
 {% endblock %}
