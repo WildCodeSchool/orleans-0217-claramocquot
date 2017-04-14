@@ -45,10 +45,10 @@ switch ($route) {
         $view = $page->addContent($type);
         break;
     case 'modif-article':
-        $view = $page->updateContent($type, $id);
+        $view = $page->updateContent($id);
         break;
     case 'supp-article':
-        $view = $page->deleteContent($type, $id);
+        $view = $page->deleteContent($id);
         break;
     case 'images':
         $view = $page->showPicturesHome();

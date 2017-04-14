@@ -39,8 +39,7 @@ class ContentManager extends DB
         $prep = $this->db->prepare($req);
         $prep->bindValue(':id', $id, \PDO::PARAM_INT);
         $prep->execute();
-        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst(content));
-
+        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst('content'));
         return $res[0];
     }
 
@@ -58,8 +57,7 @@ class ContentManager extends DB
         $prep->bindValue(':image', $data['image'], \PDO::PARAM_STR);
         $prep->bindValue(':content', $data['content'], \PDO::PARAM_STR);
         $prep->bindValue(':sumup', $data['sumup'], \PDO::PARAM_STR);
-        $prep->execute();
-        $res = true;
+        $res = $prep->execute();
         return $res;
     }
 
