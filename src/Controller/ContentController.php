@@ -12,17 +12,12 @@ use Clara\Form\Validator\ImageValidators;
 use Del\Form\Form;
 use Del\Form\Field\Text;
 use Del\Form\Field\Hidden;
-use Del\Form\Field\TextArea;
 use Del\Form\Field\FileUpload;
 use Del\Form\Field\Submit;
 use Clara\Model\ContentManager;
-use Del\Form\Filter\Adapter\FilterAdapterZf;
 use Del\Form\Validator\Adapter\ValidatorAdapterZf;
-use Zend\Validator\Between;
 use Zend\Validator\Callback;
 use Zend\Validator\Date;
-use Zend\Validator\File\ImageSize;
-use Zend\Validator\File\IsImage;
 
 /**
  * Class ContentController
@@ -43,14 +38,15 @@ class ContentController extends Controller
     }
 
     /**
-     * @param $id
+     * @param $type
+     * @param $result
      * @return string
      */
-    public function showContents($type)
+    public function showContents($type, $result)
     {
         $em = new ContentManager();
         $datas = $em->findAll($type);
-        return $this->getTwig()->render('showContents.html.twig', ['datas' => $datas, 'type' => $type]);
+        return $this->getTwig()->render('showContents.html.twig', ['datas' => $datas, 'type' => $type, 'result' => $result]);
     }
 
     /**
@@ -104,8 +100,7 @@ class ContentController extends Controller
         if (!empty($_FILES)) {
             $imageVal = new Callback([new ImageValidators(), 'isValid']);
             if (!$imageVal->isValid($_FILES['image']['tmp_name'])) {
-                $message = $imageVal->getMessages();
-                return $this->getTwig()->render('addContent.html.twig', ['form' => $form, 'type' => $type, 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format !']);
+                return $this->getTwig()->render('addContent.html.twig', ['form' => $form, 'type' => $type, 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format de 500x500 !']);
             }
         }
 
@@ -125,24 +120,26 @@ class ContentController extends Controller
 
     /**
      * @param $id
-     * @param $title
-     * @param $type
-     * @param $content
-     * @param $visibility
-     * @param $date
-     * @param $img
-     * @param $sumup
      * @return string
      */
-    public function update($data)
+    public function updateContent($id)
     {
+        $em = new ContentManager();
+        $data1 = $em->findOne($id);
         $form = new Form('addContent');
+        $form->setEncType('multipart/form-data');
         $title = new Text('title');
+        $title->setValue($data1->getTitle());
         $date = new Text('date');
+        $date->setValue($data1->getDate());
         $image = new FileUpload('image');
+        //$image->setValue($data1->getImage());
         $sumup = new Text('sumup');
-        $content = new TextArea('content');
+        $sumup->setValue($data1->getSumup());
+        $content = new \Clara\Form\Field\TextArea('content');
+        $content->setValue($data1->getContent());
         $hidden = new Hidden('type');
+        $hidden->setValue($data1->getType());
         $submit = new Submit('submit');
         $title->setLabel('Titre :');
         $date->setLabel('Date de création :');
@@ -154,14 +151,14 @@ class ContentController extends Controller
         $date->setRequired(true);
         $sumup->setRequired(true);
         $content->setRequired(true);
-        $hidden->setValue($type);
+        $hidden->setValue($data1->getType());
         $title->setPlaceholder('Titre de l\'article');
         $sumup->setPlaceholder('Résumé de l\'article');
         $date->setPlaceholder('YYYY-MM-DD');
         $content->setClass('input-block-level');
         $content->setId('summernote');
-        $image->setUploadDirectory('/../img/upload/');
-        $submit->setValue('Ajouter');
+        $image->setUploadDirectory('../img/upload/');
+        $submit->setValue('Modifier');
         $form->addField($title)
             ->addField($date)
             ->addField($image)
@@ -169,31 +166,42 @@ class ContentController extends Controller
             ->addField($content)
             ->addField($hidden)
             ->addField($submit);
+        $res = '';
+
+        if (!empty($_FILES)) {
+            $imageVal = new Callback([new ImageValidators(), 'isValid']);
+            if (!$imageVal->isValid($_FILES['image']['tmp_name'])) {
+                return $this->getTwig()->render('addContent.html.twig', ['form' => $form, 'type' => $data1->getType(), 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format !']);
+            }
+        }
 
         if (isset($_POST['submit'])) {
             $data = $_POST;
             $form->populate($data);
             if ($form->isValid()) {
                 $filteredData = $form->getValues();
-                $em = new ContentManager();
-                if ($em->updateContent($filteredData)) {
-                    echo 'Article Ajouté !';
+
+                if ($em->updateContent($filteredData, $id)) {
+                    $res = 'Article Modifié !';
                 }
             }
         }
-        return $this->getTwig()->render('updateContent.html.twig', ['form' => $form, 'type' => $type]);
+        return $this->getTwig()->render('updateContent.html.twig', ['form' => $form, 'type' => $data1->getType(), 'result' => $res]);
     }
 
     /**
+     * @param $type
      * @param $id
      * @return string
      */
-    public function delete($type, $id)
+    public function deleteContent($type, $id)
     {
         $db = new ContentManager();
-        $db->deleteContent($type, $id);
-        return $this->getTwig()->render('showContents.html.twig', ['type' => $type]);
+        $res = '';
+        if ($db->deleteContent($id)) {
+            $res = 'Article Supprimé !';
+            return $this->showContents($type, $res);
+        }
     }
-
 
 }

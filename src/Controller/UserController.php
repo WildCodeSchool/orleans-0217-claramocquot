@@ -37,6 +37,7 @@ class UserController extends Controller
     }
     public function home()
     {
-        return $this->getTwig()->render('home.html.twig');
+        $content = new HomeController(true);
+        return $content->homeContent();
     }
 }

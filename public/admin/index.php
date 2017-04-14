@@ -8,6 +8,7 @@ use Clara\Controller\AdminController;
 $route = '';
 $type= '';
 $id='';
+$result='';
 
 if (isset($_GET['route'])) {
     $route = $_GET['route'];
@@ -36,7 +37,7 @@ switch ($route) {
         $view = $page->updateHat();
         break;
     case 'articles':
-        $view = $page->showContents($type);
+        $view = $page->showContents($type, $result);
         break;
     case 'article':
         $view = $page->showContent($id);
@@ -48,7 +49,7 @@ switch ($route) {
         $view = $page->updateContent($id);
         break;
     case 'supp-article':
-        $view = $page->deleteContent($id);
+        $view = $page->deleteContent($type, $id);
         break;
     case 'images':
         $view = $page->showPicturesHome();

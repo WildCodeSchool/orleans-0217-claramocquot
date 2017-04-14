@@ -7,10 +7,16 @@ require __DIR__ . '/../vendor/autoload.php';
 use Clara\Controller\UserController;
 
 $route = '';
+$id ='';
 
 if (isset($_GET['route'])) {
     $route = $_GET['route'];
 }
+
+if (isset($_GET['id'])) {
+    $route = $_GET['id'];
+}
+
 $page = new UserController(true);
 
 switch ($route) {
@@ -51,7 +57,7 @@ switch ($route) {
         $view = $page->articles();
         break;
     case 'evenement':
-        $view = $page->article();
+        $view = $page->article($id);
         break;
     case 'prestations':
         $view = $page->articles();

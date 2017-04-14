@@ -15,51 +15,84 @@ class AdminController extends Controller
     {
         return $this->getTwig()->render('showHats.html.twig');
     }
+
     public function addHat()
     {
         return $this->getTwig()->render('addHat.html.twig');
     }
+
     public function updateHat()
     {
         return $this->getTwig()->render('updateHat.html.twig');
     }
-    public function showContents($type)
+
+    /**
+     * @param $type
+     * @param $result
+     * @return string
+     */
+    public function showContents($type, $result)
     {
         $content = new ContentController(false);
-        return $content->showContents($type);
+        return $content->showContents($type, $result);
     }
+
+    /**
+     * @param $id
+     * @return string
+     */
     public function showContent($id)
     {
         $content = new ContentController(false);
         return $content->showContent($id);
     }
+
+    /**
+     * @param $type
+     * @return string
+     */
     public function addContent($type)
     {
         $content = new ContentController(false);
         return $content->addContent($type);
     }
-    public function updateContent($type, $id)
+
+    /**
+     * @param $id
+     * @return string
+     */
+    public function updateContent($id)
     {
         $content = new ContentController(false);
-        return $content->updateContent($type, $id);
+        return $content->updateContent($id);
     }
+
+    /**
+     * @param $type
+     * @param $id
+     * @return string
+     */
     public function deleteContent($type, $id)
     {
         $content = new ContentController(false);
         return $content->deleteContent($type, $id);
     }
+
     public function showPicturesHome()
     {
         return $this->getTwig()->render('showPicturesHome.html.twig');
     }
+
     public function addPictureHome()
     {
         return $this->getTwig()->render('addPictureHome.html.twig');
     }
+
     public function updatePictureHome()
     {
         return $this->getTwig()->render('updatePictureHome.html.twig');
     }
+
     public function homeAdmin()
     {
         return $this->getTwig()->render('homeAdmin.html.twig');
