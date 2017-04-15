@@ -8,7 +8,10 @@
 
 namespace Clara\Model;
 
-
+/**
+ * Class Content
+ * @package Clara\Model
+ */
 class Content
 {
     private $id;
@@ -130,7 +133,6 @@ class Content
     {
         $this->sumup = $sumup;
     }
-
 
 
 }

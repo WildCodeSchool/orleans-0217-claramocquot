@@ -11,16 +11,20 @@ namespace Clara\Model;
 
 use Clara\DB;
 
+/**
+ * Class ContentManager
+ * @package Clara\Model
+ */
 class ContentManager extends DB
 {
 
     /**
-     * @param $table
+     * @param $type
      * @return array
      */
     public function findAll($type)
     {
-        $req = "SELECT * FROM content WHERE type=:type";
+        $req = "SELECT * FROM content WHERE type=:type ORDER BY id DESC";
         $prep = $this->db->prepare($req);
         $prep->bindValue(':type', $type, \PDO::PARAM_STR);
         $prep->execute();
@@ -29,7 +33,6 @@ class ContentManager extends DB
     }
 
     /**
-     * @param $table
      * @param $id
      * @return mixed
      */
@@ -43,9 +46,19 @@ class ContentManager extends DB
         return $res[0];
     }
 
+    public function findLastType($type)
+    {
+        $req = "SELECT * FROM content WHERE type=:type ORDER BY id DESC LIMIT 0,1";
+        $prep = $this->db->prepare($req);
+        $prep->bindValue(':type', $type, \PDO::PARAM_STR);
+        $prep->execute();
+        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst('content'));
+        return $res[0];
+    }
+
     /**
      * @param $data
-     * @return string
+     * @return bool
      */
     public function addContent($data)
     {
@@ -62,39 +75,34 @@ class ContentManager extends DB
     }
 
     /**
-     * @param $table
+     * @param $data
      * @param $id
-     * @return mixed
+     * @return bool
      */
-    public function updateContent($table, $id, $type, $title, $date, $image, $content, $sumup)
+    public function updateContent($data, $id)
     {
-        $req = "UPDATE $table SET (type=:type, title=:title,  date=:date,  image=:image, content=:content, sumup=:sumup) WHERE id=:id";
+        $req = "UPDATE content SET title=:title,  date=:date,  image=:image, content=:content, sumup=:sumup WHERE id=:id";
         $prep = $this->db->prepare($req);
         $prep->bindValue(':id', $id, \PDO::PARAM_INT);
-        $prep->bindValue(':type', $type, \PDO::PARAM_STR);
-        $prep->bindValue(':title', $title, \PDO::PARAM_STR);
-        $prep->bindValue(':date', $date, \PDO::PARAM_STR);
-        $prep->bindValue(':img', $image, \PDO::PARAM_STR);
-        $prep->bindValue(':content', $content, \PDO::PARAM_STR);
-        $prep->bindValue(':sumup', $sumup, \PDO::PARAM_STR);
-        $prep->execute();
-        $res = 'Element modifié';
+        $prep->bindValue(':title', $data['title'], \PDO::PARAM_STR);
+        $prep->bindValue(':date', $data['date'], \PDO::PARAM_STR);
+        $prep->bindValue(':image', $data['image'], \PDO::PARAM_STR);
+        $prep->bindValue(':content', $data['content'], \PDO::PARAM_STR);
+        $prep->bindValue(':sumup', $data['sumup'], \PDO::PARAM_STR);
+        $res = $prep->execute();
         return $res;
     }
 
     /**
-     * @param $table
      * @param $id
-     * @return mixed
+     * @return bool
      */
-    public function deleteContent($table, $id)
+    public function deleteContent($id)
     {
-        $req = "DELETE FROM $table WHERE id=:id";
+        $req = "DELETE FROM content WHERE id=:id";
         $prep = $this->db->prepare($req);
         $prep->bindValue(':id', $id, \PDO::PARAM_INT);
-        $prep->execute();
-        $res = 'Element supprimé';
+        $res = $prep->execute();
         return $res;
     }
-
 }

@@ -11,13 +11,15 @@ namespace Clara\Controller;
 
 class UserController extends Controller
 {
-    public function articles()
+    public function articles($type)
     {
-        return $this->getTwig()->render('contents.html.twig');
+        $content = new HomeController(true);
+        return $content->showContents($type);
     }
-    public function article()
+    public function article($id)
     {
-        return $this->getTwig()->render('content.html.twig');
+        $content = new HomeController(true);
+        return $content->showContent($id);
     }
     public function manifest()
     {
@@ -37,6 +39,7 @@ class UserController extends Controller
     }
     public function home()
     {
-        return $this->getTwig()->render('home.html.twig');
+        $content = new HomeController(true);
+        return $content->homeContent();
     }
 }

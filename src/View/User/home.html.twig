@@ -16,6 +16,8 @@
 
     <!-- Font Awesome -->
     <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/summernote.css">
+    <link rel="stylesheet" href="css/admin.css">
 
     <!-- Style -->
     <link href="css/style.css" type="text/css" rel="stylesheet">
@@ -81,7 +83,7 @@
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <a href="index.php?route=blogs">
+                            <a href="index.php?route=blogs&type=blog">
                                 <div class="thumbnailHome">
                                     <div class="captionHome">
                                         <h2>BLOG</h2>
@@ -97,7 +99,7 @@
 
                     <div class="row">
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <a href="index.php?route=marraines">
+                            <a href="index.php?route=marraines&type=marraine">
                                 <div class="thumbnailHome">
                                     <div class="captionHome">
                                         <h2>MARRAINES</h2>
@@ -121,7 +123,7 @@
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <a href="index.php?route=partenaires">
+                            <a href="index.php?route=partenaires&type=partenaire">
                                 <div class="thumbnailHome">
                                     <div class="captionHome">
                                         <h2>PARTENAIRES</h2>
@@ -137,7 +139,7 @@
 
                     <div class="row">
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <a href="index.php?route=prestations">
+                            <a href="index.php?route=prestations&type=prestation">
                                 <div class="thumbnailHome">
                                     <div class="captionHome">
                                         <h2>PRESTATION PRO</h2>
@@ -149,7 +151,7 @@
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <a href="index.php?route=evenements">
+                            <a href="index.php?route=evenements&type=evenement">
                                 <div class="thumbnailHome">
                                     <div class="captionHome">
                                         <h2>EVENEMENTS</h2>
@@ -161,7 +163,7 @@
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <a href="index.php?route=portraits">
+                            <a href="index.php?route=portraits&type=portrait">
                                 <div class="thumbnailHome">
                                     <div class="captionHome">
                                         <h2>VOS PORTRAITS</h2>
@@ -319,87 +321,67 @@
         <div class="row">
             <div class="col-xs-8 col-xs-offset-2">
                 <div class="row">
-                    <div class="col-md-4 col-xs-12">
+
+                    <div class="col-md-4 col-xs-12 text-center">
                         <h2 class="text-center">Dernier Evenement</h2>
-                        <a href="art.html" target=_blank">
+                        <a href="index.php?route={{ evenement.type }}&id={{ evenement.id }}">
                             <div class="thumbnail pad_articles borderBlack">
-                                <img src="img/article1.3.jpg" alt="...">
+                                <img src="../img/upload/{{ evenement.image }}" alt="{{ evenement.image }}">
                                 <div class="caption">
                                     <div class="row">
-
-
                                         <div class="col-md-12 col-xs-12">
                                             <div class="row">
-                                                <h2 class="titre">Titre</h2>
-                                                <p class="date">Date</p>
+                                                <h2 class="titre">{{ evenement.title }}</h2>
+                                                <p class="date">{{ evenement.date|date("d/m/Y") }}</p>
                                             </div>
                                             <div class="row txt_com">
-                                                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-                                            </div>
-                                            <div class="cache">
-
+                                                <p>{{ evenement.sumup }}</p>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                    <div class="col-md-4 col-xs-12">
-                        <h2 class="text-center">Dernier Article</h2>
-                        <a href="art.html" target=_blank">
+                    <div class="col-md-4 col-xs-12 text-center">
+                        <h2 class="text-center">Dernier Blog</h2>
+                        <a href="index.php?route={{ blog.type }}&id={{ blog.id }}">
                             <div class="thumbnail pad_articles borderBlack">
-                                <img src="img/article1.3.jpg" alt="...">
+                                <img src="../img/upload/{{ blog.image }}" alt="{{ blog.image }}">
                                 <div class="caption">
                                     <div class="row">
-
-
                                         <div class="col-md-12 col-xs-12">
                                             <div class="row">
-                                                <h2 class="titre">Titre</h2>
-                                                <p class="date">Date</p>
+                                                <h2 class="titre">{{ blog.title }}</h2>
+                                                <p class="date">{{ blog.date|date("d/m/Y") }}</p>
                                             </div>
                                             <div class="row txt_com">
-                                                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-                                            </div>
-                                            <div class="cache">
-
+                                                <p>{{ blog.sumup }}</p>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                    <div class="col-md-4 col-xs-12">
+                    <div class="col-md-4 col-xs-12 text-center">
                         <h2 class="text-center">Dernier Portrait</h2>
-                        <a href="art.html" target=_blank">
+                        <a href="index.php?route={{ portrait.type }}&id={{ portrait.id }}">
                             <div class="thumbnail pad_articles borderBlack">
-                                <img src="img/article1.3.jpg" alt="...">
+                                <img src="../img/upload/{{ portrait.image }}" alt="{{ portrait.image }}">
                                 <div class="caption">
                                     <div class="row">
-
-
                                         <div class="col-md-12 col-xs-12">
                                             <div class="row">
-                                                <h2 class="titre">Titre</h2>
-                                                <p class="date">Date</p>
+                                                <h2 class="titre">{{ portrait.title }}</h2>
+                                                <p class="date">{{ portrait.date|date("d/m/Y") }}</p>
                                             </div>
                                             <div class="row txt_com">
-                                                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-                                            </div>
-                                            <div class="cache">
-
+                                                <p>{{ portrait.sumup }}</p>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>

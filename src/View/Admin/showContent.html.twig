@@ -4,10 +4,11 @@
     <div class="container text-center">
         <h1 class="text-center">{{ data.title }}</h1><br/>
         <p>Article créé le {{ data.date|date("d/m/Y") }}</p>
-<div class="borderBlack padSummernote">
-    {{ data.content|raw }}
-</div>
+        <div class="borderBlack padSummernote">
+            {{ data.content|raw }}
+        </div>
         <a href="index.php?route=modif-article&id={{ data.id }}" role="button" class="btn btn-primary">Modifier</a>
-        <a href="index.php?route=supp-article&id={{ data.id }}" role="button" class="btn btn-danger">Supprimer</a>
+        <a href="index.php?route=supp-article&id={{ data.id }}&type={{ data.type }}" role="button"
+           class="btn btn-danger">Supprimer</a>
     </div><br/>
 {% endblock %}

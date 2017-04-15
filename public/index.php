@@ -7,10 +7,21 @@ require __DIR__ . '/../vendor/autoload.php';
 use Clara\Controller\UserController;
 
 $route = '';
+$id ='';
+$type ='';
 
 if (isset($_GET['route'])) {
     $route = $_GET['route'];
 }
+
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+}
+
+if (isset($_GET['type'])) {
+    $type = $_GET['type'];
+}
+
 $page = new UserController(true);
 
 switch ($route) {
@@ -24,40 +35,40 @@ switch ($route) {
         $view = $page->product();
         break;
     case 'blogs':
-        $view = $page->articles();
+        $view = $page->articles($type);
         break;
     case 'blog':
-        $view = $page->article();
+        $view = $page->article($id);
         break;
     case 'marraines':
-        $view = $page->articles();
+        $view = $page->articles($type);
         break;
     case 'marraine':
-        $view = $page->article();
+        $view = $page->article($id);
         break;
     case 'portraits':
-        $view = $page->articles();
+        $view = $page->articles($type);
         break;
     case 'portrait':
-        $view = $page->article();
+        $view = $page->article($id);
         break;
     case 'partenaires':
-        $view = $page->articles();
+        $view = $page->articles($type);
         break;
     case 'partenaire':
-        $view = $page->article();
+        $view = $page->article($id);
         break;
     case 'evenements':
-        $view = $page->articles();
+        $view = $page->articles($type);
         break;
     case 'evenement':
-        $view = $page->article();
+        $view = $page->article($id);
         break;
     case 'prestations':
-        $view = $page->articles();
+        $view = $page->articles($type);
         break;
     case 'prestation':
-        $view = $page->article();
+        $view = $page->article($id);
         break;
     case 'entreprise':
         $view = $page->firm();
@@ -68,7 +79,6 @@ switch ($route) {
     default :
         $view = $page->home();
 }
-
 echo $view;
 
 
