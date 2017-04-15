@@ -38,6 +38,6 @@ class HomeController extends Controller
     {
         $db = new ContentManager();
         $res = $db->findAll($type);
-        return $this->getTwig()->render('contents.html.twig', ['datas'=>$res]);
+        return $this->getTwig()->render('contents.html.twig', ['datas'=>$res,'type'=>$type]);
     }
 }
