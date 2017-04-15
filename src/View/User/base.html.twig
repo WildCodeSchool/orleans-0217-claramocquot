@@ -86,7 +86,7 @@
                                     <h4 class="modal-title" id="exampleModalLabel">Formulaire de contact</h4>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="">
+                                    <form action="" method="post">
                                         <div class="form-group">
                                             <label for="recipient-name" class="control-label">Nom:</label>
                                             <input type="text" class="form-control" id="recipient-name">
@@ -140,7 +140,7 @@
                                 ...
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
                             </div>
                         </div>
                     </div>
@@ -152,16 +152,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/landingPage.js"></script>
     <script src="js/thumbnailHome.js"></script>
-
     <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
-    <script>(function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
 {% endblock %}
 </body>
 </html>

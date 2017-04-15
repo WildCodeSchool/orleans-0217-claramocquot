@@ -42,7 +42,6 @@ body {
 -----------------------------------------*/
 
 .landingPageAccueil {
-    background: url(../img/article4.1.jpg);
     height: 1080px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -123,12 +122,6 @@ body {
     max-width: 100%;
     height: auto;
     margin: 0;
-}
-
-.borderPlus {
-    border: 1px solid black;
-    margin-top: 70px;
-    margin-bottom: 50px;
 }
 
 .stopPadding {
@@ -554,6 +547,11 @@ a {
 
 .dropdown-menu li {
     padding: 5px;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     font-weight: bolder;
+}
+
+.padding {
+    padding: 20px;
+    margin-top: -10px;
 }
