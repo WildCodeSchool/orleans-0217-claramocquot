@@ -16,15 +16,21 @@ class AdminController extends Controller
         $hat= new HatController(false);
         return $hat->showHats();
     }
+
+    public function showHat($id)
+    {
+        $hat= new HatController(false);
+        return $hat->showHat($id);
+    }
     public function addHat()
     {
         $hat= new HatController(false);
         return $hat->addHat();
     }
-    public function updateHat()
+    public function updateHat($id)
     {
         $hat = new HatController(false);
-        return $hat->updateHate();
+        return $hat->updateHate($id);
     }
     public function showContents($type)
     {

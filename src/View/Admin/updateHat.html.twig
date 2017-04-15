@@ -2,5 +2,8 @@
 
 {% block content %}
 
-
+    <div class="container text-center">
+        <h1>Modifier un article : {{ update }}</h1><hr/>
+        {{ form.render|raw }}
+    </div>
 {% endblock %}

@@ -29,11 +29,14 @@ switch ($route) {
     case 'chapeaux':
         $view = $page->showHats();
         break;
+    case 'chapeau':
+        $view = $page->showHat($id);
+        break;
     case 'nouveau-chapeau':
         $view = $page->addHat();
         break;
     case 'modif-chapeau':
-        $view = $page->updateHat();
+        $view = $page->updateHat($id);
         break;
     case 'articles':
         $view = $page->showContents($type);

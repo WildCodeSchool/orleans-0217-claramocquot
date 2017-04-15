@@ -44,13 +44,13 @@ class HatManager extends DB
 
 
 
-        $radio1 = $radio2 = $radio4 = $radio4 = 0;
+        $radio1 = $radio2 = $radio3 = $radio4 = 0;
         if ($form['radio'] == 0) {
             $radio1 = 1;
         } elseif ($form['radio'] == 1) {
             $radio2 = 1;
         } elseif ($form['radio'] == 2) {
-            $radio4 = 1;
+            $radio3 = 1;
         } elseif ($form['radio'] == 3) {
             $radio4 = 1;
         }
@@ -96,19 +96,45 @@ class HatManager extends DB
         return $res;
     }
 
+    public function showHat($id)
+    {
+        $req = "SELECT * FROM picture JOIN hat ON picture.id_hat=hat.id WHERE id_hat=:id";
+        $prep = $this->db->prepare($req);
+        $prep->bindValue(':id', $id, \PDO::PARAM_INT);
+        $prep->execute();
+        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst('hat'));
+        return $res;
+    }
+
     public function showHats()
     {
 
-        $req = "SELECT * FROM hat JOIN picture ON hat.id=picture.id_hat WHERE radio=1";
+        $req = "SELECT * FROM picture JOIN hat ON picture.id_hat=hat.id WHERE radio=1";
         $prep = $this->db->prepare($req);
         $prep->execute();
-        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst('content'));
+        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst('hat'));
         return $res;
 
 
     }
 
-    public function updateHat(){
+    public function updateHat($table, $id, $content, $price, $name, $new_prod, $product, $unavailable, $old, $hide){
+
+
+        $req = "UPDATE $table SET (content=:content, price=:price, name=:name, new_prod=:new_prod, product=:product, unavailable=:unavailable, old=:old, hide=:hide) WHERE id=:id";
+        $prep = $this->db->prepare($req);
+        $prep->bindValue(':id', $id, \PDO::PARAM_INT);
+        $prep->bindValue(':content', $content, \PDO::PARAM_STR);
+        $prep->bindValue(':price', $price, \PDO::PARAM_STR);
+        $prep->bindValue(':name', $name, \PDO::PARAM_STR);
+        $prep->bindValue(':new_prod', $new_prod, \PDO::PARAM_STR);
+        $prep->bindValue(':product', $product, \PDO::PARAM_STR);
+        $prep->bindValue(':unavailable', $unavailable, \PDO::PARAM_STR);
+        $prep->bindValue(':old', $old, \PDO::PARAM_STR);
+        $prep->bindValue(':hide', $hide, \PDO::PARAM_STR);
+        $prep->execute();
+        $res = 'Element modifié';
+        return $res;
 
     }
 }
