@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Clara;
+namespace Clara\Model;
 
 class DB
 {

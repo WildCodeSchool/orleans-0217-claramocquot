@@ -4,8 +4,9 @@
     <div class="container text-center">
         <h1 class="borderBlack">Liste des articles : {{ type }}</h1><br/>
         {% if result is not empty %}
-            <blockquote class="btn-success">{{ result }}</blockquote><br/>
+            <blockquote class="alert alert-success">{{ result }}</blockquote><br/>
         {% endif %}
+        {{ form.render|raw }}
         <div class="row">
             <div class="col-sm-4 col-xs-12">
                 <a href="index.php?route=nouvel-article&type={{ type }}">

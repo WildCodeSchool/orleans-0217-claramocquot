@@ -10,8 +10,9 @@ namespace Clara\Controller;
 
 
 use Clara\Model\ContentManager;
+use Clara\Model\Visibility_marraineManager;
 
-class HomeController extends Controller
+class FrontController extends Controller
 {
     public function homeContent()
     {
@@ -37,7 +38,9 @@ class HomeController extends Controller
     public function showContents($type)
     {
         $db = new ContentManager();
+        $em = new Visibility_marraineManager();
+        $visibility = $em->showVisibility();
         $res = $db->findAll($type);
-        return $this->getTwig()->render('contents.html.twig', ['datas'=>$res,'type'=>$type]);
+        return $this->getTwig()->render('contents.html.twig', ['datas'=>$res,'type'=>$type, 'visibility'=>$visibility]);
     }
 }

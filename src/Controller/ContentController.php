@@ -9,6 +9,8 @@
 namespace Clara\Controller;
 
 use Clara\Form\Validator\ImageValidators;
+use Clara\Model\Visibility_marraineManager;
+use Del\Form\Field\Select;
 use Del\Form\Form;
 use Del\Form\Field\Text;
 use Del\Form\Field\Hidden;
@@ -44,9 +46,35 @@ class ContentController extends Controller
      */
     public function showContents($type, $result)
     {
+        $form='';
         $em = new ContentManager();
+        if ($type == 'marraine') {
+            $db = new Visibility_marraineManager();
+            $actualVisibility = $db->showVisibility();
+            $form = new Form('changeVisibility');
+            $visibility = new Select('visibility');
+            $submit = new Submit('submit');
+            $submit->setValue('Changer');
+            $submit->setClass('btn btn-default');
+            $visibility->setValue($actualVisibility->getVisibility());
+            $visibility->setLabel('Activer le recrutement des marraines ');
+            $visibility->setOptions([1 => 'Oui', 0 => 'Non']);
+            $form->addField($visibility)
+                ->addField($submit);
+
+            if (isset($_POST['submit'])) {
+                $data = $_POST;
+                $form->populate($data);
+                if ($form->isValid()) {
+                    $filteredData = $form->getValues();
+                    if ($db->updateVisibility($filteredData)) {
+                        $result = 'Modification effectuée';
+                    }
+                }
+            }
+        }
         $datas = $em->findAll($type);
-        return $this->getTwig()->render('showContents.html.twig', ['datas' => $datas, 'type' => $type, 'result' => $result]);
+        return $this->getTwig()->render('showContents.html.twig', ['datas' => $datas, 'type' => $type, 'result' => $result, 'form' => $form]);
     }
 
     /**

@@ -9,7 +9,7 @@
 namespace Clara\Model;
 
 
-use Clara\DB;
+use Clara\Model\DB;
 
 class PictureHomeManager extends DB
 {

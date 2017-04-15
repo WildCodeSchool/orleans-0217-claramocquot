@@ -15,56 +15,34 @@
 </head>
 
 <body>
-<div id="fb-root"></div>
 
 <div class="container-fluid">
 
     <!-- Header -->
-    <div class="row header">
-
-				<span class="col-xs-3">
-
-					<span class="marque"><a href="index.php#navigation"> Clara MOCQUOT</a></span>
-					<p class="marque2"><a href="index.php"> CM </a></p>
-
-				</span>
-
-
-        <!-- Menu burger -->
-        <div class="col-xs-offset-8 col-xs-1 btn-nav">
-            <button type="button" class="btn btn-default burger"></button>
-
-            <div class="deroulement">
-                <div id="div1" class="menuburger"><a href="index.php?route=evenements&type=evenement"
-                                                     class="navGenerale">Evénements</a></div>
-                <br>
-                <div id="div2" class="menuburger"><a href="index.php?route=blogs&type=blog" class="navGenerale">Blog</a></div>
-                <br>
-                <div id="div3" class="menuburger"><a href="index.php?route=marraines&type=marraine" class="navGenerale">Marraines</a>
-                </div>
-                <br>
-                <div id="div4" class="menuburger"><a href="index.php?route=entreprise"
-                                                     class="navGenerale">Entreprise</a></div>
-                <br>
-                <div id="div5" class="menuburger"><a href="index.php?route=produits" class="navGenerale">Collection</a>
-                </div>
-                <br>
-                <div id="div6" class="menuburger"><a href="index.php?route=portraits&type=portrait" class="navGenerale">Portraits</a>
-                </div>
-                <br>
-                <div id="div7" class="menuburger"><a href="index.php?route=partenaires&type=partenaire"
-                                                     class="navGenerale">Partenaires</a></div>
-                <br>
-                <div id="div8" class="menuburger"><a href="index.php?route=manifeste" class="navGenerale">Manifeste</a>
-                </div>
-                <br>
-                <div id="div9" class="menuburger"><a href="index.php?route=prestations&type=prestation" class="navGenerale">Prestations
-                        pro</a></div>
-            </div>
+    <div class="row header text-center">
+        <a href="index.php#navigation">
+            <div class="col-xs-3 marginHeader1"><span class="marque">Clara MOCQUOT</span></div>
+        </a>
+        <div class="btn-group marginHeader2 dropdown col-xs-1 col-xs-offset-8">
+            <button type="button" class="btn dropdown-toggle burger" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu text-center">
+                <li class="borderBlack text-center"><a href="index.php?route=evenements&type=evenement">EVENEMENTS</a>
+                </li>
+                <li class="borderBlack text-center"><a href="index.php?route=blogs&type=blog">BLOG</a></li>
+                <li class="borderBlack text-center"><a
+                            href="index.php?route=partenaires&type=partenaire">PARTENAIRES</a></li>
+                <li class="borderBlack text-center"><a href="index.php?route=portraits&type=portrait">PORTRAIT</a></li>
+                <li class="borderBlack text-center"><a href="index.php?route=marraines&type=marraine">MARRAINES</a></li>
+                <li class="borderBlack text-center"><a href="index.php?route=manifeste">MANIFESTE</a></li>
+                <li class="borderBlack text-center"><a href="index.php?route=entreprise">ENTREPRISE</a></li>
+                <li class="borderBlack text-center"><a href="index.php?route=produits">CHAPEAUX</a></li>
+                <li class="borderBlack text-center"><a
+                            href="index.php?route=prestations&type=prestation">PRESTATIONS</a></li>
+            </ul>
         </div>
-        <!-- Fin menu burger -->
-
-        <!-- Fin header -->
 
     </div>
 </div>
@@ -108,7 +86,7 @@
                                     <h4 class="modal-title" id="exampleModalLabel">Formulaire de contact</h4>
                                 </div>
                                 <div class="modal-body">
-                                    <form>
+                                    <form action="">
                                         <div class="form-group">
                                             <label for="recipient-name" class="control-label">Nom:</label>
                                             <input type="text" class="form-control" id="recipient-name">
@@ -126,12 +104,14 @@
                                             <label for="message-text" class="control-label">Message:</label>
                                             <textarea class="form-control" id="message-text"></textarea>
                                         </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Annuler
+                                            </button>
+                                            <button type="button" class="btn btn-default">Envoyer</button>
+                                        </div>
                                     </form>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
-                                    <button type="button" class="btn btn-default">Envoyer</button>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -170,7 +150,6 @@
     </footer>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/burger.js"></script>
     <script src="js/landingPage.js"></script>
     <script src="js/thumbnailHome.js"></script>
 

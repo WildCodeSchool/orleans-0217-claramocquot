@@ -13,12 +13,12 @@ class UserController extends Controller
 {
     public function articles($type)
     {
-        $content = new HomeController(true);
+        $content = new FrontController(true);
         return $content->showContents($type);
     }
     public function article($id)
     {
-        $content = new HomeController(true);
+        $content = new FrontController(true);
         return $content->showContent($id);
     }
     public function manifest()
@@ -39,7 +39,7 @@ class UserController extends Controller
     }
     public function home()
     {
-        $content = new HomeController(true);
+        $content = new FrontController(true);
         return $content->homeContent();
     }
 }

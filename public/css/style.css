@@ -9,11 +9,11 @@ Table of Content
 */
 
 /*@font-face{*/
-    /*font-family: 'PTSans';*/
-    /*src: url('../fonts/PTS55F-webfont.woff') format('woff');*/
+/*font-family: 'PTSans';*/
+/*src: url('../fonts/PTS55F-webfont.woff') format('woff');*/
 /*}*/
 
-.container-fluid, .row{
+.container-fluid, .row {
     margin: 0;
 }
 
@@ -118,8 +118,8 @@ body {
     border-radius: 0;
 
     border: 1px solid black;
-    position:relative;
-    overflow:hidden;
+    position: relative;
+    overflow: hidden;
     max-width: 100%;
     height: auto;
     margin: 0;
@@ -130,6 +130,7 @@ body {
     margin-top: 70px;
     margin-bottom: 50px;
 }
+
 .stopPadding {
     padding: 0;
 }
@@ -137,13 +138,13 @@ body {
 .captionHome {
 
     color: white;
-    position:absolute;
-    top:0;
-    right:0;
-    background:rgba(0, 0, 0, 0.33);
-    width:100%;
-    height:100%;
-    padding-top:35%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.33);
+    width: 100%;
+    height: 100%;
+    padding-top: 35%;
     display: none;
     text-align: center;
     z-index: 2;
@@ -180,8 +181,8 @@ body {
     margin: 1px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: #000\9;
-    background-color: rgba(0,0,0,0);
+    background-color: #000 \9;
+    background-color: rgba(0, 0, 0, 0);
     border: 2px solid black;
     border-radius: 10px;
 }
@@ -193,18 +194,19 @@ body {
     background-color: black;
 }
 
-.thumbnailSlider{
+.thumbnailSlider {
     display: block;
     vertical-align: middle;
     border-radius: 0;
     border: 2px solid black;
-    position:relative;
-    overflow:hidden;
+    position: relative;
+    overflow: hidden;
     max-width: 100%;
     height: auto;
     margin: 0;
     background-color: white;
 }
+
 /*------------------------------------
     HEADER
  -------------------------------------*/
@@ -220,6 +222,14 @@ body {
     border-bottom: black 2px solid;
 }
 
+.marginHeader1 {
+    margin-top: 20px;
+}
+
+.marginHeader2 {
+    margin-top: 15px;
+}
+
 /* fin header */
 
 /* logo */
@@ -231,18 +241,13 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .marque {
     color: black;
+    display: inline;
     text-decoration: none;
-    position: relative;
-    font-size: 2em;
+    font-size: 30px;
     text-align: center;
-    top: 20px;
     border: solid black 2px;
-    padding: 7px 30px;
     text-transform: uppercase;
-}
-
-.marque2 {
-    display: none;
+    padding: 5px 30px;
 }
 
 .logoHome {
@@ -258,42 +263,20 @@ a, a:hover, a:active, a:focus, a:visited {
 
 /* menu burger */
 .burger {
-    position: relative;
     background-image: url("../img/boutonBurger.jpg");
     height: 53px;
     width: 53px;
-    top: 12px;
-    border: solid black 2.5px;
+    border: solid black 2px;
     border-radius: 0;
 }
 
-.burger:hover, .burger:active, .burger:focus, .burger:visited {
-    border: solid black 2.5px;
-}
-
-.deroulement {
-    position: absolute;
-    z-index: 100;
-}
-
-.menuburger {
-    display: none;
-    font-size: 20px;
-    position: relative;
-    top: 60px;
-    right: 80px;
-    width: 200px;
-    height: 40px;
-    border: 2px solid black;
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    padding: 2px 4px 2px 4px;
-}
-
-.navGenerale, .navGenerale:hover, .navGenerale:active, .navGenerale:focus, .navGenerale:visited {
-    color: black;
-    text-decoration: none;
-    text-transform: uppercase;
+.dropdown-menu {
+    left: -48px;
+    margin-top: 30px;
+    background: none;
+    box-shadow: none;
+    border: none;
+    font-size: 15px;
 }
 
 /* fin menu burger */
@@ -311,7 +294,7 @@ a, a:hover, a:active, a:focus, a:visited {
 .contentManifest {
     margin-top: 80px;
     padding: 50px;
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255, 255, 255, 0.6);
     border: 2px solid black;
     margin-bottom: 60px;
 
@@ -324,41 +307,6 @@ a, a:hover, a:active, a:focus, a:visited {
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 40px;
-}
-
-/*/// MEDIA QUERY HEADER ///*/
-@media screen and (max-width: 992px) {
-
-    /* logo */
-    .marque {
-        display: none;
-    }
-
-    .marque2 {
-        display: inline;
-        color: white;
-        text-decoration: none;
-        position: relative;
-        font-size: 2em;
-        text-align: center;
-        top: 20px;
-        border: solid black 2px;
-        padding: 5px;
-    }
-
-    /* fin logo */
-    /* menu burger */
-    button {
-        right: 30px;
-    }
-
-    .menuburger {
-        right: 120px;
-        height: 45px;
-        width: 150px;
-        padding-top: 5px;
-        font-size: 17px;
-    }
 }
 
 /* fin menu burger */
@@ -394,7 +342,6 @@ a, a:hover, a:active, a:focus, a:visited {
     font-size: 1.15em;
 }
 
-
 /* fin page articles */
 
 /*    page collections  */
@@ -426,7 +373,7 @@ a, a:hover, a:active, a:focus, a:visited {
     -o-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
     filter: grayscale(100%);
-    }
+}
 
 .ajustMargin {
     padding-top: 30px;
@@ -438,6 +385,7 @@ a, a:hover, a:active, a:focus, a:visited {
     padding-top: 30px;
     background-color: rgba(0, 0, 0, 0.33);
 }
+
 /*  fin collections */
 
 /* Page entreprise*/
@@ -514,8 +462,7 @@ footer img {
     border: 2px solid black;
 }
 
-
-Cont{
+Cont {
     font-size: 15px;
 }
 
@@ -556,13 +503,12 @@ a {
     margin-top: 20px;
 }
 
-.DescProduit{
+.DescProduit {
     font-size: 20px;
-
 
 }
 
-.titleProduit{
+.titleProduit {
     margin-top: 130px;
     font-size: 40px;
 
@@ -570,10 +516,9 @@ a {
 
 /*button reseaux sociaux*/
 
-.buttonFB{
+.buttonFB {
     margin-top: 20px;
 }
-
 
 .carousel-indicators {
     bottom: -30px;
@@ -605,4 +550,10 @@ a {
 
 .marginContent {
     margin-bottom: 50px;
+}
+
+.dropdown-menu li {
+    padding: 5px;
+    background-color: rgba(255,255,255,0.8);
+    font-weight: bolder;
 }

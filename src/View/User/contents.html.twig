@@ -12,7 +12,7 @@
                 <div class="row">
                     <div class="col-md-12 col-xs-12 text-center">
                         <div class=" presentationArticles">
-                            <h1>Liste des {{ type }}s</h1>
+                            <h1 class="borderBlack">Liste des {{ type }}s</h1><br/>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                 ut labore et dolore magna aliqua.
                                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -26,7 +26,7 @@
                     </div>
                 </div>
 
-                <div class="row marginContent">
+                <div class="row marginContent text-center">
                     {% for data in datas %}
                         <div class="col-md-4 col-xs-12">
                             <a href="index.php?route={{ data.type }}&id={{ data.id }}">
@@ -37,7 +37,7 @@
                                             <div class="col-md-12 col-xs-12">
                                                 <div class="row">
                                                     <h2 class="titre">{{ data.title }}</h2>
-                                                    <p class="date"{{ data.date|date('d/m/Y') }}</p>
+                                                    <p class="date">{{ data.date|date("d/m/Y") }}</p>
                                                 </div>
                                                 <div class="row txt_com">
                                                     <p>{{ data.sumup }}</p>
@@ -49,6 +49,53 @@
                             </a>
                         </div>
                     {% endfor %}
+
+                    {% if type == 'marraine' and visibility.visibility == 1 %}
+                    <div class="col-md-4 col-xs-12">
+                        <a href="#">
+                            <div class="thumbnail pad_articles borderBlack">
+                                <img src="../img/fun.jpg" alt="recrutement_marraines">
+                                <div class="caption">
+                                    <div class="row">
+                                        <div class="col-md-12 col-xs-12">
+                                            <div class="row">
+                                                <h2 class="titre">Venez nous rejoindre</h2>
+                                            </div>
+                                            <div class="row txt_com">
+                                                <p>Envie de devenir l'ambassadrice de nos chapeaux ?<br/></p>
+                                                <p>Cliquez ici !</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% endif %}
+
+                    {% if type == 'partenaire' %}
+                        <div class="col-md-4 col-xs-12">
+                            <a href="#">
+                                <div class="thumbnail pad_articles borderBlack">
+                                    <img src="../img/fun.jpg" alt="recrutement_partenaires">
+                                    <div class="caption">
+                                        <div class="row">
+                                            <div class="col-md-12 col-xs-12">
+                                                <div class="row">
+                                                    <h2 class="titre">Venez nous rejoindre</h2>
+                                                </div>
+                                                <div class="row txt_com">
+                                                    <p>Envie de nous soutenir et de devenir notre partenaire ?<br/></p>
+                                                    <p>Cliquez ici !</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endif %}
+
                 </div>
             </div>
         </div>
