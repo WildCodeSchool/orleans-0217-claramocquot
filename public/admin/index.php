@@ -9,6 +9,7 @@ $route = '';
 $type= '';
 $id='';
 $result='';
+$res='';
 
 if (isset($_GET['route'])) {
     $route = $_GET['route'];
@@ -28,7 +29,7 @@ switch ($route) {
         $view = $page->homeAdmin();
         break;
     case 'chapeaux':
-        $view = $page->showHats();
+        $view = $page->showHats($res);
         break;
     case 'chapeau':
         $view = $page->showHat($id);
@@ -38,6 +39,9 @@ switch ($route) {
         break;
     case 'modif-chapeau':
         $view = $page->updateHat($id);
+        break;
+    case 'supp-chapeau':
+        $view = $page->deleteHat($id);
         break;
     case 'articles':
         $view = $page->showContents($type, $result);

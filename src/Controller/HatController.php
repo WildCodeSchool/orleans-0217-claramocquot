@@ -18,8 +18,10 @@ use Del\Form\Field\Select;
 use Del\Form\Field\TextArea;
 use Del\Form\Field\Radio;
 use Del\Form\Field\Hidden;
+use Zend\Validator\Callback;
 
 
+use Clara\Form\Validator\ImageValidators;
 use Del\Form\Filter\Adapter\FilterAdapterZf;
 use Del\Form\Validator\Adapter\ValidatorAdapterZf;
 use Zend\Filter\StripTags;
@@ -116,20 +118,49 @@ class HatController extends Controller
         return $this->getTwig()->render('showHat.html.twig', ['hats' => $res]);
     }
 
-    public function showHats()
+    public function showHats($res)
     {
+
         $em = new HatManager();
         $datas = $em->showHats();
-        return $this->getTwig()->render('showHats.html.twig', ['datas' => $datas]);
+        return $this->getTwig()->render('showHats.html.twig', ['datas' => $datas, 'res'=> $res]);
     }
 
     public function updateHate($id)
     {
+        $res= '';
+        $value='';
+        $em = new HatManager();
+        $data2 = $em->showHat($id);
+        if ($data2[0]->getNewProd() ==1){
+            $value=0;
+        }
+        if ($data2[0]->getProduct() ==1){
+            $value=1;
+        }
+        if ($data2[0]->getUnavailable() ==1){
+            $value=2;
+        }
+        if ($data2[0]->getOld() ==1){
+            $value=3;
+        }
+        if ($data2[0]->getHide() ==1){
+            $value=4;
+        }
+
+
         $form = new Form('addHat');
         $form->setEncType('multipart/form-data');
+
         $name = new Text('name');
+        $name->setValue($data2[0]->getName());
+
         $content = new TextArea('content');
+        $content->setValue($data2[0]->getContent());
+
         $price = new Text('price');
+        $price->setValue($data2[0]->getPrice());
+
         $select = new Select('localisation');
         $select->setOptions([
             '0' => 'Accueil + Collection',
@@ -138,12 +169,21 @@ class HatController extends Controller
             '3' => 'Ancienne Collection',
             '4' => 'Ne pas afficher',
         ]);
+        $select->setValue($value);
         $image1 = new FileUpload('image1');
+        $image1->setValue($data2[0]->getImage());
+
         $image2 = new FileUpload('image2');
+//        $image2->setValue($data2[0]->getImage());
+
         $image3 = new FileUpload('image3');
+//        $image3->setValue($data2[0]->getImage());
+
         $image4 = new FileUpload('image4');
+//        $image4->setValue($data2[0]->getImage());
+
         $radio = new Radio('radio');
-        $hiden = new Hidden($id);
+        $hiden = new Hidden('id');
         $radio->setRenderInline(true);
         $radio->setOptions([
             '0' => 'Image 1',
@@ -152,8 +192,12 @@ class HatController extends Controller
             '3' => 'Image 4',
         ]);
         $hiden->setValue($id);
+        $hiden->setValue($data2[0]->getId());
+
         $radio->setValue(0);
         $submit = new Submit('submit');
+        $submit->setValue('Modifier');
+
         $radio->setLabel('Choississez votre image de miniature :   ');
         $name->setLabel('Nom du produit');
         $content->setLabel('Description');
@@ -187,19 +231,63 @@ class HatController extends Controller
             ->addField($submit);
 
 
+        var_dump($_POST);
+        var_dump($_FILES);
+
+
+
+
+
+        if (!empty($_FILES['image1']['name'])) {
+            $imageVal = new Callback([new ImageValidators(), 'isValid']);
+            if (!$imageVal->isValid($_FILES['image1']['tmp_name'])) {
+                return $this->getTwig()->render('updateHat.html.twig', ['form' => $form, 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format !']);
+            }
+        }
+        if (!empty($_FILES['image2']['name'])) {
+            $imageVal = new Callback([new ImageValidators(), 'isValid']);
+            if (!$imageVal->isValid($_FILES['image2']['tmp_name'])) {
+                return $this->getTwig()->render('updateHat.html.twig', ['form' => $form, 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format !']);
+            }
+        }
+        if (!empty($_FILES['image3']['name'])) {
+            $imageVal = new Callback([new ImageValidators(), 'isValid']);
+            if (!$imageVal->isValid($_FILES['image3']['tmp_name'])) {
+                return $this->getTwig()->render('updateHat.html.twig', ['form' => $form, 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format !']);
+            }
+        }
+        if (!empty($_FILES['image4']['name'])) {
+            $imageVal = new Callback([new ImageValidators(), 'isValid']);
+            if (!$imageVal->isValid($_FILES['image4']['tmp_name'])) {
+                return $this->getTwig()->render('updateHat.html.twig', ['form' => $form, 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format !']);
+            }
+        }
+
         if (isset($_POST['submit'])) {
             $data = $_POST;
             $form->populate($data);
             if ($form->isValid()) {
                 $filteredData = $form->getValues();
                 $em = new HatManager();
-                if ($em->updateHat($filteredData)) {
+                if ($em->updateHat($filteredData, $id)) {
                     $res = 'Modifié bebe';
                 }
             }
         }
 
         return $this->getTwig()->render('updateHat.html.twig', ['form' => $form, 'result' => $res]);
+
+
+    }
+
+    public function deleteHat($id){
+        $db = new HatManager();
+        $res='';
+        if ($db->deleteHat($id)) {
+            $res = 'Article Supprimé !';
+
+        }
+        return $this->showHats($res);
 
 
     }

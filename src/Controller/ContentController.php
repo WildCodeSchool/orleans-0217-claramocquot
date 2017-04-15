@@ -127,6 +127,8 @@ class ContentController extends Controller
     {
         $em = new ContentManager();
         $data1 = $em->findOne($id);
+
+
         $form = new Form('addContent');
         $form->setEncType('multipart/form-data');
         $title = new Text('title');
@@ -142,6 +144,9 @@ class ContentController extends Controller
         $hidden = new Hidden('type');
         $hidden->setValue($data1->getType());
         $submit = new Submit('submit');
+
+
+
         $title->setLabel('Titre :');
         $date->setLabel('Date de création :');
         $image->setLabel('Image de mignature :');

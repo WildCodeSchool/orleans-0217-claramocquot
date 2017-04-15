@@ -11,10 +11,10 @@ namespace Clara\Controller;
 
 class AdminController extends Controller
 {
-    public function showHats()
+    public function showHats($res)
     {
         $hat= new HatController(false);
-        return $hat->showHats();
+        return $hat->showHats($res);
     }
 
     public function showHat($id)
@@ -36,6 +36,11 @@ class AdminController extends Controller
         return $hat->updateHate($id);
     }
 
+    public function deleteHat($id)
+    {
+        $hat = new HatController(false);
+        return $hat->deleteHat($id);
+    }
     /**
      * @param $type
      * @param $result
