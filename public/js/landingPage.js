@@ -40,6 +40,18 @@ $(function() {
         $(this).find('.dropdown-menu').first().stop(true, true).fadeToggle(300);
     });
 
+    $('.thumbnailHome .captionHome').show();
+    $('.thumbnailHome').hover(
+        function () {
+            $(this).find('.captionHome').fadeOut(300);
+            $(this).find('.captionHome2').fadeIn(300);
+        },
+        function () {
+            $(this).find('.captionHome').fadeIn(300);
+            $(this).find('.captionHome2').fadeOut(300);
+
+        }
+    );
 
     (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
