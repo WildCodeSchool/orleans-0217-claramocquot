@@ -11,21 +11,36 @@ namespace Clara\Controller;
 
 class AdminController extends Controller
 {
-    public function showHats()
+    public function showHats($res)
     {
-        return $this->getTwig()->render('showHats.html.twig');
+        $hat= new HatController(false);
+        return $hat->showHats($res);
+    }
+
+    public function showHat($id)
+    {
+        $hat= new HatController(false);
+        return $hat->showHat($id);
     }
 
     public function addHat()
     {
-        return $this->getTwig()->render('addHat.html.twig');
+        $hat= new HatController(false);
+        return $hat->addHat();
     }
 
-    public function updateHat()
+
+    public function updateHat($id)
     {
-        return $this->getTwig()->render('updateHat.html.twig');
+        $hat = new HatController(false);
+        return $hat->updateHate($id);
     }
 
+    public function deleteHat($id)
+    {
+        $hat = new HatController(false);
+        return $hat->deleteHat($id);
+    }
     /**
      * @param $type
      * @param $result
@@ -98,3 +113,4 @@ class AdminController extends Controller
         return $this->getTwig()->render('homeAdmin.html.twig');
     }
 }
+
