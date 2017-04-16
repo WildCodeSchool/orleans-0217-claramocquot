@@ -2,20 +2,21 @@
 
 {% block content %}
     <div class="container text-center">
-        <h1 class="borderBlack">Liste des produits</h1><br/>
+        <h1 class="borderBlack">Liste des chapeaux</h1><br/>
         {% if res is not empty %}
             <blockquote class="btn-success">{{ res }}</blockquote><br/>
         {% endif %}
         <div class="row">
             <div class="col-sm-4 col-xs-12">
                 <a href="index.php?route=nouveau-chapeau">
-                    <div class="thumbnail pad_articles borderBlack">
+                    <div class="thumbnail pad_articles borderBlack add">
                         <img src="../img/logos/add.png" alt="ajouter-article">
                         <div class="caption">
                             <div class="row">
                                 <div class="col-md-12 col-xs-12">
                                     <div class="row">
-                                        <h2 class="titre">Ajouter un nouvel Article</h2>
+                                        <hr/>
+                                        <h2 class="titre addTitle">Ajouter un nouveau chapeau</h2>
                                     </div>
                                 </div>
                             </div>

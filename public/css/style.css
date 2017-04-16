@@ -116,7 +116,6 @@ body {
     display: block;
     vertical-align: middle;
     border-radius: 0;
-
     border: 1px solid black;
     position: relative;
     overflow: hidden;
@@ -499,8 +498,9 @@ a {
 }
 
 .sliderProduit {
-    padding-top: 40px;
-    padding-bottom: 100px;
+    padding-top: 220px;
+    padding-bottom: 130px;
+    background-color: rgba(0,0,0,0.33);
 }
 
 .sliderHeight {
@@ -588,6 +588,10 @@ a {
     color: rgba(255,255,255,0.6);
 }
 
+.carousel-indicators {
+    bottom: -50px;
+}
+
 .carousel-indicators li {
     width: 25px;
     background-color: rgba(255,255,255,0.6);
@@ -596,5 +600,5 @@ a {
 .carousel-indicators .active {
     width: 35px;
     background-color: white;
-    border-color: rgba(255,255,255,0.6);
+    border-color: white;
 }

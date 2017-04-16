@@ -46,14 +46,14 @@
     MOSAIQUE DE NAVIGATION
 ============================== -->
 
-<section class="landingPageNavigation" id="navigation">
+<section class="landingPageNavigation">
     <div class="section_overlay">
 
 
         <div class="container">
             <div class="logoHome"><a href="#navigation" id="link" class="titreGeneral borderBlack"> Clara MOCQUOT</a>
             </div>
-            <div class="row navHeight">
+            <div class="row navHeight" id="navigation">
                 <div class="col-md-10 col-md-offset-1 padding">
 
 
@@ -223,6 +223,7 @@
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
+                        {% for new in news %}
                         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                         <li data-target="#carousel-example-generic" data-slide-to="2"></li>

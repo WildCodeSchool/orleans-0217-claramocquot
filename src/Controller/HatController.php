@@ -101,7 +101,7 @@ class HatController extends Controller
                 $filteredData = $form->getValues();
                 $em = new HatManager();
                 if ($em->addHat($filteredData)) {
-                    $res = 'bien joue bebe';
+                    $res = 'Chapeau ajouté';
                 }
             }
         }
@@ -270,7 +270,7 @@ class HatController extends Controller
                 $filteredData = $form->getValues();
                 $em = new HatManager();
                 if ($em->updateHat($filteredData, $id)) {
-                    $res = 'Modifié bebe';
+                    $res = 'Chapeau Modifié';
                 }
             }
         }

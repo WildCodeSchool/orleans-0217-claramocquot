@@ -9,7 +9,7 @@
 namespace Clara\Model;
 
 
-use Clara\DB;
+use Clara\Model\DB;
 use Doctrine\DBAL\Driver\PDOException;
 
 class HatManager extends DB
@@ -108,14 +108,20 @@ class HatManager extends DB
 
     public function showHats()
     {
-
         $req = "SELECT * FROM picture JOIN hat ON picture.id_hat=hat.id WHERE radio=1 ORDER BY hat.id DESC ";
         $prep = $this->db->prepare($req);
         $prep->execute();
         $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst('hat'));
         return $res;
+    }
 
-
+    public function showNewHats()
+    {
+        $req = "SELECT * FROM picture JOIN hat ON picture.id_hat=hat.id WHERE radio=1 AND new_prod=1 ORDER BY hat.id DESC ";
+        $prep = $this->db->prepare($req);
+        $prep->execute();
+        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst('hat'));
+        return $res;
     }
 
     public function updateHat($data, $id){
