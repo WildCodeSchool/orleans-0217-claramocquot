@@ -89,7 +89,8 @@ body {
 -----------------------------------------*/
 
 .landingPageNavigation .section_overlay {
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba(0, 0, 0, 0);
+    padding-top: 80px;
 }
 
 .navHome {
@@ -157,10 +158,18 @@ body {
     z-index: 2;
 }
 
-.landingPageNouveautes .section_overlay {
-    margin-top: 50px;
-    padding-bottom: 50px;
+.landingPageNouveautes {
+    padding-top: 50px;
+    padding-bottom: 100px;
     background-color: rgba(0, 0, 0, 0.33);
+}
+
+.section_overlay2 {
+padding-bottom: 50px;
+}
+
+.navHeight {
+    height: 1000px;
 }
 
 /*---------------------------------------
@@ -168,7 +177,6 @@ body {
 -----------------------------------------*/
 
 .landingPageActualites .section_overlay {
-
     height: 500px;
 }
 
@@ -188,7 +196,6 @@ body {
     margin: 1px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: #000 \9;
     background-color: rgba(0, 0, 0, 0);
     border: 2px solid black;
     border-radius: 10px;
@@ -270,7 +277,7 @@ a, a:hover, a:active, a:focus, a:visited {
 
 /* menu burger */
 .burger {
-    background-image: url("../img/boutonBurger.jpg");
+    background-image: url("../img/logos/boutonBurger.jpg");
     height: 53px;
     width: 53px;
     border: solid black 2px;
@@ -292,9 +299,9 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .bannerManifest {
     background-size: cover;
-    background-image: url("../img/manifeste/manifeste.jpg");
+    background-image: url("../img/pageManifeste/manifesteCover.jpg");
     background-repeat: no-repeat;
-    height: 250px;
+    height: 400px;
     margin-top: 90px;
 }
 
@@ -399,10 +406,9 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .banner {
     background-size: cover;
-    background-image: url("../img/entreprise/entreprise - copie.jpg");
+    background-image: url("../img/pageEntreprise/entrepriseCover1.jpg");
     background-repeat: no-repeat;
-    height: 250px;
-    /*margin: 50px;*/
+    height: 400px;
     margin-top: 90px;
     color: white;
     position: relative;
@@ -568,4 +574,27 @@ a {
 .padding {
     padding: 20px;
     margin-top: -15px;
+}
+
+.carousel-control.right, .carousel-control.left {
+    background: none;
+}
+
+.carousel-control:focus, .carousel-control:hover {
+    color: white;
+}
+
+.carousel-control, .carousel-control:active {
+    color: rgba(255,255,255,0.6);
+}
+
+.carousel-indicators li {
+    width: 25px;
+    background-color: rgba(255,255,255,0.6);
+    border-color: white;
+}
+.carousel-indicators .active {
+    width: 35px;
+    background-color: white;
+    border-color: rgba(255,255,255,0.6);
 }
