@@ -7,7 +7,7 @@ namespace clara\model;
 class PictureHome
 {
     private $id;
-    private $url;
+    private $name;
     private $visibility;
 
     /**
@@ -29,17 +29,17 @@ class PictureHome
     /**
      * @return mixed
      */
-    public function getUrl()
+    public function getName()
     {
-        return $this->url;
+        return $this->name;
     }
 
     /**
-     * @param $url
+     * @param $name
      */
-    public function setUrl($url)
+    public function setName($name)
     {
-        $this->url = $url;
+        $this->name = $name;
     }
 
     /**

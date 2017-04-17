@@ -14,7 +14,23 @@ use Clara\Model\DB;
 class PictureHomeManager extends DB
 {
 
-    // mocquot_picture_home
+    public function findAll()
+    {
+        $req = "SELECT * FROM picture_home ORDER BY id DESC";
+        $prep = $this->db->prepare($req);
+        $prep->execute();
+        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst('pictureHome'));
+        return $res;
+    }
+
+    public function findPictureHome()
+    {
+        $req = "SELECT * FROM picture_home WHERE visibility=1";
+        $prep = $this->db->prepare($req);
+        $prep->execute();
+        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst('pictureHome'));
+        return $res[0];
+    }
 
     /**
      * @param $table
@@ -22,13 +38,13 @@ class PictureHomeManager extends DB
      * @param $url
      * @param $visibility
      */
-    public function addPictureHome($table, $id, $url, $visibility)
+    public function addPictureHome($data)
     {
-        $req = "INSERT INTO $table(id, url, visibility) VALUES(:id, :url, :visibility)";
+        $this->resetPictureHomeVisibility();
+        $req = "INSERT INTO picture_home(name, visibility) VALUES(:name, :visibility)";
         $prep = $this->db->prepare($req);
-        $prep->bindValue(':id', $id, \PDO::PARAM_STR);
-        $prep->bindValue(':url', $url, \PDO::PARAM_STR);
-        $prep->bindValue(':visibility', $visibility, \PDO::PARAM_INT);
+        $prep->bindValue(':name', $data['name'], \PDO::PARAM_STR);
+        $prep->bindValue(':visibility', $data['visibility'], \PDO::PARAM_INT);
         $prep->execute();
         $res = 'Élément ajouté.';
         return $res;
@@ -41,25 +57,33 @@ class PictureHomeManager extends DB
      * @param $visibility
      * @return string
      */
-    public function updatePictureHome($table, $id, $url, $visibility)
+    public function resetPictureHomeVisibility()
     {
-        $req = "UPDATE $table SET (id=:id, url=:url, visibility=:visibility) WHERE id=:id";
+        $req = "UPDATE picture_home SET visibility=:visibility";
         $prep = $this->db->prepare($req);
-        $prep->bindValue(':id', $id, \PDO::PARAM_INT);
-        $prep->bindValue(':url', $url, \PDO::PARAM_STR);
-        $prep->bindValue(':visibility', $visibility, \PDO::PARAM_INT);
-        $prep->execute();
-        $res = 'Élément modifié.';
+        $prep->bindValue(':visibility', 0, \PDO::PARAM_INT);
+        $res=$prep->execute();
         return $res;
     }
 
-    public function deletePictureHome($table, $id)
+    public function updatePictureHomeVisibility($data)
     {
-        $req = "DELETE FROM $table WHERE id=:id";
+        $this->resetPictureHomeVisibility();
+        $req = "UPDATE picture_home SET visibility=:visibility WHERE id=:id";
         $prep = $this->db->prepare($req);
-        $prep->bindValue(':id', $id, \PDO::PARAM_INT);
-        $prep->execute();
-        $res = 'Élément supprimé';
+        $prep->bindValue(':id', $data['id'], \PDO::PARAM_INT);
+        $prep->bindValue(':visibility', '1', \PDO::PARAM_INT);
+        $res=$prep->execute();
+        return $res;
+    }
+
+
+    public function deletePictureHome($data)
+    {
+        $req = "DELETE FROM picture_home WHERE id=:id";
+        $prep = $this->db->prepare($req);
+        $prep->bindValue(':id', $data['id'], \PDO::PARAM_INT);
+        $res=$prep->execute();
         return $res;
     }
 }

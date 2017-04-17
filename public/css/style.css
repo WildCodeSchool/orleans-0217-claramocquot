@@ -145,7 +145,7 @@ body {
 
 .captionHome2 {
 
-    color: rgb(70,70,70);
+    color: rgb(70, 70, 70);
     position: absolute;
     top: 0;
     right: 0;
@@ -164,7 +164,7 @@ body {
 }
 
 .section_overlay2 {
-padding-bottom: 50px;
+    padding-bottom: 50px;
 }
 
 .navHeight {
@@ -505,7 +505,7 @@ a {
 .sliderProduit {
     padding-top: 220px;
     padding-bottom: 130px;
-    background-color: rgba(0,0,0,0.33);
+    background-color: rgba(0, 0, 0, 0.33);
 }
 
 .sliderHeight {
@@ -590,7 +590,7 @@ a {
 }
 
 .carousel-control, .carousel-control:active {
-    color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .carousel-indicators {
@@ -599,11 +599,37 @@ a {
 
 .carousel-indicators li {
     width: 25px;
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255, 255, 255, 0.6);
     border-color: white;
 }
+
 .carousel-indicators .active {
     width: 35px;
     background-color: white;
     border-color: white;
+}
+
+th {
+    border: 2px solid black;
+    vertical-align: middle;
+}
+
+tr td {
+    border: 1px solid black;
+}
+
+.marginTab {
+    padding-bottom: 50px;
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    vertical-align: middle;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    border-top: 2px solid black;
+}
+
+.apercu {
+    width: 200px;
 }
