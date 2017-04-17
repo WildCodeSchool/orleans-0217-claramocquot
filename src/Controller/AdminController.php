@@ -99,25 +99,9 @@ class AdminController extends Controller
         return $picture->showPicturesHome();
     }
 
-public function showPictureHome()
-{
-    $picture = new PictureHomeController(false);
-    return $picture->showPictureHome();
-}
-
-    public function addPictureHome()
-    {
-        $picture = new PictureHomeController(false);
-        return $picture->addPictureHome();    }
-
-    public function updatePictureHome()
-    {
-        $picture = new PictureHomeController(false);
-        return $picture->updatePictureHome();    }
-
     public function homeAdmin()
     {
-        $picture = new PictureHomeController(false);
-        return $picture->deletePictureHome();    }
+        return $this->getTwig()->render('homeAdmin.html.twig');
+    }
 }
 
