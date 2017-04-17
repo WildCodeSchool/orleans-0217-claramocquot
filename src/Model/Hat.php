@@ -22,6 +22,7 @@ class Hat
     private $unavailable;
     private $old;
     private $hide;
+    private $image;
 
     /**
      * @return mixed
@@ -165,6 +166,22 @@ class Hat
     public function setHide($hide)
     {
         $this->hide = $hide;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param mixed $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
     }
 
 }

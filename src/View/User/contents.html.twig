@@ -6,11 +6,11 @@
     <div class="container-fluid">
 
         <div class="row">
-            <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2">
+            <div class="col-md-10 col-md-offset-1 col-xs-8 col-xs-offset-2">
 
 
                 <div class="row">
-                    <div class="col-md-12 col-xs-12 text-center">
+                    <div class="col-md-10 col-md-offset-1 col-xs-12 text-center">
                         <div class=" presentationArticles">
                             <h1 class="borderBlack">Liste des {{ type }}s</h1><br/>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -29,7 +29,7 @@
                 <div class="row marginContent text-center">
                     {% for data in datas %}
                         <div class="col-md-4 col-xs-12">
-                            <a href="index.php?route={{ data.type }}&id={{ data.id }}">
+                            <a href="index.php?route=article&id={{ data.id }}">
                                 <div class="thumbnail pad_articles borderBlack">
                                     <img src="../img/upload/{{ data.image }}" alt="{{ data.image }}">
                                     <div class="caption">

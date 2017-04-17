@@ -3,6 +3,8 @@
 {% block content %}
     <div class="container text-center">
         <h1 class="text-center">{{ data.title }}</h1><br/>
+        <a href="index.php?route=articles&type={{ data.type }}"><p class="text-left"><span class="fa fa-angle-double-left"></span> retour à la
+                liste</p></a><br/>
         <p>Article créé le {{ data.date|date("d/m/Y") }}</p>
         <div class="borderBlack padSummernote">
             {{ data.content|raw }}
