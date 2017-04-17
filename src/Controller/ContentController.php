@@ -113,7 +113,7 @@ class ContentController extends Controller
         $date->setPlaceholder('YYYY-MM-DD');
         $content->setClass('input-block-level');
         $image->setId('img');
-        $content->setId('summernote');
+        $content->setId('editor');
         $image->setUploadDirectory('../img/upload/');
         $submit->setValue('Ajouter');
         $form->addField($title)
@@ -185,7 +185,7 @@ class ContentController extends Controller
         $sumup->setPlaceholder('Résumé de l\'article');
         $date->setPlaceholder('YYYY-MM-DD');
         $content->setClass('input-block-level');
-        $content->setId('summernote');
+        $content->setId('editor');
         $image->setUploadDirectory('../img/upload/');
         $submit->setValue('Modifier');
         $form->addField($title)
