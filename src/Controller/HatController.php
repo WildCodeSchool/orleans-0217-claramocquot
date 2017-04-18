@@ -118,36 +118,39 @@ class HatController extends Controller
         return $this->getTwig()->render('showHat.html.twig', ['hats' => $res]);
     }
 
-    public function showHats($res)
-    {
-
-        $em = new HatManager();
-        $datas = $em->showHats();
-        return $this->getTwig()->render('showHats.html.twig', ['datas' => $datas, 'res'=> $res]);
-    }
-
     public function updateHate($id)
     {
-        $res= '';
-        $value='';
+        $valueradio = 0;
+        $res = '';
+        $value = '';
         $em = new HatManager();
         $data2 = $em->showHat($id);
-        if ($data2[0]->getNewProd() ==1){
-            $value=0;
+        if ($data2[0]->getNewProd() == 1) {
+            $value = 0;
         }
-        if ($data2[0]->getProduct() ==1){
-            $value=1;
+        if ($data2[0]->getProduct() == 1) {
+            $value = 1;
         }
-        if ($data2[0]->getUnavailable() ==1){
-            $value=2;
+        if ($data2[0]->getUnavailable() == 1) {
+            $value = 2;
         }
-        if ($data2[0]->getOld() ==1){
-            $value=3;
+        if ($data2[0]->getOld() == 1) {
+            $value = 3;
         }
-        if ($data2[0]->getHide() ==1){
-            $value=4;
+        if ($data2[0]->getHide() == 1) {
+            $value = 4;
         }
 
+        foreach ($data2 as $key => $value1) {
+
+
+            if ($data2[$key]->getRadio() == 1) {
+
+                $valueradio = $key;
+
+            }
+
+        }
 
         $form = new Form('addHat');
         $form->setEncType('multipart/form-data');
@@ -193,8 +196,7 @@ class HatController extends Controller
         ]);
         $hiden->setValue($id);
         $hiden->setValue($data2[0]->getId());
-
-        $radio->setValue(0);
+        $radio->setValue($valueradio);
         $submit = new Submit('submit');
         $submit->setValue('Modifier');
 
@@ -229,14 +231,6 @@ class HatController extends Controller
             ->addField($radio)
             ->addField($hiden)
             ->addField($submit);
-
-
-        var_dump($_POST);
-        var_dump($_FILES);
-
-
-
-
 
         if (!empty($_FILES['image1']['name'])) {
             $imageVal = new Callback([new ImageValidators(), 'isValid']);
@@ -280,9 +274,10 @@ class HatController extends Controller
 
     }
 
-    public function deleteHat($id){
+    public function deleteHat($id)
+    {
         $db = new HatManager();
-        $res='';
+        $res = '';
         if ($db->deleteHat($id)) {
             $res = 'Article Supprimé !';
 
@@ -290,6 +285,14 @@ class HatController extends Controller
         return $this->showHats($res);
 
 
+    }
+
+    public function showHats($res)
+    {
+
+        $em = new HatManager();
+        $datas = $em->showHats();
+        return $this->getTwig()->render('showHats.html.twig', ['datas' => $datas, 'res' => $res]);
     }
 }
 

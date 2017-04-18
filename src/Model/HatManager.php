@@ -133,6 +133,17 @@ class HatManager extends DB
             $hide = 1;
         }
 
+        $radio1 = $radio2 = $radio3 = $radio4 = 0;
+        if ($data['radio'] == 0) {
+            $radio1 = 1;
+        } elseif ($data['radio'] == 1) {
+            $radio2 = 1;
+        } elseif ($data['radio'] == 2) {
+            $radio3 = 1;
+        } elseif ($data['radio'] == 3) {
+            $radio4 = 1;
+        }
+
         $req = "UPDATE hat SET content=:content, price=:price, name=:name, new_prod=:new_prod, product=:product, unavailable=:unavailable, old=:old, hide=:hide WHERE id=:id";
         $prep = $this->db->prepare($req);
         $prep->bindValue(':id', $id, \PDO::PARAM_INT);
@@ -150,10 +161,12 @@ class HatManager extends DB
 
         $req2 = "UPDATE picture SET (image, radio) VALUES (:img, :radio) WHERE id =:id";
         $prep2 = $this->db->prepare($req2);
-        $prep->bindValue(':id', $id, \PDO::PARAM_INT);
+        $prep2->bindValue(':id', $id, \PDO::PARAM_INT);
         $prep2->bindValue(':img', $data['image1']['name']);
         $prep2->bindValue(':radio', $radio1);
         $prep2->execute();
+
+        $lastid = $this->db->lastInsertId();
 
         if (!empty($form['image2'])) {
             $req3 = "UPDATE picture SET (image, id_hat, radio) VALUES (:img, :idhat, :radio)";

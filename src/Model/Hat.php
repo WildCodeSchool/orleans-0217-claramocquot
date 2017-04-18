@@ -12,7 +12,6 @@ namespace Clara\Model;
 class Hat
 {
 
-
     private $id;
     private $content;
     private $name;
@@ -23,6 +22,23 @@ class Hat
     private $old;
     private $hide;
     private $image;
+    private $radio;
+
+    /**
+     * @return mixed
+     */
+    public function getRadio()
+    {
+        return $this->radio;
+    }
+
+    /**
+     * @param mixed $radio
+     */
+    public function setRadio($radio)
+    {
+        $this->radio = $radio;
+    }
 
     /**
      * @return mixed
@@ -183,4 +199,7 @@ class Hat
     {
         $this->image = $image;
     }
+
+
+
 }
