@@ -2,118 +2,155 @@
 {% block title %}Chapeau rouge{% endblock %}
 
 {% block content %}
-<div class="containerProduit">
-    <div class="row">
-        <div class="col-xs-offset-2 titleProduit">
-            <p>Chapeau rouge</p>
+    <div class="container-fluid containerProduit">
+        <div class="row">
+            <div class="col-xs-5 sliderProduit">
+                <div class="row">
+                <div id="carousel-example-generic" class=" col-xs-10 col-xs-offset-1 carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                    </ol>
 
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-10 col-xs-offset-1">
-            <div class="row">
-                <div class="col-xs-6 sliderProduit">
-                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                        </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="row">
+                        <div class="col-xs-10 col-xs-offset-1">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="img/pageChapeaux/modele1.1.jpg" alt="...">
+                                </div>
 
-                        <!-- Wrapper for slides -->
-                        <div class="row">
-                            <div class="col-xs-8 col-xs-offset-3">
-                                <div class="carousel-inner sliderHeight " role="listbox">
-                                    <div class="item active">
-                                        <img src="img/collection/modele1.1.jpg" alt="...">
-                                    </div>
+                                <div class="item">
+                                    <img src="img/pageChapeaux/modele1.2.jpg" alt="...">
+                                </div>
 
-                                    <div class="item">
-                                        <img src="img/collection/model2.2.jpg" alt="...">
-                                    </div>
+                                <div class="item">
+                                    <img src="img/pageChapeaux/modele1.3.jpg" alt="...">
+                                </div>
+
+                                <div class="item">
+                                    <img src="img/pageChapeaux/modele1.4.jpg" alt="...">
                                 </div>
                             </div>
-
-                            <!-- Controls -->
-                            {#<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">#}
-                                {#<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>#}
-                                {#<span class="sr-only">Previous</span>#}
-                            {#</a>#}
-                            {#<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">#}
-                                {#<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>#}
-                                {#<span class="sr-only">Next</span>#}
-                            {#</a>#}
                         </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button"
+                           data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button"
+                           data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
                 </div>
-                <div class="col-xs-6 produitDescription">
-                    <p><span class="DescProduit">Description: </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores assumenda consequatur corporis culpa cum dolore incidunt labore, laborum molestiae nemo nesciunt, nostrum officia officiis quos sit velit veniam veritatis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, cumque deserunt dolor eius eligendi excepturi illum maiores molestiae, nemo odit, provident rerum sunt totam. Ab architecto culpa illum ipsum saepe! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, aliquam architecto cumque cupiditate distinctio ea excepturi, labore officia possimus praesentium qui quisquam suscipit tempore totam unde, vel vero voluptas voluptate! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut autem, consectetur distinctio ex expedita ipsa iste molestiae nemo quas ratione reiciendis sunt vel. Commodi earum facilis molestias odio ut! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dicta dignissimos distinctio eius esse et expedita harum, illum natus nemo rem reprehenderit similique sit tenetur vitae! Eveniet, magnam molestiae. Adipisci!</p>
+            </div>
+            </div>
+            <div class="col-xs-5 col-xs-offset-1 produitDescription">
 
-                    <p><span class="DescProduit"> Prix:</span> 100€</p>
-                </div>
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#Se_renseigner" data-whatever="@mdo"><Cont>Se renseigner</Cont></button>
-                <div class="modal fade" id="Se_renseigner" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                <h1 class="titleProduit">Chapeau rouge</h1>
+                <a href="index.php?route=produits"><p class="text-left"><span class="fa fa-angle-double-left"></span> retour à la
+                        liste</p></a><br/>
+                <p><span class="DescProduit">Description:</span><br/>Chapeau fait-main en feutre de poil de lapin 100% - Haute Qualité.
+                    Forme canotier à bords plats. Bandeau de décoration en velours noir.
+                    Réalisé avec une entrée de tête de 58.5 cm, soit une taille moyenne. Gabarit
+                    général de 29cm par 24cm.
+                    Fait sur mesure et à la demande de la taille 56 à la taille 59 - pour d’autres
+                    tailles me contacter
+                    A l’intérieur vous trouverez un ruban « de gros-grain » noir en coton et ma
+                    griffe pour l’identifier : Clara Mocquot
+                    Pour une ligne contemporaine, ce canotier a une hauteur de calotte très
+                    basse - 7 cm.
+                    Pour un porté classique, prendre sa mesure de tête habituelle
+                    Pour un porté en arrière, voir les précisions
+                    Un élastique de maintien peut être ajouté pour votre confort.
+                    Le modèle est réalisable en bleu navy, vermillon, olive et noir .</p>
+
+                <p><span class="DescProduit"> Prix:</span> 100€</p>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#Se_renseigner"
+                        data-whatever="@mdo">
+                    <Cont>Se renseigner</Cont>
+                </button>
+                <div class="modal fade" id="Se_renseigner" tabindex="-1" role="dialog"
+                     aria-labelledby="exampleModalLabel">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
                                 <h4 class="modal-title" id="exampleModalLabel">Renseignement produit</h4>
                             </div>
-                                    <div class="headModalProduit">
-                                        <p>« Merci de votre confiance - laissez-nous vos coordonnées afin que nous puissions revenir
-
-                                            vers vous et valider votre commande. Si vous la connaissez, donner-nous votre taille de tour de
-
-                                            tête, et surtout n’hésitez pas à ajouter vos questions ou vos remarques dans l’espace
-
-                                            commentaires. Puisque nos produits sont faits par nos soins et requièrent des délais, faites-nous
-
-                                            savoir l’échéance souhaitée »</p>
-                                    </div>
+                            <div class="headModalProduit">
+                                <p>« Merci de votre confiance - laissez-nous vos coordonnées afin que nous
+                                    puissions
+                                    revenir
+                                    vers vous et valider votre commande. Si vous la connaissez, donner-nous
+                                    votre
+                                    taille de tour de
+                                    tête, et surtout n’hésitez pas à ajouter vos questions ou vos remarques dans
+                                    l’espace
+                                    commentaires. Puisque nos produits sont faits par nos soins et requièrent
+                                    des
+                                    délais, faites-nous
+                                    savoir l’échéance souhaitée »</p>
+                            </div>
                             <div class="modal-body">
-                                <form>
+                                <form action="" method="post">
                                     <div class="form-group">
-                                        <label for="recipient-name" class="control-label">Nom:</label>
-                                        <input type="text" class="form-control" id="recipient-name">
+                                        <label for="name" class="control-label">Nom:</label>
+                                        <input type="text" class="form-control" name="name">
                                     </div>
                                     <div class="form-group">
-                                        <label for="recipient-name" class="control-label">Prenom:</label>
-                                        <input type="text" class="form-control" id="recipient-name">
+                                        <label for="firstname" class="control-label">Prenom:</label>
+                                        <input type="text" class="form-control" name="firstname">
                                     </div>
                                     <div class="form-group">
-                                        <label for="recipient-name" class="control-label">Adresse email:</label>
-                                        <input type="email" class="form-control" id="recipient-name" placeholder="dupont@exemple.fr">
+                                        <label for="email" class="control-label">Adresse email:</label>
+                                        <input type="email" class="form-control" name="email"
+                                               placeholder="dupont@exemple.fr">
                                     </div>
                                     <div class="form-group">
-                                        <label for="recipient-name" class="control-label">Adresse:</label>
-                                        <input type="text" class="form-control" id="recipient-name">
+                                        <label for="address" class="control-label">Adresse:</label>
+                                        <input type="text" class="form-control" name="address">
                                     </div>
                                     <div class="form-group">
-                                        <label for="recipient-name" class="control-label">Taille:</label>
-                                        <input type="text" class="form-control" id="recipient-name">
+                                        <label for="size" class="control-label">Taille:</label>
+                                        <input type="text" class="form-control" name="size">
                                     </div>
                                     <div class="form-group">
-                                        <label for="message-text" class="control-label">Commentaire:</label>
-                                        <textarea class="form-control" id="message-text"></textarea>
+                                        <label for="comment" class="control-label">Commentaire:</label>
+                                        <textarea class="form-control" name="comment"></textarea>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                                            Annuler
+                                        </button>
+                                        <button type="submit" name="submit" class="btn btn-default">Envoyer
+                                        </button>
                                     </div>
                                 </form>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
-                                <button type="button" class="btn btn-default">Envoyer</button>
-                            </div>
+
                         </div>
                     </div>
                 </div>
-                    <div class="buttonFB">
-                        <div class="fb-share-button" data-href="#" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fclara%2Fpublic%2Findex.php%3Froute%3Dproduit%23&amp;src=sdkpreparse">Partager</a></div>
-
-
+                <div class="buttonFB">
+                    <div class="fb-share-button" data-href="#" data-layout="button_count" data-size="small"
+                         data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank"
+                                                      href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fclara%2Fpublic%2Findex.php%3Froute%3Dproduit%23&amp;src=sdkpreparse">Partager</a>
                     </div>
+                </div>
+
+
             </div>
         </div>
     </div>
-</div>
 
 {% endblock %}

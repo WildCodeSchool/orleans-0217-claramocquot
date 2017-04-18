@@ -10,6 +10,7 @@
     <!-- Importation des fonts Google -->
     <link href="https://fonts.googleapis.com/css?family=Overpass|PT+Sans|PT+Sans+Caption|PT+Serif|Roboto+Condensed"
           rel="stylesheet"/>
+    <link rel="icon" type="image/png" href="img/logos/favicon.png"/>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
@@ -28,7 +29,7 @@
     SECTION ACCUEIL
 ============================== -->
 
-<section class="container-fluid landingPageAccueil" id="accueil">
+<section class="container-fluid landingPageAccueil" id="accueil" style="background: url(img/upload/{{ picture.name }})">
     <div class="row section_overlay">
         <a href="#navigation" id="title" class="titreGeneral">
             <div class="col-xs-offset-3 col-xs-6 home-container titreCadre1">
@@ -45,51 +46,59 @@
     MOSAIQUE DE NAVIGATION
 ============================== -->
 
-<section class="landingPageNavigation" id="navigation">
+<section class="landingPageNavigation">
     <div class="section_overlay">
 
 
         <div class="container">
             <div class="logoHome"><a href="#navigation" id="link" class="titreGeneral borderBlack"> Clara MOCQUOT</a>
             </div>
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 borderPlus stopPadding">
+            <div class="row navHeight" id="navigation">
+                <div class="col-md-10 col-md-offset-1 padding">
 
 
                     <div class="row">
                         <div class="col-xs-12 col-md-4 stopPadding">
                             <a href="index.php?route=entreprise">
-                                <div class="thumbnailHome">
+                                <div class="thumbnailHome borderBlack">
                                     <div class="captionHome">
-                                        <h2>ENTREPRISE</h2>
+                                        <h2>L'ENTREPRISE</h2>
                                     </div>
-
+                                    <div class="captionHome2">
+                                        <h2>L'ENTREPRISE</h2>
+                                    </div>
                                     <img class="thumbnail"
-                                         src="img/entreprise.jpg"
+                                         src="img/pageHome/mosaic1.jpg"
                                          alt="thumbnail image">
                                 </div>
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
                             <a href="index.php?route=manifeste">
-                                <div class="thumbnailHome">
+                                <div class="thumbnailHome borderBlack">
                                     <div class="captionHome">
-                                        <h2>MANIFESTE</h2>
+                                        <h2>NOTRE MANIFESTE</h2>
+                                    </div>
+                                    <div class="captionHome2">
+                                        <h2>NOTRE MANIFESTE</h2>
                                     </div>
                                     <img class="thumbnail"
-                                         src="img/manifeste.jpg"
+                                         src="img/pageHome/mosaic2.jpg"
                                          alt="thumbnail image">
                                 </div>
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <a href="index.php?route=blogs&type=blog">
-                                <div class="thumbnailHome">
+                            <a href="index.php?route=articles&type=blog">
+                                <div class="thumbnailHome borderBlack">
                                     <div class="captionHome">
-                                        <h2>BLOG</h2>
+                                        <h2>LA REDACTION</h2>
+                                    </div>
+                                    <div class="captionHome2">
+                                        <h2>LA REDACTION</h2>
                                     </div>
                                     <img class="thumbnail"
-                                         src="img/articles.png"
+                                         src="img/pageHome/mosaic3.jpg"
                                          alt="thumbnail image">
                                 </div>
                             </a>
@@ -99,37 +108,46 @@
 
                     <div class="row">
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <a href="index.php?route=marraines&type=marraine">
-                                <div class="thumbnailHome">
+                            <a href="index.php?route=articles&type=marraine">
+                                <div class="thumbnailHome borderBlack">
                                     <div class="captionHome">
-                                        <h2>MARRAINES</h2>
+                                        <h2>NOS MARRAINES</h2>
+                                    </div>
+                                    <div class="captionHome2">
+                                        <h2>NOS MARRAINES</h2>
                                     </div>
                                     <img class="thumbnail"
-                                         src="img/marraines.jpg"
+                                         src="img/pageHome/mosaic4.jpg"
                                          alt="thumbnail image">
                                 </div>
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
                             <a href="index.php?route=produits">
-                                <div class="thumbnailHome">
+                                <div class="thumbnailHome borderBlack">
                                     <div class="captionHome">
-                                        <h2>COLLECTION</h2>
+                                        <h2>LES CHAPEAUX</h2>
+                                    </div>
+                                    <div class="captionHome2">
+                                        <h2>LES CHAPEAUX</h2>
                                     </div>
                                     <img class="thumbnail"
-                                         src="img/collections.jpg"
+                                         src="img/pageHome/mosaic5.jpg"
                                          alt="thumbnail image">
                                 </div>
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <a href="index.php?route=partenaires&type=partenaire">
-                                <div class="thumbnailHome">
+                            <a href="index.php?route=articles&type=partenaire">
+                                <div class="thumbnailHome borderBlack">
                                     <div class="captionHome">
-                                        <h2>PARTENAIRES</h2>
+                                        <h2>NOS PARTENAIRES</h2>
+                                    </div>
+                                    <div class="captionHome2">
+                                        <h2>NOS PARTENAIRES</h2>
                                     </div>
                                     <img class="thumbnail"
-                                         src="img/partenaires.jpg"
+                                         src="img/pageHome/mosaic6.jpg"
                                          alt="thumbnail image">
                                 </div>
                             </a>
@@ -139,37 +157,46 @@
 
                     <div class="row">
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <a href="index.php?route=prestations&type=prestation">
-                                <div class="thumbnailHome">
+                            <a href="index.php?route=articles&type=prestation">
+                                <div class="thumbnailHome borderBlack">
                                     <div class="captionHome">
-                                        <h2>PRESTATION PRO</h2>
+                                        <h2>NOS PRESTATIONS</h2>
+                                    </div>
+                                    <div class="captionHome2">
+                                        <h2>NOS PRESTATIONS</h2>
                                     </div>
                                     <img class="thumbnail"
-                                         src="img/prestationsPro.png"
+                                         src="img/pageHome/mosaic7.jpg"
                                          alt="thumbnail image">
                                 </div>
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <a href="index.php?route=evenements&type=evenement">
-                                <div class="thumbnailHome">
+                            <a href="index.php?route=articles&type=evenement">
+                                <div class="thumbnailHome borderBlack">
                                     <div class="captionHome">
-                                        <h2>EVENEMENTS</h2>
+                                        <h2>L'ODYSSEE</h2>
+                                    </div>
+                                    <div class="captionHome2">
+                                        <h2>L'ODYSSEE</h2>
                                     </div>
                                     <img class="thumbnail"
-                                         src="img/evenements.jpg"
+                                         src="img/pageHome/mosaic8.jpg"
                                          alt="thumbnail image">
                                 </div>
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
-                            <a href="index.php?route=portraits&type=portrait">
-                                <div class="thumbnailHome">
+                            <a href="index.php?route=articles&type=portrait">
+                                <div class="thumbnailHome borderBlack">
                                     <div class="captionHome">
-                                        <h2>VOS PORTRAITS</h2>
+                                        <h2>VOS TEMOIGNAGES</h2>
+                                    </div>
+                                    <div class="captionHome2">
+                                        <h2>VOS TEMOIGNAGES</h2>
                                     </div>
                                     <img class="thumbnail"
-                                         src="img/temoignages.jpg"
+                                         src="img/pageHome/mosaic9.jpg"
                                          alt="thumbnail image">
                                 </div>
                             </a>
@@ -185,123 +212,59 @@
 ============================== -->
 
 <section class="container-fluid landingPageNouveautes text-center" id="nouveautes">
-    <div class="section_overlay">
+    <div class="section_overlay2">
         <div class="row">
             <div class="col-md-offset-5 col-md-2">
-                <h2 class="titreCadre2">NOUVEAUTÉS</h2>
+                <h2 class="titreCadre2">NOS DERNIERS CHAPEAUX</h2>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <div class="col-md-10 col-md-offset-1">
+                <div id="nouveaux_chapeaux" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        {% for new in news if news|length>3 %}
+                            {% if loop.first or loop.index0%3 == 0 %}
+                                <li data-target="#nouveaux_chapeaux" data-slide-to="{{ loop.index0/3 }}"
+                                        {% if loop.first %} class="active"{% endif %}></li>
+                            {% endif %}
+                        {% endfor %}
                     </ol>
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <div class="row">
+                        {% for new in news %}
+                            {% if loop.first or loop.index0%3 == 0 %}
+                                <div class="item row{% if loop.first %} active{% endif %}">
+                            {% endif %}
+                            <a href="index.php?route=produit&id={{ new.id }}">
                                 <div class="col-xs-12 col-md-4">
                                     <div class="thumbnailSlider marginCollections">
                                         <img class="thumbnail"
-                                             src="img/modele2.4.jpg"
-                                             alt="thumbnail image">
-                                        <h1 class="titre_photo">Chapeau d'hiver</h1>
+                                             src="img/upload/{{ new.image }}"
+                                             alt="{{ new.image }}">
+                                        <h3 class="titre_photo">{{ new.name }} </h3>
+                                        <div class="text-right price">{{ new.price }} €</div>
                                     </div>
                                 </div>
-
-                                <div class="col-xs-12 col-md-4">
-                                    <div class="thumbnailSlider marginCollections">
-                                        <img class="thumbnail"
-                                             src="img/modele2.4.jpg"
-                                             alt="thumbnail image">
-                                        <h1 class="titre_photo">Chapeau d'été</h1>
-                                    </div>
+                            </a>
+                            {% if loop.last or loop.index0%3 == 2 %}
                                 </div>
-
-                                <div class="col-xs-12 col-md-4">
-                                    <div class="thumbnailSlider marginCollections">
-                                        <img class="thumbnail"
-                                             src="img/modele2.4.jpg"
-                                             alt="thumbnail image">
-                                        <h1 class="titre_photo">Chapeau d'lapin</h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-xs-12 col-md-4">
-                                    <div class="thumbnailSlider marginCollections">
-                                        <img class="thumbnail"
-                                             src="img/modele2.4.jpg"
-                                             alt="thumbnail image">
-                                        <h1 class="titre_photo">Chapeau d'échappement</h1>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-md-4">
-                                    <div class="thumbnailSlider marginCollections">
-                                        <img class="thumbnail"
-                                             src="img/modele2.4.jpg"
-                                             alt="thumbnail image">
-                                        <h1 class="titre_photo">Chapeau de miel</h1>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-md-4">
-                                    <div class="thumbnailSlider marginCollections">
-                                        <img class="thumbnail"
-                                             src="img/modele2.4.jpg"
-                                             alt="thumbnail image">
-                                        <h1 class="titre_photo">Chapeau chapi</h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-xs-12 col-md-4">
-                                    <div class="thumbnailSlider marginCollections">
-                                        <img class="thumbnail"
-                                             src="img/modele2.4.jpg"
-                                             alt="thumbnail image">
-                                        <h1 class="titre_photo">Chapeau de printemps</h1>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-md-4">
-                                    <div class="thumbnailSlider marginCollections">
-                                        <img class="thumbnail"
-                                             src="img/modele2.4.jpg"
-                                             alt="thumbnail image">
-                                        <h1 class="titre_photo">Chapeau d'automne</h1>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-md-4">
-                                    <div class="thumbnailSlider marginCollections">
-                                        <img class="thumbnail"
-                                             src="img/modele2.4.jpg"
-                                             alt="thumbnail image">
-                                        <h1 class="titre_photo">Chapeau de pluie</h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
-
-                <!-- Controls -->
-                <!--                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">-->
-                <!--                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
-                <!--                    <span class="sr-only">Previous</span>-->
-                <!--                </a>-->
-                <!--                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">-->
-                <!--                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-                <!--                    <span class="sr-only">Next</span>-->
-                <!--                </a>-->
+                {% if news|length > 3 %}
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#nouveaux_chapeaux" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#nouveaux_chapeaux" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -315,16 +278,15 @@
     <div class="section_overlay">
         <div class="row">
             <div class="col-md-offset-5 col-md-2">
-                <h2 class="titreCadre2 text-center">ACTUALITÉS</h2>
+                <h2 class="titreCadre2 text-center">NOTRE ACTUALITÉ</h2>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-8 col-xs-offset-2">
+            <div class="col-xs-10 col-xs-offset-1">
                 <div class="row">
-
                     <div class="col-md-4 col-xs-12 text-center">
-                        <h2 class="text-center">Dernier Evenement</h2>
-                        <a href="index.php?route={{ evenement.type }}&id={{ evenement.id }}">
+                        <h2 class="text-center">Dernière Odyssée</h2>
+                        <a href="index.php?route=article&id={{ evenement.id }}">
                             <div class="thumbnail pad_articles borderBlack">
                                 <img src="../img/upload/{{ evenement.image }}" alt="{{ evenement.image }}">
                                 <div class="caption">
@@ -345,8 +307,8 @@
                     </div>
 
                     <div class="col-md-4 col-xs-12 text-center">
-                        <h2 class="text-center">Dernier Blog</h2>
-                        <a href="index.php?route={{ blog.type }}&id={{ blog.id }}">
+                        <h2 class="text-center">Dernier Article</h2>
+                        <a href="index.php?route=article&id={{ blog.id }}">
                             <div class="thumbnail pad_articles borderBlack">
                                 <img src="../img/upload/{{ blog.image }}" alt="{{ blog.image }}">
                                 <div class="caption">
@@ -367,8 +329,8 @@
                     </div>
 
                     <div class="col-md-4 col-xs-12 text-center">
-                        <h2 class="text-center">Dernier Portrait</h2>
-                        <a href="index.php?route={{ portrait.type }}&id={{ portrait.id }}">
+                        <h2 class="text-center">Dernier Témoignage</h2>
+                        <a href="index.php?route=article&id={{ portrait.id }}">
                             <div class="thumbnail pad_articles borderBlack">
                                 <img src="../img/upload/{{ portrait.image }}" alt="{{ portrait.image }}">
                                 <div class="caption">
@@ -401,14 +363,14 @@
                 <div class="row">
                     <div class="col-md-4 col-xs-4  ">
                         <a href="https://www.facebook.com/claramocquotchapeaux/" target="_blank"><img
-                                    src="img/logo/facebook.jpg" class="fb"></a>
+                                    src="img/logos/logoFacebook.png" class="fb"></a>
                     </div>
                     <div class="col-md-4 col-xs-4">
                         <a href="https://www.instagram.com/claramocquotchapeaux/?hl=fr" target="_blank"><img
-                                    src="img/logo/instagram.png"></a>
+                                    src="img/logos/logoInstagram.png"></a>
                     </div>
                     <div class="col-md-4 col-xs-4">
-                        <a href="https://fr.pinterest.com/" target="_blank"><img src="img/logo/pinterest.jpg"></a>
+                        <a href="https://fr.pinterest.com/" target="_blank"><img src="img/logos/logoPinterest.png"></a>
                     </div>
                 </div>
             </div>
@@ -457,11 +419,12 @@
             <div class="col-md-4 col-xs-4">
                 <div class="row">
                     <div class="col-md-4 col-xs-4">
-                        <a href="https://wildcodeschool.fr/" target="_blank"><img src="img/logo/wcs_logo.png"></a>
+                        <a href="https://wildcodeschool.fr/" target="_blank"><img
+                                    src="img/logos/logoWildCodeSchool.png"></a>
                     </div>
                     <div class="col-md-4 col-xs-4">
                         <a href="#mentions" data-target="#mentions" data-toggle="modal"><img
-                                    src="img/logo/info.png"></a>
+                                    src="img/logos/logoInfo.png"></a>
                     </div>
                 </div>
             </div>
@@ -475,7 +438,72 @@
                             <h4 class="modal-title" id="myModalLabel">Mentions légales</h4>
                         </div>
                         <div class="modal-body">
-                            ...
+                            <p>Conditions générales de vente - 17/02/2017
+                                Il s'agit ici des conditions générales de vente (CGV) entre professionnels. Elles constituent le
+                                socle de la négociation commerciale et peuvent être différenciées selon les catégories
+                                d'acheteurs. Lorsqu'elles sont formalisées, elles doivent comporter certaines mentions
+                                obligatoires. Elles doivent être communiquées à tout acheteur professionnel qui en fait la
+                                demande.
+                                Les mentions obligatoires des conditions générales de vente
+                                Les conditions générales de vente sont définies à l'article L. 441-6 du Code de commerce.
+                                Elles comprennent obligatoirement :
+                                les conditions de vente proprement dites (conditions relatives au transfert de propriété,
+                                à la logistique, etc.) ;
+                                le barème des prix unitaires ;
+                                les réductions de prix ;
+                                les conditions de règlement.
+                                Les conditions de règlement doivent obligatoirement préciser les conditions d'application et le
+                                taux d'intérêt des pénalités de retard exigibles le jour suivant la date de règlement figurant sur
+                                la facture, ainsi que le montant de l’indemnité forfaitaire pour les frais de recouvrement dû au
+                                créancier, dans le cas où les sommes dues sont réglées après cette date. Sauf disposition
+                                contraire qui ne peut toutefois fixer un taux inférieur à trois fois le taux d'intérêt légal, ce taux
+                                est égal au taux d'intérêt appliqué par la Banque centrale européenne à son opération de
+                                refinancement la plus récente majoré de 10 points de pourcentage. Les pénalités de retard
+                                sont exigibles sans qu'un rappel soit nécessaire.
+                                L’indemnité forfaitaire pour frais de recouvrement, dont le montant est fixé à 40 euros, est due
+                                de plein droit à son créancier par tout professionnel en situation de retard de paiement.
+                                Lorsque les frais de recouvrement exposés sont supérieurs au montant de cette indemnité
+                                forfaitaire, le créancier peut demander une indemnisation complémentaire sur justification. Le
+                                créancier ne peut toutefois pas invoquer le bénéfice de ces indemnités lorsque l’ouverture
+                                d’une procédure de sauvegarde, de redressement ou de liquidation judiciaire interdit le
+                                paiement à son échéance de la créance qui lui est due.
+                                La communication des conditions gйnйrales de vente
+                                L'information précontractuelle est organisée par l'article L. 442-6 I 9° du Code de commerce qui
+                                fait obligation à tout producteur, commerçant, industriel ou personne immatriculée au répertoire
+                                des métiers de communiquer ses conditions générales de vente à tout acheteur de produits ou
+                                tout demandeur de prestations de services qui en fait la demande pour l'exercice d'une activité
+                                professionnelle. Cette communication s'effectue par tout moyen conforme aux usages de la
+                                profession.
+                                Les conditions générales de vente peuvent être différenciées selon les catégories d'acheteurs
+                                de produits ou de demandeurs de prestation de services (par exemple, détaillants, grossistes).
+                                Dans ce cas, l'obligation de communication ne s'applique qu'à l'égard des acheteurs de
+                                produits ou des demandeurs de prestation de services d'une même catégorie. Les conditions
+                                générales de vente constituant le socle unique de la négociation commerciale, tout producteur,
+                                prestataire de services, grossiste ou importateur peut, par ailleurs, dans le cadre de cette
+                                négociation convenir avec un acheteur de produits ou un demandeur de prestation de services
+                                des conditions particulières de vente qui ne sont pas soumises à cette obligation de
+                                communication.
+                                Lorsque le lait de vache est utilisé dans la fabrication de produits alimentaires ou lorsque ces
+                                produits alimentaires contiennent des fruits et légumes à l’état frais, les conditions générales de
+                                vente de ces produits alimentaires, doivent indiquer le prix moyen prévisionnel proposé par le
+                                vendeur au producteur de ces produits agricoles. Les critères et modalités de détermination de
+                                ce prix prévisionnel peuvent faire référence à un ou plusieurs indices publics de coût de
+                                production en agriculture et à un ou plusieurs indices publics des prix de vente aux
+                                consommateurs de ces produits alimentaires. Le professionnel qui dérogerait à l'obligation de
+                                communication de ses conditions générales de ventes s'expose aux sanctions civiles de
+                                l'article L. 442-6 et notamment à une amende civile dont le montant maximal pour ce cas est de
+                                cinq millions d'euros.
+                                En outre, en application du VI de l’article L. 441-6 du code de commerce, encourt une amende
+                                administrative, d’un montant maximal de 75 000 euros pour une personne physique et de deux
+                                millions d’euros pour une personne morale, le professionnel qui n'indiquerait pas dans les
+                                conditions de règlement les conditions d'application et le taux d'intérêt des pénalités de retard
+                                ainsi que le montant de l'indemnité forfaitaire pour frais de recouvrement ou qui fixerait un taux
+                                ou des conditions d'exigibilité des pénalités de retard non conformes aux prescriptions
+                                précisées ci-dessus. Le montant de l’amende encourue est doublé en cas de réitération du
+                                manquement dans un délai de deux ans à compter de la date à laquelle la première décision
+                                de sanction est devenue définitive.
+                                Les éléments ci-dessus sont donnés à titre d'information. Ils ne sont pas forcément exhaustifs
+                                et ne sauraient se substituer à la réglementation applicable.</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -488,18 +516,7 @@
 </footer>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/burger.js"></script>
 <script src="js/landingPage.js"></script>
-<script src="js/thumbnailHome.js"></script>
-
 <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
-<script>(function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>

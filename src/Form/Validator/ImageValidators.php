@@ -56,6 +56,24 @@ class ImageValidators implements ValidatorInterface
         return false;
     }
 
+    public function isValidHome($image)
+    {
+        if (!empty($image)) {
+            if (getimagesize($image)) {
+                $size = getimagesize($image);
+                if ($size[0] == 1920 && $size[1] == 1080) {
+                    return true;
+                } else {
+                    $this->setNotValid([0 => 'L\'image envoyée n\'est pas au bon format de 500x500!']);
+
+                }
+            } else {
+                $this->setNotValid([0 => 'L\'image envoyée n\'est pas valide !']);
+            }
+        }
+        return false;
+    }
+
     /**
      * @return mixed
      */

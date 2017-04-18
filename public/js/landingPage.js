@@ -32,6 +32,35 @@ $(function() {
         link();
     });
 
+    $('.dropdown').on('show.bs.dropdown', function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).fadeToggle(300);
+    });
+
+    $('.dropdown').on('hide.bs.dropdown', function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).fadeToggle(300);
+    });
+
+    $('.thumbnailHome .captionHome').show();
+    $('.thumbnailHome').hover(
+        function () {
+            $(this).find('.captionHome').fadeOut(300);
+            $(this).find('.captionHome2').fadeIn(300);
+        },
+        function () {
+            $(this).find('.captionHome').fadeIn(300);
+            $(this).find('.captionHome2').fadeOut(300);
+
+        }
+    );
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
 
 });
 

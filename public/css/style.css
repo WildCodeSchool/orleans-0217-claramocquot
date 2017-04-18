@@ -9,11 +9,11 @@ Table of Content
 */
 
 /*@font-face{*/
-    /*font-family: 'PTSans';*/
-    /*src: url('../fonts/PTS55F-webfont.woff') format('woff');*/
+/*font-family: 'PTSans';*/
+/*src: url('../fonts/PTS55F-webfont.woff') format('woff');*/
 /*}*/
 
-.container-fluid, .row{
+.container-fluid, .row {
     margin: 0;
 }
 
@@ -42,7 +42,6 @@ body {
 -----------------------------------------*/
 
 .landingPageAccueil {
-    background: url(../img/article4.1.jpg);
     height: 1080px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -64,7 +63,7 @@ body {
 
 .titreCadre2 {
     font-family: 'PT Sans', sans-serif;
-    font-size: 20px;
+    font-size: 23px;
     border: 2px solid black;
     padding: 5px 8px;
     text-decoration: none;
@@ -90,7 +89,8 @@ body {
 -----------------------------------------*/
 
 .landingPageNavigation .section_overlay {
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba(0, 0, 0, 0);
+    padding-top: 80px;
 }
 
 .navHome {
@@ -116,20 +116,14 @@ body {
     display: block;
     vertical-align: middle;
     border-radius: 0;
-
     border: 1px solid black;
-    position:relative;
-    overflow:hidden;
+    position: relative;
+    overflow: hidden;
     max-width: 100%;
     height: auto;
     margin: 0;
 }
 
-.borderPlus {
-    border: 1px solid black;
-    margin-top: 70px;
-    margin-bottom: 50px;
-}
 .stopPadding {
     padding: 0;
 }
@@ -137,22 +131,44 @@ body {
 .captionHome {
 
     color: white;
-    position:absolute;
-    top:0;
-    right:0;
-    background:rgba(0, 0, 0, 0.33);
-    width:100%;
-    height:100%;
-    padding-top:35%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    padding-top: 35%;
     display: none;
     text-align: center;
     z-index: 2;
 }
 
-.landingPageNouveautes .section_overlay {
-    margin-top: 50px;
-    padding-bottom: 50px;
+.captionHome2 {
+
+    color: rgb(70, 70, 70);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 35%;
+    display: none;
+    text-align: center;
+    z-index: 2;
+}
+
+.landingPageNouveautes {
+    padding-top: 50px;
+    padding-bottom: 100px;
     background-color: rgba(0, 0, 0, 0.33);
+}
+
+.section_overlay2 {
+    padding-bottom: 50px;
+}
+
+.navHeight {
+    height: 1000px;
 }
 
 /*---------------------------------------
@@ -160,7 +176,6 @@ body {
 -----------------------------------------*/
 
 .landingPageActualites .section_overlay {
-
     height: 500px;
 }
 
@@ -180,8 +195,7 @@ body {
     margin: 1px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: #000\9;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     border: 2px solid black;
     border-radius: 10px;
 }
@@ -193,18 +207,19 @@ body {
     background-color: black;
 }
 
-.thumbnailSlider{
+.thumbnailSlider {
     display: block;
     vertical-align: middle;
     border-radius: 0;
     border: 2px solid black;
-    position:relative;
-    overflow:hidden;
+    position: relative;
+    overflow: hidden;
     max-width: 100%;
     height: auto;
     margin: 0;
     background-color: white;
 }
+
 /*------------------------------------
     HEADER
  -------------------------------------*/
@@ -220,6 +235,14 @@ body {
     border-bottom: black 2px solid;
 }
 
+.marginHeader1 {
+    margin-top: 20px;
+}
+
+.marginHeader2 {
+    margin-top: 15px;
+}
+
 /* fin header */
 
 /* logo */
@@ -231,25 +254,20 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .marque {
     color: black;
+    display: inline;
     text-decoration: none;
-    position: relative;
-    font-size: 2em;
+    font-size: 30px;
     text-align: center;
-    top: 20px;
     border: solid black 2px;
-    padding: 7px 30px;
     text-transform: uppercase;
-}
-
-.marque2 {
-    display: none;
+    padding: 5px 30px;
 }
 
 .logoHome {
     position: fixed;
-    top: 30px;
-    left: 20px;
-    font-size: 20px;
+    top: 25px;
+    left: 0;
+    font-size: 18px;
     color: black;
     text-transform: uppercase;
 }
@@ -258,42 +276,20 @@ a, a:hover, a:active, a:focus, a:visited {
 
 /* menu burger */
 .burger {
-    position: relative;
-    background-image: url("../img/boutonBurger.jpg");
+    background-image: url("../img/logos/boutonBurger.jpg");
     height: 53px;
     width: 53px;
-    top: 12px;
-    border: solid black 2.5px;
+    border: solid black 2px;
     border-radius: 0;
 }
 
-.burger:hover, .burger:active, .burger:focus, .burger:visited {
-    border: solid black 2.5px;
-}
-
-.deroulement {
-    position: absolute;
-    z-index: 100;
-}
-
-.menuburger {
-    display: none;
-    font-size: 20px;
-    position: relative;
-    top: 60px;
-    right: 80px;
-    width: 200px;
-    height: 40px;
-    border: 2px solid black;
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    padding: 2px 4px 2px 4px;
-}
-
-.navGenerale, .navGenerale:hover, .navGenerale:active, .navGenerale:focus, .navGenerale:visited {
-    color: black;
-    text-decoration: none;
-    text-transform: uppercase;
+.dropdown-menu {
+    left: -48px;
+    margin-top: 30px;
+    background: none;
+    box-shadow: none;
+    border: none;
+    font-size: 15px;
 }
 
 /* fin menu burger */
@@ -302,16 +298,16 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .bannerManifest {
     background-size: cover;
-    background-image: url("../img/manifeste/manifeste.jpg");
+    background-image: url("../img/pageManifeste/manifesteCover.jpg");
     background-repeat: no-repeat;
-    height: 250px;
+    height: 400px;
     margin-top: 90px;
 }
 
 .contentManifest {
     margin-top: 80px;
     padding: 50px;
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255, 255, 255, 0.6);
     border: 2px solid black;
     margin-bottom: 60px;
 
@@ -326,41 +322,6 @@ a, a:hover, a:active, a:focus, a:visited {
     margin-bottom: 40px;
 }
 
-/*/// MEDIA QUERY HEADER ///*/
-@media screen and (max-width: 992px) {
-
-    /* logo */
-    .marque {
-        display: none;
-    }
-
-    .marque2 {
-        display: inline;
-        color: white;
-        text-decoration: none;
-        position: relative;
-        font-size: 2em;
-        text-align: center;
-        top: 20px;
-        border: solid black 2px;
-        padding: 5px;
-    }
-
-    /* fin logo */
-    /* menu burger */
-    button {
-        right: 30px;
-    }
-
-    .menuburger {
-        right: 120px;
-        height: 45px;
-        width: 150px;
-        padding-top: 5px;
-        font-size: 17px;
-    }
-}
-
 /* fin menu burger */
 
 /*/// FIN MEDIA QUERY HEADER ///*/
@@ -373,7 +334,7 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .pad_articles {
     padding: 0px;
-    height: 545px;
+    height: 650px;
 }
 
 .petit {
@@ -394,7 +355,6 @@ a, a:hover, a:active, a:focus, a:visited {
     font-size: 1.15em;
 }
 
-
 /* fin page articles */
 
 /*    page collections  */
@@ -405,11 +365,17 @@ a, a:hover, a:active, a:focus, a:visited {
 }
 
 .titre_photo {
-    text-align: center;
     font-family: 'PTSans', sans-serif;
     font-size: 16pt;
+    text-align: center;
     color: black;
     padding-bottom: 10px;
+    width: 100%;
+}
+
+.price {
+    margin: 0 15px 10px 0;
+    font-size: 18px;
 }
 
 .titreCollections {
@@ -426,7 +392,7 @@ a, a:hover, a:active, a:focus, a:visited {
     -o-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
     filter: grayscale(100%);
-    }
+}
 
 .ajustMargin {
     padding-top: 30px;
@@ -438,16 +404,16 @@ a, a:hover, a:active, a:focus, a:visited {
     padding-top: 30px;
     background-color: rgba(0, 0, 0, 0.33);
 }
+
 /*  fin collections */
 
 /* Page entreprise*/
 
 .banner {
     background-size: cover;
-    background-image: url("../img/entreprise/entreprise - copie.jpg");
+    background-image: url("../img/pageEntreprise/entrepriseCover1.jpg");
     background-repeat: no-repeat;
-    height: 250px;
-    /*margin: 50px;*/
+    height: 400px;
     margin-top: 90px;
     color: white;
     position: relative;
@@ -514,8 +480,7 @@ footer img {
     border: 2px solid black;
 }
 
-
-Cont{
+Cont {
     font-size: 15px;
 }
 
@@ -539,8 +504,9 @@ a {
 }
 
 .sliderProduit {
-    padding-top: 40px;
-    padding-bottom: 100px;
+    padding-top: 220px;
+    padding-bottom: 130px;
+    background-color: rgba(0, 0, 0, 0.33);
 }
 
 .sliderHeight {
@@ -556,13 +522,12 @@ a {
     margin-top: 20px;
 }
 
-.DescProduit{
+.DescProduit {
     font-size: 20px;
-
 
 }
 
-.titleProduit{
+.titleProduit {
     margin-top: 130px;
     font-size: 40px;
 
@@ -570,10 +535,9 @@ a {
 
 /*button reseaux sociaux*/
 
-.buttonFB{
+.buttonFB {
     margin-top: 20px;
 }
-
 
 .carousel-indicators {
     bottom: -30px;
@@ -585,7 +549,6 @@ a {
 
 .padSummernote {
     padding: 20px;
-    width: 1180px;
     font-family: 'PT Sans';
 }
 
@@ -605,4 +568,72 @@ a {
 
 .marginContent {
     margin-bottom: 50px;
+}
+
+.dropdown-menu li {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-weight: bolder;
+}
+
+.padding {
+    padding: 20px;
+    margin-top: -15px;
+}
+
+.carousel-control.right, .carousel-control.left {
+    background: none;
+}
+
+.carousel-control:focus, .carousel-control:hover {
+    color: white;
+}
+
+.carousel-control, .carousel-control:active {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.carousel-indicators {
+    bottom: -50px;
+}
+
+.carousel-indicators li {
+    width: 25px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-color: white;
+}
+
+.carousel-indicators .active {
+    width: 35px;
+    background-color: white;
+    border-color: white;
+}
+
+th {
+    border: 2px solid black;
+    vertical-align: middle;
+}
+
+tr td {
+    border: 1px solid black;
+}
+
+.marginTab {
+    padding-bottom: 50px;
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    vertical-align: middle;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    border-top: 2px solid black;
+}
+
+.apercu {
+    width: 200px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'PT Sans';
 }

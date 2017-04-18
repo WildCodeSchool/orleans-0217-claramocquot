@@ -34,40 +34,10 @@ switch ($route) {
     case 'produit':
         $view = $page->product();
         break;
-    case 'blogs':
+    case 'articles':
         $view = $page->articles($type);
         break;
-    case 'blog':
-        $view = $page->article($id);
-        break;
-    case 'marraines':
-        $view = $page->articles($type);
-        break;
-    case 'marraine':
-        $view = $page->article($id);
-        break;
-    case 'portraits':
-        $view = $page->articles($type);
-        break;
-    case 'portrait':
-        $view = $page->article($id);
-        break;
-    case 'partenaires':
-        $view = $page->articles($type);
-        break;
-    case 'partenaire':
-        $view = $page->article($id);
-        break;
-    case 'evenements':
-        $view = $page->articles($type);
-        break;
-    case 'evenement':
-        $view = $page->article($id);
-        break;
-    case 'prestations':
-        $view = $page->articles($type);
-        break;
-    case 'prestation':
+    case 'article':
         $view = $page->article($id);
         break;
     case 'entreprise':

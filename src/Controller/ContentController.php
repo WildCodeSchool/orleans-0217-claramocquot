@@ -9,6 +9,8 @@
 namespace Clara\Controller;
 
 use Clara\Form\Validator\ImageValidators;
+use Clara\Model\Visibility_marraineManager;
+use Del\Form\Field\Select;
 use Del\Form\Form;
 use Del\Form\Field\Text;
 use Del\Form\Field\Hidden;
@@ -44,9 +46,35 @@ class ContentController extends Controller
      */
     public function showContents($type, $result)
     {
+        $form='';
         $em = new ContentManager();
+        if ($type == 'marraine') {
+            $db = new Visibility_marraineManager();
+            $actualVisibility = $db->showVisibility();
+            $form = new Form('changeVisibility');
+            $visibility = new Select('visibility');
+            $submit = new Submit('submit');
+            $submit->setValue('Changer');
+            $submit->setClass('btn btn-default');
+            $visibility->setValue($actualVisibility->getVisibility());
+            $visibility->setLabel('Activer le recrutement des marraines ');
+            $visibility->setOptions([1 => 'Oui', 0 => 'Non']);
+            $form->addField($visibility)
+                ->addField($submit);
+
+            if (isset($_POST['submit'])) {
+                $data = $_POST;
+                $form->populate($data);
+                if ($form->isValid()) {
+                    $filteredData = $form->getValues();
+                    if ($db->updateVisibility($filteredData)) {
+                        $result = 'Modification effectuée';
+                    }
+                }
+            }
+        }
         $datas = $em->findAll($type);
-        return $this->getTwig()->render('showContents.html.twig', ['datas' => $datas, 'type' => $type, 'result' => $result]);
+        return $this->getTwig()->render('showContents.html.twig', ['datas' => $datas, 'type' => $type, 'result' => $result, 'form' => $form]);
     }
 
     /**
@@ -85,7 +113,7 @@ class ContentController extends Controller
         $date->setPlaceholder('YYYY-MM-DD');
         $content->setClass('input-block-level');
         $image->setId('img');
-        $content->setId('summernote');
+        $content->setId('editor');
         $image->setUploadDirectory('../img/upload/');
         $submit->setValue('Ajouter');
         $form->addField($title)
@@ -127,8 +155,6 @@ class ContentController extends Controller
     {
         $em = new ContentManager();
         $data1 = $em->findOne($id);
-
-
         $form = new Form('addContent');
         $form->setEncType('multipart/form-data');
         $title = new Text('title');
@@ -144,9 +170,6 @@ class ContentController extends Controller
         $hidden = new Hidden('type');
         $hidden->setValue($data1->getType());
         $submit = new Submit('submit');
-
-
-
         $title->setLabel('Titre :');
         $date->setLabel('Date de création :');
         $image->setLabel('Image de mignature :');
@@ -162,7 +185,7 @@ class ContentController extends Controller
         $sumup->setPlaceholder('Résumé de l\'article');
         $date->setPlaceholder('YYYY-MM-DD');
         $content->setClass('input-block-level');
-        $content->setId('summernote');
+        $content->setId('editor');
         $image->setUploadDirectory('../img/upload/');
         $submit->setValue('Modifier');
         $form->addField($title)
