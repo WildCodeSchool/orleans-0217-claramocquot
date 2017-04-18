@@ -18,8 +18,10 @@ use Del\Form\Field\FileUpload;
 use Del\Form\Field\Submit;
 use Clara\Model\ContentManager;
 use Del\Form\Validator\Adapter\ValidatorAdapterZf;
+use Zend\Validator\Between;
 use Zend\Validator\Callback;
 use Zend\Validator\Date;
+use Zend\Validator\StringLength;
 
 /**
  * Class ContentController
@@ -88,19 +90,23 @@ class ContentController extends Controller
         $form = new Form('addContent');
         $form->setEncType('multipart/form-data');
         $title = new Text('title');
+        $titleVal = new ValidatorAdapterZf(new StringLength(['max'=>70]));
+        $title->addValidator($titleVal);
         $date = new Text('date');
         $date->setValue(date('Y-m-d'));
         $dateVal = new ValidatorAdapterZf(new Date());
         $date->addValidator($dateVal);
         $image = new FileUpload('image');
         $sumup = new Text('sumup');
+        $sumupVal = new ValidatorAdapterZf(new StringLength(['max'=>120]));
+        $sumup->addValidator($sumupVal);
         $content = new \Clara\Form\Field\TextArea('content');
         $hidden = new Hidden('type');
         $submit = new Submit('submit');
-        $title->setLabel('Titre :');
+        $title->setLabel('Titre (70 caractères maximum) :');
         $date->setLabel('Date de création (YYYY-MM-DD) :');
         $image->setLabel('Image de miniature (500px X 500px) :');
-        $sumup->setLabel('Résumé de la miniature :');
+        $sumup->setLabel('Résumé de la miniature (120 caractères maximum) :');
         $content->setLabel('Mise en page de l\'article');
         $title->setRequired(true);
         $image->setRequired(true);
@@ -159,24 +165,28 @@ class ContentController extends Controller
         $form->setEncType('multipart/form-data');
         $title = new Text('title');
         $title->setValue($data1->getTitle());
+        $titleVal = new ValidatorAdapterZf(new StringLength(['max'=>70]));
+        $title->addValidator($titleVal);
         $date = new Text('date');
         $date->setValue($data1->getDate());
+        $date->setValue(date('Y-m-d'));
+        $dateVal = new ValidatorAdapterZf(new Date());
         $image = new FileUpload('image');
-        //$image->setValue($data1->getImage());
         $sumup = new Text('sumup');
         $sumup->setValue($data1->getSumup());
+        $sumupVal = new ValidatorAdapterZf(new StringLength(['max'=>120]));
+        $sumup->addValidator($sumupVal);
         $content = new \Clara\Form\Field\TextArea('content');
         $content->setValue($data1->getContent());
         $hidden = new Hidden('type');
         $hidden->setValue($data1->getType());
         $submit = new Submit('submit');
-        $title->setLabel('Titre :');
-        $date->setLabel('Date de création :');
-        $image->setLabel('Image de mignature :');
-        $sumup->setLabel('Résumé de la mignature :');
+        $title->setLabel('Titre (70 caractères maximum) :');
+        $date->setLabel('Date de création (YYY-MM-DD) :');
+        $image->setLabel('Image de mignature (500px X 500px:');
+        $sumup->setLabel('Résumé de la mignature (120 caractères maximum) :');
         $content->setLabel('Mise en page de l\'article');
         $title->setRequired(true);
-        $image->setRequired(true);
         $date->setRequired(true);
         $sumup->setRequired(true);
         $content->setRequired(true);
@@ -197,7 +207,7 @@ class ContentController extends Controller
             ->addField($submit);
         $res = '';
 
-        if (!empty($_FILES)) {
+        if (!empty($_FILES['image']['name'])) {
             $imageVal = new Callback([new ImageValidators(), 'isValid']);
             if (!$imageVal->isValid($_FILES['image']['tmp_name'])) {
                 return $this->getTwig()->render('addContent.html.twig', ['form' => $form, 'type' => $data1->getType(), 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format !']);
@@ -215,7 +225,7 @@ class ContentController extends Controller
                 }
             }
         }
-        return $this->getTwig()->render('updateContent.html.twig', ['form' => $form, 'type' => $data1->getType(), 'result' => $res]);
+        return $this->getTwig()->render('updateContent.html.twig', ['form' => $form, 'type' => $data1->getType(), 'image'=> $data1->getImage(), 'result' => $res]);
     }
 
     /**

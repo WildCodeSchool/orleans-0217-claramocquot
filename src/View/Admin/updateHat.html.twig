@@ -4,16 +4,27 @@
 
     <div class="container text-center">
 
-        <h1>Modifier un article :</h1><hr/>
-        <a href="index.php?route=chapeaux"><p class="text-left"><span class="fa fa-angle-double-left"></span> retour à la
+        <h1>Modifier un article :</h1>
+        <hr/>
+        <a href="index.php?route=chapeaux"><p class="text-left"><span class="fa fa-angle-double-left"></span> retour à
+                la
                 liste</p></a><br/>
         {% if result is not empty %}
             <blockquote class="btn-success">{{ result }}</blockquote><br/>
         {% endif %}
         {% if noResult is not empty %}
-            <blockquote class="btn-danger">{#{{ noResult }}#}</blockquote><br/>
+            <blockquote class="btn-danger">{{ noResult }}</blockquote><br/>
         {% endif %}
-
+        <div class="row">
+            {% for data in datas %}
+                <div class="col-xs-3">
+                    <img src="../img/upload/{{ data.image }}" width="200px"><br/>
+                    <h4>Image {{ loop.index }}</h4><br/>
+                </div>
+            {% endfor %}
+        </div>
+        <br/>
         {{ form.render|raw }}
+        <br/>
     </div>
 {% endblock %}
