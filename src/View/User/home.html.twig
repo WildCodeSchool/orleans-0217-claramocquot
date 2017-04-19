@@ -8,43 +8,39 @@
     <title>Clara Mocquot | Accueil</title>
 
     <!-- Importation des fonts Google -->
-    <link href="https://fonts.googleapis.com/css?family=Overpass|PT+Sans|PT+Sans+Caption|PT+Serif|Roboto+Condensed"
-          rel="stylesheet"/>
-    <link rel="icon" type="image/png" href="img/logos/favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="/public/img/logos/faviconBlanc.png"/>
+
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
 
     <!-- Font Awesome -->
     <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/summernote.css">
-    <link rel="stylesheet" href="css/admin.css">
 
     <!-- Style -->
-    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
 
 </head>
-<body>
-<!-- =========================
-    SECTION ACCUEIL
-============================== -->
 
-<section class="container-fluid landingPageAccueil" id="accueil" style="background: url(img/upload/{{ picture.name }})">
-    <div class="row section_overlay">
+<body>
+
+{# SECTION ACCUEIL __________________________________________________________________________________________________#}
+
+<section id="accueil" style="background: url(img/upload/{{ picture.name }})">
+    <div class="row sectionAccueil">
         <a href="#navigation" id="title" class="titreGeneral">
-            <div class="col-xs-offset-3 col-xs-6 home-container titreCadre1">
-                <span>CLARA MOCQUOT</span>
+            <div class="col-xs-offset-1 col-sm-offset-2 col-md-offset-3 col-xs-10 col-sm-8 col-md-6 cadreTitreAccueil">
+                <span class="titreAccueil1">CLARA MOCQUOT</span>
                 <hr class="trait">
-                <h1 class="title">COIFFES & CHAPEAUX<br>
-                    sur-mesure et à la demande</h1>
+                <h1 class="titreAccueil2">COIFFES & CHAPEAUX<br>sur-mesure et à la demande</h1>
             </div>
         </a>
     </div>
 </section>
 
-<!-- =========================
-    MOSAIQUE DE NAVIGATION
-============================== -->
+{#SECTION NAVIGATION (MOSAIQUE) _____________________________________________________________________________________#}
 
 <section class="landingPageNavigation">
     <div class="section_overlay">
