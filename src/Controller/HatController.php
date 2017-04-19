@@ -38,7 +38,7 @@ class HatController extends Controller
         $form = new Form('addHat');
         $form->setEncType('multipart/form-data');
         $name = new Text('name');
-        $content = new TextArea('content');
+        $content = new \Clara\Form\Field\TextArea('content');
         $price = new Text('price');
         $select = new Select('localisation');
         $select->setOptions([
@@ -55,6 +55,8 @@ class HatController extends Controller
         $submit = new Submit('submit');
         $name->setLabel('Nom du produit');
         $content->setLabel('Description');
+        $content->setClass('input-block-level');
+        $content->setId('editor');
         $price->setLabel('Prix');
         $select->setLabel('Choississez ou l\'afficher');
         $image1->setLabel('Choississez les images de votre produit');
@@ -65,7 +67,6 @@ class HatController extends Controller
         $image2->setUploadDirectory('../img/upload');
         $image3->setUploadDirectory('../img/upload');
         $image4->setUploadDirectory('../img/upload');
-
         $name->setRequired(true);
         $content->setRequired(true);
         $price->setRequired(true);
@@ -108,7 +109,6 @@ class HatController extends Controller
 
     public function updateHate($id)
     {
-        $valueradio = 0;
         $res = '';
         $value = '';
         $em = new HatManager();
@@ -136,8 +136,10 @@ class HatController extends Controller
         $name = new Text('name');
         $name->setValue($data2[0]->getName());
 
-        $content = new TextArea('content');
+        $content = new \Clara\Form\Field\TextArea('content');
         $content->setValue($data2[0]->getContent());
+        $content->setClass('input-block-level');
+        $content->setId('editor');
 
         $price = new Text('price');
         $price->setValue($data2[0]->getPrice());

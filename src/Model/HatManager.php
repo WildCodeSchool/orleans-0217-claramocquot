@@ -77,7 +77,7 @@ class HatManager extends DB
             $res = $prep5->execute();
         }
 
-
+$res = 'Chapeau Ajouté';
         return $res;
     }
 
@@ -149,7 +149,6 @@ class HatManager extends DB
         $prep2->execute();
         $imagesHat = $prep2->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst('picture'));
 
-        var_dump($data);
         foreach ($imagesHat as $index => $imageHat) {
             if (!empty($data['image' . ($index + 1)])) {
                 $req3 = "UPDATE picture SET image =:image WHERE id=:id";
@@ -165,8 +164,7 @@ class HatManager extends DB
                 $prep4 = $this->db->prepare($req4);
                 $prep4->bindValue(':img', $data['image'. ($i+1)], \PDO::PARAM_STR);
                 $prep4->bindValue(':idhat', $id, \PDO::PARAM_INT);
-                $res = $prep4->execute();
-                var_dump($res);
+                $prep4->execute();
             }
 
         }

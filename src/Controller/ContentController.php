@@ -171,6 +171,7 @@ class ContentController extends Controller
         $date->setValue($data1->getDate());
         $date->setValue(date('Y-m-d'));
         $dateVal = new ValidatorAdapterZf(new Date());
+        $date->addValidator($dateVal);
         $image = new FileUpload('image');
         $sumup = new Text('sumup');
         $sumup->setValue($data1->getSumup());
