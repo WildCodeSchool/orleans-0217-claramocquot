@@ -16,7 +16,6 @@ class HatManager extends DB
 {
     public function addHat($form)
     {
-        $res = '';
         $new_prod = $product = $unavailable = $old = $hide = 0;
         if ($form['localisation'] == 0) {
             $new_prod = 1;
@@ -74,10 +73,10 @@ class HatManager extends DB
             $prep5->bindValue(':img', $form['image4']);
             $prep5->bindValue(':idhat', $lastid);
 
-            $res = $prep5->execute();
+            $prep5->execute();
         }
 
-$res = 'Chapeau Ajouté';
+        $res = 'Chapeau Ajouté';
         return $res;
     }
 
@@ -112,6 +111,7 @@ $res = 'Chapeau Ajouté';
         $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst('hat'));
         return $res;
     }
+
     public function showOldHats()
     {
         $req = "SELECT min(picture.image) as image, hat.* 
@@ -169,10 +169,10 @@ $res = 'Chapeau Ajouté';
             }
         }
         for ($i = 1; $i <= 4; $i++) {
-            if (!empty($data['image'. ($i+1)]) && !isset($imagesHat[$i])) {
+            if (!empty($data['image' . ($i + 1)]) && !isset($imagesHat[$i])) {
                 $req4 = "INSERT INTO picture (image, id_hat) VALUES (:img, :idhat)";
                 $prep4 = $this->db->prepare($req4);
-                $prep4->bindValue(':img', $data['image'. ($i+1)], \PDO::PARAM_STR);
+                $prep4->bindValue(':img', $data['image' . ($i + 1)], \PDO::PARAM_STR);
                 $prep4->bindValue(':idhat', $id, \PDO::PARAM_INT);
                 $prep4->execute();
             }
