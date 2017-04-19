@@ -7,11 +7,7 @@
  */
 
 namespace Clara\Controller;
-
-require __DIR__ . '/../../vendor/swiftmailer/swiftmailer/lib/swift_required.php';
-use Swift_SmtpTransport;
-use Swift_Mailer;
-use Swift_Message;
+use Clara\Controller\MailController;
 
 class UserController extends Controller
 {
@@ -29,11 +25,19 @@ class UserController extends Controller
 
     public function manifest()
     {
+        $msg = new MailController(true);
+        if (isset($_POST['submitcontact'])) {
+            $msg->contact($_POST);
+            header('Location:index.php?route=manifeste');}
         return $this->getTwig()->render('manifest.html.twig');
     }
 
     public function firm()
     {
+        $msg = new MailController(true);
+        if (isset($_POST['submitcontact'])) {
+            $msg->contact($_POST);
+            header('Location:index.php?route=entreprise');}
         return $this->getTwig()->render('firm.html.twig');
     }
 
@@ -42,37 +46,15 @@ class UserController extends Controller
         $hats= new FrontController(true);
         return $hats->showHats($res);
     }
+
     public function product($id)
     {
         $hat= new FrontController(true);
         return $hat->showHat($id);
     }
-    public function mailer(){
 
-        $mail = new MailController(true);
-        return $mail->product();
-}
-//    public function product()
-//    {
-//        if (isset($_POST['submit'])) {
-//            $transport = Swift_SmtpTransport::newInstance('smtp.googlemail.com', 465, 'ssl')
-//                ->setUsername('lefadak3@gmail.com')
-//                ->setPassword('ahglagla');
-//            $mailer = Swift_Mailer::newInstance($transport);
-//            $message = Swift_Message::newInstance('Renseignements Commande')
-//                ->setSubject('Renseignements Commande')
-//                ->setFrom(array($_POST['email'] => $_POST['firstname'] . ' ' . $_POST['name']))
-//                ->setTo(array('julienmartin.opto@gmail.com' => 'Julien Martin'))
-//                ->setDate(time())
-//                ->setBody($_POST['address'] . '<br/>' . $_POST['size'] . '<br/>' . $_POST['comment'] . '<br/>');
-//            $res = $mailer->send($message);
-//            echo $res;
-//        }
-//        return $this->getTwig()->render('product.html.twig');
-//    }
+    public function home(){
 
-    public function home()
-    {
         $content = new FrontController(true);
         return $content->homeContent();
     }

@@ -653,6 +653,10 @@ a {
     padding-top: 70px;
 
 }
+.produitDescriptionAdmin {
+    padding-top: -70px;
+
+}
 
 .sliderProduit {
     padding-top: 220px;

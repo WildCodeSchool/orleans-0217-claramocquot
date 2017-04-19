@@ -418,7 +418,8 @@
                         data-whatever="@mdo">
                     <Cont>CONTACT</Cont>
                 </button>
-                <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                <div class="modal fade" id="contact" tabindex="-1" role="dialog"
+                     aria-labelledby="exampleModalLabel">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -426,30 +427,38 @@
                                             aria-hidden="true">&times;</span></button>
                                 <h4 class="modal-title" id="exampleModalLabel">Formulaire de contact</h4>
                             </div>
+                            <div class="headModalProduit">
+                                <p>* Bonjour *<br>
+                                    Vous souhaitez en savoir plus ?<br>
+                                    Nous laissez un message?<br>
+                                    Faire une suggestion?<br>
+                                    Nous rencontrer?<br>
+                                    N’hésitez pas, nous ferons un maximum pour répondre à vos questions ;-)</p>
+                            </div>
                             <div class="modal-body">
-                                <form>
+                                <form action="" method="post">
+                                    <label for="name" class="control-label">Nom:</label>
+                                    <input type="text" class="form-control" name="Nom">
                                     <div class="form-group">
-                                        <label for="recipient-name" class="control-label">Nom:</label>
-                                        <input type="text" class="form-control" id="recipient-name">
+                                        <label for="firstname" class="control-label">Prenom:</label>
+                                        <input type="text" class="form-control" name="Prenom">
                                     </div>
                                     <div class="form-group">
-                                        <label for="recipient-name" class="control-label">Prenom:</label>
-                                        <input type="text" class="form-control" id="recipient-name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="recipient-name" class="control-label">Adresse email:</label>
-                                        <input type="email" class="form-control" id="recipient-name"
+                                        <label for="email" class="control-label">Adresse email:</label>
+                                        <input type="email" class="form-control" name="Email"
                                                placeholder="dupont@exemple.fr">
                                     </div>
                                     <div class="form-group">
-                                        <label for="message-text" class="control-label">Message:</label>
-                                        <textarea class="form-control" id="message-text"></textarea>
+                                        <label for="comment" class="control-label">Commentaire:</label>
+                                        <textarea class="form-control" name="Commentaire"></textarea>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Annuler
+                                        </button>
+                                        <button type="submit" name="submitcontact" class="btn btn-default">Envoyer
+                                        </button>
                                     </div>
                                 </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
-                                <button type="button" class="btn btn-default">Envoyer</button>
                             </div>
                         </div>
                     </div>
@@ -478,72 +487,111 @@
                         </div>
                         <div class="modal-body">
                             <p>Conditions générales de vente - 17/02/2017
-                                Il s'agit ici des conditions générales de vente (CGV) entre professionnels. Elles constituent le
+                                Il s'agit ici des conditions générales de vente (CGV) entre professionnels. Elles
+                                constituent le
                                 socle de la négociation commerciale et peuvent être différenciées selon les catégories
                                 d'acheteurs. Lorsqu'elles sont formalisées, elles doivent comporter certaines mentions
-                                obligatoires. Elles doivent être communiquées à tout acheteur professionnel qui en fait la
+                                obligatoires. Elles doivent être communiquées à tout acheteur professionnel qui en fait
+                                la
                                 demande.<br/>
                                 Les mentions obligatoires des conditions générales de vente<br/>
-                                Les conditions générales de vente sont définies à l'article L. 441-6 du Code de commerce.
+                                Les conditions générales de vente sont définies à l'article L. 441-6 du Code de
+                                commerce.
                                 Elles comprennent obligatoirement :<br/>
-                                les conditions de vente proprement dites (conditions relatives au transfert de propriété,
+                                les conditions de vente proprement dites (conditions relatives au transfert de
+                                propriété,
                                 à la logistique, etc.) ;<br/>
                                 le barème des prix unitaires ;<br/>
                                 les réductions de prix ;<br/>
                                 les conditions de règlement.<br/>
-                                Les conditions de règlement doivent obligatoirement préciser les conditions d'application et le
-                                taux d'intérêt des pénalités de retard exigibles le jour suivant la date de règlement figurant sur
-                                la facture, ainsi que le montant de l’indemnité forfaitaire pour les frais de recouvrement dû au
-                                créancier, dans le cas où les sommes dues sont réglées après cette date. Sauf disposition
-                                contraire qui ne peut toutefois fixer un taux inférieur à trois fois le taux d'intérêt légal, ce taux
+                                Les conditions de règlement doivent obligatoirement préciser les conditions
+                                d'application et le
+                                taux d'intérêt des pénalités de retard exigibles le jour suivant la date de règlement
+                                figurant sur
+                                la facture, ainsi que le montant de l’indemnité forfaitaire pour les frais de
+                                recouvrement dû au
+                                créancier, dans le cas où les sommes dues sont réglées après cette date. Sauf
+                                disposition
+                                contraire qui ne peut toutefois fixer un taux inférieur à trois fois le taux d'intérêt
+                                légal, ce taux
                                 est égal au taux d'intérêt appliqué par la Banque centrale européenne à son opération de
-                                refinancement la plus récente majoré de 10 points de pourcentage. Les pénalités de retard
+                                refinancement la plus récente majoré de 10 points de pourcentage. Les pénalités de
+                                retard
                                 sont exigibles sans qu'un rappel soit nécessaire.<br/>
-                                L’indemnité forfaitaire pour frais de recouvrement, dont le montant est fixé à 40 euros, est due
-                                de plein droit à son créancier par tout professionnel en situation de retard de paiement.
+                                L’indemnité forfaitaire pour frais de recouvrement, dont le montant est fixé à 40 euros,
+                                est due
+                                de plein droit à son créancier par tout professionnel en situation de retard de
+                                paiement.
                                 Lorsque les frais de recouvrement exposés sont supérieurs au montant de cette indemnité
-                                forfaitaire, le créancier peut demander une indemnisation complémentaire sur justification. Le
-                                créancier ne peut toutefois pas invoquer le bénéfice de ces indemnités lorsque l’ouverture
+                                forfaitaire, le créancier peut demander une indemnisation complémentaire sur
+                                justification. Le
+                                créancier ne peut toutefois pas invoquer le bénéfice de ces indemnités lorsque
+                                l’ouverture
                                 d’une procédure de sauvegarde, de redressement ou de liquidation judiciaire interdit le
                                 paiement à son échéance de la créance qui lui est due.<br/>
                                 La communication des conditions gйnйrales de vente<br/>
-                                L'information précontractuelle est organisée par l'article L. 442-6 I 9° du Code de commerce qui
-                                fait obligation à tout producteur, commerçant, industriel ou personne immatriculée au répertoire
-                                des métiers de communiquer ses conditions générales de vente à tout acheteur de produits ou
-                                tout demandeur de prestations de services qui en fait la demande pour l'exercice d'une activité
+                                L'information précontractuelle est organisée par l'article L. 442-6 I 9° du Code de
+                                commerce qui
+                                fait obligation à tout producteur, commerçant, industriel ou personne immatriculée au
+                                répertoire
+                                des métiers de communiquer ses conditions générales de vente à tout acheteur de produits
+                                ou
+                                tout demandeur de prestations de services qui en fait la demande pour l'exercice d'une
+                                activité
                                 professionnelle. Cette communication s'effectue par tout moyen conforme aux usages de la
                                 profession.<br/>
-                                Les conditions générales de vente peuvent être différenciées selon les catégories d'acheteurs
-                                de produits ou de demandeurs de prestation de services (par exemple, détaillants, grossistes).
+                                Les conditions générales de vente peuvent être différenciées selon les catégories
+                                d'acheteurs
+                                de produits ou de demandeurs de prestation de services (par exemple, détaillants,
+                                grossistes).
                                 Dans ce cas, l'obligation de communication ne s'applique qu'à l'égard des acheteurs de
-                                produits ou des demandeurs de prestation de services d'une même catégorie. Les conditions
-                                générales de vente constituant le socle unique de la négociation commerciale, tout producteur,
-                                prestataire de services, grossiste ou importateur peut, par ailleurs, dans le cadre de cette
-                                négociation convenir avec un acheteur de produits ou un demandeur de prestation de services
+                                produits ou des demandeurs de prestation de services d'une même catégorie. Les
+                                conditions
+                                générales de vente constituant le socle unique de la négociation commerciale, tout
+                                producteur,
+                                prestataire de services, grossiste ou importateur peut, par ailleurs, dans le cadre de
+                                cette
+                                négociation convenir avec un acheteur de produits ou un demandeur de prestation de
+                                services
                                 des conditions particulières de vente qui ne sont pas soumises à cette obligation de
                                 communication.<br/>
-                                Lorsque le lait de vache est utilisé dans la fabrication de produits alimentaires ou lorsque ces
-                                produits alimentaires contiennent des fruits et légumes à l’état frais, les conditions générales de
-                                vente de ces produits alimentaires, doivent indiquer le prix moyen prévisionnel proposé par le
-                                vendeur au producteur de ces produits agricoles. Les critères et modalités de détermination de
-                                ce prix prévisionnel peuvent faire référence à un ou plusieurs indices publics de coût de
+                                Lorsque le lait de vache est utilisé dans la fabrication de produits alimentaires ou
+                                lorsque ces
+                                produits alimentaires contiennent des fruits et légumes à l’état frais, les conditions
+                                générales de
+                                vente de ces produits alimentaires, doivent indiquer le prix moyen prévisionnel proposé
+                                par le
+                                vendeur au producteur de ces produits agricoles. Les critères et modalités de
+                                détermination de
+                                ce prix prévisionnel peuvent faire référence à un ou plusieurs indices publics de coût
+                                de
                                 production en agriculture et à un ou plusieurs indices publics des prix de vente aux
-                                consommateurs de ces produits alimentaires. Le professionnel qui dérogerait à l'obligation de
+                                consommateurs de ces produits alimentaires. Le professionnel qui dérogerait à
+                                l'obligation de
                                 communication de ses conditions générales de ventes s'expose aux sanctions civiles de
-                                l'article L. 442-6 et notamment à une amende civile dont le montant maximal pour ce cas est de
+                                l'article L. 442-6 et notamment à une amende civile dont le montant maximal pour ce cas
+                                est de
                                 cinq millions d'euros.<br/>
-                                En outre, en application du VI de l’article L. 441-6 du code de commerce, encourt une amende
-                                administrative, d’un montant maximal de 75 000 euros pour une personne physique et de deux
-                                millions d’euros pour une personne morale, le professionnel qui n'indiquerait pas dans les
-                                conditions de règlement les conditions d'application et le taux d'intérêt des pénalités de retard
-                                ainsi que le montant de l'indemnité forfaitaire pour frais de recouvrement ou qui fixerait un taux
+                                En outre, en application du VI de l’article L. 441-6 du code de commerce, encourt une
+                                amende
+                                administrative, d’un montant maximal de 75 000 euros pour une personne physique et de
+                                deux
+                                millions d’euros pour une personne morale, le professionnel qui n'indiquerait pas dans
+                                les
+                                conditions de règlement les conditions d'application et le taux d'intérêt des pénalités
+                                de retard
+                                ainsi que le montant de l'indemnité forfaitaire pour frais de recouvrement ou qui
+                                fixerait un taux
                                 ou des conditions d'exigibilité des pénalités de retard non conformes aux prescriptions
                                 précisées ci-dessus. Le montant de l’amende encourue est doublé en cas de réitération du
-                                manquement dans un délai de deux ans à compter de la date à laquelle la première décision
+                                manquement dans un délai de deux ans à compter de la date à laquelle la première
+                                décision
                                 de sanction est devenue définitive.<br/>
-                                Les éléments ci-dessus sont donnés à titre d'information. Ils ne sont pas forcément exhaustifs
+                                Les éléments ci-dessus sont donnés à titre d'information. Ils ne sont pas forcément
+                                exhaustifs
                                 et ne sauraient se substituer à la réglementation applicable.</p>
                         </div>
+
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
