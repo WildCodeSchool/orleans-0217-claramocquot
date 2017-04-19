@@ -55,7 +55,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-4 stopPadding">
                             <a href="index.php?route=entreprise">
-                                <div class="thumbnailHome borderBlack">
+                                <div class="thumbnailHome borderBlackNav">
                                     <div class="captionHome">
                                         <h2>L'ENTREPRISE</h2>
                                     </div>
@@ -70,7 +70,7 @@
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
                             <a href="index.php?route=manifeste">
-                                <div class="thumbnailHome borderBlack">
+                                <div class="thumbnailHome borderBlackNav">
                                     <div class="captionHome">
                                         <h2>NOTRE MANIFESTE</h2>
                                     </div>
@@ -85,7 +85,7 @@
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
                             <a href="index.php?route=articles&type=blog">
-                                <div class="thumbnailHome borderBlack">
+                                <div class="thumbnailHome borderBlackNav">
                                     <div class="captionHome">
                                         <h2>LA REDACTION</h2>
                                     </div>
@@ -104,7 +104,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-4 stopPadding">
                             <a href="index.php?route=articles&type=marraine">
-                                <div class="thumbnailHome borderBlack">
+                                <div class="thumbnailHome borderBlackNav">
                                     <div class="captionHome">
                                         <h2>NOS MARRAINES</h2>
                                     </div>
@@ -119,7 +119,7 @@
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
                             <a href="index.php?route=produits">
-                                <div class="thumbnailHome borderBlack">
+                                <div class="thumbnailHome borderBlackNav">
                                     <div class="captionHome">
                                         <h2>LES CHAPEAUX</h2>
                                     </div>
@@ -134,7 +134,7 @@
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
                             <a href="index.php?route=articles&type=partenaire">
-                                <div class="thumbnailHome borderBlack">
+                                <div class="thumbnailHome borderBlackNav">
                                     <div class="captionHome">
                                         <h2>NOS PARTENAIRES</h2>
                                     </div>
@@ -153,7 +153,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-4 stopPadding">
                             <a href="index.php?route=articles&type=prestation">
-                                <div class="thumbnailHome borderBlack">
+                                <div class="thumbnailHome borderBlackNav">
                                     <div class="captionHome">
                                         <h2>NOS PRESTATIONS</h2>
                                     </div>
@@ -168,7 +168,7 @@
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
                             <a href="index.php?route=articles&type=evenement">
-                                <div class="thumbnailHome borderBlack">
+                                <div class="thumbnailHome borderBlackNav">
                                     <div class="captionHome">
                                         <h2>L'ODYSSEE</h2>
                                     </div>
@@ -183,7 +183,7 @@
                         </div>
                         <div class="col-xs-12 col-md-4 stopPadding">
                             <a href="index.php?route=articles&type=portrait">
-                                <div class="thumbnailHome borderBlack">
+                                <div class="thumbnailHome borderBlackNav">
                                     <div class="captionHome">
                                         <h2>VOS TEMOIGNAGES</h2>
                                     </div>
@@ -209,8 +209,8 @@
 <section class="container-fluid landingPageNouveautes text-center" id="nouveautes">
     <div class="section_overlay2">
         <div class="row">
-            <div class="col-md-offset-5 col-md-2">
-                <h2 class="titreCadre2">NOS DERNIERS CHAPEAUX</h2>
+            <div class="col-xs-12">
+                <h2 class="titreCadre2"><span class="borderBlack">NOS DERNIERS CHAPEAUX</span></h2>
             </div>
         </div>
 
@@ -272,9 +272,9 @@
 
 <section class="container-fluid landingPageActualites" id="actualites">
     <div class="section_overlay">
-        <div class="row">
-            <div class="col-md-offset-5 col-md-2">
-                <h2 class="titreCadre2 text-center">NOTRE ACTUALITÉ</h2>
+        <div class="row text-center">
+            <div class="col-xs-12">
+                <h2 class="titreCadre2"><span class="borderBlack">NOTRE ACTUALITE</span></h2>
             </div>
         </div>
         <div class="row">
@@ -283,7 +283,7 @@
                     <div class="col-md-4 col-xs-12 text-center">
                         <h2 class="text-center">Dernière Odyssée</h2>
                         <a href="index.php?route=article&id={{ evenement.id }}">
-                            <div class="thumbnail pad_articles borderBlack">
+                            <div class="thumbnail pad_articles borderBlackNav">
                                 <img src="../img/upload/{{ evenement.image }}" alt="{{ evenement.image }}">
                                 <div class="caption">
                                     <div class="row">
@@ -305,7 +305,7 @@
                     <div class="col-md-4 col-xs-12 text-center">
                         <h2 class="text-center">Dernier Article</h2>
                         <a href="index.php?route=article&id={{ blog.id }}">
-                            <div class="thumbnail pad_articles borderBlack">
+                            <div class="thumbnail pad_articles borderBlackNav">
                                 <img src="../img/upload/{{ blog.image }}" alt="{{ blog.image }}">
                                 <div class="caption">
                                     <div class="row">
@@ -327,7 +327,7 @@
                     <div class="col-md-4 col-xs-12 text-center">
                         <h2 class="text-center">Dernier Témoignage</h2>
                         <a href="index.php?route=article&id={{ portrait.id }}">
-                            <div class="thumbnail pad_articles borderBlack">
+                            <div class="thumbnail pad_articles borderBlackNav">
                                 <img src="../img/upload/{{ portrait.image }}" alt="{{ portrait.image }}">
                                 <div class="caption">
                                     <div class="row">

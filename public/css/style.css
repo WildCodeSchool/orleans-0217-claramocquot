@@ -7,7 +7,6 @@
 h1, h2, h3, h4, h5, h6, a, .h1, .h2, .h3, .h4, .h5, .h6, .a{
     font-family: 'PT Sans', sans-serif;
     text-decoration: none;
-    color: black;
 }
 
 a, a:hover, a:active, a:focus, a:visited {
@@ -157,6 +156,11 @@ body {
 
 .navHeight {
     height: 1000px;
+}
+
+.borderBlackNav {
+    border: 2px solid black;
+    margin: 15px;
 }
 
 /*---------------------------------------
@@ -482,7 +486,9 @@ a {
 .borderBlack {
     border: 2px solid black;
     margin: 15px;
+    padding: 5px 15px 5px 15px;
 }
+
 
 /*page produit*/
 
