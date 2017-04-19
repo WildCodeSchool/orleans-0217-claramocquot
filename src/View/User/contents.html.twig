@@ -13,14 +13,15 @@
                     <div class="col-md-10 col-md-offset-1 col-xs-12 text-center">
                         <div class=" presentationArticles">
                             {% if type == 'blog' %}
-                            <h1><span class="borderBlack">La rédaction</span></h1><br/>
-                            <p>Cette odyssée chapelière nous donne à vivre des expériences riches, singulières,
-                                parfois drôles, inédites ou juste pratiques. Ici, nous partageons avec vous nos joies,
-                                nos réflexions, nos connaissances, nos découvertes, nos rencontres, nos savoir-
-                                faire.<br/>
-                                Nous appelons de tout coeur à un plaisir réciproque. Bonne lecture !<br/>
-                            </p>
-                                {% endif %}
+                                <h1><span class="borderBlack">La rédaction</span></h1><br/>
+                                <p>Cette odyssée chapelière nous donne à vivre des expériences riches, singulières,
+                                    parfois drôles, inédites ou juste pratiques. Ici, nous partageons avec vous nos
+                                    joies,
+                                    nos réflexions, nos connaissances, nos découvertes, nos rencontres, nos savoir-
+                                    faire.<br/>
+                                    Nous appelons de tout coeur à un plaisir réciproque. Bonne lecture !<br/>
+                                </p>
+                            {% endif %}
                             {% if type == 'marraine' %}
                                 <h1><span class="borderBlack">Nos marraines</span></h1><br/>
                                 <p>Parce qu’on ne réalise jamais rien complètement seul. Parce que le soutien est
@@ -33,7 +34,8 @@
                             {% if type == 'partenaire' %}
                                 <h1><span class="borderBlack">Nos partenaires</span></h1><br/>
                                 <p>Ils partagent nos valeurs, ils nous ont tendu la main, ils nous soutiennent de façon
-                                    pérenne, ils présentent nos produits, ils ont accueilli notre travail, ou nous ont aidé
+                                    pérenne, ils présentent nos produits, ils ont accueilli notre travail, ou nous ont
+                                    aidé
                                     dans notre aventure, ils parlent de nous avec passion...<br/>
                                     ou tout à la fois !<br/>
                                     Bref, ils nous aiment et nous aussi.<br/>
@@ -94,33 +96,109 @@
                     {% endfor %}
 
                     {% if type == 'marraine' and visibility.visibility == 1 %}
-                    <div class="col-md-4 col-xs-12">
-                        <a href="#">
-                            <div class="thumbnail pad_articles borderBlack">
-                                <img src="../img/fun.jpg" alt="recrutement_marraines">
-                                <div class="caption">
-                                    <div class="row">
-                                        <div class="col-md-12 col-xs-12">
-                                            <div class="row">
-                                                <h2 class="titre">Venez nous rejoindre</h2>
-                                            </div>
-                                            <div class="row txt_com">
-                                                <p>Envie de devenir l'ambassadrice de nos chapeaux ?<br/></p>
-                                                <p>Cliquez ici !</p>
+                        <div class="col-md-4 col-xs-12">
+                            <a href="#" data-toggle="modal" data-target="#marraine">
+                                <div class="thumbnail pad_articles borderBlack">
+                                    <img src="../img/recrutement.jpeg" alt="recrutement_marraines">
+                                    <div class="caption">
+
+                                        <div class="row">
+                                            <div class="col-md-12 col-xs-12">
+                                                <div class="row">
+                                                    <h2 class="titre">Venez nous rejoindre</h2>
+                                                </div>
+                                                <div class="row txt_com">
+                                                    <p>Nos marraines vous inspirent ?<br>
+
+                                                        Vous aimeriez porter nos chapeaux et devenir une véritable ambassadrice ?<br>
+
+                                                        Etre Marraine est un engagement où la confiance est maitresse. Il s’agit de rejoindre une
+
+                                                        communauté et d’accéder aux coulisses de l’aventure. La qualité de cette communauté est
+
+                                                        déterminante pour notre avancement.<br>
+
+                                                        Si vous pensez que nos univers peuvent s’enrichir mutuellement et que nous pourrons compter sur
+
+                                                        votre implication en toute bienveillance, rejoignez-nous en postulant ici ..</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </a>
+                        </div>
+
+                        <div class="modal fade" id="marraine" tabindex="-1" role="dialog"
+                             aria-labelledby="example">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close"><span
+                                                    aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="example">Devenir marraine</h4>
+                                    </div>
+                                    <div class="headModalProduit">
+                                        <p>** Bienvenue et merci de votre intérêt **<br><br>
+
+                                            Parlez-nous de vous, de votre univers et de vos motivations
+
+                                            et envoyer-nous vos photos - à bientôt .<br>
+
+                                            N’oubliez pas de nous donner votre tour de tête !
+
+                                        </p>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="" method="post">
+                                            <div class="form-group">
+                                                <label for="name" class="control-label">Nom:</label>
+                                                <input type="text" class="form-control" name="Nom">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="firstname" class="control-label">Prenom:</label>
+                                                <input type="text" class="form-control" name="Prenom">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email" class="control-label">Adresse email:</label>
+                                                <input type="email" class="form-control" name="Email"
+                                                       placeholder="dupont@exemple.fr">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="address" class="control-label">Ville:</label>
+                                                <input type="text" class="form-control" name="Ville">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="size" class="control-label">Taille:</label>
+                                                <input type="text" class="form-control" name="Taille">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="comment" class="control-label">Commentaire:</label>
+                                                <textarea class="form-control" name="Commentaire"></textarea>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Annuler
+                                                </button>
+                                                <button type="submit" name="submitmarraine" class="btn btn-default">Envoyer
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
                             </div>
-                        </a>
-                    </div>
+                        </div>
+
+
                     {% endif %}
 
                     {% if type == 'partenaire' %}
                         <div class="col-md-4 col-xs-12">
-                            <a href="#">
+                            <a href="#"data-toggle="modal" data-target="#partenaire">
                                 <div class="thumbnail pad_articles borderBlack">
-                                    <img src="../img/fun.jpg" alt="recrutement_partenaires">
+                                    <img src="../img/recrutement.jpeg" alt="recrutement_partenaires">
                                     <div class="caption">
                                         <div class="row">
                                             <div class="col-md-12 col-xs-12">
@@ -128,8 +206,12 @@
                                                     <h2 class="titre">Venez nous rejoindre</h2>
                                                 </div>
                                                 <div class="row txt_com">
-                                                    <p>Envie de nous soutenir et de devenir notre partenaire ?<br/></p>
-                                                    <p>Cliquez ici !</p>
+                                                    <p>Bonjour et bienvenue ! <br/>
+
+                                                        Laissez-nous votre message avec une maximum de précisions, nous reviendrons vers vous dès
+
+                                                        que possible.<br/></p>
+                                                    <br/><p>Cliquez ici !</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -137,13 +219,68 @@
                                 </div>
                             </a>
                         </div>
+
+                        <div class="modal fade" id="partenaire" tabindex="-1" role="dialog"
+                             aria-labelledby="example">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close"><span
+                                                    aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="example">Demande partenaire :</h4>
+                                    </div>
+                                    <div class="headModalProduit">
+                                        <p>** Bienvenue et merci de votre intérêt **<br><br>
+                                        </p>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="" method="post">
+                                            <div class="form-group">
+                                                <label for="name" class="control-label">Nom:</label>
+                                                <input type="text" class="form-control" name="Nom">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="firstname" class="control-label">Prenom:</label>
+                                                <input type="text" class="form-control" name="Prenom">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Entreprise" class="control-label">Nom de votre entreprise :</label>
+                                                <input type="text" class="form-control" name="Entreprise">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email" class="control-label">Adresse email:</label>
+                                                <input type="email" class="form-control" name="Email"
+                                                       placeholder="dupont@exemple.fr">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="address" class="control-label">Ville:</label>
+                                                <input type="text" class="form-control" name="Ville">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="comment" class="control-label">Commentaire:</label>
+                                                <textarea class="form-control" name="Commentaire"></textarea>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Annuler
+                                                </button>
+                                                <button type="submit" name="submitpartenaire" class="btn btn-default">Envoyer
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     {% endif %}
 
                     {% if type == 'portrait' %}
                         <div class="col-md-4 col-xs-12">
-                            <a href="#">
+                            <a href="#"data-toggle="modal" data-target="#temoignage">
                                 <div class="thumbnail pad_articles borderBlack">
-                                    <img src="../img/fun.jpg" alt="portraits">
+                                    <img src="../img/recrutement.jpeg" alt="portraits">
                                     <div class="caption">
                                         <div class="row">
                                             <div class="col-md-12 col-xs-12">
@@ -151,8 +288,13 @@
                                                     <h2 class="titre">Parlez nous de vous !</h2>
                                                 </div>
                                                 <div class="row txt_com">
-                                                    <p>Laissez nous vos impressions ou partagez votre expérience !<br/></p>
-                                                    <p>Cliquez ici !</p>
+                                                    <p>Vous avez aussi une expérience singulière avec l’un de vos chapeaux?<br>
+
+                                                        Vous accepteriez de partager votre expérience au travers d’un récit ou d’une interview?<br>
+
+                                                        Ou bien vous avez travaillé dans l’univers du chapeau et voulez transmettre un souvenir, une
+
+                                                        histoire ? <br><br>Témoignez ici.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -160,6 +302,64 @@
                                 </div>
                             </a>
                         </div>
+                        <div class="modal fade" id="temoignage" tabindex="-1" role="dialog"
+                             aria-labelledby="example">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close"><span
+                                                    aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="example">Soumettre un témoignage</h4>
+                                    </div>
+                                    <div class="headModalProduit">
+                                        <p>** Bienvenue et merci de votre intérêt **<br><br>
+
+                                            Parlez-nous de vous, de votre univers et de vos motivations
+
+                                            et envoyer-nous vos photos - à bientôt .<br>
+
+                                            N’oubliez pas de nous donner votre tour de tête !
+
+                                        </p>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="" method="post">
+                                            <div class="form-group">
+                                                <label for="name" class="control-label">Nom:</label>
+                                                <input type="text" class="form-control" name="Nom">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="firstname" class="control-label">Prenom:</label>
+                                                <input type="text" class="form-control" name="Prenom">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email" class="control-label">Adresse email:</label>
+                                                <input type="email" class="form-control" name="Email"
+                                                       placeholder="dupont@exemple.fr">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="address" class="control-label">Ville:</label>
+                                                <input type="text" class="form-control" name="Ville">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="comment" class="control-label">Commentaire:</label>
+                                                <textarea class="form-control" name="Commentaire"></textarea>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Annuler
+                                                </button>
+                                                <button type="submit" name="submittemoignage" class="btn btn-default">Envoyer
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
                     {% endif %}
 
                 </div>

@@ -59,7 +59,7 @@
 
             <p><span class="DescProduit">Description:</span><br/>{{ hats[0].content|raw }}</p>
 
-            <p><span class="DescProduit"> Prix:</span> {{ hats[0].price }}€</p>
+            <p><span class="DescProduit"> Prix:</span> {% if hats[0].unavailable ==1 %}Produit indisponible {% elseif hats[0].old==1 %}  Indisponible{% else %}{{ hats[0].price }}€{% endif %}</p>
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#Se_renseigner"
                     data-whatever="@mdo">
                 <Cont>Se renseigner</Cont>
@@ -75,51 +75,64 @@
                             <h4 class="modal-title" id="exampleModalLabel">Renseignement produit</h4>
                         </div>
                         <div class="headModalProduit">
-                            <p>« Merci de votre confiance - laissez-nous vos coordonnées afin que nous
-                                puissions
-                                revenir
-                                vers vous et valider votre commande. Si vous la connaissez, donner-nous
-                                votre
-                                taille de tour de
-                                tête, et surtout n’hésitez pas à ajouter vos questions ou vos remarques dans
-                                l’espace
-                                commentaires. Puisque nos produits sont faits par nos soins et requièrent
-                                des
-                                délais, faites-nous
-                                savoir l’échéance souhaitée »</p>
+                            <p>** FELICITATION! **<br>
+
+                                Vous êtes sur la bonne voie pour avoir votre chapeau....<br><br>
+
+                                Confiez-nous votre tour de tête, le modèle qui vous intéresse, et les finitions que vous
+
+                                souhaiteriez.
+                                Notez aussi si vous avez une date à respecter impérativement (pour une cérémonie,
+
+                                un cadeau,...). Et toute autres informations qui pourrait orienter notre travail dans le bon sens.<br><br>
+
+                                1 - Nous allons étudier votre demande, vérifiez la disponibilité des matières, et évaluer si nous
+
+                                pouvons respecter vos souhaits.<br>
+
+                                2 - Nous vous ferons part des délais estimés - et les modalités de paiement à respecter.<br>
+
+                                3 - Nous lançons la confection de votre chapeau après validation.<br>
+
+                                4 - Nous l’envoyons à réception du paiement.<br>
+
+                                Vous pourrez alors le porter avec fierté.<br><br>
+
+                                Vive les audacieux !</p>
                         </div>
                         <div class="modal-body">
                             <form action="" method="post">
                                 <div class="form-group">
+                                    <input type="hidden" class="form-control" name="Chapeau" value="{{ hats[0].name|raw }}">
                                     <label for="name" class="control-label">Nom:</label>
-                                    <input type="text" class="form-control" name="name">
+                                    <input type="text" class="form-control" name="Nom">
                                 </div>
                                 <div class="form-group">
                                     <label for="firstname" class="control-label">Prenom:</label>
-                                    <input type="text" class="form-control" name="firstname">
+                                    <input type="text" class="form-control" name="Prenom">
                                 </div>
                                 <div class="form-group">
                                     <label for="email" class="control-label">Adresse email:</label>
-                                    <input type="email" class="form-control" name="email"
+                                    <input type="email" class="form-control" name="Email"
                                            placeholder="dupont@exemple.fr">
                                 </div>
                                 <div class="form-group">
-                                    <label for="address" class="control-label">Adresse:</label>
-                                    <input type="text" class="form-control" name="address">
+                                    <label for="address" class="control-label">Ville:</label>
+                                    <input type="text" class="form-control" name="Ville">
                                 </div>
                                 <div class="form-group">
                                     <label for="size" class="control-label">Taille:</label>
-                                    <input type="text" class="form-control" name="size">
+                                    <input type="text" class="form-control" name="Taille">
                                 </div>
                                 <div class="form-group">
                                     <label for="comment" class="control-label">Commentaire:</label>
-                                    <textarea class="form-control" name="comment"></textarea>
+                                    <textarea class="form-control" name="Commentaire"></textarea>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">
                                         Annuler
                                     </button>
-                                    <button type="submit" name="submit" class="btn btn-default">Envoyer
+                                    <button type="submit" name="submitproduit" class="btn btn-default">Envoyer
                                     </button>
                                 </div>
                             </form>
