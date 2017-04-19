@@ -509,12 +509,9 @@ a, a:hover, a:active, a:focus, a:visited {
     font-size: 1.15em;
 }
 
-@media screen and (max-width: 1680px) {
-    .containerProduit{
-        margin-bottom: 20px;
-    }
 
-}
+
+
 
 .imageCarProd{
     margin: 0 auto;
@@ -854,5 +851,17 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 @media screen and (min-width: 992px; max-width: 1600px) {
     .txt_com {
         font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1680px) {
+    .containerProduit {
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .produitDescription {
+        margin-top: -82px;
     }
 }
