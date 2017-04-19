@@ -21,7 +21,8 @@
                                 <div class="thumbnailSlider marginCollections">
                                     <img class="thumbnail"
                                          src="../img/upload/{{ data.image }}" alt="{{ data.image }}">
-                                    <h1 class="titre_photo">{{ data.name }}</h1>
+                                    <h3 class="titre_photo">{{ data.name }} </h3>
+                                    <div class="text-right price">{{ data.price }} €</div>
                                 </div>
                             </a>
                         </div>
@@ -32,7 +33,8 @@
                                 <div class="thumbnailSlider marginCollections">
                                     <img class="thumbnail"
                                          src="../img/upload/{{ data.image }}" alt="{{ data.image }}">
-                                    <h1 class="titre_photo">{{ data.name }}</h1>
+                                    <h3 class="titre_photo">{{ data.name }} </h3>
+                                    <div class="text-right price">{{ data.price }} €</div>
                                 </div>
                             </a>
                         </div>
@@ -45,17 +47,16 @@
                                 <div class="thumbnailSlider marginCollections">
                                     <img class="thumbnail"
                                          src="../img/upload/{{ data.image }}" alt="{{ data.image }}">
-                                    <h1 class="titre_photo">{{ data.name }}</h1>
+                                    <h3 class="titre_photo">{{ data.name }} </h3>
+                                    <div class="text-right price">{{ data.price }} €</div>
                                 </div>
                             </a>
                         </div>
                     {% endif %}
                 {% endfor %}
             </div>
-
-
-
-
+        </div>
+    </div>
             <section class="container-fluid landingPageNouveautes text-center" id="nouveautes">
                 <div class="section_overlay2">
                     <div class="row">
@@ -109,15 +110,15 @@
                                 <a class="right carousel-control" href="#nouveaux_chapeaux" role="button" data-slide="next">
                                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                                     <span class="sr-only">Next</span>
+
                                 </a>
-                            {% endif %}
-                        </div>
-                    </div>
+                                {% endif %}
                 </div>
-            </section>
-
+            </div>
         </div>
-
-
+    </section>
     </div>
+
+
+
 {% endblock %}
