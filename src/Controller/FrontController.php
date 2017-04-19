@@ -48,4 +48,12 @@ class FrontController extends Controller
         $res = $db->findAll($type);
         return $this->getTwig()->render('contents.html.twig', ['datas'=>$res,'type'=>$type, 'visibility'=>$visibility]);
     }
+
+    public function showHats($res)
+    {
+
+        $em = new HatManager();
+        $datas = $em->showHats();
+        return $this->getTwig()->render('products.html.twig', ['datas' => $datas, 'res' => $res]);
+    }
 }

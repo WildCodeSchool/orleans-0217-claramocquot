@@ -131,7 +131,6 @@ class ContentController extends Controller
                 return $this->getTwig()->render('addContent.html.twig', ['form' => $form, 'type' => $type, 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format de 500x500 !']);
             }
         }
-
         if (isset($_POST['submit'])) {
             $data = $_POST;
             $form->populate($data);

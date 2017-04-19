@@ -168,7 +168,7 @@ class HatManager extends DB
         $req2 = "UPDATE picture SET (image, radio) VALUES (:img, :radio) WHERE id =:id";
         $prep2 = $this->db->prepare($req2);
         $prep2->bindValue(':id', $id, \PDO::PARAM_INT);
-        $prep2->bindValue(':img', $data['image1']['name']);
+        $prep2->bindValue(':img', $data['image1']);
         $prep2->bindValue(':radio', $radio1);
         $prep2->execute();
 
