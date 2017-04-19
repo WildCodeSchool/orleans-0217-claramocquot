@@ -170,6 +170,12 @@ body {
     margin: 40px auto;
 }
 
+@media screen and (max-width: 450px){
+    .titreCadre2 {
+        font-size: 20px;
+    }
+}
+
 .landingPageActualites .section_overlay {
     height: 500px;
 }
@@ -268,11 +274,26 @@ a, a:hover, a:active, a:focus, a:visited {
     text-transform: uppercase;
 }
 
+@media screen and (max-width: 1200px){
+    .logoHome {
+        font-size: 15px;
+        left: -5px;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .logoHome {
+        font-size: 12px;
+        left: -10px;
+    }
+}
+
 /* fin logo */
 
 /* menu burger */
 .burger {
     background-image: url("../img/logos/boutonBurger.jpg");
+    background-size: cover;
     height: 53px;
     width: 53px;
     border: solid black 2px;
@@ -280,7 +301,7 @@ a, a:hover, a:active, a:focus, a:visited {
 }
 
 .dropdown-menu {
-    left: -48px;
+    left: -80px;
     margin-top: 30px;
     background: none;
     box-shadow: none;
@@ -288,6 +309,91 @@ a, a:hover, a:active, a:focus, a:visited {
     font-size: 15px;
 }
 
+@media screen and (max-width: 1440px){
+    .dropdown-menu {
+        left: -100px;
+    }
+
+    .burger {
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 1150px){
+    .dropdown-menu {
+        left: -110px;
+    }
+
+    .burger {
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .dropdown-menu {
+        left: -120px;
+    }
+
+    .burger {
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .dropdown-menu {
+        left: -135px;
+    }
+
+    .burger {
+        right: 40px;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .dropdown-menu {
+        left: -150px;
+    }
+
+    .burger {
+        right: 60px;
+    }
+}
+
+@media screen and (max-width: 540px){
+    .dropdown-menu {
+        left: -165px;
+    }
+
+    .burger {
+        right: 50px;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .dropdown-menu {
+        left: -155px;
+        font-size: 13px;
+    }
+
+    .marque {
+        font-size: 23px;
+    }
+
+    .marginHeader1 {
+        margin-top: 25px;
+    }
+
+    .marginHeader2 {
+        margin-top: 18px;
+    }
+
+    .burger {
+        height: 45px;
+        width: 45px;
+    }
+
+
+}
 /* fin menu burger */
 
 /* manifeste */
@@ -456,6 +562,39 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .imgEntreprise {
     margin: 0 auto;
+}
+
+@media screen and (max-width: 1400px){
+    .imgEntreprise {
+        margin-top: 100px;
+    }
+
+    .textentreprise {
+        margin-top : 40px;
+        padding-left: 30px;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .imgEntreprise {
+        margin-top: 150px;
+    }
+
+    .textentreprise {
+        margin-top : 40px;
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width: 990px){
+    .imgEntreprise {
+        margin-top: 30px;
+    }
+
+    .textentreprise {
+        margin-top : 20px;
+        padding-left: 10px;
+    }
 }
 
 figcaption {
@@ -657,5 +796,5 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .addPadd {
     padding: 40px;
-    margin-bottom: -6px;
+    margin-bottom: -11px;
 }
