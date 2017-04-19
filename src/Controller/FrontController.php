@@ -57,6 +57,12 @@ class FrontController extends Controller
         $oldHats= $em->showOldHats();
         return $this->getTwig()->render('products.html.twig', ['datas' => $datas, 'res' => $res, 'olds' =>$oldHats]);
     }
+    public function showHat($id)
+    {
+        $db = new HatManager();
+        $res = $db->showHat($id);
+        return $this->getTwig()->render('product.html.twig', ['hats' => $res]);
+    }
 
 
 }
