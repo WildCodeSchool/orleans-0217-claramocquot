@@ -406,13 +406,14 @@ a, a:hover, a:active, a:focus, a:visited {
     margin-top: 90px;
 }
 
-.contentManifest {
-    margin-top: 80px;
-    padding: 50px;
-    background-color: rgba(255, 255, 255, 0.6);
-    border: 2px solid black;
-    margin-bottom: 60px;
 
+
+.contentManifest {
+    margin-top: -170px;
+    padding: 50px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    margin-bottom: -150px;
 }
 
 .titreManifeste {
@@ -423,6 +424,44 @@ a, a:hover, a:active, a:focus, a:visited {
     font-weight: bold;
     margin-bottom: 40px;
 }
+
+@media screen and (max-width: 800px){
+    .contentManifest {
+        font-size: 15px;
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 580px){
+    .contentManifest {
+        font-size: 12px;
+    }
+
+    .titreManifeste {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 580px){
+    .contentManifest {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .titreManifeste {
+        font-size: 30px;
+    }
+}
+
+.bannerManifest2 {
+    background-size: cover;
+    background-image: url("../img/pageManifeste/manifesteCover2.jpg");
+    background-repeat: no-repeat;
+    height: 400px;
+    clear: both;
+}
+
+
 
 /* fin menu burger */
 
