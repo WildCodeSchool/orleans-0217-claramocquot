@@ -58,7 +58,6 @@ body {
     width: 60%;
     margin-top: 3vh;
     margin-bottom: 4vh;
-
 }
 
 .cadreTitreAccueil {
@@ -261,8 +260,9 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .logoHome {
     position: fixed;
-    top: 25px;
+    top: 0;
     left: 0;
+    margin-left: -10px;
     font-size: 18px;
     color: black;
     text-transform: uppercase;
@@ -330,7 +330,19 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .pad_articles {
     padding: 0px;
-    height: 650px;
+    height: 700px;
+}
+
+@media screen and (max-width: 1500px) {
+    .pad_articles {
+        height: 650px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .pad_articles {
+        height: auto;
+    }
 }
 
 .petit {
@@ -343,7 +355,8 @@ a, a:hover, a:active, a:focus, a:visited {
 }
 
 .titre {
-    font-size: 1.6em;
+    font-size: 1.4em;
+    font-weight: bold;
 }
 
 .date {
@@ -437,13 +450,13 @@ a, a:hover, a:active, a:focus, a:visited {
 }
 
 .textentreprise {
-    margin-top : 60px;
+    margin-top : 40px;
     padding-left: 50px;
 }
 
-/*.imgEntreprise {*/
-    /*max-width: 350px;*/
-/*}*/
+.imgEntreprise {
+    margin: 0 auto;
+}
 
 figcaption {
     text-align: center;

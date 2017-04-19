@@ -90,7 +90,7 @@ class ContentController extends Controller
         $form = new Form('addContent');
         $form->setEncType('multipart/form-data');
         $title = new Text('title');
-        $titleVal = new ValidatorAdapterZf(new StringLength(['max'=>70]));
+        $titleVal = new ValidatorAdapterZf(new StringLength(['max'=>50]));
         $title->addValidator($titleVal);
         $date = new Text('date');
         $date->setValue(date('Y-m-d'));
@@ -103,7 +103,7 @@ class ContentController extends Controller
         $content = new \Clara\Form\Field\TextArea('content');
         $hidden = new Hidden('type');
         $submit = new Submit('submit');
-        $title->setLabel('Titre (70 caractères maximum) :');
+        $title->setLabel('Titre (50 caractères maximum) :');
         $date->setLabel('Date de création (YYYY-MM-DD) :');
         $image->setLabel('Image de miniature (500px X 500px) :');
         $sumup->setLabel('Résumé de la miniature (120 caractères maximum) :');
@@ -164,7 +164,7 @@ class ContentController extends Controller
         $form->setEncType('multipart/form-data');
         $title = new Text('title');
         $title->setValue($data1->getTitle());
-        $titleVal = new ValidatorAdapterZf(new StringLength(['max'=>70]));
+        $titleVal = new ValidatorAdapterZf(new StringLength(['max'=>50]));
         $title->addValidator($titleVal);
         $date = new Text('date');
         $date->setValue($data1->getDate());
@@ -181,7 +181,7 @@ class ContentController extends Controller
         $hidden = new Hidden('type');
         $hidden->setValue($data1->getType());
         $submit = new Submit('submit');
-        $title->setLabel('Titre (70 caractères maximum) :');
+        $title->setLabel('Titre (50 caractères maximum) :');
         $date->setLabel('Date de création (YYY-MM-DD) :');
         $image->setLabel('Image de mignature (500px X 500px:');
         $sumup->setLabel('Résumé de la mignature (120 caractères maximum) :');
