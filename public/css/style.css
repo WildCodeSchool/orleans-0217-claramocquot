@@ -158,6 +158,11 @@ body {
     height: 1000px;
 }
 
+.borderBlackNav {
+    border: 2px solid black;
+    margin: 15px;
+}
+
 /*---------------------------------------
    SECTION ACTUALITÉS
 -----------------------------------------*/
@@ -481,7 +486,9 @@ a {
 .borderBlack {
     border: 2px solid black;
     margin: 15px;
+    padding: 5px 15px 5px 15px;
 }
+
 
 /*page produit*/
 
