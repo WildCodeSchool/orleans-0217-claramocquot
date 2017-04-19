@@ -1,55 +1,59 @@
 {% extends "homeAdmin.html.twig" %}
 
 {% block content %}
-    <div class="container text-center">
-        <h1 class="borderBlack">Liste des articles : {{ type }}</h1><br/>
-        {% if result is not empty %}
-            <blockquote class="alert alert-success">{{ result }}</blockquote><br/>
-        {% endif %}
-        {{ form.render|raw }}
+    <div class="container-fluid text-center">
         <div class="row">
-            <div class="col-sm-4 col-xs-12">
-                <a href="index.php?route=nouvel-article&type={{ type }}">
-                    <div class="thumbnail pad_articles borderBlack add">
-                        <img src="../img/logos/add.png" alt="ajouter-article">
-                        <div class="caption">
-                            <div class="row">
-                                <div class="col-md-12 col-xs-12">
+            <div class="col-xs-10 col-xs-offset-1">
+                <h1 class="borderBlack">Liste des articles : {{ type }}</h1><br/>
+                {% if result is not empty %}
+                    <blockquote class="alert alert-success">{{ result }}</blockquote><br/>
+                {% endif %}
+                {{ form.render|raw }}
+                <div class="row">
+                    <div class="col-sm-4 col-xs-12">
+                        <a href="index.php?route=nouvel-article&type={{ type }}">
+                            <div class="thumbnail pad_articles borderBlack add">
+                                <img src="../img/logos/add.png" alt="ajouter-article">
+                                <div class="caption">
                                     <div class="row">
-                                        <hr/>
-                                        <h2 class="titre addTitle">Ajouter un nouvel Article</h2>
+                                        <div class="col-md-12 col-xs-12">
+                                            <div class="row">
+                                                <hr/>
+                                                <h2 class="titre addTitle">Ajouter un nouvel Article</h2>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
-                </a>
-            </div>
 
-            {% for data in datas %}
+                    {% for data in datas %}
 
-                <div class="col-sm-4 col-xs-12">
-                    <a href="index.php?route=article&id={{ data.id }}">
-                        <div class="thumbnail pad_articles borderBlack">
-                            <img src="../img/upload/{{ data.image }}" alt="{{ data.image }}">
-                            <div class="caption">
-                                <div class="row">
-                                    <div class="col-md-12 col-xs-12">
+                        <div class="col-sm-4 col-xs-12">
+                            <a href="index.php?route=article&id={{ data.id }}">
+                                <div class="thumbnail pad_articles borderBlack">
+                                    <img src="../img/upload/{{ data.image }}" alt="{{ data.image }}">
+                                    <div class="caption">
                                         <div class="row">
-                                            <h2 class="titre">{{ data.title }}</h2>
-                                            <p class="date">{{ data.date|date("d/m/Y") }}</p>
-                                        </div>
-                                        <div class="row txt_com">
-                                            <p>{{ data.sumup }}</p>
+                                            <div class="col-md-12 col-xs-12">
+                                                <div class="row">
+                                                    <h2 class="titre">{{ data.title }}</h2>
+                                                    <p class="date">{{ data.date|date("d/m/Y") }}</p>
+                                                </div>
+                                                <div class="row txt_com">
+                                                    <p>{{ data.sumup }}</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
 
-            {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </div>
     <br/>

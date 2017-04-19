@@ -54,6 +54,9 @@ class FrontController extends Controller
 
         $em = new HatManager();
         $datas = $em->showHats();
-        return $this->getTwig()->render('products.html.twig', ['datas' => $datas, 'res' => $res]);
+        $oldHats= $em->showOldHats();
+        return $this->getTwig()->render('products.html.twig', ['datas' => $datas, 'res' => $res, 'olds' =>$oldHats]);
     }
+
+
 }

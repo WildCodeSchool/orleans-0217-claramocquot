@@ -81,14 +81,24 @@ class ContentManager extends DB
      */
     public function updateContent($data, $id)
     {
-        $req = "UPDATE content SET title=:title,  date=:date,  image=:image, content=:content, sumup=:sumup WHERE id=:id";
-        $prep = $this->db->prepare($req);
-        $prep->bindValue(':id', $id, \PDO::PARAM_INT);
-        $prep->bindValue(':title', $data['title'], \PDO::PARAM_STR);
-        $prep->bindValue(':date', $data['date'], \PDO::PARAM_STR);
-        $prep->bindValue(':image', $data['image'], \PDO::PARAM_STR);
-        $prep->bindValue(':content', $data['content'], \PDO::PARAM_STR);
-        $prep->bindValue(':sumup', $data['sumup'], \PDO::PARAM_STR);
+        if (!empty($data['image'])) {
+            $req = "UPDATE content SET title=:title,  date=:date,  image=:image, content=:content, sumup=:sumup WHERE id=:id";
+            $prep = $this->db->prepare($req);
+            $prep->bindValue(':id', $id, \PDO::PARAM_INT);
+            $prep->bindValue(':title', $data['title'], \PDO::PARAM_STR);
+            $prep->bindValue(':date', $data['date'], \PDO::PARAM_STR);
+            $prep->bindValue(':image', $data['image'], \PDO::PARAM_STR);
+            $prep->bindValue(':content', $data['content'], \PDO::PARAM_STR);
+            $prep->bindValue(':sumup', $data['sumup'], \PDO::PARAM_STR);
+        } else {
+            $req = "UPDATE content SET title=:title,  date=:date, content=:content, sumup=:sumup WHERE id=:id";
+            $prep = $this->db->prepare($req);
+            $prep->bindValue(':id', $id, \PDO::PARAM_INT);
+            $prep->bindValue(':title', $data['title'], \PDO::PARAM_STR);
+            $prep->bindValue(':date', $data['date'], \PDO::PARAM_STR);
+            $prep->bindValue(':content', $data['content'], \PDO::PARAM_STR);
+            $prep->bindValue(':sumup', $data['sumup'], \PDO::PARAM_STR);
+        }
         $res = $prep->execute();
         return $res;
     }

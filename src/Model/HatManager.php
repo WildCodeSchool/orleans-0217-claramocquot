@@ -16,6 +16,7 @@ class HatManager extends DB
 {
     public function addHat($form)
     {
+        $res = '';
         $new_prod = $product = $unavailable = $old = $hide = 0;
         if ($form['localisation'] == 0) {
             $new_prod = 1;
@@ -42,57 +43,41 @@ class HatManager extends DB
         $prep->bindValue(':hide', $hide, \PDO::PARAM_INT);
         $prep->execute();
 
-
-
-        $radio1 = $radio2 = $radio3 = $radio4 = 0;
-        if ($form['radio'] == 0) {
-            $radio1 = 1;
-        } elseif ($form['radio'] == 1) {
-            $radio2 = 1;
-        } elseif ($form['radio'] == 2) {
-            $radio3 = 1;
-        } elseif ($form['radio'] == 3) {
-            $radio4 = 1;
-        }
         $lastid = $this->db->lastInsertId();
 
-        $req2 = "INSERT INTO picture (image, id_hat, radio) VALUES (:img, :idhat, :radio)";
+
+        $req2 = "INSERT INTO picture (image, id_hat) VALUES (:img, :idhat)";
         $prep2 = $this->db->prepare($req2);
         $prep2->bindValue(':img', $form['image1']);
         $prep2->bindValue(':idhat', $lastid);
-        $prep2->bindValue(':radio', $radio1);
         $prep2->execute();
 
         if (!empty($form['image2'])) {
-            $req3 = "INSERT INTO picture (image, id_hat, radio) VALUES (:img, :idhat, :radio)";
+            $req3 = "INSERT INTO picture (image, id_hat) VALUES (:img, :idhat)";
             $prep3 = $this->db->prepare($req3);
             $prep3->bindValue(':img', $form['image2']);
             $prep3->bindValue(':idhat', $lastid);
-            $prep3->bindValue(':radio', $radio2);
 
             $prep3->execute();
         }
         if (!empty($form['image3'])) {
-            $req4 = "INSERT INTO picture (image, id_hat, radio) VALUES (:img, :idhat, :radio)";
+            $req4 = "INSERT INTO picture (image, id_hat) VALUES (:img, :idhat)";
             $prep4 = $this->db->prepare($req4);
             $prep4->bindValue(':img', $form['image3']);
             $prep4->bindValue(':idhat', $lastid);
-            $prep4->bindValue(':radio', $radio3);
 
             $prep4->execute();
         }
         if (!empty($form['image4'])) {
-            $req5 = "INSERT INTO picture (image, id_hat, radio) VALUES (:img, :idhat, :radio)";
+            $req5 = "INSERT INTO picture (image, id_hat) VALUES (:img, :idhat)";
             $prep5 = $this->db->prepare($req5);
             $prep5->bindValue(':img', $form['image4']);
             $prep5->bindValue(':idhat', $lastid);
-            $prep5->bindValue(':radio', $radio4);
 
-            $prep5->execute();
+            $res = $prep5->execute();
         }
 
 
-        $res = true;
         return $res;
     }
 
@@ -108,7 +93,9 @@ class HatManager extends DB
 
     public function showHats()
     {
-        $req = "SELECT * FROM picture JOIN hat ON picture.id_hat=hat.id WHERE radio=1 ORDER BY hat.id DESC ";
+        $req = "SELECT min(picture.image) as image, hat.* 
+                FROM mocquot.picture JOIN hat ON picture.id_hat = hat.id 
+                GROUP BY id_hat ORDER BY id_hat DESC ";
         $prep = $this->db->prepare($req);
         $prep->execute();
         $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst('hat'));
@@ -117,14 +104,27 @@ class HatManager extends DB
 
     public function showNewHats()
     {
-        $req = "SELECT * FROM picture JOIN hat ON picture.id_hat=hat.id WHERE radio=1 AND new_prod=1 ORDER BY hat.id DESC ";
+        $req = "SELECT min(picture.image) as image, hat.* 
+                FROM mocquot.picture JOIN hat ON picture.id_hat = hat.id 
+                WHERE new_prod=1 GROUP BY id_hat ORDER BY id_hat DESC ";
+        $prep = $this->db->prepare($req);
+        $prep->execute();
+        $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst('hat'));
+        return $res;
+    }
+    public function showOldHats()
+    {
+        $req = "SELECT min(picture.image) as image, hat.* 
+                FROM mocquot.picture JOIN hat ON picture.id_hat = hat.id 
+                WHERE old=1 GROUP BY id_hat ORDER BY id_hat DESC ";
         $prep = $this->db->prepare($req);
         $prep->execute();
         $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst('hat'));
         return $res;
     }
 
-    public function updateHat($data, $id){
+    public function updateHat($data, $id)
+    {
 
         $new_prod = $product = $unavailable = $old = $hide = 0;
         if ($data['localisation'] == 0) {
@@ -139,16 +139,6 @@ class HatManager extends DB
             $hide = 1;
         }
 
-        $radio1 = $radio2 = $radio3 = $radio4 = 0;
-        if ($data['radio'] == 0) {
-            $radio1 = 1;
-        } elseif ($data['radio'] == 1) {
-            $radio2 = 1;
-        } elseif ($data['radio'] == 2) {
-            $radio3 = 1;
-        } elseif ($data['radio'] == 3) {
-            $radio4 = 1;
-        }
 
         $req = "UPDATE hat SET content=:content, price=:price, name=:name, new_prod=:new_prod, product=:product, unavailable=:unavailable, old=:old, hide=:hide WHERE id=:id";
         $prep = $this->db->prepare($req);
@@ -163,40 +153,29 @@ class HatManager extends DB
         $prep->bindValue(':hide', $hide, \PDO::PARAM_INT);
         $prep->execute();
 
-
-
-        $req2 = "UPDATE picture SET (image, radio) VALUES (:img, :radio) WHERE id =:id";
+        $req2 = "SELECT * FROM picture WHERE id_hat=:id";
         $prep2 = $this->db->prepare($req2);
         $prep2->bindValue(':id', $id, \PDO::PARAM_INT);
-        $prep2->bindValue(':img', $data['image1']);
-        $prep2->bindValue(':radio', $radio1);
         $prep2->execute();
-
-        $lastid = $this->db->lastInsertId();
-
-        if (!empty($form['image2'])) {
-            $req3 = "UPDATE picture SET (image, id_hat, radio) VALUES (:img, :idhat, :radio)";
-            $prep3 = $this->db->prepare($req3);
-            $prep3->bindValue(':img', $form['image2']);
-            $prep3->bindValue(':idhat', $lastid);
-            $prep3->bindValue(':radio', $radio2);
-            $prep3->execute();
+        $imagesHat = $prep2->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst('picture'));
+        foreach ($imagesHat as $index => $imageHat) {
+            if (!empty($data['image' . ($index + 1)])) {
+                $req3 = "UPDATE picture SET image =:image WHERE id=:id";
+                $prep3 = $this->db->prepare($req3);
+                $prep3->bindValue(':image', $data['image' . ($index + 1)], \PDO::PARAM_STR);
+                $prep3->bindValue(':id', $imageHat->getId(), \PDO::PARAM_INT);
+                $prep3->execute();
+            }
         }
-        if (!empty($form['image3'])) {
-            $req4 = "UPDATE picture SET (image, id_hat, radio) VALUES (:img, :idhat, :radio)";
-            $prep4 = $this->db->prepare($req4);
-            $prep4->bindValue(':img', $form['image3']);
-            $prep4->bindValue(':idhat', $lastid);
-            $prep4->bindValue(':radio', $radio3);
-            $prep4->execute();
-        }
-        if (!empty($form['image4'])) {
-            $req5 = "UPDATE picture SET (image, id_hat, radio) VALUES (:img, :idhat, :radio)";
-            $prep5 = $this->db->prepare($req5);
-            $prep5->bindValue(':img', $form['image4']);
-            $prep5->bindValue(':idhat', $lastid);
-            $prep5->bindValue(':radio', $radio4);
-            $prep5->execute();
+        for ($i = 1; $i <= 4; $i++) {
+            if (!empty($data['image'. ($i+1)]) && !isset($imagesHat[$i])) {
+                $req4 = "INSERT INTO picture (image, id_hat) VALUES (:img, :idhat)";
+                $prep4 = $this->db->prepare($req4);
+                $prep4->bindValue(':img', $data['image'. ($i+1)], \PDO::PARAM_STR);
+                $prep4->bindValue(':idhat', $id, \PDO::PARAM_INT);
+                $prep4->execute();
+            }
+
         }
         $res = 'Element modifié';
         return $res;
@@ -207,9 +186,7 @@ class HatManager extends DB
         $req = "DELETE FROM hat WHERE id = :id";
         $prep = $this->db->prepare($req);
         $prep->bindValue(':id', $id);
-        var_dump($prep);
         $res = $prep->execute();
-        var_dump($res);
         return $res;
     }
 }

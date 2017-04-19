@@ -69,7 +69,7 @@
                             <div id="nouveaux_chapeaux" class="carousel slide" data-ride="carousel">
                                 <!-- Indicators -->
                                 <ol class="carousel-indicators">
-                                    {% for data in datas if datas|length>3 %}
+                                    {% for old in olds if olds|length>3 %}
                                         {% if loop.first or loop.index0%3 == 0 %}
                                             <li data-target="#nouveaux_chapeaux" data-slide-to="{{ loop.index0/3 }}"
                                                     {% if loop.first %} class="active"{% endif %}></li>
@@ -79,18 +79,18 @@
 
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner" role="listbox">
-                                    {% for data in datas %}
+                                    {% for old in olds %}
                                         {% if loop.first or loop.index0%3 == 0 %}
                                             <div class="item row{% if loop.first %} active{% endif %}">
                                         {% endif %}
-                                        <a href="index.php?route=produit&id={{ data.id }}">
+                                        <a href="index.php?route=produit&id={{ old.id }}">
                                             <div class="col-xs-12 col-md-4">
                                                 <div class="thumbnailSlider marginCollections">
                                                     <img class="thumbnail"
-                                                         src="img/upload/{{ data.image }}"
-                                                         alt="{{ data.image }}">
-                                                    <h3 class="titre_photo">{{ data.name }} </h3>
-                                                    <div class="text-right price">{{ data.price }} €</div>
+                                                         src="img/upload/{{ old.image }}"
+                                                         alt="{{ old.image }}">
+                                                    <h3 class="titre_photo">{{ old.name }} </h3>
+                                                    <div class="text-right price">{{ old.price }} €</div>
                                                 </div>
                                             </div>
                                         </a>
@@ -100,7 +100,7 @@
                                     {% endfor %}
                                 </div>
                             </div>
-                            {% if data|length > 3 %}
+                            {% if old|length > 3 %}
                                 <!-- Controls -->
                                 <a class="left carousel-control" href="#nouveaux_chapeaux" role="button" data-slide="prev">
                                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>

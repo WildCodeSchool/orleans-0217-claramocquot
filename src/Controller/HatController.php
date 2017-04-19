@@ -52,17 +52,7 @@ class HatController extends Controller
         $image2 = new FileUpload('image2');
         $image3 = new FileUpload('image3');
         $image4 = new FileUpload('image4');
-        $radio = new Radio('radio');
-        $radio->setRenderInline(true);
-        $radio->setOptions([
-            '0' => 'Image 1',
-            '1' => 'Image 2',
-            '2' => 'Image 3',
-            '3' => 'Image 4',
-        ]);
-        $radio->setValue(0);
         $submit = new Submit('submit');
-        $radio->setLabel('Choississez votre image de miniature :   ');
         $name->setLabel('Nom du produit');
         $content->setLabel('Description');
         $price->setLabel('Prix');
@@ -81,7 +71,6 @@ class HatController extends Controller
         $price->setRequired(true);
         $select->setRequired(true);
         $image1->setRequired(true);
-        $radio->setRequired(true);
         $form->addField($name)
             ->addField($content)
             ->addField($price)
@@ -90,7 +79,6 @@ class HatController extends Controller
             ->addField($image2)
             ->addField($image3)
             ->addField($image4)
-            ->addField($radio)
             ->addField($submit);
 
 
@@ -141,16 +129,6 @@ class HatController extends Controller
             $value = 4;
         }
 
-        foreach ($data2 as $key => $value1) {
-
-
-            if ($data2[$key]->getRadio() == 1) {
-
-                $valueradio = $key;
-
-            }
-
-        }
 
         $form = new Form('addHat');
         $form->setEncType('multipart/form-data');
@@ -174,33 +152,19 @@ class HatController extends Controller
         ]);
         $select->setValue($value);
         $image1 = new FileUpload('image1');
-        $image1->setValue($data2[0]->getImage());
 
         $image2 = new FileUpload('image2');
-//        $image2->setValue($data2[0]->getImage());
 
         $image3 = new FileUpload('image3');
-//        $image3->setValue($data2[0]->getImage());
 
         $image4 = new FileUpload('image4');
-//        $image4->setValue($data2[0]->getImage());
 
-        $radio = new Radio('radio');
         $hiden = new Hidden('id');
-        $radio->setRenderInline(true);
-        $radio->setOptions([
-            '0' => 'Image 1',
-            '1' => 'Image 2',
-            '2' => 'Image 3',
-            '3' => 'Image 4',
-        ]);
+
         $hiden->setValue($id);
         $hiden->setValue($data2[0]->getId());
-        $radio->setValue($valueradio);
         $submit = new Submit('submit');
         $submit->setValue('Modifier');
-
-        $radio->setLabel('Choississez votre image de miniature :   ');
         $name->setLabel('Nom du produit');
         $content->setLabel('Description');
         $price->setLabel('Prix');
@@ -213,13 +177,10 @@ class HatController extends Controller
         $image2->setUploadDirectory('../img/upload');
         $image3->setUploadDirectory('../img/upload');
         $image4->setUploadDirectory('../img/upload');
-
         $name->setRequired(true);
         $content->setRequired(true);
         $price->setRequired(true);
         $select->setRequired(true);
-        $image1->setRequired(true);
-        $radio->setRequired(true);
         $form->addField($name)
             ->addField($content)
             ->addField($price)
@@ -228,7 +189,6 @@ class HatController extends Controller
             ->addField($image2)
             ->addField($image3)
             ->addField($image4)
-            ->addField($radio)
             ->addField($hiden)
             ->addField($submit);
 
@@ -269,7 +229,7 @@ class HatController extends Controller
             }
         }
 
-        return $this->getTwig()->render('updateHat.html.twig', ['form' => $form, 'result' => $res]);
+        return $this->getTwig()->render('updateHat.html.twig', ['form' => $form, 'datas'=>$data2, 'result' => $res]);
 
 
     }
