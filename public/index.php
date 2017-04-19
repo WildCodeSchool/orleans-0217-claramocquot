@@ -33,7 +33,7 @@ switch ($route) {
         $view = $page->products($res);
         break;
     case 'produit':
-        $view = $page->product();
+        $view = $page->product($id);
         break;
     case 'articles':
         $view = $page->articles($type);

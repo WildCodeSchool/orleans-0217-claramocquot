@@ -42,7 +42,11 @@ class UserController extends Controller
         $hats= new FrontController(true);
         return $hats->showHats($res);
     }
-
+    public function product($id)
+    {
+        $hat= new FrontController(true);
+        return $hat->showHat($id);
+    }
     public function mailer(){
 
         $mail = new MailController(true);
