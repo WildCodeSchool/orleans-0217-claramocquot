@@ -18,7 +18,7 @@ $(function() {
 
     function link() {
         var scroll = $(window).scrollTop();
-            if (scroll <= 1000) {
+            if (scroll <= 950) {
                 $('#link').addClass('hidden');
             } else {
                 $('#link').removeClass('hidden');
