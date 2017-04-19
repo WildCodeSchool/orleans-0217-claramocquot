@@ -15,7 +15,7 @@ a, a:hover, a:active, a:focus, a:visited {
 
 body {
     font-family: 'PT Sans', sans-serif;
-    /* position: relative; */
+    font-size: 18px;
 }
 
 .thumbnail {
@@ -166,6 +166,10 @@ body {
 /*---------------------------------------
    SECTION ACTUALITÉS
 -----------------------------------------*/
+
+.titreCadre2 {
+    margin: 40px auto;
+}
 
 .landingPageActualites .section_overlay {
     height: 500px;
@@ -433,16 +437,17 @@ a, a:hover, a:active, a:focus, a:visited {
 }
 
 .textentreprise {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top : 60px;
+    padding-left: 50px;
 }
 
-.imgportrait {
-    padding-top: 45px;
-}
+/*.imgEntreprise {*/
+    /*max-width: 350px;*/
+/*}*/
 
 figcaption {
     text-align: center;
+    margin-bottom: 50px;
 }
 
 /*fin de la page entreprise*/
