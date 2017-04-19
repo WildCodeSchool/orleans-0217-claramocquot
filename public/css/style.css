@@ -1,0 +1,648 @@
+/* COMMON STYLES |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+.container-fluid, .row {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, a, .h1, .h2, .h3, .h4, .h5, .h6, .a{
+    font-family: 'PT Sans', sans-serif;
+    text-decoration: none;
+}
+
+a, a:hover, a:active, a:focus, a:visited {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+}
+
+.thumbnail {
+    display: block;
+    border-radius: 0;
+    padding: 0px;
+    border: none;
+    max-width: 100%;
+    height: auto;
+    margin: 0px;
+    background-size: auto;
+}
+
+/* HOME ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+/* SECTION ACCUEIL ___________________________________________________________________________________________________*/
+
+.sectionAccueil {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 5vh;
+}
+
+.titreAccueil1 {
+    text-decoration: none;
+    color: black;
+    font-size: calc(18px + 4vw);
+}
+
+.titreAccueil2 {
+    text-decoration: none;
+    color: black;
+    font-size: calc(11px + 2vw);
+}
+
+.trait {
+    border: 1px solid black;
+    width: 60%;
+    margin-top: 3vh;
+    margin-bottom: 4vh;
+
+}
+
+.cadreTitreAccueil {
+    margin-top: calc(10px + 30vh);
+    text-align: center;
+    padding: 4vh 4vw;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: black solid calc(2px + 0.4vw);
+}
+
+/* SECTION NAVIGAION (MOSAIQUE) ______________________________________________________________________________________*/
+
+/*---------------------------------------
+   SECTION NAVIGATION (MOSAIQUE)
+-----------------------------------------*/
+
+.landingPageNavigation .section_overlay {
+    background-color: rgba(0, 0, 0, 0);
+    padding-top: 80px;
+}
+
+.navHome {
+    padding-top: 50px;
+}
+
+.thumbnail {
+    display: block;
+    border-radius: 0;
+    padding: 0px;
+    border: none;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-size: auto;
+}
+
+.hide {
+    position: absolute;
+}
+
+.thumbnailHome {
+    display: block;
+    vertical-align: middle;
+    border-radius: 0;
+    border: 1px solid black;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.stopPadding {
+    padding: 0;
+}
+
+.captionHome {
+
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    padding-top: 35%;
+    display: none;
+    text-align: center;
+    z-index: 2;
+}
+
+.captionHome2 {
+
+    color: rgb(70, 70, 70);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 35%;
+    display: none;
+    text-align: center;
+    z-index: 2;
+}
+
+.landingPageNouveautes {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-color: rgba(0, 0, 0, 0.33);
+}
+
+.section_overlay2 {
+    padding-bottom: 50px;
+}
+
+.navHeight {
+    height: 1000px;
+}
+
+.borderBlackNav {
+    border: 2px solid black;
+    margin: 15px;
+}
+
+/*---------------------------------------
+   SECTION ACTUALITÉS
+-----------------------------------------*/
+
+.titreCadre2 {
+    margin: 40px auto;
+}
+
+.landingPageActualites .section_overlay {
+    height: 500px;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.deroulement {
+    position: absolute;
+    z-index: 100;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: black;
+}
+
+.thumbnailSlider {
+    display: block;
+    vertical-align: middle;
+    border-radius: 0;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    background-color: white;
+}
+
+/*------------------------------------
+    HEADER
+ -------------------------------------*/
+/* header complet */
+.header {
+    font-family: 'PT Sans', sans-serif;
+    background-color: white;
+    height: 90px;
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    z-index: 51;
+    border-bottom: black 2px solid;
+}
+
+.marginHeader1 {
+    margin-top: 20px;
+}
+
+.marginHeader2 {
+    margin-top: 15px;
+}
+
+/* fin header */
+
+/* logo */
+
+a, a:hover, a:active, a:focus, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.marque {
+    color: black;
+    display: inline;
+    text-decoration: none;
+    font-size: 30px;
+    text-align: center;
+    border: solid black 2px;
+    text-transform: uppercase;
+    padding: 5px 30px;
+}
+
+.logoHome {
+    position: fixed;
+    top: 25px;
+    left: 0;
+    font-size: 18px;
+    color: black;
+    text-transform: uppercase;
+}
+
+/* fin logo */
+
+/* menu burger */
+.burger {
+    background-image: url("../img/logos/boutonBurger.jpg");
+    height: 53px;
+    width: 53px;
+    border: solid black 2px;
+    border-radius: 0;
+}
+
+.dropdown-menu {
+    left: -48px;
+    margin-top: 30px;
+    background: none;
+    box-shadow: none;
+    border: none;
+    font-size: 15px;
+}
+
+/* fin menu burger */
+
+/* manifeste */
+
+.bannerManifest {
+    background-size: cover;
+    background-image: url("../img/pageManifeste/manifesteCover.jpg");
+    background-repeat: no-repeat;
+    height: 400px;
+    margin-top: 90px;
+}
+
+.contentManifest {
+    margin-top: 80px;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid black;
+    margin-bottom: 60px;
+
+}
+
+.titreManifeste {
+    text-transform: uppercase;
+    font-family: 'PTSans';
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* fin menu burger */
+
+/*/// FIN MEDIA QUERY HEADER ///*/
+
+/* page articles */
+.presentationArticles {
+    margin-top: 160px;
+    margin-bottom: 50px;
+}
+
+.pad_articles {
+    padding: 0px;
+    height: 650px;
+}
+
+.petit {
+
+    text-align: right;
+}
+
+.grand {
+    border-left: solid black 1px;
+}
+
+.titre {
+    font-size: 1.6em;
+}
+
+.date {
+    font-style: italic;
+    font-size: 1.15em;
+}
+
+/* fin page articles */
+
+/*    page collections  */
+
+.page_collec {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.titre_photo {
+    font-family: 'PTSans', sans-serif;
+    font-size: 16pt;
+    text-align: center;
+    color: black;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.price {
+    margin: 0 15px 10px 0;
+    font-size: 18px;
+}
+
+.titreCollections {
+    margin-bottom: 30px;
+}
+
+.marginCollections {
+    margin-bottom: 25px;
+}
+
+.gris {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.ajustMargin {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+/* fin page articles */
+.wrapperCollections {
+    padding-top: 30px;
+    background-color: rgba(0, 0, 0, 0.33);
+}
+
+/*  fin collections */
+
+/* Page entreprise*/
+
+.banner {
+    background-size: cover;
+    background-image: url("../img/pageEntreprise/entrepriseCover1.jpg");
+    background-repeat: no-repeat;
+    height: 400px;
+    margin-top: 90px;
+    color: white;
+    position: relative;
+}
+
+.banner p {
+    color: white;
+    font-size: 55px;
+    position: absolute;
+    bottom: 25px;
+    right: 50px;
+}
+
+.presentationentreprise {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-size: 20px;
+    border: 2px solid black;
+}
+
+.container ul {
+    list-style: none;
+    line-height: 40px;
+    padding-top: 40px;
+}
+
+.textentreprise {
+    margin-top : 60px;
+    padding-left: 50px;
+}
+
+/*.imgEntreprise {*/
+    /*max-width: 350px;*/
+/*}*/
+
+figcaption {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/*fin de la page entreprise*/
+
+/*Footer*/
+
+footer {
+
+    text-align: center;
+    border-top: solid 2px black;
+    height: 80px;
+}
+
+footer img {
+    width: 35px;
+    padding-top: 20px;
+}
+
+.contact {
+    padding-top: 20px;
+}
+
+.contact button {
+    background-color: white;
+    color: black;
+    border-radius: 0;
+    border: 2px solid black;
+}
+
+Cont {
+    font-size: 15px;
+}
+
+/*Fin du footer*/
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.borderBlack {
+    border: 2px solid black;
+    margin: 15px;
+    padding: 5px 15px 5px 15px;
+}
+
+
+/*page produit*/
+
+.produitDescription {
+    padding-top: 70px;
+
+}
+
+.sliderProduit {
+    padding-top: 220px;
+    padding-bottom: 130px;
+    background-color: rgba(0, 0, 0, 0.33);
+}
+
+.sliderHeight {
+    height: 450px;
+}
+
+.headModalProduit {
+    padding: 20px;
+    text-align: center;
+}
+
+.headModalProduit p {
+    margin-top: 20px;
+}
+
+.DescProduit {
+    font-size: 20px;
+
+}
+
+.titleProduit {
+    margin-top: 30px;
+    font-size: 40px;
+
+}
+.returnList {
+    margin-top: 70px;
+    margin-right: 150px;
+
+
+}
+/*button reseaux sociaux*/
+
+.buttonFB {
+    margin-top: 20px;
+}
+
+.carousel-indicators {
+    bottom: -30px;
+}
+
+#summernote {
+    width: 1140px;
+}
+
+.padSummernote {
+    padding: 20px;
+    font-family: 'PT Sans';
+}
+
+.showContent {
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.add {
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.addTitle {
+    margin-top: 50px;
+}
+
+.marginContent {
+    margin-bottom: 50px;
+}
+
+.dropdown-menu li {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-weight: bolder;
+}
+
+.padding {
+    padding: 20px;
+    margin-top: -15px;
+}
+
+.carousel-control.right, .carousel-control.left {
+    background: none;
+}
+
+.carousel-control:focus, .carousel-control:hover {
+    color: white;
+}
+
+.carousel-control, .carousel-control:active {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.carousel-indicators {
+    bottom: -50px;
+}
+
+.carousel-indicators li {
+    width: 25px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-color: white;
+}
+
+.carousel-indicators .active {
+    width: 35px;
+    background-color: white;
+    border-color: white;
+}
+
+th {
+    border: 2px solid black;
+    vertical-align: middle;
+}
+
+tr td {
+    border: 1px solid black;
+}
+
+.marginTab {
+    padding-bottom: 50px;
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    vertical-align: middle;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    border-top: 2px solid black;
+}
+
+.apercu {
+    width: 200px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'PT Sans';
+}
+
+.addPadd {
+    padding: 40px;
+    margin-bottom: -6px;
+}
