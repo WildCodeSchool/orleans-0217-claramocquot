@@ -470,6 +470,17 @@ a, a:hover, a:active, a:focus, a:visited {
     font-size: 1.15em;
 }
 
+@media screen and (max-width: 1680px) {
+    .containerProduit{
+        padding-bottom: 20px;
+    }
+
+}
+
+.imageCarProd{
+    margin: 0 auto;
+}
+
 /* fin page articles */
 
 /*    page collections  */
