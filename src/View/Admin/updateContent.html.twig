@@ -11,7 +11,7 @@
         {% if noResult is not empty %}
             <blockquote class="alert alert-danger">{{ noResult }}</blockquote><br/>
         {% endif %}
-        <img src="../img/upload/{{ image }}" width="200px"><br/>
+        <img src="../img/upload/{{ image }}" width="200px" class="borderBlackNav"><br/>
         <h4>Image de mignature</h4><br/>
         {{ form.render|raw }}<br/>
     </div>

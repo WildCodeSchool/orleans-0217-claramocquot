@@ -1,88 +1,74 @@
-/*
-Table of Content
-==================================================
-  1. ACCUEIL
-  2. NAVIGATION
-  3. NOUVEAUTÉS
-  4. ACTUALITÉS
-==================================================
-*/
-
-/*@font-face{*/
-/*font-family: 'PTSans';*/
-/*src: url('../fonts/PTS55F-webfont.woff') format('woff');*/
-/*}*/
+/* COMMON STYLES |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 
 .container-fluid, .row {
     margin: 0;
 }
 
-.marque:hover, .marque:active, .marque:focus, .marque:visited {
+h1, h2, h3, h4, h5, h6, a, .h1, .h2, .h3, .h4, .h5, .h6, .a{
+    font-family: 'PT Sans', sans-serif;
     text-decoration: none;
-    color: black;
+}
+
+a, a:hover, a:active, a:focus, a:visited {
+    text-decoration: none;
 }
 
 body {
     font-family: 'PT Sans', sans-serif;
-    position: relative;
+    font-size: 18px;
 }
 
-.titreGeneral, .titreGeneral:hover, .titreGeneral:active, .titreGeneral:focus, .titreGeneral:visited {
-    color: black;
-    padding: 10px;
+.thumbnail {
+    display: block;
+    border-radius: 0;
+    padding: 0px;
+    border: none;
+    max-width: 100%;
+    height: auto;
+    margin: 0px;
+    background-size: auto;
 }
 
-.title {
-    color: black;
-    padding-top: 25px;
-}
+/* HOME ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 
-/*---------------------------------------
-   SECTION ACCUEIL
------------------------------------------*/
+/* SECTION ACCUEIL ___________________________________________________________________________________________________*/
 
-.landingPageAccueil {
-    height: 1080px;
+.sectionAccueil {
+    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-.landingPageAccueil .section_overlay {
     background-color: rgba(255, 255, 255, 0.6);
-    height: 1080px;
+    margin-bottom: 5vh;
 }
 
-.titreCadre1 {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 100px;
-    border: 7px solid black;
+.titreAccueil1 {
     text-decoration: none;
     color: black;
-    margin-top: 50px;
+    font-size: calc(18px + 4vw);
 }
 
-.titreCadre2 {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 23px;
-    border: 2px solid black;
-    padding: 5px 8px;
+.titreAccueil2 {
     text-decoration: none;
     color: black;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    font-size: calc(11px + 2vw);
 }
 
 .trait {
     border: 1px solid black;
-    width: 50%;
+    width: 60%;
+    margin-top: 3vh;
+    margin-bottom: 4vh;
 }
 
-.home-container {
-    margin-top: 200px;
+.cadreTitreAccueil {
+    margin-top: calc(10px + 30vh);
     text-align: center;
-    padding: 80px 0 80px 0;
+    padding: 4vh 4vw;
     background-color: rgba(255, 255, 255, 0.8);
+    border: black solid calc(2px + 0.4vw);
 }
+
+/* SECTION NAVIGAION (MOSAIQUE) ______________________________________________________________________________________*/
 
 /*---------------------------------------
    SECTION NAVIGATION (MOSAIQUE)
@@ -104,7 +90,7 @@ body {
     border: none;
     max-width: 100%;
     height: auto;
-    margin: 0px;
+    margin: 0 auto;
     background-size: auto;
 }
 
@@ -171,9 +157,18 @@ body {
     height: 1000px;
 }
 
+.borderBlackNav {
+    border: 2px solid black;
+    margin: 15px;
+}
+
 /*---------------------------------------
    SECTION ACTUALITÉS
 -----------------------------------------*/
+
+.titreCadre2 {
+    margin: 40px auto;
+}
 
 .landingPageActualites .section_overlay {
     height: 500px;
@@ -265,8 +260,9 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .logoHome {
     position: fixed;
-    top: 25px;
+    top: 0;
     left: 0;
+    margin-left: -10px;
     font-size: 18px;
     color: black;
     text-transform: uppercase;
@@ -334,7 +330,19 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .pad_articles {
     padding: 0px;
-    height: 650px;
+    height: 700px;
+}
+
+@media screen and (max-width: 1500px) {
+    .pad_articles {
+        height: 650px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .pad_articles {
+        height: auto;
+    }
 }
 
 .petit {
@@ -347,7 +355,8 @@ a, a:hover, a:active, a:focus, a:visited {
 }
 
 .titre {
-    font-size: 1.6em;
+    font-size: 1.4em;
+    font-weight: bold;
 }
 
 .date {
@@ -441,16 +450,17 @@ a, a:hover, a:active, a:focus, a:visited {
 }
 
 .textentreprise {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top : 40px;
+    padding-left: 50px;
 }
 
-.imgportrait {
-    padding-top: 45px;
+.imgEntreprise {
+    margin: 0 auto;
 }
 
 figcaption {
     text-align: center;
+    margin-bottom: 50px;
 }
 
 /*fin de la page entreprise*/
@@ -494,12 +504,18 @@ a {
 .borderBlack {
     border: 2px solid black;
     margin: 15px;
+    padding: 5px 15px 5px 15px;
 }
+
 
 /*page produit*/
 
 .produitDescription {
     padding-top: 70px;
+
+}
+.produitDescriptionAdmin {
+    padding-top: -70px;
 
 }
 
