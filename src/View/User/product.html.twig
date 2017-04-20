@@ -50,23 +50,23 @@
 
          <div class="col-md-5 col-md-offset-1 col-xs-12 produitDescription">
 
-            <a href="index.php?route=produits"><p class="text-left returnList"><span class="fa fa-angle-double-left"></span>
+            <a href="index.php?route=produits"><p class="text-left returnListProd"><span class="fa fa-angle-double-left"></span>
                     retour à la
                     liste</p></a><br/>
 
              <h1 class="titleProduit">{{ hats[0].name|raw }}</h1>
 
 
-            <p><span class="DescProduit">Description:</span><br/>{{ hats[0].content|raw }}</p>
+            <p><br/>{{ hats[0].content|raw }}</p>
 
-            <p><span class="DescProduit"> Prix:</span> {% if hats[0].unavailable ==1 %}Produit indisponible {% elseif hats[0].old==1 %}  Indisponible{% else %}{{ hats[0].price }}€{% endif %}</p>
+             <p><span class="DescProduit"> <b> Prix : </b></span> {% if hats[0].unavailable ==1 %} <b>Produit indisponible</b> {% elseif hats[0].old==1 %}   <b>Indisponible</b>{% else %} <b>{{ hats[0].price }}€</b>{% endif %}</p>
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#Se_renseigner"
                     data-whatever="@mdo">
                 <Cont>Se renseigner</Cont>
             </button>
             <div class="modal fade" id="Se_renseigner" tabindex="-1" role="dialog"
                  aria-labelledby="exampleModalLabel">
-                <div class="modal-dialog" role="document">
+                <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal"
