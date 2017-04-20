@@ -39,7 +39,7 @@ class HatController extends Controller
         $form = new Form('addHat');
         $form->setEncType('multipart/form-data');
         $name = new Text('name');
-        $nameVal = new ValidatorAdapterZf(new StringLength(['max'=>40]));
+        $nameVal = new ValidatorAdapterZf(new StringLength(['max'=>35]));
         $name->addValidator($nameVal);
 
         $content = new \Clara\Form\Field\TextArea('content');
@@ -139,7 +139,7 @@ class HatController extends Controller
 
         $name = new Text('name');
         $name->setValue($data2[0]->getName());
-        $nameVal = new ValidatorAdapterZf(new StringLength(['max'=>40]));
+        $nameVal = new ValidatorAdapterZf(new StringLength(['max'=>35]));
         $name->addValidator($nameVal);
         $content = new \Clara\Form\Field\TextArea('content');
         $content->setValue($data2[0]->getContent());
