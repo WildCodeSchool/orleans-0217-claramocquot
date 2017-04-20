@@ -18,6 +18,7 @@ use Del\Form\Field\FileUpload;
 use Del\Form\Field\Submit;
 use Clara\Model\ContentManager;
 use Del\Form\Validator\Adapter\ValidatorAdapterZf;
+use WindowsAzure\ServiceManagement\Models\Location;
 use Zend\Validator\Between;
 use Zend\Validator\Callback;
 use Zend\Validator\Date;
@@ -83,10 +84,8 @@ class ContentController extends Controller
      * @param $type
      * @return string
      */
-    public function addContent($type)
+    public function addContent($type, $res)
     {
-
-        $res = '';
         $form = new Form('addContent');
         $form->setEncType('multipart/form-data');
         $title = new Text('title');
@@ -145,6 +144,7 @@ class ContentController extends Controller
                 $em = new ContentManager();
                 if ($em->addContent($filteredData)) {
                     $res = 'Article ajouté';
+                    header('Location: index.php?route=nouvel-article&res='.$res.'&type='.$type);
                 }
                 
             }

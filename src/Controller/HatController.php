@@ -33,9 +33,8 @@ use Zend\Validator\StringLength;
 class HatController extends Controller
 {
 
-    public function addHat()
+    public function addHat($res)
     {
-        $res = '';
         $form = new Form('addHat');
         $form->setEncType('multipart/form-data');
         $name = new Text('name');
@@ -95,6 +94,7 @@ class HatController extends Controller
                 $em = new HatManager();
                 if ($em->addHat($filteredData)) {
                     $res = 'Chapeau ajouté';
+                    header('Location: index.php?route=nouveau-chapeau&res='.$res);
                 }
             }
         }

@@ -20,6 +20,9 @@ if (isset($_GET['type'])) {
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 }
+if (isset($_GET['res'])) {
+    $res = $_GET['res'];
+}
 
 
 $page = new AdminController(false);
@@ -35,7 +38,7 @@ switch ($route) {
         $view = $page->showHat($id);
         break;
     case 'nouveau-chapeau':
-        $view = $page->addHat();
+        $view = $page->addHat($res);
         break;
     case 'modif-chapeau':
         $view = $page->updateHat($id);
@@ -50,7 +53,7 @@ switch ($route) {
         $view = $page->showContent($id);
         break;
     case 'nouvel-article':
-        $view = $page->addContent($type);
+        $view = $page->addContent($type, $res);
         break;
     case 'modif-article':
         $view = $page->updateContent($id);

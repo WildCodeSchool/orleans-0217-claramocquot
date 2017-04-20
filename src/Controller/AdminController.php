@@ -23,10 +23,10 @@ class AdminController extends Controller
         return $hat->showHat($id);
     }
 
-    public function addHat()
+    public function addHat($res)
     {
         $hat= new HatController(false);
-        return $hat->addHat();
+        return $hat->addHat($res);
     }
 
 
@@ -66,10 +66,10 @@ class AdminController extends Controller
      * @param $type
      * @return string
      */
-    public function addContent($type)
+    public function addContent($type, $res)
     {
         $content = new ContentController(false);
-        return $content->addContent($type);
+        return $content->addContent($type, $res);
     }
 
     /**
