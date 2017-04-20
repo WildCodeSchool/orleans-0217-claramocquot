@@ -129,6 +129,16 @@ body {
     text-align: center;
     z-index: 2;
 }
+.captionHomeSm {
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    bottom: -100px;
+}
 
 .captionHomeXs {
     color: black;
@@ -152,12 +162,25 @@ body {
 }
 
 .navHeight {
-    height: 1000px;
+    height: 100vh;
 }
 
 .borderBlackNav {
     border: 2px solid black;
     margin: 15px;
+}
+
+.marginTopXs {
+    margin-top: 25px;
+}
+
+.marginTopLg {
+    margin-top: 20px;
+}
+
+.marginTopBottomMd {
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 /*---------------------------------------
