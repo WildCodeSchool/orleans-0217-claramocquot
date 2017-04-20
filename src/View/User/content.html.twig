@@ -3,12 +3,25 @@
 
 {% block content %}
     <div class="container showContent">
-        <h1 class="text-center">{{ data.title }}</h1><br/>
-        <a href="index.php?route=articles&type={{ data.type }}"><p class="text-left"><span class="fa fa-angle-double-left"></span> retour à la
+        <a href="index.php?route=articles&type={{ data.type }}"><p class="text-left"><span
+                        class="fa fa-angle-double-left"></span> retour à la
                 liste</p></a><br/>
-        <p>Article créé le {{ data.date|date("d/m/Y") }}</p>
+        <h1 class="text-center">{{ data.title }}</h1><br/>
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4">
+                <img src="img/upload/{{ data.image }}" class="img-responsive borderBlackNav text-center imgArticle">
+            </div>
+        </div>
         <div class="borderBlack padSummernote">
             {{ data.content|raw }}
         </div>
+        <p class="text-left dateArticle">Article créé le {{ data.date|date("d/m/Y") }}</p>
+        <div class="buttonFB text-center">
+            <div class="fb-share-button" data-href="#" data-layout="button_count" data-size="small"
+                 data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank"
+                                              href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fclara%2Fpublic%2Findex.php%3Froute%3Dproduit%23&amp;src=sdkpreparse">Partager</a>
+            </div>
+        </div>
+
     </div><br/>
 {% endblock %}

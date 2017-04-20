@@ -33,9 +33,8 @@ use Zend\Validator\StringLength;
 class HatController extends Controller
 {
 
-    public function addHat()
+    public function addHat($res)
     {
-        $res = '';
         $form = new Form('addHat');
         $form->setEncType('multipart/form-data');
         $name = new Text('name');
@@ -95,6 +94,7 @@ class HatController extends Controller
                 $em = new HatManager();
                 if ($em->addHat($filteredData)) {
                     $res = 'Chapeau ajouté';
+                    header('Location: index.php?route=nouveau-chapeau&res='.$res);
                 }
             }
         }
@@ -111,9 +111,8 @@ class HatController extends Controller
         return $this->getTwig()->render('showHat.html.twig', ['hats' => $res]);
     }
 
-    public function updateHate($id)
+    public function updateHate($id, $res)
     {
-        $res = '';
         $value = '';
         $em = new HatManager();
         $data2 = $em->showHat($id);
@@ -232,6 +231,8 @@ class HatController extends Controller
                 $em = new HatManager();
                 if ($em->updateHat($filteredData, $id)) {
                     $res = 'Chapeau Modifié';
+                    header('Location: index.php?route=modif-chapeau&res='.$res.'&id='.$id);
+
                 }
             }
         }
