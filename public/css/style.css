@@ -160,6 +160,14 @@ body {
     margin: 15px;
 }
 
+/*.paddingNavSm {*/
+    /*padding: 25px;*/
+    /*margin-top: -15px;*/
+/*}*/
+
+.navHeightSm{
+    height: auto;
+}
 /*---------------------------------------
    SECTION ACTUALITÉS
 -----------------------------------------*/
@@ -459,8 +467,6 @@ a, a:hover, a:active, a:focus, a:visited {
     clear: both;
 }
 
-
-
 /* fin menu burger */
 
 /*/// FIN MEDIA QUERY HEADER ///*/
@@ -506,10 +512,6 @@ a, a:hover, a:active, a:focus, a:visited {
     font-style: italic;
     font-size: 1.15em;
 }
-
-
-
-
 
 .imageCarProd{
     margin: 0 auto;
