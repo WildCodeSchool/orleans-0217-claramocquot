@@ -1,4 +1,4 @@
-AuthUserFile "/home/wilder2/Projets/Clara-Mocquot/public/admin/.htpasswd"
+AuthUserFile "/home/julien/data/claraMocquot/orleans-0217-claramocquot/public/admin/.htpasswd"
 AuthName "Accès protégé"
 AuthType Basic
 Require valid-user
