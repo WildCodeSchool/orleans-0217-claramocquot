@@ -75,6 +75,11 @@ body {
     padding-top: 80px;
 }
 
+.landingPageNavigation {
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
 .navHome {
     padding-top: 50px;
 }
@@ -740,6 +745,7 @@ a {
 
 .buttonFB {
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .carousel-indicators {
@@ -875,4 +881,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     .produitDescription {
         margin-top: -82px;
     }
+}
+
+.marginBottom {
+    margin-bottom: 30px;
 }
