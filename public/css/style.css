@@ -70,10 +70,6 @@ body {
 
 /* SECTION NAVIGAION (MOSAIQUE) ______________________________________________________________________________________*/
 
-/*---------------------------------------
-   SECTION NAVIGATION (MOSAIQUE)
------------------------------------------*/
-
 .landingPageNavigation .section_overlay {
     background-color: rgba(0, 0, 0, 0);
     padding-top: 80px;
@@ -81,17 +77,6 @@ body {
 
 .navHome {
     padding-top: 50px;
-}
-
-.thumbnail {
-    display: block;
-    border-radius: 0;
-    padding: 0px;
-    border: none;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    background-size: auto;
 }
 
 .hide {
@@ -110,12 +95,15 @@ body {
     margin: 0;
 }
 
+.floatNone {
+    float: none;
+}
+
 .stopPadding {
-    padding: 0;
+    padding: 0px 0px;
 }
 
 .captionHome {
-
     color: white;
     position: absolute;
     top: 0;
@@ -130,7 +118,6 @@ body {
 }
 
 .captionHome2 {
-
     color: rgb(70, 70, 70);
     position: absolute;
     top: 0;
@@ -141,6 +128,17 @@ body {
     display: none;
     text-align: center;
     z-index: 2;
+}
+
+.captionHomeXs {
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    bottom: -23px;
 }
 
 .landingPageNouveautes {
