@@ -600,6 +600,10 @@ a, a:hover, a:active, a:focus, a:visited {
     padding-bottom: 50px;
 }
 
+.carrouselOld{
+    margin-bottom: 20px;
+}
+
 /* fin page articles */
 .wrapperCollections {
     padding-top: 30px;
@@ -931,9 +935,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-bottom: 20px;
 }
 
-marginTopFooter {
-    margin-top: 20px;
-}
 
 .dateArticle {
     margin-top: -10px;
