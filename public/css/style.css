@@ -431,8 +431,13 @@ a, a:hover, a:active, a:focus, a:visited {
         height: 45px;
         width: 45px;
     }
+    
+}
 
-
+@media screen and (max-width: 420px) {
+    .titleHat {
+        font-size: 20px;
+    }
 }
 /* fin menu burger */
 
@@ -474,7 +479,7 @@ a, a:hover, a:active, a:focus, a:visited {
 
 @media screen and (max-width: 580px){
     .contentManifest {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .titreManifeste {
@@ -484,7 +489,7 @@ a, a:hover, a:active, a:focus, a:visited {
 
 @media screen and (max-width: 580px){
     .contentManifest {
-        font-size: 12px;
+        font-size: 13px;
         padding: 10px;
     }
 
@@ -593,6 +598,10 @@ a, a:hover, a:active, a:focus, a:visited {
 .ajustMargin {
     padding-top: 30px;
     padding-bottom: 50px;
+}
+
+.carrouselOld{
+    margin-bottom: 20px;
 }
 
 /* fin page articles */
@@ -838,7 +847,7 @@ a {
 }
 
 .carousel-indicators {
-    bottom: -50px;
+    bottom: -40px;
 }
 
 .carousel-indicators li {
@@ -929,4 +938,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-top: -10px;
     font-size: 15px;
     margin-left: 50px;
+}
+
+@media screen and (max-width: 420px) {
+    .titreArticleXS{
+        font-size: 20px;
+    }
 }
