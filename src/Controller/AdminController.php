@@ -93,10 +93,10 @@ class AdminController extends Controller
         return $content->deleteContent($type, $id);
     }
 
-    public function showPicturesHome()
+    public function showPicturesHome($res)
     {
         $picture = new PictureHomeController(false);
-        return $picture->showPicturesHome();
+        return $picture->showPicturesHome($res);
     }
 
     public function homeAdmin()

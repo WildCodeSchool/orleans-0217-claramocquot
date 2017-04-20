@@ -15,9 +15,8 @@ use Zend\Validator\Callback;
 class PictureHomeController extends Controller
 {
 
-    public function showPicturesHome()
+    public function showPicturesHome($res)
     {
-        $res = '';
         $em = new PictureHomeManager();
         $form = new Form('addPicture');
         $form->setEncType('multipart/form-data');
@@ -48,6 +47,8 @@ class PictureHomeController extends Controller
                 $filteredData = $form->getValues();
                 if ($em->addPictureHome($filteredData)) {
                     $res = 'Image d\'acceuil ajoutée !';
+                    header('Location: index.php?route=images&res='.$res);
+
                 }
             }
         }
@@ -55,12 +56,16 @@ class PictureHomeController extends Controller
         if (isset($_POST['submitVisibility'])) {
                 if ($em->updatePictureHomeVisibility($_POST)) {
                     $res = 'Image d\'acceuil changée !';
+                    header('Location: index.php?route=images&res='.$res);
+
                 }
             }
 
         if (isset($_POST['submitDelete'])) {
                 if ($em->deletePictureHome($_POST)) {
                     $res = 'Image supprimée !';
+                    header('Location: index.php?route=images&res='.$res);
+
                 }
             }
 

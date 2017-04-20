@@ -62,13 +62,7 @@ switch ($route) {
         $view = $page->deleteContent($type, $id);
         break;
     case 'images':
-        $view = $page->showPicturesHome();
-        break;
-    case 'nouvelle-image':
-        $view = $page->addPictureHome();
-        break;
-    case 'modif-image':
-        $view = $page->updatePictureHome();
+        $view = $page->showPicturesHome($res);
         break;
     default :
         $view = $page->homeAdmin();
