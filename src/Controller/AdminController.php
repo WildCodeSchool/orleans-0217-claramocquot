@@ -30,10 +30,10 @@ class AdminController extends Controller
     }
 
 
-    public function updateHat($id)
+    public function updateHat($id, $res)
     {
         $hat = new HatController(false);
-        return $hat->updateHate($id);
+        return $hat->updateHate($id, $res);
     }
 
     public function deleteHat($id)
@@ -76,10 +76,10 @@ class AdminController extends Controller
      * @param $id
      * @return string
      */
-    public function updateContent($id)
+    public function updateContent($id, $res)
     {
         $content = new ContentController(false);
-        return $content->updateContent($id);
+        return $content->updateContent($id, $res);
     }
 
     /**

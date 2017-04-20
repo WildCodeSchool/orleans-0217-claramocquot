@@ -166,30 +166,31 @@ body {
     padding-bottom: 50px;
 }
 
-.navHeight {
-    height: 100vh;
-}
+/*.navHeight {*/
+    /*height: 100vh;*/
+/*}*/
 
 .borderBlackNav {
     border: 2px solid black;
     margin: 15px;
 }
 
+
 /*.paddingNavSm {*/
     /*padding: 25px;*/
     /*margin-top: -15px;*/
 /*}*/
 
-.navHeightSm{
-    height: 100vh;
-}
+/*.navHeightSm{*/
+    /*height: 100vh;*/
+/*}*/
 
 .marginTopXs {
     margin-top: 30px;
 }
 
 .marginTopLg {
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .marginTopBottomMd {
@@ -197,9 +198,9 @@ body {
     margin-bottom: 0px;
 }
 
-.navHeightXs {
-    height: 90vh;
-}
+/*.navHeightXs {*/
+    /*height: 90vh;*/
+/*}*/
 
 /*---------------------------------------
    SECTION ACTUALITÉS

@@ -41,7 +41,7 @@ switch ($route) {
         $view = $page->addHat($res);
         break;
     case 'modif-chapeau':
-        $view = $page->updateHat($id);
+        $view = $page->updateHat($id, $res);
         break;
     case 'supp-chapeau':
         $view = $page->deleteHat($id);
@@ -56,7 +56,7 @@ switch ($route) {
         $view = $page->addContent($type, $res);
         break;
     case 'modif-article':
-        $view = $page->updateContent($id);
+        $view = $page->updateContent($id, $res);
         break;
     case 'supp-article':
         $view = $page->deleteContent($type, $id);

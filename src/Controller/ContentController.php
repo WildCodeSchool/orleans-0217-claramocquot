@@ -156,7 +156,7 @@ class ContentController extends Controller
      * @param $id
      * @return string
      */
-    public function updateContent($id)
+    public function updateContent($id, $res)
     {
         $em = new ContentManager();
         $data1 = $em->findOne($id);
@@ -205,7 +205,6 @@ class ContentController extends Controller
             ->addField($content)
             ->addField($hidden)
             ->addField($submit);
-        $res = '';
 
         if (!empty($_FILES['image']['name'])) {
             $imageVal = new Callback([new ImageValidators(), 'isValid']);
@@ -222,6 +221,7 @@ class ContentController extends Controller
 
                 if ($em->updateContent($filteredData, $id)) {
                     $res = 'Article Modifié !';
+                    header('Location: index.php?route=modif-article&res='.$res.'&id='.$id);
                 }
             }
         }

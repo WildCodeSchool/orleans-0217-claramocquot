@@ -111,9 +111,8 @@ class HatController extends Controller
         return $this->getTwig()->render('showHat.html.twig', ['hats' => $res]);
     }
 
-    public function updateHate($id)
+    public function updateHate($id, $res)
     {
-        $res = '';
         $value = '';
         $em = new HatManager();
         $data2 = $em->showHat($id);
@@ -232,6 +231,8 @@ class HatController extends Controller
                 $em = new HatManager();
                 if ($em->updateHat($filteredData, $id)) {
                     $res = 'Chapeau Modifié';
+                    header('Location: index.php?route=modif-chapeau&res='.$res.'&id='.$id);
+
                 }
             }
         }
