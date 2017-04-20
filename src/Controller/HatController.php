@@ -27,6 +27,7 @@ use Del\Form\Validator\Adapter\ValidatorAdapterZf;
 use Zend\Filter\StripTags;
 use Zend\Filter\StringTrim;
 use Zend\Filter\StringToLower;
+use Zend\Validator\StringLength;
 
 
 class HatController extends Controller
@@ -38,6 +39,9 @@ class HatController extends Controller
         $form = new Form('addHat');
         $form->setEncType('multipart/form-data');
         $name = new Text('name');
+        $nameVal = new ValidatorAdapterZf(new StringLength(['max'=>40]));
+        $name->addValidator($nameVal);
+
         $content = new \Clara\Form\Field\TextArea('content');
         $price = new Text('price');
         $select = new Select('localisation');
@@ -53,7 +57,7 @@ class HatController extends Controller
         $image3 = new FileUpload('image3');
         $image4 = new FileUpload('image4');
         $submit = new Submit('submit');
-        $name->setLabel('Nom du produit');
+        $name->setLabel('Nom du produit (40 catactères maximum)');
         $content->setLabel('Description');
         $content->setClass('input-block-level');
         $content->setId('editor');
@@ -135,7 +139,8 @@ class HatController extends Controller
 
         $name = new Text('name');
         $name->setValue($data2[0]->getName());
-
+        $nameVal = new ValidatorAdapterZf(new StringLength(['max'=>40]));
+        $name->addValidator($nameVal);
         $content = new \Clara\Form\Field\TextArea('content');
         $content->setValue($data2[0]->getContent());
         $content->setClass('input-block-level');
@@ -167,7 +172,7 @@ class HatController extends Controller
         $hiden->setValue($data2[0]->getId());
         $submit = new Submit('submit');
         $submit->setValue('Modifier');
-        $name->setLabel('Nom du produit');
+        $name->setLabel('Nom du produit (40 catactères maximum)');
         $content->setLabel('Description');
         $price->setLabel('Prix');
         $select->setLabel('Choississez ou l\'afficher');
