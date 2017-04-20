@@ -917,3 +917,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .marginBottom {
     margin-bottom: 30px;
 }
+
+.dateArticle {
+    margin-top: -10px;
+    font-size: 15px;
+    margin-left: 50px;
+}
