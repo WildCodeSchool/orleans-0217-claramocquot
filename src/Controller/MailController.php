@@ -27,8 +27,8 @@ class MailController extends Controller
         }
 
         $transport = Swift_SmtpTransport::newInstance('smtp.googlemail.com', 465, 'ssl')
-            ->setUsername('lefadak3@gmail.com')
-            ->setPassword('ahglagla');
+            ->setUsername('contact.clara.mocquot@gmail.com')
+            ->setPassword('wildschoolCJT2017');
         $mailer = Swift_Mailer::newInstance($transport);
         $message = Swift_Message::newInstance('Renseignements Commande')
             ->setSubject('Renseignements Commande')
@@ -54,8 +54,8 @@ class MailController extends Controller
         }
 
         $transport = Swift_SmtpTransport::newInstance('smtp.googlemail.com', 465, 'ssl')
-            ->setUsername('lefadak3@gmail.com')
-            ->setPassword('ahglagla');
+            ->setUsername('contact.clara.mocquot@gmail.com')
+            ->setPassword('wildschoolCJT2017');
         $mailer = Swift_Mailer::newInstance($transport);
         $message = Swift_Message::newInstance('Prise de contact')
             ->setSubject('Prise de contact')
@@ -80,8 +80,8 @@ class MailController extends Controller
         }
 
         $transport = Swift_SmtpTransport::newInstance('smtp.googlemail.com', 465, 'ssl')
-            ->setUsername('lefadak3@gmail.com')
-            ->setPassword('ahglagla');
+            ->setUsername('contact.clara.mocquot@gmail.com')
+            ->setPassword('wildschoolCJT2017');
         $mailer = Swift_Mailer::newInstance($transport);
         $message = Swift_Message::newInstance('Demande Marraine')
             ->setSubject('Demande Marraine')
@@ -104,8 +104,8 @@ class MailController extends Controller
         }
 
         $transport = Swift_SmtpTransport::newInstance('smtp.googlemail.com', 465, 'ssl')
-            ->setUsername('lefadak3@gmail.com')
-            ->setPassword('ahglagla');
+            ->setUsername('contact.clara.mocquot@gmail.com')
+            ->setPassword('wildschoolCJT2017');
         $mailer = Swift_Mailer::newInstance($transport);
         $message = Swift_Message::newInstance('Proposition témoignage')
             ->setSubject('Proposition témoignage')
@@ -128,8 +128,8 @@ class MailController extends Controller
         }
 
         $transport = Swift_SmtpTransport::newInstance('smtp.googlemail.com', 465, 'ssl')
-            ->setUsername('lefadak3@gmail.com')
-            ->setPassword('ahglagla');
+            ->setUsername('contact.clara.mocquot@gmail.com')
+            ->setPassword('wildschoolCJT2017');
         $mailer = Swift_Mailer::newInstance($transport);
         $message = Swift_Message::newInstance('Renseignements Partenaires')
             ->setSubject('Renseignements Partenaires')
