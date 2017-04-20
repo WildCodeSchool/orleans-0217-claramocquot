@@ -27,14 +27,14 @@ class MailController extends Controller
         }
 
         $transport = Swift_SmtpTransport::newInstance('smtp.googlemail.com', 465, 'ssl')
-            ->setUsername('contact.clara.mocquot@gmail.com')
-            ->setPassword('wildschoolCJT2017');
+            ->setUsername(MAILER)
+            ->setPassword(MAILER_PASS);
         $mailer = Swift_Mailer::newInstance($transport);
         $message = Swift_Message::newInstance('Renseignements Commande')
             ->setSubject('Renseignements Commande')
             ->setFrom(array($_POST['Email'] => $_POST['Prenom'] . ' ' . $_POST['Nom']))
             ->setReplyTo($_POST['Email'])
-            ->setTo(array('derot7@gmail.com' => 'Julien Martin'))
+            ->setTo(array(MAIL => NAME))
             ->setDate(time())
             ->setBody($body, 'text/html');
         $mailer->send($message);
@@ -54,14 +54,14 @@ class MailController extends Controller
         }
 
         $transport = Swift_SmtpTransport::newInstance('smtp.googlemail.com', 465, 'ssl')
-            ->setUsername('contact.clara.mocquot@gmail.com')
-            ->setPassword('wildschoolCJT2017');
+            ->setUsername(MAILER)
+            ->setPassword(MAILER_PASS);
         $mailer = Swift_Mailer::newInstance($transport);
         $message = Swift_Message::newInstance('Prise de contact')
             ->setSubject('Prise de contact')
             ->setFrom(array($_POST['Email'] => $_POST['Prenom'] . ' ' . $_POST['Nom']))
             ->setReplyTo($_POST['Email'])
-            ->setTo(array('derot7@gmail.com' => 'Julien Martin'))
+            ->setTo(array(MAIL => NAME))
             ->setDate(time())
             ->setBody($body, 'text/html');
         $mailer->send($message);
@@ -80,14 +80,14 @@ class MailController extends Controller
         }
 
         $transport = Swift_SmtpTransport::newInstance('smtp.googlemail.com', 465, 'ssl')
-            ->setUsername('contact.clara.mocquot@gmail.com')
-            ->setPassword('wildschoolCJT2017');
+            ->setUsername(MAILER)
+            ->setPassword(MAILER_PASS);
         $mailer = Swift_Mailer::newInstance($transport);
         $message = Swift_Message::newInstance('Demande Marraine')
             ->setSubject('Demande Marraine')
             ->setFrom(array($_POST['Email'] => $_POST['Prenom'] . ' ' . $_POST['Nom']))
             ->setReplyTo($_POST['Email'])
-            ->setTo(array('derot7@gmail.com' => 'Julien Martin'))
+            ->setTo(array(MAIL => NAME))
             ->setDate(time())
             ->setBody($body, 'text/html');
         $mailer->send($message);
@@ -104,14 +104,14 @@ class MailController extends Controller
         }
 
         $transport = Swift_SmtpTransport::newInstance('smtp.googlemail.com', 465, 'ssl')
-            ->setUsername('contact.clara.mocquot@gmail.com')
-            ->setPassword('wildschoolCJT2017');
+            ->setUsername(MAILER)
+            ->setPassword(MAILER_PASS);
         $mailer = Swift_Mailer::newInstance($transport);
         $message = Swift_Message::newInstance('Proposition témoignage')
             ->setSubject('Proposition témoignage')
             ->setFrom(array($_POST['Email'] => $_POST['Prenom'] . ' ' . $_POST['Nom']))
             ->setReplyTo($_POST['Email'])
-            ->setTo(array('derot7@gmail.com' => 'Julien Martin'))
+            ->setTo(array(MAIL => NAME))
             ->setDate(time())
             ->setBody($body, 'text/html');
         $mailer->send($message);
@@ -128,14 +128,14 @@ class MailController extends Controller
         }
 
         $transport = Swift_SmtpTransport::newInstance('smtp.googlemail.com', 465, 'ssl')
-            ->setUsername('contact.clara.mocquot@gmail.com')
-            ->setPassword('wildschoolCJT2017');
+            ->setUsername(MAILER)
+            ->setPassword(MAILER_PASS);
         $mailer = Swift_Mailer::newInstance($transport);
         $message = Swift_Message::newInstance('Renseignements Partenaires')
             ->setSubject('Renseignements Partenaires')
             ->setFrom(array($_POST['Email'] => $_POST['Prenom'] . ' ' . $_POST['Nom']))
             ->setReplyTo($_POST['Email'])
-            ->setTo(array('derot7@gmail.com' => 'Julien Martin'))
+            ->setTo(array(MAIL => NAME))
             ->setDate(time())
             ->setBody($body, 'text/html');
         $mailer->send($message);
