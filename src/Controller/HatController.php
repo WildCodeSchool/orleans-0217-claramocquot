@@ -57,7 +57,7 @@ class HatController extends Controller
         $image3 = new FileUpload('image3');
         $image4 = new FileUpload('image4');
         $submit = new Submit('submit');
-        $name->setLabel('Nom du produit (40 catactères maximum)');
+        $name->setLabel('Nom du produit (35 catactères maximum)');
         $content->setLabel('Description');
         $content->setClass('input-block-level');
         $content->setId('editor');
@@ -172,7 +172,7 @@ class HatController extends Controller
         $hiden->setValue($data2[0]->getId());
         $submit = new Submit('submit');
         $submit->setValue('Modifier');
-        $name->setLabel('Nom du produit (40 catactères maximum)');
+        $name->setLabel('Nom du produit (35 catactères maximum)');
         $content->setLabel('Description');
         $price->setLabel('Prix');
         $select->setLabel('Choississez ou l\'afficher');
