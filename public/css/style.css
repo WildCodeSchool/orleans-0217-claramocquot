@@ -792,7 +792,8 @@ a {
 
 .padSummernote {
     padding: 20px;
-    font-family: 'PT Sans';
+    font-family: 'PT Sans', Sans-Serif;
+    word-wrap: break-word;
 }
 
 .showContent {
