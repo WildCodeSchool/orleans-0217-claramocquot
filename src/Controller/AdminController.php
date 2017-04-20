@@ -23,17 +23,17 @@ class AdminController extends Controller
         return $hat->showHat($id);
     }
 
-    public function addHat()
+    public function addHat($res)
     {
         $hat= new HatController(false);
-        return $hat->addHat();
+        return $hat->addHat($res);
     }
 
 
-    public function updateHat($id)
+    public function updateHat($id, $res)
     {
         $hat = new HatController(false);
-        return $hat->updateHate($id);
+        return $hat->updateHate($id, $res);
     }
 
     public function deleteHat($id)
@@ -66,20 +66,20 @@ class AdminController extends Controller
      * @param $type
      * @return string
      */
-    public function addContent($type)
+    public function addContent($type, $res)
     {
         $content = new ContentController(false);
-        return $content->addContent($type);
+        return $content->addContent($type, $res);
     }
 
     /**
      * @param $id
      * @return string
      */
-    public function updateContent($id)
+    public function updateContent($id, $res)
     {
         $content = new ContentController(false);
-        return $content->updateContent($id);
+        return $content->updateContent($id, $res);
     }
 
     /**
