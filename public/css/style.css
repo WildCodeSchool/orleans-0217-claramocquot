@@ -463,7 +463,7 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .titreManifeste {
     text-transform: uppercase;
-    font-family: 'PTSans';
+    font-family: 'PT Sans', sans-serif;
     text-align: center;
     font-size: 40px;
     font-weight: bold;
@@ -925,6 +925,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .marginBottom {
     margin-bottom: 30px;
+}
+
+.footerMargin {
+    margin-bottom: 20px;
+}
+
+marginTopFooter {
+    margin-top: 20px;
 }
 
 .dateArticle {
