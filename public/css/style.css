@@ -458,7 +458,7 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .titreManifeste {
     text-transform: uppercase;
-    font-family: 'PTSans';
+    font-family: 'PT Sans', sans-serif;
     text-align: center;
     font-size: 40px;
     font-weight: bold;
