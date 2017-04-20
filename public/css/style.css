@@ -75,6 +75,11 @@ body {
     padding-top: 80px;
 }
 
+.landingPageNavigation {
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
 .navHome {
     padding-top: 50px;
 }
@@ -742,6 +747,7 @@ a {
 
 .buttonFB {
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .carousel-indicators {
@@ -848,11 +854,24 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-bottom: -11px;
 }
 
-@media screen and (min-width: 992px; max-width: 1600px) {
+@media screen and (min-width: 1300px) and (max-width: 1600px) {
+    .txt_com {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 1050px) and (max-width: 1300px) {
+    .txt_com {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1050px) {
     .txt_com {
         font-size: 12px;
     }
 }
+
 
 @media screen and (max-width: 1680px) {
     .containerProduit {
@@ -864,4 +883,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     .produitDescription {
         margin-top: -82px;
     }
+}
+
+.marginBottom {
+    margin-bottom: 30px;
 }
