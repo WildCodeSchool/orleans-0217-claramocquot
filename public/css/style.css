@@ -72,11 +72,11 @@ body {
 
 .landingPageNavigation .section_overlay {
     background-color: rgba(0, 0, 0, 0);
-    padding-top: 80px;
+    /*padding-top: 80px;*/
 }
 
 .landingPageNavigation {
-    padding-top: 80px;
+    /*padding-top: 80px;*/
     padding-bottom: 40px;
 }
 
@@ -181,11 +181,11 @@ body {
 /*}*/
 
 .navHeightSm{
-    height: auto;
+    height: 100vh;
 }
 
 .marginTopXs {
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 .marginTopLg {
@@ -193,12 +193,12 @@ body {
 }
 
 .marginTopBottomMd {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 30px;
+    margin-bottom: 0px;
 }
 
 .navHeightXs {
-    height: auto;
+    height: 90vh;
 }
 
 /*---------------------------------------
