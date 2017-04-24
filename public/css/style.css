@@ -955,3 +955,7 @@ button.close {
     background: 0 0;
     border: 0;
 }
+
+.imgArticle {
+    margin: 0 auto;
+}
