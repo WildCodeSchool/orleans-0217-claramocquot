@@ -29,7 +29,11 @@ class PictureHomeManager extends DB
         $prep = $this->db->prepare($req);
         $prep->execute();
         $res = $prep->fetchAll(\PDO::FETCH_CLASS, __NAMESPACE__ . '\\' . ucfirst('pictureHome'));
-        return $res[0];
+        if (!empty($res)) {
+            return $res[0];
+        } else {
+            return '';
+        }
     }
 
     /**
