@@ -5,13 +5,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="img/logos/favicon.png"/>
+        <link rel="icon" type="image/png" href="../../img/logos/favicon.png"/>
         <link href="https://fonts.googleapis.com/css?family=Overpass|PT+Sans|PT+Sans+Caption|PT+Serif|Roboto+Condensed"
               rel="stylesheet"/>
-        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
-        <link rel="stylesheet" href="../css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/summernote.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="../../css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+        <link rel="stylesheet" href="../../css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/style.css">
         <title>Clara Mocquot | {% block title %}{% endblock %}</title>
     {% endblock %}
 </head>
@@ -20,7 +19,7 @@
 
 <div class="container-fluid">
     <div class="row header">
-        <a href="index.php#navigation">
+        <a href="/accueil#navigation">
             <div class="col-xs-11 marginHeader1"><span class="marque">Clara MOCQUOT</span></div>
         </a>
         <div class="btn-group marginHeader2 dropdown col-xs-1">
@@ -29,19 +28,19 @@
                 <span class="sr-only">Toggle Dropdown</span>
             </button>
             <ul class="dropdown-menu text-center">
-                <li class="borderBlack text-center"><a href="index.php?route=entreprise">L'ENTREPRISE</a></li>
-                <li class="borderBlack text-center"><a href="index.php?route=manifeste">NOTRE MANIFESTE</a></li>
-                <li class="borderBlack text-center"><a href="index.php?route=articles&type=blog">LA RÉDACTION</a></li>
-                <li class="borderBlack text-center"><a href="index.php?route=articles&type=marraine">NOS MARRAINES</a>
+                <li class="borderBlack text-center"><a href="/entreprise">L'ENTREPRISE</a></li>
+                <li class="borderBlack text-center"><a href="/manifeste">NOTRE MANIFESTE</a></li>
+                <li class="borderBlack text-center"><a href="/articles/blog">LA RÉDACTION</a></li>
+                <li class="borderBlack text-center"><a href="/articles/marraine">NOS MARRAINES</a>
                 </li>
-                <li class="borderBlack text-center"><a href="index.php?route=produits">NOS CHAPEAUX</a></li>
+                <li class="borderBlack text-center"><a href="/chapeaux">NOS CHAPEAUX</a></li>
                 <li class="borderBlack text-center"><a
-                            href="index.php?route=articles&type=partenaire">NOS PARTENAIRES</a></li>
+                            href="/articles/partenaire">NOS PARTENAIRES</a></li>
                 <li class="borderBlack text-center"><a
-                            href="index.php?route=articles&type=prestation">NOS PRESTATIONS</a></li>
-                <li class="borderBlack text-center"><a href="index.php?route=articles&type=evenement">L'ODYSSÉE</a>
+                            href="/articles/prestation">NOS PRESTATIONS</a></li>
+                <li class="borderBlack text-center"><a href="/articles/evenement">L'ODYSSÉE</a>
                 </li>
-                <li class="borderBlack text-center"><a href="index.php?route=articles&type=portrait">VOS TÉMOIGNAGES</a>
+                <li class="borderBlack text-center"><a href="/articles/portrait">VOS TÉMOIGNAGES</a>
                 </li>
             </ul>
         </div>
@@ -113,14 +112,14 @@
             <div class="row footerMargin">
                 <div class="col-xs-2 col-xs-offset-1 col-sm-offset-2 col-sm-1">
                     <a href="https://www.facebook.com/claramocquotchapeaux/" target="_blank"><img
-                                src="img/logos/logoFacebook.png" class="fb"></a>
+                                src="../../img/logos/logoFacebook.png" class="fb"></a>
                 </div>
                 <div class="col-xs-2 col-sm-1">
                     <a href="https://www.instagram.com/claramocquotchapeaux/?hl=fr" target="_blank"><img
-                                src="img/logos/logoInstagram.png"></a>
+                                src="../../img/logos/logoInstagram.png"></a>
                 </div>
                 <div class="col-xs-2 col-sm-1">
-                    <a href="https://fr.pinterest.com/" target="_blank"><img src="img/logos/logoPinterest.png"></a>
+                    <a href="https://fr.pinterest.com/" target="_blank"><img src="../../img/logos/logoPinterest.png"></a>
                 </div>
                 {#</div>#}
                 {#</div>#}
@@ -177,12 +176,12 @@
                 </div>
                 <div class="col-xs-2 col-sm-offset-1 col-sm-1">
                     <a href="https://wildcodeschool.fr/" target="_blank">
-                        <img src="img/logos/logoWildCodeSchool.png">
+                        <img src="../../img/logos/logoWildCodeSchool.png">
                     </a>
                 </div>
                 <div class="col-xs-2 col-sm-1">
                     <a href="#mentions" data-target="#mentions" data-toggle="modal"><img
-                                src="img/logos/logoInfo.png"></a>
+                                src="../../img/logos/logoInfo.png"></a>
                 </div>
             </div>
             <!-- Modal -->
@@ -338,9 +337,9 @@
 
     </footer>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/landingPage.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/landingPage.js"></script>
     <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
 {% endblock %}
 </body>

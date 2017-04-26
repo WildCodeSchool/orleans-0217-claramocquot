@@ -84,7 +84,7 @@ class FrontController extends Controller
         return $this->getTwig()->render('contents.html.twig', ['datas' => $res, 'type' => $type, 'visibility' => $visibility]);
     }
 
-    public function showHats($res)
+    public function showHats()
     {
         $msg = new MailController(true);
         $em = new HatManager();
@@ -94,10 +94,9 @@ class FrontController extends Controller
         if (isset($_POST['submitproduit'])) {
             $msg->contactProduct($_POST);
             header('Location:index.php?route=produits');
-
         }
 
-        return $this->getTwig()->render('products.html.twig', ['datas' => $datas, 'res' => $res, 'olds' => $oldHats]);
+        return $this->getTwig()->render('products.html.twig', ['datas' => $datas, 'olds' => $oldHats]);
     }
 
     public function showHat($id)

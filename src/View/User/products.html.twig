@@ -17,10 +17,10 @@
                     {% for data in datas %}
                         {% if data.newProd == 1 %}
                             <div class="col-xs-12 col-sm-4">
-                                <a href="index.php?route=produit&id={{ data.id }}">
+                                <a href="/chapeau/{{ data.id }}">
                                     <div class="thumbnailSlider marginCollections">
                                         <img class="thumbnail"
-                                             src="../img/upload/{{ data.image }}" alt="{{ data.image }}">
+                                             src="../../img/upload/{{ data.image }}" alt="{{ data.image }}">
                                         <h3 class="titre_photo">{{ data.name }} </h3>
                                         <div class="text-right price">{{ data.price }} €</div>
                                     </div>
@@ -29,10 +29,10 @@
                         {% endif %}
                         {% if data.product == 1 %}
                             <div class="col-xs-12 col-sm-4">
-                                <a href="index.php?route=produit&id={{ data.id }}">
+                                <a href="/chapeau/{{ data.id }}">
                                     <div class="thumbnailSlider marginCollections">
                                         <img class="thumbnail"
-                                             src="../img/upload/{{ data.image }}" alt="{{ data.image }}">
+                                             src="../../img/upload/{{ data.image }}" alt="{{ data.image }}">
                                         <h3 class="titre_photo">{{ data.name }} </h3>
                                         <div class="text-right price">{{ data.price }} €</div>
                                     </div>
@@ -41,13 +41,13 @@
                         {% endif %}
                         {% if data.unavailable ==1 %}
                             <div class="col-xs-12 col-sm-4 gris">
-                                <a href="index.php?route=produit&id={{ data.id }}"
+                                <a href="/chapeau/{{ data.id }}"
                                    title="Produit actuellement indisponible"
                                    data-toggle="tooltip"
                                    data-delay="delay: {show: 10, hide: 10}">
                                     <div class="thumbnailSlider marginCollections">
                                         <img class="thumbnail"
-                                             src="../img/upload/{{ data.image }}" alt="{{ data.image }}">
+                                             src="../../img/upload/{{ data.image }}" alt="{{ data.image }}">
                                         <h3 class="titre_photo">{{ data.name }} </h3>
                                         <div class="text-right price">Produit indisponible</div>
                                     </div>
@@ -87,11 +87,11 @@
                                     {% if loop.first or loop.index0%3 == 0 %}
                                         <div class="item row{% if loop.first %} active{% endif %}">
                                     {% endif %}
-                                    <a href="index.php?route=produit&id={{ old.id }}">
+                                    <a href="/chapeau/{{ old.id }}">
                                         <div class="col-xs-4">
                                             <div class="thumbnailSlider marginCollections">
                                                 <img class="thumbnail"
-                                                     src="img/upload/{{ old.image }}"
+                                                     src="../../img/upload/{{ old.image }}"
                                                      alt="{{ old.image }}">
                                                 <h3 class="titre_photo">{{ old.name }} </h3>
                                             </div>
@@ -113,12 +113,12 @@
                     {% endif %}
                     {% if data.unavailable ==1 %}
                         <div class="col-xs-12 col-md-4 gris">
-                            <a href="index.php?route=produit&id={{ data.id }}" title="Produit actuellement indisponible"
+                            <a href="/chapeau/{{ data.id }}" title="Produit actuellement indisponible"
                                data-toggle="tooltip"
                                data-delay="delay: {show: 10, hide: 10}">
                                 <div class="thumbnailSlider marginCollections">
                                     <img class="thumbnail"
-                                         src="../img/upload/{{ data.image }}" alt="{{ data.image }}">
+                                         src="../../img/upload/{{ data.image }}" alt="{{ data.image }}">
                                     <h3 class="titre_photo">{{ data.name }} </h3>
                                     <div class="text-right price">Non disponible</div>
                                 </div>
@@ -146,11 +146,11 @@
                             <div class="carousel-inner" role="listbox">
                                 {% for old in olds %}
                                     <div class="item row{% if loop.first %} active{% endif %}">
-                                        <a href="index.php?route=produit&id={{ old.id }}">
+                                        <a href="/chapeau/{{ old.id }}">
                                             <div class="col-xs-12">
                                                 <div class="thumbnailSlider marginCollections">
                                                     <img class="thumbnail img-responsive"
-                                                         src="img/upload/{{ old.image }}"
+                                                         src="../../img/upload/{{ old.image }}"
                                                          alt="{{ old.image }}">
                                                     <h3 class="titre_photo">{{ old.name }} </h3>
                                                 </div>

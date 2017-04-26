@@ -9,7 +9,6 @@ use Clara\Controller\UserController;
 $route = '';
 $id ='';
 $type ='';
-$res= '';
 
 if (isset($_GET['route'])) {
     $route = $_GET['route'];
@@ -30,7 +29,7 @@ switch ($route) {
         $view = $page->home();
         break;
     case 'produits':
-        $view = $page->products($res);
+        $view = $page->products();
         break;
     case 'produit':
         $view = $page->product($id);
