@@ -3,13 +3,13 @@
 
 {% block content %}
     <div class="container showContent">
-        <a href="index.php?route=articles&type={{ data.type }}"><p class="text-left"><span
+        <a href="/articles/{{ data.type }}"><p class="text-left"><span
                         class="fa fa-angle-double-left"></span> retour à la
                 liste</p></a><br/>
         <h1 class="text-center">{{ data.title }}</h1><br/>
         <div class="row">
             <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4">
-                <img src="img/upload/{{ data.image }}" alt="{{ data.image }}" class="img-responsive borderBlackNav text-center imgArticle">
+                <img src="../../img/upload/{{ data.image }}" alt="{{ data.image }}" class="img-responsive borderBlackNav text-center imgArticle">
             </div>
         </div>
         <div class="borderBlack padSummernote">

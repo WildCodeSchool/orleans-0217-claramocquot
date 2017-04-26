@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^manifeste index\.php?route=manifeste [QSA,L]
+    RewriteRule ^entreprise index\.php?route=entreprise [QSA,L]
+    RewriteRule ^chapeaux index\.php?route=produits [QSA,L]
+    RewriteRule ^chapeau/(.*) index\.php?route=produit&id=$1 [QSA,L]
+    RewriteRule ^articles/(.*) index\.php?route=articles&type=$1 [QSA,L]
+    RewriteRule ^article/(.*) index\.php?route=article&id=$1 [QSA,L]
+    RewriteRule ^accueil index\.php?route=home [QSA,L]
+</IfModule>

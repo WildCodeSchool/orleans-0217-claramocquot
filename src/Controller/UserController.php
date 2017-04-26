@@ -41,10 +41,10 @@ class UserController extends Controller
         return $this->getTwig()->render('firm.html.twig');
     }
 
-    public function products($res)
+    public function products()
     {
         $hats= new FrontController(true);
-        return $hats->showHats($res);
+        return $hats->showHats();
     }
 
     public function product($id)
