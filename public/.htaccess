@@ -1,3 +1,5 @@
+#    ErrorDocument 404 /index\.php?route=home
+    ErrorDocument 404 /erreur.php
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
