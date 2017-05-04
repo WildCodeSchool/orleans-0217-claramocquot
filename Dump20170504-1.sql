@@ -16,6 +16,25 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `content`
+--
+
+DROP TABLE IF EXISTS `content`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `content` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `type` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `date` date NOT NULL,
+  `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `content` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `sumup` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `content`
 --
 
@@ -29,6 +48,27 @@ INSERT INTO `content` VALUES (31,'blog','Lorem Ipsum','2017-04-21','article5.jpg
 UNLOCK TABLES;
 
 --
+-- Table structure for table `hat`
+--
+
+DROP TABLE IF EXISTS `hat`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `hat` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `content` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `price` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `new_prod` int(11) NOT NULL,
+  `product` int(11) NOT NULL,
+  `unavailable` int(11) NOT NULL,
+  `old` int(11) NOT NULL,
+  `hide` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `hat`
 --
 
@@ -37,6 +77,23 @@ LOCK TABLES `hat` WRITE;
 INSERT INTO `hat` VALUES (1,'Chapeau fait-main en feutre de poil de lapin 100% - Haute QualitÃ©.\r\n\r\nForme canotier Ã  bords plats. Bandeau de dÃ©coration en velours noir.\r\n\r\nRÃ©alisÃ© avec une entrÃ©e de tÃªte de 58.5 cm, soit une taille moyenne. Gabarit\r\n\r\ngÃ©nÃ©ral de 29cm par 24cm.\r\n\r\nFait sur mesure et Ã  la demande de la taille 56 Ã  la taille 59 - pour dâ€™autres\r\n\r\ntailles me contacter\r\n\r\nA lâ€™intÃ©rieur vous trouverez un ruban Â« de gros-grain Â» noir en coton et ma\r\n\r\ngriffe pour lâ€™identifier : Clara Mocquot\r\n\r\nPour une ligne contemporaine, ce canotier a une hauteur de calotte trÃ¨s\r\n\r\nbasse - 7 cm.\r\n\r\nPour un portÃ© classique, prendre sa mesure de tÃªte habituelle\r\n\r\nPour un portÃ© en arriÃ¨re, voir les prÃ©cisions\r\n\r\nUn Ã©lastique de maintien peut Ãªtre ajoutÃ© pour votre confort.\r\n\r\nLe modÃ¨le est rÃ©alisable en bleu navy, vermillon, olive et noir .',150,'Super chapeau',1,0,0,0,0),(3,'<p>&laquo; Chapeau fait-main en feutre de poil de lapin 100% - Haute Qualit&eacute;. Forme canotier &agrave; bords plats. Bandeau de d&eacute;coration en velours noir.</p>\r\n\r\n<p>R&eacute;alis&eacute; avec une entr&eacute;e de t&ecirc;te de 58.5 cm, soit une taille moyenne.</p>\r\n\r\n<p>Gabarit g&eacute;n&eacute;ral de 29cm par 24cm.</p>\r\n\r\n<p>Fait sur mesure et &agrave; la demande de la taille 56 &agrave; la taille 59 - pour d&rsquo;autres tailles me contacter.</p>\r\n\r\n<p>A l&rsquo;int&eacute;rieur vous trouverez un ruban &laquo; de gros-grain &raquo; noir en coton et ma griffe pour l&rsquo;identifier : Clara Mocquot.</p>\r\n\r\n<p>Pour une ligne contemporaine, ce canotier a une hauteur de calotte tr&egrave;s basse - 7 cm.</p>\r\n\r\n<p>Pour un port&eacute; classique, prendre sa mesure de t&ecirc;te habituelle Pour un port&eacute; en arri&egrave;re, voir les pr&eacute;cisions</p>\r\n\r\n<p>Un &eacute;lastique de maintien peut &ecirc;tre ajout&eacute; pour votre confort.</p>\r\n\r\n<p>Le mod&egrave;le est r&eacute;alisable en bleu navy, vermillon, olive et noir . &raquo;</p>\r\n',230,'Mega chapeau',1,0,0,0,0),(5,'<p>&laquo; Chapeau fait-main en feutre de poil de lapin 100% - Haute Qualit&eacute;. Forme canotier &agrave; bords plats. Bandeau de d&eacute;coration en velours noir.</p>\r\n\r\n<p>R&eacute;alis&eacute; avec une entr&eacute;e de t&ecirc;te de 58.5 cm, soit une taille moyenne.</p>\r\n\r\n<p>Gabarit g&eacute;n&eacute;ral de 29cm par 24cm.</p>\r\n\r\n<p>Fait sur mesure et &agrave; la demande de la taille 56 &agrave; la taille 59 - pour d&rsquo;autres tailles me contacter.</p>\r\n\r\n<p>A l&rsquo;int&eacute;rieur vous trouverez un ruban &laquo; de gros-grain &raquo; noir en coton et ma griffe pour l&rsquo;identifier : Clara Mocquot.</p>\r\n\r\n<p>Pour une ligne contemporaine, ce canotier a une hauteur de calotte tr&egrave;s basse - 7 cm.</p>\r\n\r\n<p>Pour un port&eacute; classique, prendre sa mesure de t&ecirc;te habituelle Pour un port&eacute; en arri&egrave;re, voir les pr&eacute;cisions</p>\r\n\r\n<p>Un &eacute;lastique de maintien peut &ecirc;tre ajout&eacute; pour votre confort.</p>\r\n\r\n<p>Le mod&egrave;le est r&eacute;alisable en bleu navy, vermillon, olive et noir . &raquo;</p>\r\n',230,'Extra chapeau',1,0,0,0,0),(6,'<p>&laquo; Chapeau fait-main en feutre de poil de lapin 100% - Haute Qualit&eacute;. Forme canotier &agrave; bords plats. Bandeau de d&eacute;coration en velours noir.</p>\r\n\r\n<p>R&eacute;alis&eacute; avec une entr&eacute;e de t&ecirc;te de 58.5 cm, soit une taille moyenne.</p>\r\n\r\n<p>Gabarit g&eacute;n&eacute;ral de 29cm par 24cm.</p>\r\n\r\n<p>Fait sur mesure et &agrave; la demande de la taille 56 &agrave; la taille 59 - pour d&rsquo;autres tailles me contacter.</p>\r\n\r\n<p>A l&rsquo;int&eacute;rieur vous trouverez un ruban &laquo; de gros-grain &raquo; noir en coton et ma griffe pour l&rsquo;identifier : Clara Mocquot.</p>\r\n\r\n<p>Pour une ligne contemporaine, ce canotier a une hauteur de calotte tr&egrave;s basse - 7 cm.</p>\r\n\r\n<p>Pour un port&eacute; classique, prendre sa mesure de t&ecirc;te habituelle Pour un port&eacute; en arri&egrave;re, voir les pr&eacute;cisions</p>\r\n\r\n<p>Un &eacute;lastique de maintien peut &ecirc;tre ajout&eacute; pour votre confort.</p>\r\n\r\n<p>Le mod&egrave;le est r&eacute;alisable en bleu navy, vermillon, olive et noir . &raquo;</p>\r\n',55,'Chapeau nouveau',0,0,1,0,0),(7,'<p>&laquo; Chapeau fait-main en feutre de poil de lapin 100% - Haute Qualit&eacute;. Forme canotier &agrave; bords plats. Bandeau de d&eacute;coration en velours noir.</p>\r\n\r\n<p>R&eacute;alis&eacute; avec une entr&eacute;e de t&ecirc;te de 58.5 cm, soit une taille moyenne.</p>\r\n\r\n<p>Gabarit g&eacute;n&eacute;ral de 29cm par 24cm.</p>\r\n\r\n<p>Fait sur mesure et &agrave; la demande de la taille 56 &agrave; la taille 59 - pour d&rsquo;autres tailles me contacter.</p>\r\n\r\n<p>A l&rsquo;int&eacute;rieur vous trouverez un ruban &laquo; de gros-grain &raquo; noir en coton et ma griffe pour l&rsquo;identifier : Clara Mocquot.</p>\r\n\r\n<p>Pour une ligne contemporaine, ce canotier a une hauteur de calotte tr&egrave;s basse - 7 cm.</p>\r\n\r\n<p>Pour un port&eacute; classique, prendre sa mesure de t&ecirc;te habituelle Pour un port&eacute; en arri&egrave;re, voir les pr&eacute;cisions</p>\r\n\r\n<p>Un &eacute;lastique de maintien peut &ecirc;tre ajout&eacute; pour votre confort.</p>\r\n\r\n<p>Le mod&egrave;le est r&eacute;alisable en bleu navy, vermillon, olive et noir . &raquo;</p>\r\n',58,'Chapeau noir',0,0,1,0,0),(8,'<p>&laquo; Chapeau fait-main en feutre de poil de lapin 100% - Haute Qualit&eacute;. Forme canotier &agrave; bords plats. Bandeau de d&eacute;coration en velours noir.</p>\r\n\r\n<p>R&eacute;alis&eacute; avec une entr&eacute;e de t&ecirc;te de 58.5 cm, soit une taille moyenne.</p>\r\n\r\n<p>Gabarit g&eacute;n&eacute;ral de 29cm par 24cm.</p>\r\n\r\n<p>Fait sur mesure et &agrave; la demande de la taille 56 &agrave; la taille 59 - pour d&rsquo;autres tailles me contacter.</p>\r\n\r\n<p>A l&rsquo;int&eacute;rieur vous trouverez un ruban &laquo; de gros-grain &raquo; noir en coton et ma griffe pour l&rsquo;identifier : Clara Mocquot.</p>\r\n\r\n<p>Pour une ligne contemporaine, ce canotier a une hauteur de calotte tr&egrave;s basse - 7 cm.</p>\r\n\r\n<p>Pour un port&eacute; classique, prendre sa mesure de t&ecirc;te habituelle Pour un port&eacute; en arri&egrave;re, voir les pr&eacute;cisions</p>\r\n\r\n<p>Un &eacute;lastique de maintien peut &ecirc;tre ajout&eacute; pour votre confort.</p>\r\n\r\n<p>Le mod&egrave;le est r&eacute;alisable en bleu navy, vermillon, olive et noir . &raquo;</p>\r\n',77,'Chapeau',1,0,0,0,0),(9,'<p>&laquo; Chapeau fait-main en feutre de poil de lapin 100% - Haute Qualit&eacute;. Forme canotier &agrave; bords plats. Bandeau de d&eacute;coration en velours noir.</p>\r\n\r\n<p>R&eacute;alis&eacute; avec une entr&eacute;e de t&ecirc;te de 58.5 cm, soit une taille moyenne.</p>\r\n\r\n<p>Gabarit g&eacute;n&eacute;ral de 29cm par 24cm.</p>\r\n\r\n<p>Fait sur mesure et &agrave; la demande de la taille 56 &agrave; la taille 59 - pour d&rsquo;autres tailles me contacter.</p>\r\n\r\n<p>A l&rsquo;int&eacute;rieur vous trouverez un ruban &laquo; de gros-grain &raquo; noir en coton et ma griffe pour l&rsquo;identifier : Clara Mocquot.</p>\r\n\r\n<p>Pour une ligne contemporaine, ce canotier a une hauteur de calotte tr&egrave;s basse - 7 cm.</p>\r\n\r\n<p>Pour un port&eacute; classique, prendre sa mesure de t&ecirc;te habituelle Pour un port&eacute; en arri&egrave;re, voir les pr&eacute;cisions</p>\r\n\r\n<p>Un &eacute;lastique de maintien peut &ecirc;tre ajout&eacute; pour votre confort.</p>\r\n\r\n<p>Le mod&egrave;le est r&eacute;alisable en bleu navy, vermillon, olive et noir . &raquo;</p>\r\n',66,'Chapeau',0,0,0,1,0),(10,'<p>&laquo; Chapeau fait-main en feutre de poil de lapin 100% - Haute Qualit&eacute;. Forme canotier &agrave; bords plats. Bandeau de d&eacute;coration en velours noir.</p>\r\n\r\n<p>R&eacute;alis&eacute; avec une entr&eacute;e de t&ecirc;te de 58.5 cm, soit une taille moyenne.</p>\r\n\r\n<p>Gabarit g&eacute;n&eacute;ral de 29cm par 24cm.</p>\r\n\r\n<p>Fait sur mesure et &agrave; la demande de la taille 56 &agrave; la taille 59 - pour d&rsquo;autres tailles me contacter.</p>\r\n\r\n<p>A l&rsquo;int&eacute;rieur vous trouverez un ruban &laquo; de gros-grain &raquo; noir en coton et ma griffe pour l&rsquo;identifier : Clara Mocquot.</p>\r\n\r\n<p>Pour une ligne contemporaine, ce canotier a une hauteur de calotte tr&egrave;s basse - 7 cm.</p>\r\n\r\n<p>Pour un port&eacute; classique, prendre sa mesure de t&ecirc;te habituelle Pour un port&eacute; en arri&egrave;re, voir les pr&eacute;cisions</p>\r\n\r\n<p>Un &eacute;lastique de maintien peut &ecirc;tre ajout&eacute; pour votre confort.</p>\r\n\r\n<p>Le mod&egrave;le est r&eacute;alisable en bleu navy, vermillon, olive et noir . &raquo;</p>\r\n',258,'Chapeau bleu',0,0,0,1,0),(11,'<p>&laquo; Chapeau fait-main en feutre de poil de lapin 100% - Haute Qualit&eacute;. Forme canotier &agrave; bords plats. Bandeau de d&eacute;coration en velours noir.</p>\r\n\r\n<p>R&eacute;alis&eacute; avec une entr&eacute;e de t&ecirc;te de 58.5 cm, soit une taille moyenne.</p>\r\n\r\n<p>Gabarit g&eacute;n&eacute;ral de 29cm par 24cm.</p>\r\n\r\n<p>Fait sur mesure et &agrave; la demande de la taille 56 &agrave; la taille 59 - pour d&rsquo;autres tailles me contacter.</p>\r\n\r\n<p>A l&rsquo;int&eacute;rieur vous trouverez un ruban &laquo; de gros-grain &raquo; noir en coton et ma griffe pour l&rsquo;identifier : Clara Mocquot.</p>\r\n\r\n<p>Pour une ligne contemporaine, ce canotier a une hauteur de calotte tr&egrave;s basse - 7 cm.</p>\r\n\r\n<p>Pour un port&eacute; classique, prendre sa mesure de t&ecirc;te habituelle Pour un port&eacute; en arri&egrave;re, voir les pr&eacute;cisions</p>\r\n\r\n<p>Un &eacute;lastique de maintien peut &ecirc;tre ajout&eacute; pour votre confort.</p>\r\n\r\n<p>Le mod&egrave;le est r&eacute;alisable en bleu navy, vermillon, olive et noir . &raquo;</p>\r\n',225,'Chapeau rouge',0,0,0,1,0),(12,'eifoziofgnzignzpi',4189489,'nivo',0,0,0,1,0),(13,'rgtrhtrherh',4,'r\"r\"r\"rr\"r\"r\"r',0,0,0,1,0),(14,'ujujujujujuj',4444,'jujujujujuj',0,0,0,1,0),(15,'egergergegaeg',333,'gtgtgtg',0,0,0,1,0),(16,'egergergegaeg',333,'gtgtgtg',0,0,0,1,0),(17,'egergergegaeg',333,'gtgtgtg',0,0,0,1,0),(18,'egergergegaeg',333,'gtgtgtg',0,0,0,1,0),(19,'\'(ehgz\'gg\"\'',55555,'zegzgzg',0,0,0,1,0),(20,'<p>ergerherhr</p>\r\n',333,'regergrg',0,0,0,1,0),(21,'<p>frerhgerhege</p>\r\n',253,'ccccccccccc',0,0,0,1,0),(22,'<p>trherherherqh</p>\r\n',2,'efzfefzfzefezfzftrjhtyktyjty',0,0,0,1,0),(23,'<p>&laquo; Chapeau fait-main en feutre de poil de lapin 100% - Haute Qualit&eacute;. Forme canotier &agrave; bords plats. Bandeau de d&eacute;coration en velours noir.</p>\r\n\r\n<p>R&eacute;alis&eacute; avec une entr&eacute;e de t&ecirc;te de 58.5 cm, soit une taille moyenne.</p>\r\n\r\n<p>Gabarit g&eacute;n&eacute;ral de 29cm par 24cm.</p>\r\n\r\n<p>Fait sur mesure et &agrave; la demande de la taille 56 &agrave; la taille 59 - pour d&rsquo;autres tailles me contacter.</p>\r\n\r\n<p>A l&rsquo;int&eacute;rieur vous trouverez un ruban &laquo; de gros-grain &raquo; noir en coton et ma griffe pour l&rsquo;identifier : Clara Mocquot.</p>\r\n\r\n<p>Pour une ligne contemporaine, ce canotier a une hauteur de calotte tr&egrave;s basse - 7 cm.</p>\r\n\r\n<p>Pour un port&eacute; classique, prendre sa mesure de t&ecirc;te habituelle Pour un port&eacute; en arri&egrave;re, voir les pr&eacute;cisions</p>\r\n\r\n<p>Un &eacute;lastique de maintien peut &ecirc;tre ajout&eacute; pour votre confort.</p>\r\n\r\n<p>Le mod&egrave;le est r&eacute;alisable en bleu navy, vermillon, olive et noir . &raquo;</p>\r\n',96,'Chapeau',0,0,0,1,0),(24,'<p>&laquo; Chapeau fait-main en feutre de poil de lapin 100% - Haute Qualit&eacute;. Forme canotier &agrave; bords plats. Bandeau de d&eacute;coration en velours noir.</p>\r\n\r\n<p>R&eacute;alis&eacute; avec une entr&eacute;e de t&ecirc;te de 58.5 cm, soit une taille moyenne.</p>\r\n\r\n<p>Gabarit g&eacute;n&eacute;ral de 29cm par 24cm.</p>\r\n\r\n<p>Fait sur mesure et &agrave; la demande de la taille 56 &agrave; la taille 59 - pour d&rsquo;autres tailles me contacter.</p>\r\n\r\n<p>A l&rsquo;int&eacute;rieur vous trouverez un ruban &laquo; de gros-grain &raquo; noir en coton et ma griffe pour l&rsquo;identifier : Clara Mocquot.</p>\r\n\r\n<p>Pour une ligne contemporaine, ce canotier a une hauteur de calotte tr&egrave;s basse - 7 cm.</p>\r\n\r\n<p>Pour un port&eacute; classique, prendre sa mesure de t&ecirc;te habituelle Pour un port&eacute; en arri&egrave;re, voir les pr&eacute;cisions</p>\r\n\r\n<p>Un &eacute;lastique de maintien peut &ecirc;tre ajout&eacute; pour votre confort.</p>\r\n\r\n<p>Le mod&egrave;le est r&eacute;alisable en bleu navy, vermillon, olive et noir . &raquo;</p>\r\n',225,'Chapeau',0,0,0,1,0),(25,'<p>&laquo; Chapeau fait-main en feutre de poil de lapin 100% - Haute Qualit&eacute;. Forme canotier &agrave; bords plats. Bandeau de d&eacute;coration en velours noir.</p>\r\n\r\n<p>R&eacute;alis&eacute; avec une entr&eacute;e de t&ecirc;te de 58.5 cm, soit une taille moyenne.</p>\r\n\r\n<p>Gabarit g&eacute;n&eacute;ral de 29cm par 24cm.</p>\r\n\r\n<p>Fait sur mesure et &agrave; la demande de la taille 56 &agrave; la taille 59 - pour d&rsquo;autres tailles me contacter.</p>\r\n\r\n<p>A l&rsquo;int&eacute;rieur vous trouverez un ruban &laquo; de gros-grain &raquo; noir en coton et ma griffe pour l&rsquo;identifier : Clara Mocquot.</p>\r\n\r\n<p>Pour une ligne contemporaine, ce canotier a une hauteur de calotte tr&egrave;s basse - 7 cm.</p>\r\n\r\n<p>Pour un port&eacute; classique, prendre sa mesure de t&ecirc;te habituelle Pour un port&eacute; en arri&egrave;re, voir les pr&eacute;cisions</p>\r\n\r\n<p>Un &eacute;lastique de maintien peut &ecirc;tre ajout&eacute; pour votre confort.</p>\r\n\r\n<p>Le mod&egrave;le est r&eacute;alisable en bleu navy, vermillon, olive et noir . &raquo;</p>\r\n',100,'Chapeau',0,0,0,1,0),(28,'<p>&laquo; Chapeau fait-main en feutre de poil de lapin 100% - Haute Qualit&eacute;. Forme canotier &agrave; bords plats. Bandeau de d&eacute;coration en velours noir.</p>\r\n\r\n<p>R&eacute;alis&eacute; avec une entr&eacute;e de t&ecirc;te de 58.5 cm, soit une taille moyenne.</p>\r\n\r\n<p>Gabarit g&eacute;n&eacute;ral de 29cm par 24cm.</p>\r\n\r\n<p>Fait sur mesure et &agrave; la demande de la taille 56 &agrave; la taille 59 - pour d&rsquo;autres tailles me contacter.</p>\r\n\r\n<p>A l&rsquo;int&eacute;rieur vous trouverez un ruban &laquo; de gros-grain &raquo; noir en coton et ma griffe pour l&rsquo;identifier : Clara Mocquot.</p>\r\n\r\n<p>Pour une ligne contemporaine, ce canotier a une hauteur de calotte tr&egrave;s basse - 7 cm.</p>\r\n\r\n<p>Pour un port&eacute; classique, prendre sa mesure de t&ecirc;te habituelle Pour un port&eacute; en arri&egrave;re, voir les pr&eacute;cisions</p>\r\n\r\n<p>Un &eacute;lastique de maintien peut &ecirc;tre ajout&eacute; pour votre confort.</p>\r\n\r\n<p>Le mod&egrave;le est r&eacute;alisable en bleu navy, vermillon, olive et noir . &raquo;</p>\r\n',280,'Chapeau Vermillon',1,0,0,0,0),(29,'<p>&laquo; Chapeau fait-main en feutre de poil de lapin 100% - Haute Qualit&eacute;. Forme canotier &agrave; bords plats. Bandeau de d&eacute;coration en velours noir.</p>\r\n\r\n<p>R&eacute;alis&eacute; avec une entr&eacute;e de t&ecirc;te de 58.5 cm, soit une taille moyenne.</p>\r\n\r\n<p>Gabarit g&eacute;n&eacute;ral de 29cm par 24cm.</p>\r\n\r\n<p>Fait sur mesure et &agrave; la demande de la taille 56 &agrave; la taille 59 - pour d&rsquo;autres tailles me contacter.</p>\r\n\r\n<p>A l&rsquo;int&eacute;rieur vous trouverez un ruban &laquo; de gros-grain &raquo; noir en coton et ma griffe pour l&rsquo;identifier : Clara Mocquot.</p>\r\n\r\n<p>Pour une ligne contemporaine, ce canotier a une hauteur de calotte tr&egrave;s basse - 7 cm.</p>\r\n\r\n<p>Pour un port&eacute; classique, prendre sa mesure de t&ecirc;te habituelle Pour un port&eacute; en arri&egrave;re, voir les pr&eacute;cisions</p>\r\n\r\n<p>Un &eacute;lastique de maintien peut &ecirc;tre ajout&eacute; pour votre confort.</p>\r\n\r\n<p>Le mod&egrave;le est r&eacute;alisable en bleu navy, vermillon, olive et noir . &raquo;</p>\r\n',130,'Chapeau chasseur',1,0,0,0,0),(30,'<p>&laquo; Chapeau fait-main en feutre de poil de lapin 100% - Haute Qualit&eacute;. Forme canotier &agrave; bords plats. Bandeau de d&eacute;coration en velours noir.</p>\r\n\r\n<p>R&eacute;alis&eacute; avec une entr&eacute;e de t&ecirc;te de 58.5 cm, soit une taille moyenne.</p>\r\n\r\n<p>Gabarit g&eacute;n&eacute;ral de 29cm par 24cm.</p>\r\n\r\n<p>Fait sur mesure et &agrave; la demande de la taille 56 &agrave; la taille 59 - pour d&rsquo;autres tailles me contacter.</p>\r\n\r\n<p>A l&rsquo;int&eacute;rieur vous trouverez un ruban &laquo; de gros-grain &raquo; noir en coton et ma griffe pour l&rsquo;identifier : Clara Mocquot.</p>\r\n\r\n<p>Pour une ligne contemporaine, ce canotier a une hauteur de calotte tr&egrave;s basse - 7 cm.</p>\r\n\r\n<p>Pour un port&eacute; classique, prendre sa mesure de t&ecirc;te habituelle Pour un port&eacute; en arri&egrave;re, voir les pr&eacute;cisions</p>\r\n\r\n<p>Un &eacute;lastique de maintien peut &ecirc;tre ajout&eacute; pour votre confort.</p>\r\n\r\n<p>Le mod&egrave;le est r&eacute;alisable en bleu navy, vermillon, olive et noir . &raquo;</p>\r\n',245,'Coiffe pour dame',0,0,1,0,0),(31,'<p>essai</p>\r\n',150,'test',1,0,0,0,0),(32,'<p>f</p>\r\n',4,'f',1,0,0,0,0);
 /*!40000 ALTER TABLE `hat` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `picture`
+--
+
+DROP TABLE IF EXISTS `picture`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `picture` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `image` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `id_hat` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id_hat_idx` (`id_hat`),
+  CONSTRAINT `id_hat` FOREIGN KEY (`id_hat`) REFERENCES `hat` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `picture`
@@ -49,6 +106,21 @@ INSERT INTO `picture` VALUES (5,'modele2.1.jpg',3),(6,'modele2.2.jpg',3),(7,'mod
 UNLOCK TABLES;
 
 --
+-- Table structure for table `picture_home`
+--
+
+DROP TABLE IF EXISTS `picture_home`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `picture_home` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `visibility` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `picture_home`
 --
 
@@ -57,6 +129,20 @@ LOCK TABLES `picture_home` WRITE;
 INSERT INTO `picture_home` VALUES (4,'home.jpg',1);
 /*!40000 ALTER TABLE `picture_home` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `visibility_marraine`
+--
+
+DROP TABLE IF EXISTS `visibility_marraine`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `visibility_marraine` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `visibility` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `visibility_marraine`
@@ -77,4 +163,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-04 16:00:17
+-- Dump completed on 2017-05-04 16:06:29
