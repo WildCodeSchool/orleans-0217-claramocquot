@@ -13,13 +13,13 @@
                             {% set index=0 %}
                             {% for hat in hats %}
                                 <li data-target="#chapeau" data-slide-to="{{ index }}"
-                                    class="{% if index==0 %}active {% endif %}"></li>
+                                    class="{% if index==0 %}active {% endif %} "></li>
                                 {% set index = index +1 %}
                             {% endfor %}
                         </ol>
                         <!-- Wrapper for slides -->
                         <div class="row">
-                            <div class="col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
+                            <div class=" col-xs-12 ">
                                 <div class="carousel-inner" role="listbox">
                                     {% set index=0 %}
                                     {% for hat in hats %}
@@ -62,7 +62,7 @@
              <p><span class="DescProduit"> <b> Prix : </b></span> {% if hats[0].unavailable ==1 %} <b>Produit indisponible</b> {% elseif hats[0].old==1 %}   <b>Indisponible</b>{% else %} <b>{{ hats[0].price }}€</b>{% endif %}</p>
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#Se_renseigner"
                     data-whatever="@mdo">
-                <Cont>Se renseigner</Cont>
+                <Cont>Commander</Cont>
             </button>
             <div class="modal fade" id="Se_renseigner" tabindex="-1" role="dialog"
                  aria-labelledby="exampleModalLabel">
@@ -72,7 +72,7 @@
                             <button type="button" class="close" data-dismiss="modal"
                                     aria-label="Close"><span
                                         aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="exampleModalLabel">Renseignement produit</h4>
+                            <h4 class="modal-title" id="exampleModalLabel">Commander</h4>
                         </div>
                         <div class="headModalProduit">
                             <p>** FELICITATION! **<br>

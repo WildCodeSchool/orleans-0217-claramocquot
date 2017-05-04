@@ -72,11 +72,9 @@ body {
 
 .landingPageNavigation .section_overlay {
     background-color: rgba(0, 0, 0, 0);
-    /*padding-top: 80px;*/
 }
 
 .landingPageNavigation {
-    /*padding-top: 80px;*/
     padding-bottom: 40px;
 }
 
@@ -160,30 +158,17 @@ body {
 .landingPageNouveautes {
     padding-top: 50px;
     padding-bottom: 100px;
-    background-color: rgba(0, 0, 0, 0.33);
+    /*background-color: rgba(0, 0, 0, 0.33);*/
 }
 
 .section_overlay2 {
     padding-bottom: 50px;
 }
 
-/*.navHeight {*/
-/*height: 100vh;*/
-/*}*/
-
 .borderBlackNav {
     border: 2px solid black;
     margin: 15px;
 }
-
-/*.paddingNavSm {*/
-/*padding: 25px;*/
-/*margin-top: -15px;*/
-/*}*/
-
-/*.navHeightSm{*/
-/*height: 100vh;*/
-/*}*/
 
 .marginTopXs {
     margin-top: 30px;
@@ -197,10 +182,6 @@ body {
     margin-top: 30px;
     margin-bottom: 0px;
 }
-
-/*.navHeightXs {*/
-/*height: 90vh;*/
-/*}*/
 
 /*---------------------------------------
    SECTION ACTUALITÉS
@@ -755,9 +736,8 @@ a {
 }
 
 .sliderProduit {
-    padding-top: 220px;
-    padding-bottom: 130px;
-    background-color: rgba(0, 0, 0, 0.33);
+    padding-top: 140px;
+    padding-bottom: 60px;
 }
 
 .sliderHeight {
@@ -792,6 +772,7 @@ a {
 .returnListProd {
     margin-top: 30px;
 }
+
 
 /*button reseaux sociaux*/
 
@@ -848,11 +829,11 @@ a {
 }
 
 .carousel-control:focus, .carousel-control:hover {
-    color: white;
+    color: black;
 }
 
 .carousel-control, .carousel-control:active {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0);
 }
 
 .carousel-indicators {
@@ -861,14 +842,14 @@ a {
 
 .carousel-indicators li {
     width: 25px;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: black;
 }
 
 .carousel-indicators .active {
     width: 35px;
-    background-color: white;
-    border-color: white;
+    background-color: black;
+    border-color: black;
 }
 
 th {
