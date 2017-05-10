@@ -104,7 +104,7 @@ class ContentController extends Controller
         $submit = new Submit('submit');
         $title->setLabel('Titre (50 caractères maximum) :');
         $date->setLabel('Date de création (YYYY-MM-DD) :');
-        $image->setLabel('Image de miniature (500px X 500px) :');
+        $image->setLabel('Image de miniature (700px X 700px) :');
         $sumup->setLabel('Résumé de la miniature (120 caractères maximum) :');
         $content->setLabel('Mise en page de l\'article');
         $title->setRequired(true);
@@ -133,7 +133,7 @@ class ContentController extends Controller
         if (!empty($_FILES)) {
             $imageVal = new Callback([new ImageValidators(), 'isValid']);
             if (!$imageVal->isValid($_FILES['image']['tmp_name'])) {
-                return $this->getTwig()->render('addContent.html.twig', ['form' => $form, 'type' => $type, 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format de 500x500 !']);
+                return $this->getTwig()->render('addContent.html.twig', ['form' => $form, 'type' => $type, 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format de 700x700 !']);
             }
         }
         if (isset($_POST['submit'])) {
@@ -183,7 +183,7 @@ class ContentController extends Controller
         $submit = new Submit('submit');
         $title->setLabel('Titre (50 caractères maximum) :');
         $date->setLabel('Date de création (YYY-MM-DD) :');
-        $image->setLabel('Image de mignature (500px X 500px:');
+        $image->setLabel('Image de mignature (700px X 700px:');
         $sumup->setLabel('Résumé de la mignature (120 caractères maximum) :');
         $content->setLabel('Mise en page de l\'article');
         $title->setRequired(true);

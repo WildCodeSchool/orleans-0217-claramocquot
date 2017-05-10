@@ -62,7 +62,7 @@ class HatController extends Controller
         $content->setId('editor');
         $price->setLabel('Prix');
         $select->setLabel('Choississez ou l\'afficher');
-        $image1->setLabel('Choississez les images de votre produit');
+        $image1->setLabel('Choississez les images de votre produit (700 x 700');
         $image2->setLabel('Image 2 ');
         $image3->setLabel('Image 3');
         $image4->setLabel('Image 4');
@@ -175,7 +175,7 @@ class HatController extends Controller
         $content->setLabel('Description');
         $price->setLabel('Prix');
         $select->setLabel('Choississez ou l\'afficher');
-        $image1->setLabel('Choississez les images de votre produit');
+        $image1->setLabel('Choississez les images de votre produit (700 x 700');
         $image2->setLabel('Image 2 ');
         $image3->setLabel('Image 3');
         $image4->setLabel('Image 4');
