@@ -85,6 +85,30 @@ class HatController extends Controller
             ->addField($image4)
             ->addField($submit);
 
+        if (!empty($_FILES['image1']['name'])) {
+            $imageVal = new Callback([new ImageValidators(), 'isValid']);
+            if (!$imageVal->isValid($_FILES['image1']['tmp_name'])) {
+                return $this->getTwig()->render('addHat.html.twig', ['form' => $form, 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format de 700px x 700px !']);
+            }
+        }
+        if (!empty($_FILES['image2']['name'])) {
+            $imageVal = new Callback([new ImageValidators(), 'isValid']);
+            if (!$imageVal->isValid($_FILES['image2']['tmp_name'])) {
+                return $this->getTwig()->render('addHat.html.twig', ['form' => $form, 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format de 700px x 700px !']);
+            }
+        }
+        if (!empty($_FILES['image3']['name'])) {
+            $imageVal = new Callback([new ImageValidators(), 'isValid']);
+            if (!$imageVal->isValid($_FILES['image3']['tmp_name'])) {
+                return $this->getTwig()->render('addHat.html.twig', ['form' => $form, 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format de 700px x 700px !']);
+            }
+        }
+        if (!empty($_FILES['image4']['name'])) {
+            $imageVal = new Callback([new ImageValidators(), 'isValid']);
+            if (!$imageVal->isValid($_FILES['image4']['tmp_name'])) {
+                return $this->getTwig()->render('addHat.html.twig', ['form' => $form, 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format de 700px x 700px !']);
+            }
+        }
 
         if (isset($_POST['submit'])) {
             $data = $_POST;
