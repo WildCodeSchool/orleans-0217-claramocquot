@@ -24,7 +24,7 @@ class PictureHomeController extends Controller
         $submit = new Submit('Ajouter');
         $hidden = new Hidden('visibility');
         $hidden->setValue('1');
-        $image->setLabel('Ajouter une image d\'accueil (1920x1080) :');
+        $image->setLabel('Ajouter une image d\'accueil (1920px x 1080px) :');
         $image->setUploadDirectory('../img/upload/');
         $form->addField($image)
             ->addField($hidden)
@@ -35,7 +35,7 @@ class PictureHomeController extends Controller
             if (!empty($_FILES['name'])) {
                 $imageVal = new Callback([new ImageValidators(), 'isValidHome']);
                 if (!$imageVal->isValid($_FILES['name']['tmp_name'])) {
-                    return $this->getTwig()->render('showPicturesHome.html.twig', ['form' => $form, 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format !']);
+                    return $this->getTwig()->render('showPicturesHome.html.twig', ['form' => $form, 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format de 1920px x 1080px !']);
                 }
             }
         }

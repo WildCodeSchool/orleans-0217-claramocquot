@@ -133,7 +133,7 @@ class ContentController extends Controller
         if (!empty($_FILES)) {
             $imageVal = new Callback([new ImageValidators(), 'isValid']);
             if (!$imageVal->isValid($_FILES['image']['tmp_name'])) {
-                return $this->getTwig()->render('addContent.html.twig', ['form' => $form, 'type' => $type, 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format de 700x700 !']);
+                return $this->getTwig()->render('addContent.html.twig', ['form' => $form, 'type' => $type, 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format de 700px x 700px !']);
             }
         }
         if (isset($_POST['submit'])) {
@@ -209,7 +209,7 @@ class ContentController extends Controller
         if (!empty($_FILES['image']['name'])) {
             $imageVal = new Callback([new ImageValidators(), 'isValid']);
             if (!$imageVal->isValid($_FILES['image']['tmp_name'])) {
-                return $this->getTwig()->render('addContent.html.twig', ['form' => $form, 'type' => $data1->getType(), 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format !']);
+                return $this->getTwig()->render('addContent.html.twig', ['form' => $form, 'type' => $data1->getType(), 'noResult' => 'L\'image n\'est pas valide ou n\'est pas au bon format de 700px x 700px !']);
             }
         }
 

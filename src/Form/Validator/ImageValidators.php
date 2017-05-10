@@ -64,7 +64,7 @@ class ImageValidators implements ValidatorInterface
                 if ($size[0] == 1920 && $size[1] == 1080) {
                     return true;
                 } else {
-                    $this->setNotValid([0 => 'L\'image envoyée n\'est pas au bon format de 700x700!']);
+                    $this->setNotValid([0 => 'L\'image envoyée n\'est pas au bon format de 700px x 700px!']);
 
                 }
             } else {
